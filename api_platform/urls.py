@@ -16,6 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from My_api.views import *
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^welcome/$', welcome),
+    url(r'^case_list/$', case_list),
+    url(r'^home/$', home),
 ]
