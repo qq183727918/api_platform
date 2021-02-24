@@ -11,7 +11,8 @@
             box-shadow: 4px 4px 4px grey;
             height: 34px;
         }
-        .btn-default{
+
+        .btn-default {
             background: linear-gradient(to top, #00a515, #e79b83, #ddb1ec, #b400b0);
             border-radius: 5px;
             border: 1px solid #353c48;
@@ -63,10 +64,11 @@
             <td>{{ i.api_url }}</td>
             <td>
                 <button onclick="" class="btn btn-success">调试</button>
-                <button class="wqrf_button">备注</button>
+                <button onclick="open_bz('{{ i.id }}')" class="wqrf_button">备注</button>
                 <button class="wqrf_button">复制</button>
                 <button class="wqrf_button">异常值测试</button>
-                <button onclick="" class="btn btn-danger">删除</button>
+                <button onclick="document.location.href='/project_api_del/{{ i.id }}/'" class="btn btn-danger">删除
+                </button>
             </td>
         </tr>
     {% endfor %}
@@ -76,7 +78,9 @@
             width: 100%;background-color: #f8f8f8;text-align: center;
             border: 1px solid #e7e7e7;">
     <div class="btn-group">
-        <button type="button" class="btn btn-default">新增接口</button>
+        <button type="button" class="btn btn-default"
+                onclick="document.location.href='/project_api_add/{{ project.id }}/'">新增接口
+        </button>
         <button type="button" class="btn btn-default">全局请求头</button>
         <button type="button" class="btn btn-default">全局域名</button>
         <button type="button" class="btn btn-default">接口文档导入</button>
@@ -86,6 +90,39 @@
     </div>
     <br><br>
 </div>
-<br>
+<div id="bz"
+     style="display:none;width: 50%;height: 30%;position: fixed;left: 25%;top: 35%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;">
+    <input id="which_api" type="text" style="display: none">
+    <textarea id="bz_value" name="" style="width: 100%;height: 80%;" placeholder="请输入该接口备注"></textarea>
+    <button onclick="save_bz()" style="width: 49.9%;height: 20%;">保存</button>
+    <button onclick="close_bz()" style="width: 49.3%;height: 20%;">取消</button>
+</div>
+<script>
+    function open_bz(id) {
+        document.getElementById('bz_value').value = '';
+        $.get('/get_bz/',{
+            'api_id': id,
+        },function (ret) {
+            document.getElementById('bz').style.display = 'block';
+            document.getElementById('which_api').value = id;
+            document.getElementById('bz_value').value = ret;
+        })
+    }
+
+    function save_bz(id) {
+        id = document.getElementById('which_api').value;
+        bz_value = document.getElementById('bz_value').value;
+        $.get('/save_bz/', {
+            'api_id': id,
+            'bz_value': bz_value,
+        }, function (ret) {
+            document.getElementById('bz').style.display = 'none';
+        })
+    }
+
+    function close_bz(id) {
+        document.getElementById('bz').style.display = 'none';
+    }
+</script>
 </body>
 </html>
