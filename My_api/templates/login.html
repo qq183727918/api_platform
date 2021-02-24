@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script src="/static/201908059658/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="login-box">
+        <div class="apple-btn login-apple">
+            <li class="red-btn"></li>
+            <li class="yellow-btn"></li>
+            <li class="green-btn"></li>
+        </div>
+        <div class="title">Login</div>
+        <div class="input">
+            <label for="login-user"></label><input type="text" id="login-user" placeholder="Input your username">
+        </div>
+        <div class="input">
+            <label for="login-password"></label><input type="password" id="login-password"
+                                                       placeholder="Input your password">
+        </div>
+        <div class="btn login-btn" onclick="login()">
+            <span>登录</span>
+        </div>
+        <div class="change-box login-change">
+            <div class="change-btn toSign">
+                <span>去注册</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sign-box">
+        <div class="apple-btn sign-apple">
+            <li class="red-btn"></li>
+            <li class="yellow-btn"></li>
+            <li class="green-btn"></li>
+        </div>
+        <div class="title">Sign</div>
+        <div class="input">
+            <label for="sign-user"></label><input type="text" id="sign-user" placeholder="Have A Good Name?">
+        </div>
+        <div class="input">
+            <label for="sign-password"></label><input type="password" id="sign-password" placeholder="Keep Secret">
+        </div>
+        <div class="btn sign-btn" onclick="register()">
+            <span>注册</span>
+        </div>
+        <div class="change-box sign-change">
+            <div class="change-btn toLogin">
+                <span>去登陆</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    function login() {
+        const username = document.getElementById('login-user').value;
+        const password = document.getElementById('login-password').value;
+        $.get("/login_action/", {
+            "username": username,
+            "password": password
+        }, function (ret) {
+            if (ret === "成功") {
+                console.log(ret)
+                document.location.href = '/home/'
+            } else {
+                alert('您的用户名或密码错误！')
+            }
+        })
+    }
+
+    function register() {
+        const username = document.getElementById('sign-user').value;
+        const password = document.getElementById('sign-password').value;
+
+        $.get("/sign_action/", {
+            "username": username,
+            "password": password
+        }, function (ret) {
+            alert(ret)
+        })
+    }
+</script>
+<script>
+    /*
+    Logic：
+        主要采用原生 JavaScript，
+        只有在发送 Ajax 请求是才使用 JQuery
+
+    ===
+    1、登录注册页面的切换逻辑
+    2、Ajax发送及接受响应逻辑
+    ===
+*/
+
+
+    // 封装选择器, 采用ES6箭头函数写法
+    const getSelector = ele => {
+        return typeof ele === "string" ? document.querySelector(ele) : "";
+    }
+
+
+    // 登录注册载入
+
+    const containerShow = () => {
+        var show = getSelector(".container")
+        show.className += " container-show"
+    }
+
+
+    window.onload = containerShow;
+
+
+    // 登录注册页切换
+    ((window, document) => {
+
+        // 登录 -> 注册
+        let toSignBtn = getSelector(".toSign"),
+            toLoginBtn = getSelector(".toLogin")
+        loginBox = getSelector(".login-box"),
+            signBox = getSelector(".sign-box");
+
+        toSignBtn.onclick = () => {
+            loginBox.className += ' animate_login';
+            signBox.className += ' animate_sign';
+        }
+
+        toLoginBtn.onclick = () => {
+            loginBox.classList.remove("animate_login");
+            signBox.classList.remove("animate_sign");
+        }
+
+
+    })(window, document);
+
+    // Ajax 请求发送
+</script>
+</body>
+</html>

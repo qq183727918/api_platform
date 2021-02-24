@@ -2,8 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/__pycache__/apps.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0002_db_home_href.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0003_db_project.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0004_db_apis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0002_db_home_href.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0003_db_project.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0004_db_apis.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/css/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/img/home03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/img/login.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/P_apis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/P_cases.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/P_project_set.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/project_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/img/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/img/home.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +63,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -32,9 +91,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JupyterTrust" id="99809a70-d687-4839-bb90-45e6053a00b5" />
   <component name="ProjectId" id="1oso5R90bBdDsstiDNOfqhyGsnM" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="新增" />
   </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
@@ -49,7 +109,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,10 +119,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\automate\api_platform\My_api\static" />
+      <recent name="D:\automate\api_platform\My_api\static\img" />
       <recent name="D:\api_platform\api_platform\My_api\static\img" />
       <recent name="D:\api_platform\api_platform\My_api\static" />
     </key>
@@ -126,9 +190,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="api_platform.settings" />
       </envs>
-      <option name="SDK_HOME" value="D:\python\python38\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -159,6 +223,8 @@
       <workItem from="1614085850875" duration="3035000" />
       <workItem from="1614088937198" duration="1774000" />
       <workItem from="1614090766879" duration="840000" />
+      <workItem from="1614126497065" duration="280000" />
+      <workItem from="1614126816530" duration="33464000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -198,5 +264,59 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="django" />
     <option name="LAST_COMMIT_MESSAGE" value="django" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="211" width="1089" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614126924895">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="479" y="211" width="1089" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614126924895" />
+    <state x="651" y="235" key="#检查" timestamp="1614135176569">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="651" y="235" key="#检查/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614135176569" />
+    <state width="1382" height="305" key="GridCell.Tab.0.bottom" timestamp="1614168544757">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614168544757" />
+    <state width="1382" height="305" key="GridCell.Tab.0.center" timestamp="1614168544757">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614168544757" />
+    <state width="1382" height="305" key="GridCell.Tab.0.left" timestamp="1614168544757">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614168544757" />
+    <state width="1382" height="305" key="GridCell.Tab.0.right" timestamp="1614168544757">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614168544757" />
+    <state width="1382" height="305" key="GridCell.Tab.1.bottom" timestamp="1614148735879">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614148735879" />
+    <state width="1382" height="305" key="GridCell.Tab.1.center" timestamp="1614148735879">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614148735879" />
+    <state width="1382" height="305" key="GridCell.Tab.1.left" timestamp="1614148735879">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614148735879" />
+    <state width="1382" height="305" key="GridCell.Tab.1.right" timestamp="1614148735879">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1382" height="305" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614148735879" />
+    <state x="605" y="291" key="IDE.errors.dialog" timestamp="1614151185167">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="605" y="291" key="IDE.errors.dialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614151185167" />
+    <state x="526" y="201" key="SettingsEditor" timestamp="1614126635138">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614126635138" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1614156104279">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614156104279" />
   </component>
 </project>

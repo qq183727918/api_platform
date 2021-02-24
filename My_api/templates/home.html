@@ -3,24 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>HOME</title>
+    <style>
+        body {
+            background: url("/static/img/home.png") fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
-<body style="text-align: center">
-<h1>欢迎使用接口平台</h1>
-<h3>welcome to ApiTest</h3>
-<div style="border: 1px solid black;width: 200px;text-align: left;margin-left: -webkit-calc(50% - 100px);padding-left:10px ">
-    <h2>如何使用：</h2>
-    1.打开左侧菜单 <br>
-    2.找到要用的功能 <br>
-    3.点击进入 <br><br>
-</div>
-<h2>更新信息：</h2>
-<span>项目模块管理上线，并修复已知BUG</span>
+<body>
+<div style="text-align: center">
+    <h1 style="margin-left: 410px">
+        欢迎{{ username }}使用接口测试平台
+    </h1>
 
-<h2>反馈：</h2>
-<span>如有问题，请发送邮件至：lxq13925731395@163.com</span><br>
-<span>或进入<a href="">本台的优化建议</a> 中进行反馈</span>
-<br><br>
-<img src="/static/img/home.png" alt="抱歉，图片走丢了 5555" style="width: 200px;">
+    {#        中间这里要放 超链接传送门#}
+
+    <div style="border: 1px solid black;border-radius: 10px 10px 10px 10px;text-align: center;background-color: #e3ffe3;opacity: 0.8;color: white;margin-left: 300px;width: 1200px;">
+        <h3 style="color: #3e2935">欢迎使用传送门：</h3>
+        <strong>
+
+            {% for i in hrefs %}
+                <a href="{{ i.href }}" target="_blank" style="color:#353c48;text-decoration: none">{{ i.name }}</a> <br>
+            {% endfor %}
+
+        </strong>
+        <br>
+    </div>
+    {#        中间这里要放 超链接传送门#}
+
+
+    <br>
+    <div style="border: 1px solid black;border-radius: 10px 10px 10px 10px;text-align: center;background-color: #e3ffe3;opacity: 0.8;color: white;margin-left: 300px;width: 1200px;">
+        <h3 style="color: #3e2935">您的项目：</h3>
+        <span style="color: black">
+            {#       这里存放后续的个人项目列表循环，类似传送门的套路 ,点击自己创建的项目可以直接进入项目内     #}
+            </span>
+        <br>
+    </div>
+
+    <br>
+    <div style="border: 1px solid black;border-radius: 10px 10px 10px 10px;text-align: center;background-color: #e3ffe3;opacity: 0.8;color: white;margin-left: 300px;width: 1200px;">
+        <h3 style="color: #3e2935">最新消息：</h3>
+        <span style="color: black">
+            帮助页面上线；<br>
+            后台开启，仅限有管理权限同学使用；<br>
+            项目列表上线，您现在可以进入所有项目内了 <br>
+                </span>
+        <br>
+    </div>
+
+
+    <br>
+    <div style="border: 1px solid black;border-radius: 10px 10px 10px 10px;text-align: center;background-color: #e3ffe3;opacity: 0.8;color: white;margin-left: 300px;width: 1200px;">
+        <br>
+        <textarea id="Roast_input" cols="50" rows="5" placeholder="匿名吐槽专用,点击 发送按钮即可反馈！"
+                  style=";border-radius: 5px;padding-left: 10px;box-shadow: 4px 4px 9px grey"></textarea>
+        <br>
+        <button style="border-radius: 0 0 50px 50px;width: 100px" onclick="pei()">发送</button>
+        <br><br>
+    </div>
+</div>
+
+
+<script>
+    function pei() {
+        const Roast_input = document.getElementById('Roast_input').value;
+        console.log(Roast_input)
+        $.get("/pei/", {
+            "Roast_input": Roast_input,
+        }, function (ret) {
+            alert('已成功吐槽！');
+        })
+
+    }
+</script>
+
+
 </body>
 </html>
 
