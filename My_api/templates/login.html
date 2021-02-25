@@ -142,5 +142,78 @@
 
     // Ajax 请求发送
 </script>
+<script>
+        function ts_send() {
+        var api_name = document.getElementById('ts_api_name').value;
+        var ts_method = document.getElementById('ts_method').value;
+        var ts_url = document.getElementById("ts_url").value;
+        var ts_host = document.getElementById("ts_host").value;
+        var ts_header = document.getElementById("ts_header").value;
+        var ts_body_method = $('ul#myTab li[class="active"]')[0].innerText;
+
+        if (ts_body_method === 'none') {
+            const ts_api_body = '';
+        }
+        if (ts_body_method === 'form-data') {
+            let ts_api_body = []; //新建这个空列表用来存放后续的数据
+            const tbody_ = $("table#mytable tbody")[0]; //获取该表格的内容部分
+            const trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
+            for (let i = 0; i < trlist.length; i++) {
+                const tdarr = trlist[i].children; // 获取tr下的俩个td
+                const key = tdarr[0].innerText; // 获取key
+                const value = tdarr[1].innerText; // 获取value
+                ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。
+            }
+            console.log(ts_api_body)
+            ts_api_body = JSON.stringify(ts_api_body);
+        }
+        if (ts_body_method === 'x-www-form-urlencoded') {
+            console.info('2===============================')
+            let ts_api_body = []; //新建这个空列表用来存放后续的数据
+            const tbody_ = $("table#mytable2 tbody")[0]; //获取该表格的内容部分
+            const trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
+            for (let i = 0; i < trlist.length; i++) {
+                const tdarr = trlist[i].children; // 获取tr下的俩个td
+                const key = tdarr[0].innerText; // 获取key
+                const value = tdarr[1].innerText; // 获取value
+                ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。
+            }
+            console.log(ts_api_body)
+            ts_api_body = JSON.stringify(ts_api_body);
+        }
+        if (ts_body_method === 'Text') {
+            const ts_api_body = document.getElementById('raw_Text').value;
+        }
+        if (ts_body_method === 'JavaScript') {
+            const ts_api_body = document.getElementById('raw_JavaScript').value;
+        }
+        if (ts_body_method === 'Json') {
+            const ts_api_body = document.getElementById('raw_Json').value;
+        }
+        if (ts_body_method === 'Html') {
+            const ts_api_body = document.getElementById('raw_Html').value;
+        }
+        if (ts_body_method === 'Xml') {
+            const ts_api_body = document.getElementById('raw_Xml').value;
+        }
+        var api_id = document.getElementById('ts_api_id').innerText;
+
+        let ts_api_body;
+        $.get('/Api_send/', {
+            'api_id': api_id,
+            'api_name': api_name,
+            'ts_method': ts_method,
+            'ts_url': ts_url,
+            'ts_host': ts_host,
+            'ts_header': ts_header,
+            'ts_body_method': ts_body_method,
+            'ts_api_body': ts_api_body,
+        }, function (ret) {
+            console.info('4===============================')
+            $("li a[href='#response']").click(); //点击一下返回体按钮
+            document.getElementById('ts_response_body').value = ret;
+        })
+    }
+</script>
 </body>
 </html>

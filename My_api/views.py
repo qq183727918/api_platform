@@ -1,3 +1,5 @@
+import json
+
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -5,7 +7,7 @@ from django.shortcuts import render
 from icecream import ic
 
 from My_api.models import *
-import json
+
 
 @login_required
 def welcome(request):
@@ -214,10 +216,20 @@ def Api_save(request):
     ts_host = request.GET['ts_host']
     ts_header = request.GET['ts_header']
     ts_body_method = request.GET['ts_body_method']
-    ts_api_body = request.GET['ts_api_body']
-
     api_name = request.GET['api_name']
-    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, ts_api_body, api_name)
+    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
+
+    if ts_body_method == '返回体':
+        api = DB_apis.objects.filter(id=api_id).values()[0]
+        ic(api)
+        # if
+        ts_body_method = api['last_body_method']
+        ts_api_body = api['last_api_body']
+        ic(ts_body_method, ts_body_method)
+    else:
+        ts_api_body = request.GET['ts_api_body']
+        ic(ts_api_body)
+
     # 保存数据
     DB_apis.objects.filter(id=api_id).update(
         api_models=ts_method,
@@ -236,7 +248,7 @@ def Api_save(request):
 def get_api_data(request):
     api_id = request.GET['api_id']
     api = DB_apis.objects.filter(id=api_id).values()[0]
-    return HttpResponse(json.dumps(api),content_type='application/json')
+    return HttpResponse(json.dumps(api), content_type='application/json')
 
 
 # 调试层发送请求
@@ -246,9 +258,20 @@ def Api_send(request):
     ts_url = request.GET['ts_url']
     ts_host = request.GET['ts_host']
     ts_header = request.GET['ts_header']
-    ts_body_method = request.GET['ts_body_method']
-    ts_api_body = request.GET['ts_api_body']
     api_name = request.GET['api_name']
+    ts_body_method = request.GET['ts_body_method']
+    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
+    if ts_body_method == '返回体':
+        api = DB_apis.objects.filter(id=api_id)[0]
+        ts_body_method = api.last_body_method
+        ts_api_body = api.last_api_body
+        if ts_api_body in ['', None, [["", ""]]]:
+            return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
+    else:
+        ts_api_body = request.GET['ts_api_body']
+        api = DB_apis.objects.filter(id=api_id)
+        api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
+    ic(ts_api_body)
     # 发送请求获取返回值
 
     # 把返回值传递给前端页面
