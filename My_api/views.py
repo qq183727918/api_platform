@@ -262,15 +262,19 @@ def Api_send(request):
     ts_body_method = request.GET['ts_body_method']
     ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
     if ts_body_method == '返回体':
-        api = DB_apis.objects.filter(id=api_id)[0]
-        ts_body_method = api.last_body_method
-        ts_api_body = api.last_api_body
-        if ts_api_body in ['', None, [["", ""]]]:
+        api = DB_apis.objects.filter(id=api_id).values()[0]
+        ic(api)
+        ts_body_method = api['last_body_method']
+        ts_api_body = api['last_api_body']
+        if ts_header in ['', None]:
             return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
     else:
         ts_api_body = request.GET['ts_api_body']
-        api = DB_apis.objects.filter(id=api_id)
-        api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
+        if ts_header in ['', {}, None, [["", ""]]]:
+            return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
+        else:
+            api = DB_apis.objects.filter(id=api_id)
+            api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
     ic(ts_api_body)
     # 发送请求获取返回值
 

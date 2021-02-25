@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/0002_db_home_href.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/0003_db_project.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/0004_db_apis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0002_db_home_href.cpython-38.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0003_db_project.cpython-38.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0004_db_apis.cpython-38.pyc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/P_apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_apis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +210,7 @@
       <workItem from="1614174670650" duration="38000" />
       <workItem from="1614175093527" duration="90000" />
       <workItem from="1614175216218" duration="526000" />
-      <workItem from="1614242622745" duration="10878000" />
+      <workItem from="1614242622745" duration="11444000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -258,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614090981170</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="django">
+      <created>1614255923245</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614255923245</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -299,42 +288,46 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="651" y="235" key="#检查/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614240888481" />
-    <state width="1651" height="302" key="GridCell.Tab.0.bottom" timestamp="1614254707134">
+    <state x="692" y="136" key="CommitChangelistDialog2" timestamp="1614255922004">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254707134" />
+    <state x="692" y="136" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614255922004" />
+    <state width="1651" height="302" key="GridCell.Tab.0.bottom" timestamp="1614256122326">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1651" height="302" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122326" />
     <state width="1024" height="397" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614238198632" />
-    <state width="1651" height="302" key="GridCell.Tab.0.center" timestamp="1614254707134">
+    <state width="1651" height="302" key="GridCell.Tab.0.center" timestamp="1614256122325">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254707134" />
+    <state width="1651" height="302" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122325" />
     <state width="1024" height="397" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614238198632" />
-    <state width="1651" height="302" key="GridCell.Tab.0.left" timestamp="1614254707134">
+    <state width="1651" height="302" key="GridCell.Tab.0.left" timestamp="1614256122325">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254707134" />
+    <state width="1651" height="302" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122325" />
     <state width="1024" height="397" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614238198632" />
-    <state width="1651" height="302" key="GridCell.Tab.0.right" timestamp="1614254707134">
+    <state width="1651" height="302" key="GridCell.Tab.0.right" timestamp="1614256122326">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254707134" />
+    <state width="1651" height="302" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122326" />
     <state width="1024" height="397" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614238198632" />
-    <state width="1651" height="302" key="GridCell.Tab.1.bottom" timestamp="1614254706796">
+    <state width="1651" height="302" key="GridCell.Tab.1.bottom" timestamp="1614256122035">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254706796" />
-    <state width="1651" height="302" key="GridCell.Tab.1.center" timestamp="1614254706796">
+    <state width="1651" height="302" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122035" />
+    <state width="1651" height="302" key="GridCell.Tab.1.center" timestamp="1614256122035">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254706796" />
-    <state width="1651" height="302" key="GridCell.Tab.1.left" timestamp="1614254706796">
+    <state width="1651" height="302" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122035" />
+    <state width="1651" height="302" key="GridCell.Tab.1.left" timestamp="1614256122035">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254706796" />
-    <state width="1651" height="302" key="GridCell.Tab.1.right" timestamp="1614254706796">
+    <state width="1651" height="302" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122035" />
+    <state width="1651" height="302" key="GridCell.Tab.1.right" timestamp="1614256122035">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="302" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614254706796" />
+    <state width="1651" height="302" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614256122035" />
     <state x="454" y="216" key="IDE.errors.dialog" timestamp="1614235784682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -344,6 +337,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614253557723" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1614255945583">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614255945583" />
     <state x="843" y="413" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1614243249223">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -352,5 +349,12 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1134" y="196" width="878" height="576" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614251615379" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Python.DjangoServer">
+        <watch expression="api" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
