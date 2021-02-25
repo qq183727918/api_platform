@@ -1,4 +1,5 @@
 import json
+import requests
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -181,8 +182,9 @@ def save_project_set(request, id):
 # 新增接口
 def project_api_add(request, Pid):
     project_id = Pid
+    ic(project_id)
     DB_apis.objects.create(project_id=project_id)
-    return HttpResponseRedirect('/apis/%s/' % project_id)
+    return HttpResponseRedirect('/apis/%s/'%project_id)
 
 
 # 删除接口
@@ -270,13 +272,51 @@ def Api_send(request):
             return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
     else:
         ts_api_body = request.GET['ts_api_body']
-        if ts_header in ['', {}, None, [["", ""]]]:
+        if ts_header in ['', {}, None]:
             return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
         else:
             api = DB_apis.objects.filter(id=api_id)
             api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
     ic(ts_api_body)
     # 发送请求获取返回值
+    header = json.loads(ts_header)  # 处理header
 
+    # 拼接完整的url
+    if ts_host[-1] == '/' and ts_url[0] == '/':  # 都有/
+        url = ts_host[:-1] + ts_url
+    elif ts_host[-1] != '/' and ts_url[0] != '/':  # 都没有/
+        url = ts_host + '/' + ts_url
+    else:  # 肯定有一个有/
+        url = ts_host + '/' + ts_url
+
+    if ts_body_method == 'none':
+        response = requests.request(ts_method.upper(), url, headers=header, data={})
+    elif ts_body_method == 'form-data':
+        files = []
+        payload = {}
+        for i in eval(ts_api_body):
+            payload[0] = i[1]
+            ic(payload[0], i[1])
+        ic(payload)
+        response = requests.request(ts_method.upper(), url, headers=header, data=payload, files=files)
+
+    elif ts_body_method == 'x-www-form-urlencoded':
+        header['Content-Type'] = 'application/x-www-form-urlencoded'
+        payload = {}
+        for i in eval(ts_api_body):
+            payload[0] = i[1]
+        response = requests.request(ts_method.upper(), url, headers=header, data=payload)
+    else:
+        if ts_body_method == 'Text':
+            header['Content-Type'] = 'text/plain'
+        if ts_body_method == 'Javascript':
+            header['Content-Type'] = 'text/plain'
+        if ts_body_method == 'Json':
+            header['Content-Type'] = 'text/plain'
+        if ts_body_method == 'Html':
+            header['Content-Type'] = 'text/plain'
+        if ts_body_method == 'Xml':
+            header['Content-Type'] = 'text/plain'
+        response = requests.request(ts_method.upper(), url, headers=header, data=ts_api_body.encode('utf-8'))
     # 把返回值传递给前端页面
-    return HttpResponse('{"code": 200}')
+    return HttpResponse(response.text)

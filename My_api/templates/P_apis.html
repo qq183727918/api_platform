@@ -4,28 +4,8 @@
     <meta charset="UTF-8">
     <title>接口库</title>
     <style>
-        .wqrf_button {
-            background: linear-gradient(to top, #0452a5, #16ade7, #b086ec, #9514b4);
-            border-radius: 5px;
-            border: 1px solid #353c48;
-            box-shadow: 4px 4px 4px grey;
-            height: 34px;
-        }
 
-        .btn-default {
-            background: linear-gradient(to top, #00a515, #e79b83, #ddb1ec, #b400b0);
-            border-radius: 5px;
-            border: 1px solid #353c48;
-            box-shadow: 4px 4px 4px grey;
-            height: 34px;
-        }
 
-        .btn {
-            border-radius: 5px;
-            border: 1px solid #353c48;
-            box-shadow: 4px 4px 4px grey;
-
-        }
     </style>
 </head>
 <body>
@@ -63,10 +43,10 @@
             <td>{{ i.name }}</td>
             <td>{{ i.api_url }}</td>
             <td>
-                <button onclick="ts_show('{{ i.id }}', '{{ i.name }}')" class="btn btn-success">调试</button>
-                <button onclick="open_bz('{{ i.id }}')" class="wqrf_button">备注</button>
-                <button class="wqrf_button">复制</button>
-                <button class="wqrf_button">异常值测试</button>
+                <button class="btn btn-success" onclick="ts_show('{{ i.id }}', '{{ i.name }}')">调试</button>
+                <button class="btn btn-default" onclick="open_bz('{{ i.id }}')">备注</button>
+                <button class="btn btn-default">复制</button>
+                <button class="btn btn-default">异常值测试</button>
                 <button onclick="document.location.href='/project_api_del/{{ i.id }}/'" class="btn btn-danger">删除
                 </button>
             </td>
@@ -78,8 +58,8 @@
             width: 100%;background-color: #f8f8f8;text-align: center;
             border: 1px solid #e7e7e7;">
     <div class="btn-group">
-        <button type="button" class="btn btn-default"
-                onclick="document.location.href='/project_api_add/{{ project.id }}/'">新增接口
+        <button type="button" class="btn btn-primary"
+                onclick="new_request()">新增接口
         </button>
         <button type="button" class="btn btn-default">全局请求头</button>
         <button type="button" class="btn btn-default">全局域名</button>
@@ -123,16 +103,22 @@
     function close_bz(id) {
         document.getElementById('bz').style.display = 'none';
     }
+
+    function new_request() {
+        document.getElementById('ts').style.display = 'block';
+    }
 </script>
 
 <div id="ts"
-     style="display: none;border-radius: 5px;width: 80%; position: fixed;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px;">
+     style="display: none;border-radius: 5px;width: 80%; position: absolute;left: 10%;top: 10%;background-color: #3c4043;box-shadow: 4px 4px 8px grey;color: white;padding-left: 10px;">
     <div class="btn-group" style="float: right;">
         <button onclick="ts_save()" type="button" class="btn btn-success">保存</button>
         <button onclick="ts_close()" type="button" class="btn btn-default">取消</button>
     </div>
-    <h4>接口：<small style="color: greenyellow" id="ts_api_id"></small>-
-        <input type="text" id="ts_api_name" style="padding-left: 5px;width: 50%;color: #329104">
+    <h4>接口：
+        <small style="color: greenyellow" id="ts_api_id"></small>
+        -
+        <input placeholder="请在此输入接口名称" type="text" id="ts_api_name" style="padding-left: 5px;width: 50%;color: #329104">
     </h4>
 
     <ul class="nav navbar-nav" style="width: 98%">
@@ -312,7 +298,7 @@
         });
     }
 
-    function ts_show(id,name) {
+    function ts_show(id, name) {
         clear_ts_api();
         document.getElementById('ts').style.display = 'block';
         document.getElementById('ts_api_id').innerText = id;
@@ -326,7 +312,7 @@
             document.getElementById('ts_host').value = ret.api_host;
             document.getElementById('ts_header').value = ret.api_header;
             // 请求体编码格式
-            var body_method = '#' +  ret.body_method;
+            var body_method = '#' + ret.body_method;
             console.log(body_method)
             $("li a[href=" + body_method + "]").click();
             // 请求体显示
@@ -363,12 +349,12 @@
                 }
             }
             if (ret.body_method === 'x-www-form-urlencoded') {
-                const tbody = document.getElementById('mytbody2'); // 定位表格中的tbody部分
+                var tbody = document.getElementById('mytbody2'); // 定位表格中的tbody部分
                 body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
-                for (let i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
                     key = body[i][0]; //拿出每一个键值对的key
                     value = body[i][1];//拿出每一个键值对的value
-                    const childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
                     // 每个tr下的children得到的是 td列表，只有俩个。
                     childs_tr[i].children[0].innerText = key; //第一个td放key
                     childs_tr[i].children[1].innerText = value;//第二个td放value
@@ -382,7 +368,7 @@
     }
 
     function ts_close() {
-        document.getElementById('ts').style.display = 'none';
+        document.location.reload();
     }
 
     function ts_save() {
@@ -402,7 +388,7 @@
             var ts_api_body = []; //新建这个空列表用来存放后续的数据
             var tbody_ = $("table#mytable tbody")[0]; //获取该表格的内容部分
             var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
-            for (let i = 0; i < trlist.length; i++) {
+            for (var i = 0; i < trlist.length; i++) {
                 var tdarr = trlist[i].children; // 获取tr下的俩个td
                 var key = tdarr[0].innerText; // 获取key
                 var value = tdarr[1].innerText; // 获取value
@@ -415,7 +401,7 @@
             var ts_api_body = []; //新建这个空列表用来存放后续的数据
             var tbody_ = $("table#mytable2 tbody")[0]; //获取该表格的内容部分
             var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
-            for (let i = 0; i < trlist.length; i++) {
+            for (var i = 0; i < trlist.length; i++) {
                 var tdarr = trlist[i].children; // 获取tr下的俩个td
                 var key = tdarr[0].innerText; // 获取key
                 var value = tdarr[1].innerText; // 获取value
@@ -439,9 +425,10 @@
         if (ts_body_method == 'Xml') {
             var ts_api_body = document.getElementById('raw_Xml').value;
         }
+
         var api_id = document.getElementById('ts_api_id').innerText; //获取到了接口id
         console.log(ts_api_body)
-         $.get('/Api_save/', {
+        $.get('/Api_save/', {
             'api_id': api_id,
             'api_name': api_name,
             'ts_method': ts_method,
@@ -451,7 +438,7 @@
             'ts_body_method': ts_body_method,
             'ts_api_body': ts_api_body,
         }, function (ret) {
-             console.log(ret)
+            console.log(ret)
             document.location.reload(); //直接刷新页面
         })
     }
@@ -474,7 +461,7 @@
             var ts_api_body = []; //新建这个空列表用来存放后续的数据
             var tbody_ = $("table#mytable tbody")[0]; //获取该表格的内容部分
             var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
-            for (let i = 0; i < trlist.length; i++) {
+            for (var i = 0; i < trlist.length; i++) {
                 var tdarr = trlist[i].children; // 获取tr下的俩个td
                 var key = tdarr[0].innerText; // 获取key
                 var value = tdarr[1].innerText; // 获取value
@@ -487,7 +474,7 @@
             var ts_api_body = []; //新建这个空列表用来存放后续的数据
             var tbody_ = $("table#mytable2 tbody")[0]; //获取该表格的内容部分
             var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
-            for (let i = 0; i < trlist.length; i++) {
+            for (var i = 0; i < trlist.length; i++) {
                 var tdarr = trlist[i].children; // 获取tr下的俩个td
                 var key = tdarr[0].innerText; // 获取key
                 var value = tdarr[1].innerText; // 获取value
@@ -512,7 +499,7 @@
             var ts_api_body = document.getElementById('raw_Xml').value;
         }
         var api_id = document.getElementById('ts_api_id').innerText; //获取到了接口id
-         $.get('/Api_send/', {
+        $.get('/Api_send/', {
             'api_id': api_id,
             'api_name': api_name,
             'ts_method': ts_method,
@@ -523,7 +510,7 @@
             'ts_api_body': ts_api_body,
         }, function (ret) {
             $("li a[href='#response']").click()
-             document.getElementById('ts_response_body').value = ret;
+            document.getElementById('ts_response_body').value = ret;
         })
     }
 </script>
