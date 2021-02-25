@@ -1,3 +1,5 @@
+import json
+
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -134,7 +136,7 @@ def delete_project(request):
     Id = request.GET['id']
 
     DB_project.objects.filter(id=Id).delete()
-
+    DB_apis.objects.filter(project_id=Id).delete()
     return HttpResponse('')
 
 
@@ -204,3 +206,77 @@ def get_bz(request):
     bz_value = DB_apis.objects.filter(id=api_id)[0].des
     ic(bz_value)
     return HttpResponse(bz_value)
+
+
+# 保存接口
+def Api_save(request):
+    api_id = request.GET['api_id']
+    ts_method = request.GET['ts_method']
+    ts_url = request.GET['ts_url']
+    ts_host = request.GET['ts_host']
+    ts_header = request.GET['ts_header']
+    ts_body_method = request.GET['ts_body_method']
+    api_name = request.GET['api_name']
+    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
+
+    if ts_body_method == '返回体':
+        api = DB_apis.objects.filter(id=api_id).values()[0]
+        ic(api)
+        # if
+        ts_body_method = api['last_body_method']
+        ts_api_body = api['last_api_body']
+        ic(ts_body_method, ts_body_method)
+    else:
+        ts_api_body = request.GET['ts_api_body']
+        ic(ts_api_body)
+
+    # 保存数据
+    DB_apis.objects.filter(id=api_id).update(
+        api_models=ts_method,
+        api_url=ts_url,
+        api_host=ts_host,
+        api_header=ts_header,
+        body_method=ts_body_method,
+        api_body=ts_api_body,
+        name=api_name
+    )
+
+    return HttpResponse('success')
+
+
+# 查询接口内容
+def get_api_data(request):
+    api_id = request.GET['api_id']
+    api = DB_apis.objects.filter(id=api_id).values()[0]
+    return HttpResponse(json.dumps(api), content_type='application/json')
+
+
+# 调试层发送请求
+def Api_send(request):
+    api_id = request.GET['api_id']
+    ts_method = request.GET['ts_method']
+    ts_url = request.GET['ts_url']
+    ts_host = request.GET['ts_host']
+    ts_header = request.GET['ts_header']
+    api_name = request.GET['api_name']
+    ts_body_method = request.GET['ts_body_method']
+    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
+    if ts_body_method == '返回体':
+        api = DB_apis.objects.filter(id=api_id).values()[0]
+        ic(api)
+        ts_body_method = api['last_body_method']
+        ts_api_body = api['last_api_body']
+        if ts_header in ['', None]:
+            return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
+    else:
+        ts_api_body = request.GET['ts_api_body']
+        if ts_header in ['', {}, None, [["", ""]]]:
+            return HttpResponse('请先选择好请求编码格式和请求体，在点击Send按钮发送请求！')
+        else:
+            api = DB_apis.objects.filter(id=api_id)
+            api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
+    ic(ts_api_body)
+    # 发送请求获取返回值
+
+    # 把返回值传递给前端页面
+    return HttpResponse('{"code": 200}')
