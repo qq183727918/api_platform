@@ -3,12 +3,28 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/P_cases.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_cases.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +55,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -231,7 +253,7 @@
       <workItem from="1614175093527" duration="90000" />
       <workItem from="1614175216218" duration="526000" />
       <workItem from="1614307993036" duration="33089000" />
-      <workItem from="1614400876074" duration="18108000" />
+      <workItem from="1614400876074" duration="18389000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -282,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614518770506</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="django">
+      <created>1614519406965</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1614519406965</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -319,34 +348,34 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614308472765" />
-    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1614518769686">
+    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1614519405994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614518769686" />
+    <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614519405994" />
     <state x="844" y="313" key="FileChooserDialogImpl" timestamp="1614299873332">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="844" y="313" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299873332" />
-    <state width="1223" height="201" key="GridCell.Tab.0.bottom" timestamp="1614518480273">
+    <state width="1223" height="201" key="GridCell.Tab.0.bottom" timestamp="1614519438030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1651" height="293" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037725" />
-    <state width="1223" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614518480273" />
-    <state width="1223" height="201" key="GridCell.Tab.0.center" timestamp="1614518480273">
+    <state width="1223" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
+    <state width="1223" height="201" key="GridCell.Tab.0.center" timestamp="1614519438030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1651" height="293" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037724" />
-    <state width="1223" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614518480273" />
-    <state width="1223" height="201" key="GridCell.Tab.0.left" timestamp="1614518480273">
+    <state width="1223" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
+    <state width="1223" height="201" key="GridCell.Tab.0.left" timestamp="1614519438030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1651" height="293" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037724" />
-    <state width="1223" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614518480273" />
-    <state width="1223" height="201" key="GridCell.Tab.0.right" timestamp="1614518480273">
+    <state width="1223" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
+    <state width="1223" height="201" key="GridCell.Tab.0.right" timestamp="1614519438030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1651" height="293" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037725" />
-    <state width="1223" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614518480273" />
+    <state width="1223" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
     <state width="1223" height="243" key="GridCell.Tab.1.bottom" timestamp="1614504934054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -371,10 +400,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="565" y="226" width="996" height="707" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299998516" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1614518773226">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1614519545295">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614518773226" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614519545295" />
     <state x="518" y="371" width="1353" height="598" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1614300949519">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

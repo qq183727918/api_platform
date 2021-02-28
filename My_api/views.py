@@ -653,4 +653,5 @@ def step_get_api(request):
 # 运行大用例
 def Run_Case(request):
     Case_id = request.GET['Case_id']
+    return HttpResponse('')
 
