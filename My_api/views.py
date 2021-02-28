@@ -59,8 +59,9 @@ def child_json(eid, oid='', ooid=''):
         # 这里应该是去数据库拿到这个项目的所有用例
         project = DB_project.objects.filter(id=oid)[0]
         Cases = DB_cases.objects.filter(project_id=oid)
-        res = {"project": project, "Cases": Cases}
-        ic(res)
+        apis = DB_apis.objects.filter(project_id=oid)
+        res = {"project": project, "Cases": Cases, "apis": apis}
+        # ic(res)
 
     return res
 
@@ -80,7 +81,8 @@ def user_upload(request):
         return HttpResponseRedirect('/home/')  # 如果没有则返回到首页
 
     new_name = str(request.user.id) + '.png'  # 设置好这个新图片的名字
-    destination = open("/static/img/" + new_name, 'wb+')  # 打开特定的文件进行二进制的写操作
+    ic(new_name)
+    destination = open("/My_api/static/img/" + new_name, 'wb')  # 打开特定的文件进行二进制的写操作
     for chunk in file.chunks():  # 分块写入文件
         destination.write(chunk)
     destination.close()
@@ -590,8 +592,48 @@ def delete_step(request, eid):
     Case_id = step.Case_id  # 获取目标所属大用例id
     step.delete()  # 删除目标step
     # 遍历所有该大用例下的步骤中 顺序号大于目标index的步骤
-    for i in DB_step.objects.filter(Case_id=Case_id).filter(index_gt=index):
+    for i in DB_step.objects.filter(Case_id=Case_id).filter(index=index):
         i.index -= 1  # 执行顺序自减1
         i.save()
 
     return HttpResponse('')
+
+
+# 获取小步骤数据
+def get_step(request):
+    step_id = request.GET['step_id']
+    step = DB_step.objects.filter(id=step_id)
+    steplist = list(step.values())[0]
+
+    return HttpResponse(json.dumps(steplist), content_type="application/json")
+
+
+# 保存小步骤
+def save_step(request):
+    step_id = request.GET['step_id']
+    name = request.GET['name']
+    index = request.GET['index']
+    step_method = request.GET['step_method']
+    step_url = request.GET['step_url']
+    step_host = request.GET['step_host']
+    step_header = request.GET['step_header']
+    step_body_method = request.GET['step_body_method']
+    step_api_body = request.GET['step_api_body']
+
+    DB_step.objects.filter(id=step_id).update(name=name,
+                                              index=index,
+                                              api_method=step_method,
+                                              api_url=step_url,
+                                              api_host=step_host,
+                                              api_header=step_header,
+                                              api_body_method=step_body_method,
+                                              api_body=step_api_body,
+                                              )
+    return HttpResponse('')
+
+
+# 步骤详情页获取接口数据
+def step_get_api(request):
+    api_id = request.GET['api_id']
+    api = DB_apis.objects.filter(id=api_id).values()[0]
+    return HttpResponse(json.dumps(api), content_type="application/json")
