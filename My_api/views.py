@@ -648,3 +648,9 @@ def step_get_api(request):
     api_id = request.GET['api_id']
     api = DB_apis.objects.filter(id=api_id).values()[0]
     return HttpResponse(json.dumps(api), content_type="application/json")
+
+
+# 运行大用例
+def Run_Case(request):
+    Case_id = request.GET['Case_id']
+
