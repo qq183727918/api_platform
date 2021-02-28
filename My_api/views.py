@@ -619,6 +619,12 @@ def save_step(request):
     step_header = request.GET['step_header']
     step_body_method = request.GET['step_body_method']
     step_api_body = request.GET['step_api_body']
+    ic(request.GET['get_path'])
+    get_path = request.GET['get_path']
+    get_zz = request.GET['get_zz']
+    assert_zz = request.GET['assert_zz']
+    assert_qz = request.GET['assert_qz']
+    assert_path = request.GET['assert_path']
 
     DB_step.objects.filter(id=step_id).update(name=name,
                                               index=index,
@@ -628,6 +634,11 @@ def save_step(request):
                                               api_header=step_header,
                                               api_body_method=step_body_method,
                                               api_body=step_api_body,
+                                              get_path=get_path,
+                                              get_zz=get_zz,
+                                              assert_zz=assert_zz,
+                                              assert_qz=assert_qz,
+                                              assert_path=assert_path,
                                               )
     return HttpResponse('')
 

@@ -201,6 +201,19 @@
         </div>
     </div>
 
+    {#    提取返回值功能#}
+    <br>
+    <textarea id="get_path" rows="3" style="width: 90%;background-color: rgba(245,236,222,0.29)"
+              placeholder="提取返回值-路径法"></textarea>
+    <textarea id="get_zz" rows="3" style="width: 90%;background-color: rgba(245,236,222,0.29)"
+              placeholder="提取返回值-正则法"></textarea>
+    <textarea id="assert_zz" rows="3" style="width: 90%;background-color: rgba(245,236,222,0.29)"
+              placeholder="断言返回值-路径法"></textarea>
+    <textarea id="assert_qz" rows="3" style="width: 90%;background-color: rgba(245,236,222,0.29)"
+              placeholder="断言返回值-正则法"></textarea>
+    <textarea id="assert_path" rows="3" style="width: 90%;background-color: rgba(245,236,222,0.29)"
+              placeholder="断言返回值-全文检索"></textarea>
+
     <p style="position:absolute;bottom: 0;left: 5px;">
         步骤ID：<span id="step_id"></span>
         步骤名称：<span id="step_old_name"></span>
@@ -233,6 +246,12 @@
             document.getElementById('raw_Json').value = '';
             document.getElementById('raw_Html').value = '';
             document.getElementById('raw_Xml').value = '';
+
+            document.getElementById('get_path').value = '';
+            document.getElementById('get_zz').value = '';
+            document.getElementById('assert_path').value = '';
+            document.getElementById('assert_qz').value = '';
+            document.getElementById('assert_zz').value = '';
 
             if ($("#apis").val() != 'none') { // 判断不是第一个请选择，那就去获取接口信息
                 $.get("/step_get_api/", {
@@ -408,6 +427,14 @@
             document.getElementById('step_url').value = ret.api_url;
             document.getElementById('step_host').value = ret.api_host;
             document.getElementById('step_header').value = ret.api_header;
+
+            document.getElementById('get_path').value = ret.get_path;
+            document.getElementById('get_zz').value = ret.get_zz;
+            document.getElementById('assert_path').value = ret.assert_path;
+            document.getElementById('assert_qz').value = ret.assert_qz;
+            document.getElementById('assert_zz').value = ret.assert_zz;
+
+
             // 请求体编码格式
             var body_method = '#' + ret.api_body_method;
             $("li a[href=" + body_method + "]").click();
@@ -552,7 +579,7 @@
                 var step_api_body = document.getElementById('raw_Xml').value;
             }
             var step_id = document.getElementById('step_id').innerText; //获取到了接口id
-
+            console.info('================调试保存')
             $.get('/save_step/', {
                 'step_id': step_id,
                 'name': name,
@@ -562,7 +589,14 @@
                 'step_host': step_host,
                 'step_header': step_header,
                 'step_body_method': step_body_method,
-                'step_api_body': step_api_body
+                'step_api_body': step_api_body,
+
+                'get_path': $("#get_path").val(),
+                'get_zz': $("#get_zz").val(),
+                'assert_zz': $("#assert_zz").val(),
+                'assert_qz': $("#assert_qz").val(),
+                'assert_path': $("#assert_path").val(),
+
             }, function (ret) {
                 case_id = document.getElementById("Case_id").innerText;
                 refresh_left_div(case_id);
@@ -572,7 +606,6 @@
         $("#right_div").animate({left: '100%'}, 'fast');
         $("#right_div").css("display", "none");
     }
-
 
     //初始化步骤详情页
     function clear_step() {
@@ -603,6 +636,12 @@
         document.getElementById('raw_Json').value = '';
         document.getElementById('raw_Html').value = '';
         document.getElementById('raw_Xml').value = '';
+
+        document.getElementById('get_path').value = '';
+        document.getElementById('get_zz').value = '';
+        document.getElementById('assert_path').value = '';
+        document.getElementById('assert_qz').value = '';
+        document.getElementById('assert_zz').value = '';
 
     }
 </script>
