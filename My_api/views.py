@@ -30,15 +30,16 @@ def child(request, eid, oid, ooid):
 def child_json(eid, oid='', ooid=''):
     res = {}
     if eid == 'Home.html':
-        date = DB_apis_log.objects.all()
+        date = DB_home_href.objects.all()
         home_log = DB_apis_log.objects.filter(user_id=oid)[::-1]
+        hosts = DB_host.objects.all()
+        from django.contrib.auth.models import User
+        user_projects = DB_project.objects.filter(user=User.objects.filter(id=oid)[0].username)
         if ooid == '':
-            res = {"hrefs": date, "home_log": home_log}
+            res = {"hrefs": date, "home_log": home_log, "hosts": hosts, "user_projects": user_projects}
         else:
             log = DB_apis_log.objects.filter(id=ooid)[0]
-            ic(date, home_log, oid)
-            res = {"hrefs": date, "home_log": home_log, "log": log}
-            ic(res)
+            res = {"hrefs": date, "home_log": home_log, "log": log, hosts: "hosts", "user_projects": user_projects}
 
     if eid == 'project_list.html':
         date = DB_project.objects.all()
@@ -47,7 +48,17 @@ def child_json(eid, oid='', ooid=''):
     if eid == 'P_apis.html':
         project = DB_project.objects.filter(id=oid)[0]
         apis = DB_apis.objects.filter(project_id=oid)
-        res = {"project": project, 'apis': apis}
+
+        for i in apis:
+            try:
+                i.short_url = i.api_url.split('?')[0][:50]
+            except:
+                i.short_url = ''
+        project_header = DB_project_header.objects.filter(project_id=oid)
+        hosts = DB_host.objects.all()
+        project_host = DB_project_host.objects.filter(project_id=oid)
+        res = {"project": project, 'apis': apis, 'project_header': project_header, 'hosts': hosts,
+               'project_host': project_host}
         ic(project)
 
     if eid == 'P_project_set.html':
@@ -60,8 +71,11 @@ def child_json(eid, oid='', ooid=''):
         project = DB_project.objects.filter(id=oid)[0]
         Cases = DB_cases.objects.filter(project_id=oid)
         apis = DB_apis.objects.filter(project_id=oid)
-        res = {"project": project, "Cases": Cases, "apis": apis}
-        # ic(res)
+        project_header = DB_project_header.objects.filter(project_id=oid)
+        hosts = DB_host.objects.all()
+        project_host = DB_project_host.objects.filter(project_id=oid)
+        res = {"project": project, "Cases": Cases, "apis": apis, 'project_header': project_header, 'hosts': hosts,
+               'project_host': project_host}
 
     return res
 
@@ -226,7 +240,7 @@ def save_project_set(request, id):
 def project_api_add(request, Pid):
     project_id = Pid
     ic(project_id)
-    DB_apis.objects.create(project_id=project_id, api_models='none')
+    DB_apis.objects.create(project_id=project_id, api_models='none', api_url='')
     return HttpResponseRedirect('/apis/%s/' % project_id)
 
 
@@ -262,6 +276,7 @@ def Api_save(request):
     ts_header = request.GET['ts_header']
     ts_body_method = request.GET['ts_body_method']
     api_name = request.GET['api_name']
+    ts_project_headers = request.GET['ts_project_headers']
     ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
 
     if ts_body_method == '返回体':
@@ -274,7 +289,7 @@ def Api_save(request):
     else:
         ts_api_body = request.GET['ts_api_body']
         ic(ts_api_body)
-
+    print(ts_project_headers)
     # 保存数据
     DB_apis.objects.filter(id=api_id).update(
         api_models=ts_method,
@@ -283,7 +298,8 @@ def Api_save(request):
         api_header=ts_header,
         body_method=ts_body_method,
         api_body=ts_api_body,
-        name=api_name
+        name=api_name,
+        public_header=ts_project_headers
     )
 
     return HttpResponse('success')
@@ -305,7 +321,14 @@ def Api_send(request):
     ts_header = request.GET['ts_header']
     api_name = request.GET['api_name']
     ts_body_method = request.GET['ts_body_method']
-    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
+    ts_project_headers = request.GET['ts_project_headers'].split(',')
+    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name, ts_project_headers)
+    # 处理域名host
+    if ts_host[:4] == '全局域名':
+        project_host_id = ts_host.split('-')[1]
+        ic(DB_project_host.objects.filter(id=project_host_id)[0])
+        ts_host = DB_project_host.objects.filter(id=project_host_id)[0].host
+
     if ts_body_method == '返回体':
         api = DB_apis.objects.filter(id=api_id).values()[0]
         ic(api)
@@ -323,6 +346,12 @@ def Api_send(request):
         header = json.loads(ts_header)  # 处理header
     except Exception as e:
         return HttpResponse(f'请求头不符合json格式！原因：{e}')
+
+    for i in ts_project_headers:
+        project_header = DB_project_header.objects.filter(id=i)[0]
+        header[project_header.key] = project_header.value
+
+    ic(f'这是header{header}')
 
     # 拼接完整的url
     if ts_host[-1] == '/' and ts_url[0] == '/':  # 都有/
@@ -349,6 +378,17 @@ def Api_send(request):
             for i in eval(ts_api_body):
                 payload[0] = i[1]
             response = requests.request(ts_method.upper(), url, headers=header, data=payload)
+
+        elif ts_body_method == 'GraphQL':
+            header['Content-Type'] = 'application/x-www-form-urlencoded'
+            query = ts_api_body.split('*WQRF*')[0]
+            graphql = ts_api_body.split('*WQRF*')[1]
+            try:
+                eval(graphql)
+            except:
+                graphql = {}
+            payload = f'{"query": {query}, "variables": {graphql}}'
+            response = requests.request(ts_method.upper(), url, headers=header, data=payload)
         else:
             if ts_body_method == 'Text':
                 header['Content-Type'] = 'text/plain'
@@ -363,6 +403,7 @@ def Api_send(request):
             response = requests.request(ts_method.upper(), url, headers=header, data=ts_api_body.encode('utf-8'))
         # 把返回值传递给前端页面
         response.encoding = 'utf-8'
+        DB_host.objects.update_or_create(host=ts_host)
         return HttpResponse(response.text)
     except Exception as e:
         return HttpResponse(str(e))
@@ -399,6 +440,7 @@ def copy_api(request):
 
 # 异常值发送请求
 def error_request(request):
+    ic(request)
     api_id = request.GET['api_id']
     ic(api_id)
     new_body = request.GET['new_body']
@@ -413,7 +455,6 @@ def error_request(request):
     host = api.api_host
     header = api.api_header
     body_method = api.body_method
-    header = json.loads(header)
     try:
         # 发送请求获取返回值
         header = json.loads(header)  # 处理header
@@ -466,6 +507,7 @@ def Api_send_home(request):
     ts_header = request.GET['ts_header']
     ts_body_method = request.GET['ts_body_method']
     ts_api_body = request.GET['ts_api_body']
+    ic(ts_api_body)
     # 发送请求获取返回值
     try:
         header = json.loads(ts_header)  # 处理header
@@ -507,6 +549,17 @@ def Api_send_home(request):
                 payload[i[0]] = i[1]
             response = requests.request(ts_method.upper(), url, headers=header, data=payload)
 
+        elif ts_body_method == 'GraphQL':
+            header['Content-Type'] = 'application/x-www-form-urlencoded'
+            query = ts_api_body.split('*WQRF*')[0]
+            graphql = ts_api_body.split('*WQRF*')[1]
+            try:
+                eval(graphql)
+            except:
+                graphql = {}
+            payload = f'{"query": {query}, "variables": {graphql}}'
+            response = requests.request(ts_method.upper(), url, headers=header, data=payload)
+
         else:  # 这时肯定是raw的五个子选项：
             if ts_body_method == 'Text':
                 header['Content-Type'] = 'text/plain'
@@ -526,6 +579,7 @@ def Api_send_home(request):
 
         # 把返回值传递给前端页面
         response.encoding = "utf-8"
+        DB_host.objects.update_or_create(host=ts_host)
         return HttpResponse(response.text)
     except Exception as e:
         return HttpResponse(str(e))
@@ -534,8 +588,8 @@ def Api_send_home(request):
 # 首页获取请求记录
 def get_home_log(request):
     user_id = request.user.id
-    all_logs = DB_apis_log.objects.filter(user_id=user_id)
-    ret = {"all_log": list(all_logs.values("id", "api_method", "api_url"))[::-1]}
+    all_logs = DB_apis_log.objects.filter(user_id=user_id).values()
+    ret = {"all_log": list(all_logs.values("id", "api_method", 'api_host', "api_url"))[::-1]}
     return HttpResponse(json.dumps(ret), content_type='application/json')
 
 
@@ -617,9 +671,11 @@ def save_step(request):
     step_url = request.GET['step_url']
     step_host = request.GET['step_host']
     step_header = request.GET['step_header']
+    ts_project_headers = request.GET['ts_project_headers']
+    ic(ts_project_headers)
+    mock_res = request.GET['mock_res']
     step_body_method = request.GET['step_body_method']
     step_api_body = request.GET['step_api_body']
-    ic(request.GET['get_path'])
     get_path = request.GET['get_path']
     get_zz = request.GET['get_zz']
     assert_zz = request.GET['assert_zz']
@@ -632,6 +688,8 @@ def save_step(request):
                                               api_url=step_url,
                                               api_host=step_host,
                                               api_header=step_header,
+                                              public_header=ts_project_headers,
+                                              mock_res=mock_res,
                                               api_body_method=step_body_method,
                                               api_body=step_api_body,
                                               get_path=get_path,
@@ -653,5 +711,78 @@ def step_get_api(request):
 # 运行大用例
 def Run_Case(request):
     Case_id = request.GET['Case_id']
+    Case = DB_cases.objects.filter(id=Case_id)[0]
+    steps = DB_step.objects.filter(Case_id=Case_id)
+    ic(steps)
+    from My_api.run_case import run
+    run(Case.id, Case.name, steps)
+
     return HttpResponse('')
 
+
+# 查看报告
+def look_report(request, eid):
+    Case_id = eid
+
+    return render(request, 'Reports/%s.html' % Case_id)
+
+
+# 保存项目公共请求头
+def save_project_header(request):
+    project_id = request.GET['project_id']
+    req_names = request.GET['req_names']
+    req_keys = request.GET['req_keys']
+    req_values = request.GET['req_values']
+    req_ids = request.GET['req_ids']
+
+    ic(project_id, req_names, req_keys, req_values, req_ids)
+
+    names = req_names.split(',')
+    keys = req_keys.split(',')
+    values = req_values.split(',')
+    ids = req_ids.split(',')
+    ic(names, keys, values, ids)
+    for i in range(len(ids)):
+        if names[i] != '':
+            if ids[i] == 'new':
+                DB_project_header.objects.create(project_id=project_id, name=names[i], key=keys[i], value=values[i])
+            else:
+                DB_project_header.objects.filter(id=ids[i]).update(name=names[i], key=keys[i], value=values[i])
+        else:
+            try:
+                DB_project_header.objects.filter(id=ids[i]).delete()
+            except:
+                pass
+    return HttpResponse('')
+
+
+# 保存用例名称
+def save_case_name(request):
+    Id = request.GET['id']
+    name = request.GET['name']
+    ic(Id, name)
+    DB_cases.objects.filter(id=Id).update(name=name)
+    return HttpResponse('')
+
+
+# 保存项目公共域名
+def save_project_host(request):
+    project_id = request.GET['project_id']
+    req_names = request.GET['req_names']
+    req_hosts = request.GET['req_hosts']
+    req_ids = request.GET['req_ids']
+    names = req_names.split(',')
+    hosts = req_hosts.split(',')
+    ids = req_ids.split(',')
+    for i in range(len(ids)):
+        if names[i] != '':
+            if ids[i] == 'new':
+                DB_project_host.objects.create(project_id=project_id, name=names[i], host=hosts[i])
+            else:
+                DB_project_host.objects.filter(id=ids[i]).update(name=names[i], host=hosts[i])
+        else:
+            try:
+                DB_project_host.objects.filter(id=ids[i]).delete()
+            except:
+                pass
+    return HttpResponse('')
