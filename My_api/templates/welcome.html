@@ -13,6 +13,25 @@
 </head>
 <body>
 <nav id="navbar" class="">
+    <div style="color: white;margin-top: 5px;margin-bottom: 5px;margin-left: 5px;text-align: center;">
+        欢迎你：<span>{{ username }}</span>
+        <br>
+        <img id="img_1" alt="" style="width: 50%;" class="img-circle img-thumbnail">
+        <script>
+            document.getElementById('img_1').src = "/static/img/{{ userimg }}";
+        </script>
+        <a href="javascript:show_upload()" class="glyphicon glyphicon-pencil"></a>
+    </div>
+    <form style="display: none;" id="upload_file" action="/user_upload/" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileUpload"
+               style="margin-left: 45px;width: 65px;height: 20px;font-size: xx-small;float: left"/>
+        <button onclick="upload_py()" style="color: black;width: 64px;height: 21px;font-size: xx-small"> 上传头像</button>
+    </form>
+    <script>
+        function show_upload() {
+            document.getElementById('upload_file').style.display = 'block';
+        }
+    </script>
     <ul>
         <li>
             <a href="/project_list/">
@@ -39,7 +58,7 @@
 </nav>
 
 <button id="menu_btn" onclick="display_menu()"
-        style="position: absolute;left: 188px;top: 0;z-index: 999;height: 35px;
+        style="position: absolute;left: 188px;top: 40%;z-index: 999;height: 35px;
            background-color: #353c48;color: white;border: 0;font-size: x-large;
         "><
 </button>
@@ -85,13 +104,10 @@
 <script type="text/javascript">
     $(function () {
         var rvnMenu = $("#navbar").rvnm({
-//                    mode: 'mobile',
-//                    responsive: false,
-            searchable: true,
+            searchable: false,
             theme: 'dark-lesb'
         });
         console.log(rvnMenu);
-//                rvnMenu.setMode('minimal');
         rvnMenu.setTheme('dark-ruby');
     });
 </script>
@@ -99,12 +115,11 @@
 <div id="page1"></div>
 
 <script>
-    $('#page1').load('/child/' + '{{ whichHTML }}/{{ oid }}/')
+    $('#page1').load('/child/' + '{{ whichHTML }}/{{ oid }}/{{ ooid }}/')
 </script>
 
 <script>
-    if ("{{ whichHTML }}" !== 'Home.html')
-        document.getElementById("menu_btn").click();
+    document.getElementById("menu_btn").click();
 </script>
 </body>
 </html>

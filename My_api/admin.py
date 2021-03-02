@@ -11,16 +11,9 @@ admin.site.register(DB_Roast)
 admin.site.register(DB_home_href)
 admin.site.register(DB_project)
 admin.site.register(DB_apis)
-
-# class DefaultAdminSite(LazyObject):
-#     def _setup(self):
-#         AdminSiteClass = import_string(apps.get_app_config('admin').default_site)
-#         self._wrapped = AdminSiteClass()
-#
-#
-# # This global object represents the default admin site, for the
-# # You Adminsite using the (Simple)Adminconfig default site
-# # attribute。You
-# # also instantiate Adminsite in your own code to create a
-#
-# site = DefaultAdminSite()
+admin.site.register(DB_apis_log)
+admin.site.register(DB_cases)
+admin.site.register(DB_step)
+admin.site.register(DB_project_header)
+admin.site.register(DB_host)
+admin.site.register(DB_project_host)
