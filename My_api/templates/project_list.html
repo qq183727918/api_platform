@@ -58,6 +58,7 @@
 <script>
     function delete_project(id) {
         if (confirm('确定是否要删除该项目么？') === false) {
+            return
         }
         $.get('/delete_project/', {
             'id': id

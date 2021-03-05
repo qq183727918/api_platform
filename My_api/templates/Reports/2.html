@@ -116,9 +116,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">接口测试平台测试报告：赵静雯</h1>
 <p class='attribute'><strong>测试人员 : </strong> 最棒QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2021-03-02 15:10:21</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:03.122016</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 1，错误 1，通过率= 0.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2021-03-03 13:38:11</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:06.002840</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 2，错误 2，通过率= 0.00%</p>
 
 <p class='description'>用例描述</p>
 </div>
@@ -128,7 +128,7 @@ function html_escape(s) {
 <a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
 <a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 1 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 2 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -150,15 +150,15 @@ function html_escape(s) {
 
 <tr class='errorClass warning'>
     <td>My_api.run_case.Test: 测试类</td>
-    <td class="text-center">1</td>
+    <td class="text-center">2</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center">1</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center">2</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
 <tr id='ft1_1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_001: 用来调试返回值的</div></td>
+    <td class='errorCase'><div class='testcase'>test_001: 我是新步骤www</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
@@ -168,37 +168,65 @@ function html_escape(s) {
     <div id='div_ft1_1' class="collapse in">
     <pre>
     
-ft1_1: 
-【host】： https://www.baidu.com
-【url】： /sugrec?prod=pc_his&amp;from=pc_web&amp;json=1&amp;sid=32812_1464_33049_33059_33099_33101_32962_32846_22160&amp;hisdata=&amp;_t=1606109114553&amp;req=2&amp;csor=0
-【header】： {'剑灵': '剑灵'}
-【method】： post
-【body_method】： form-data
-【body】： [["q","q"]]
+ft1_1: Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "D:\automate\api_platform\My_api\run_case.py", line 200, in tool
+  File "D:\automate\api_platform\My_api\run_case.py", line 229, in tool
     Test.demo(self, step)  # 7
-  File "D:\automate\api_platform\My_api\run_case.py", line 113, in demo
-    response = requests.request(api_method.upper(), url, headers=header, data=payload, files=files)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\requests\api.py", line 61, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\requests\sessions.py", line 530, in request
-    resp = self.send(prep, **send_kwargs)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\requests\sessions.py", line 643, in send
-    r = adapter.send(request, **kwargs)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\requests\adapters.py", line 439, in send
-    resp = conn.urlopen(
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py", line 670, in urlopen
-    httplib_response = self._make_request(
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\urllib3\connectionpool.py", line 392, in _make_request
-    conn.request(method, url, **httplib_request_kw)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1230, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1271, in _send_request
-    self.putheader(hdr, value)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\http\client.py", line 1195, in putheader
-    header = header.encode('ascii')
-UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+  File "D:\automate\api_platform\My_api\run_case.py", line 86, in demo
+    project_header = DB_project_header.objects.filter(id=i)[0]
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\lookups.py", line 76, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_003: 我是新步骤</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in">
+    <pre>
+    
+ft1_2: Traceback (most recent call last):
+  File "D:\automate\api_platform\My_api\run_case.py", line 229, in tool
+    Test.demo(self, step)  # 7
+  File "D:\automate\api_platform\My_api\run_case.py", line 48, in demo
+    ts_project_headers = step.public_header.split(',')  # 公共请求头
+AttributeError: 'NoneType' object has no attribute 'split'
 
 
     </pre>
@@ -208,10 +236,10 @@ UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordin
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
+    <td>2</td>
     <td>通过率：0.00%</td>
 </tr>
 </table>

@@ -23,111 +23,88 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/__pycache__/views_tools.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0011_db_step_api_login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0012_db_global_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0013_db_project_user_id.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0011_db_step_api_login.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0012_db_global_data.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0013_db_project_user_id.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/css/htmleaf-demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/css/progresscircle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/jQuery之家.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/js/progresscircle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/readme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/related/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/related/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_api/login/login_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_api/sign/sign_user_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_service/login/login_user_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_service/sign/sign_user_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/params/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/magicalValue.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/return_params.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/params/magicalValue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/params/return_params.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/static/public_method/public_method.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/templates/P_global_data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/run_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/P_apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_apis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/P_cases.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_cases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/P_project_set.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_project_set.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/Reports/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/Reports/2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/project_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/zhengjiao.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/zhengjiao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/views_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/__init__.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/My_api/templates/P_apis.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="427" selection-start-line="427" selection-end-line="427" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#11859#13100#0#HTML" />
-                <element signature="e#13132#16430#0#HTML" />
-                <element signature="e#16456#16525#0#HTML" />
-                <element signature="e#17176#17779#0#HTML" />
-                <element signature="e#17835#18439#0#HTML" />
-                <element signature="e#18478#18562#0#HTML" />
-                <element signature="e#18607#18697#0#HTML" />
-                <element signature="e#18736#18820#0#HTML" />
-                <element signature="e#18859#18943#0#HTML" />
-                <element signature="e#18981#19064#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/My_api/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="235" selection-start-line="235" selection-end-line="235" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api_platform/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/My_api/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ts_close</find>
-      <find>新增接口</find>
-      <find>small</find>
-      <find>调试</find>
-      <find>新增</find>
-      <find>project_api_add</find>
-    </findStrings>
   </component>
   <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
     <envs>
@@ -147,6 +124,11 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -157,25 +139,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions" />
-        <option value="$PROJECT_DIR$/My_api/tests.py" />
-        <option value="$PROJECT_DIR$/My_api/templates/project_list.html" />
-        <option value="$PROJECT_DIR$/My_api/views.py" />
-        <option value="$PROJECT_DIR$/My_api/templates/P_apis.html" />
-      </list>
-    </option>
-  </component>
-  <component name="JupyterTrust" id="99809a70-d687-4839-bb90-45e6053a00b5" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="30" />
-    <option name="y" value="207" />
-    <option name="width" value="1346" />
-    <option name="height" value="678" />
-  </component>
-  <component name="JupyterTrust" id="9f97fab8-99bb-4001-becc-053a67bbbaad" />
+  <component name="JupyterTrust" id="34008d0a-34b9-4808-8668-53367c8151a0" />
   <component name="ProjectId" id="1oso5R90bBdDsstiDNOfqhyGsnM" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="新增" />
@@ -188,12 +152,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -207,15 +172,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\automate\api_platform\My_api\static\img" />
-      <recent name="D:\automate\api_platform\My_api\static\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\automate\api_platform\My_api\static\img" />
       <recent name="D:\automate\api_platform\My_api\static" />
+      <recent name="D:\automate\api_platform\My_api\static\lxq_platform_service" />
+      <recent name="D:\automate\api_platform\My_api\static\img" />
       <recent name="D:\api_platform\api_platform\My_api\static\img" />
       <recent name="D:\api_platform\api_platform\My_api\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\automate\api_platform\My_api\static" />
+      <recent name="D:\automate\api_platform\My_api\static\img" />
+      <recent name="D:\automate\api_platform\My_api\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,23 +191,11 @@
         <option value="Python.DjangoServer" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-    <option name="contentProportion" value="0.11360124" />
   </component>
-  <component name="RunManager" selected="Python.tests"/>
-    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/api_platform/My_api/templates/home.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript 调试.P_global_data.html">
+    <configuration name="P_global_data.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/api_platform/My_api/templates/P_global_data.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-  <component name="RunManager" selected="Python.tests">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="api_platform" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,28 +210,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="api_platform" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My_api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My_api/tests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -355,19 +288,12 @@
     </configuration>
     <list>
       <item itemvalue="Django 服务器.api_platform" />
-      <item itemvalue="JavaScript 调试.home.html" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.tests" />
+      <item itemvalue="JavaScript 调试.P_global_data.html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tests" />
-      </list>
-    </recent_temporary>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.tests" />
-        <item itemvalue="JavaScript 调试.home.html" />
+        <item itemvalue="JavaScript 调试.P_global_data.html" />
       </list>
     </recent_temporary>
   </component>
@@ -427,14 +353,6 @@
       <option name="project" value="LOCAL" />
       <updated>1614090981170</updated>
     </task>
-    <task id="LOCAL-00005" summary="默认的">
-      <created>1614265007237</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1614265007237</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <task id="LOCAL-00005" summary="django">
       <created>1614353862459</created>
       <option name="number" value="00005" />
@@ -466,9 +384,6 @@
     <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6962000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -477,33 +392,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25718608" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27903226" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32903227" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="9" sideWeight="0.49924356" visible="true" weight="0.46935484" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32903227" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.46935484" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -514,36 +402,6 @@
         <entry key="MAIN">
           <value>
             <State />
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
           </value>
         </entry>
       </map>
@@ -553,42 +411,17 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="django" />
-    <MESSAGE value="默认的" />
-    <option name="LAST_COMMIT_MESSAGE" value="默认的" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/My_api/views.py</url>
-          <line>284</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Python.DjangoServer">
-        <watch expression="payload" language="Python" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/api$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614261898705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>payload</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
+    <option name="LAST_COMMIT_MESSAGE" value="django" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614308472765">
+    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614930696230">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614308472765" />
+    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614930696230" />
+    <state x="746" y="379" key="#通知" timestamp="1614912186832">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="746" y="379" key="#通知/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614912186832" />
     <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1614519405994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -597,45 +430,45 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="844" y="313" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299873332" />
-    <state width="1223" height="201" key="GridCell.Tab.0.bottom" timestamp="1614519438030">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="362" key="GridCell.Tab.0.bottom" timestamp="1614931278725">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="293" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037725" />
+    <state width="1651" height="362" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
     <state width="1223" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1223" height="201" key="GridCell.Tab.0.center" timestamp="1614519438030">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="362" key="GridCell.Tab.0.center" timestamp="1614931278725">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="293" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037724" />
+    <state width="1651" height="362" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
     <state width="1223" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1223" height="201" key="GridCell.Tab.0.left" timestamp="1614519438030">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="362" key="GridCell.Tab.0.left" timestamp="1614931278725">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="293" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037724" />
+    <state width="1651" height="362" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
     <state width="1223" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1223" height="201" key="GridCell.Tab.0.right" timestamp="1614519438030">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="362" key="GridCell.Tab.0.right" timestamp="1614931278725">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="293" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614332037725" />
+    <state width="1651" height="362" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
     <state width="1223" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1223" height="243" key="GridCell.Tab.1.bottom" timestamp="1614504934054">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="259" key="GridCell.Tab.1.bottom" timestamp="1614742566067">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614325495800" />
+    <state width="1651" height="259" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742566067" />
     <state width="1223" height="243" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614504934054" />
-    <state width="1223" height="243" key="GridCell.Tab.1.center" timestamp="1614504934054">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="259" key="GridCell.Tab.1.center" timestamp="1614742566067">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614325495800" />
+    <state width="1651" height="259" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742566067" />
     <state width="1223" height="243" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1614504934054" />
-    <state width="1223" height="243" key="GridCell.Tab.1.left" timestamp="1614504934054">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="259" key="GridCell.Tab.1.left" timestamp="1614742566067">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614325495800" />
+    <state width="1651" height="259" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742566067" />
     <state width="1223" height="243" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1614504934054" />
-    <state width="1223" height="243" key="GridCell.Tab.1.right" timestamp="1614504934054">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1651" height="259" key="GridCell.Tab.1.right" timestamp="1614742566067">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="376" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614325495800" />
+    <state width="1651" height="259" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742566067" />
     <state width="1223" height="243" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614504934054" />
     <state x="565" y="226" width="996" height="707" key="SettingsEditor" timestamp="1614299998516">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -645,98 +478,31 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614519545295" />
-    <state x="518" y="371" width="1353" height="598" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1614300949519">
+    <state width="1031" height="563" key="XDebugger.FullValuePopup" timestamp="1614742505785">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="518" y="371" width="1353" height="598" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614300949519" />
+    <state width="1031" height="563" key="XDebugger.FullValuePopup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742505785" />
+    <state x="822" y="413" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1614846365469">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="822" y="413" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614846365469" />
+    <state x="518" y="371" width="1353" height="598" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1614928777301">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="518" y="371" width="1353" height="598" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614928777301" />
     <state x="840" y="453" width="588" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1614299994586">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="840" y="453" width="588" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299994586" />
-    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1614407368446">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="573" y="197" width="896" height="915" key="search.everywhere.popup" timestamp="1614758578884">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="573" y="197" width="896" height="915" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614758578884" />
     <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614407368446" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl"/>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/api_platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614325510564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-  <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/python/python38/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My_api/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My_api/templates/project_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api_platform/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="45" column="26" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My_api/templates/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="47" selection-start-line="47" selection-end-line="59" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My_api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="235" selection-start-line="235" selection-end-line="235" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My_api/templates/P_apis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="427" selection-start-line="427" selection-end-line="427" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11859#13100#0#HTML" />
-            <element signature="e#13132#16430#0#HTML" />
-            <element signature="e#16456#16525#0#HTML" />
-            <element signature="e#17176#17779#0#HTML" />
-            <element signature="e#17835#18439#0#HTML" />
-            <element signature="e#18478#18562#0#HTML" />
-            <element signature="e#18607#18697#0#HTML" />
-            <element signature="e#18736#18820#0#HTML" />
-            <element signature="e#18859#18943#0#HTML" />
-            <element signature="e#18981#19064#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/api_platform$Unittest_in_run_case_py.coverage" NAME="Unittest in run_case.py Coverage Results" MODIFIED="1614564750688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
+    <SUITE FILE_PATH="coverage/api$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614261898705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
   </component>
 </project>

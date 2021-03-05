@@ -24,6 +24,7 @@ class DB_project(models.Model):
     name = models.CharField(max_length=100, null=True)  # 项目名称
     remark = models.CharField(max_length=1000, null=True)  # 项目描述
     user = models.CharField(max_length=15, null=True)  # 项目创建者名字
+    user_id = models.CharField(max_length=10, null=True)  # 项目创建者名id
     other = models.CharField(max_length=200, null=True)  # 项目其他创建者
 
     def __str__(self):
@@ -98,6 +99,7 @@ class DB_step(models.Model):
     assert_path = models.CharField(max_length=500, null=True)  # 断言返回值-路径法
     mock_res = models.CharField(max_length=1000, null=True)  # mock返回值
     public_header = models.CharField(max_length=1000, null=True)  # 全局变量-请求头
+    api_login = models.CharField(max_length=10, null=True)  # 是否带登录态
 
     def __str__(self):
         return self.name
@@ -143,3 +145,12 @@ class DB_login(models.Model):
 
     def __str__(self):
         return self.project_id
+
+
+class DB_global_data(models.Model):
+    name = models.CharField(max_length=20, null=True)  # 名字
+    user_id = models.CharField(max_length=10, null=True)  # 所属用户id
+    data = models.TextField(null=True)  # 存储的所有数据
+
+    def __str__(self):
+        return self.name

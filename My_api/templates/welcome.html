@@ -10,11 +10,26 @@
     <link type="text/css" rel="stylesheet" href="/static/201908059658/src/jquery-rvnm.css"/>
 
     <link type="text/css" rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+
+
+    <style>
+        .chamfer {
+            background: linear-gradient(41deg, transparent 10px, #66defd 0) top left,
+            linear-gradient(-90deg, transparent 0px, #adfdee 0) top right,
+            linear-gradient(-90deg, transparent 0px, #cbffbd 0) bottom right,
+            linear-gradient(45deg, transparent 21px, #b0fde2 0) bottom left;
+            background-size: 49% 48%;
+            background-repeat: no-repeat;
+
+        }
+    </style>
 </head>
 <body>
 <nav id="navbar" class="">
     <div style="color: white;margin-top: 5px;margin-bottom: 5px;margin-left: 5px;text-align: center;">
-        欢迎你：<span>{{ username }}</span>
+        欢迎你：<span>{{ username }}</span>&nbsp;<a href="/logout/">
+        <button style="background-color: #353C48;text-decoration: none;color: #FFFFFFCC">退出</button>
+    </a>
         <br>
         <img id="img_1" alt="" style="width: 50%;" class="img-circle img-thumbnail">
         <script>
@@ -85,20 +100,11 @@
         }
     }
 </script>
-<div style="float: right;">
-    <a href="/home/">
-        <button style="height: 35px;
-        font-size: large;position: absolute;top: 0;right: 0;
-            width: 100px;background-color: #353c48;color:white;">🏠主页
-        </button>
-    </a><br>
-    <a href="/logout/">
-        <button style="height: 35px;
-        font-size: large;position: absolute;top: 35px;right: 0;
-            width: 100px;background-color: #353c48;color:
-            white;border-radius: 0 0 0 10px;font-size: large;">🏡退出
-        </button>
-    </a>
+
+<div class="chamfer" style="height: 30px;width: 100px;position: fixed;right: 0;top: 0;">
+    <strong>
+        <a href="/home/" style="font-size: large;padding-left: 30px;color: #00372e;text-decoration: none"> HOME </a>
+    </strong>
 </div>
 <br>
 

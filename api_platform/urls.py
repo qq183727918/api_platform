@@ -19,9 +19,6 @@ from django.contrib import admin
 from My_api.views import *
 from My_api.views_tools import *
 
-
-
-
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
@@ -82,8 +79,14 @@ urlpatterns = [
 
     url(r'^project_get_login/$', project_get_login),  # 获取项目登录态接口
     url(r'^project_login_save/$', project_login_save),  # 保存项目登录态接口
+    url(r'^project_login_send/$', project_login_send),  # 调试请求登录态接口
+    url(r'^Home_save_api/$', Home_save_api),  # 首页保存请求数据
+    url(r'^search/$', search),  # 首页搜索功能
+    url(r'^global_data/(?P<Id>.*)/$', global_data),  # 进入全局变量
 
     # --------------------小工具-------------------- #
-    url(r'^tools_zhengjiao/$', zhengjiao),  #进入小工具页面
+    url(r'^tools_zhengjiao/$', zhengjiao),  # 进入小工具页面
+    url(r'^zhengjiao_play/$', zhengjiao_play),  # 正交工具运行
+    url(r'^zhengjiao_excel/$', zhengjiao_excel),  # 正交结果导出
 
 ]
