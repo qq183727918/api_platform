@@ -81,9 +81,9 @@ def child_json(eid, oid='', ooid=''):
                 i.short_url = i.api_url.split('?')[0][:50]
             except:
                 i.short_url = ''
-        project_header = DB_project_header.objects.filter(project_id=oid)
-        hosts = DB_host.objects.all()
-        project_host = DB_project_host.objects.filter(project_id=oid)
+        project_header = DbProjectHeader.objects.filter(project_id=oid)
+        hosts = DbHost.objects.all()
+        project_host = DbProjectHost.objects.filter(project_id=oid)
         res = {"project": project, 'apis': apis, 'project_header': project_header, 'hosts': hosts,
                'project_host': project_host}
         ic(project)
@@ -98,14 +98,14 @@ def child_json(eid, oid='', ooid=''):
         project = DbProject.objects.filter(id=oid)[0]
         Cases = DB_cases.objects.filter(project_id=oid)
         apis = DbApis.objects.filter(project_id=oid)
-        project_header = DB_project_header.objects.filter(project_id=oid)
+        project_header = DbProjectHeader.objects.filter(project_id=oid)
         hosts = DB_host.objects.all()
-        project_host = DB_project_host.objects.filter(project_id=oid)
+        project_host = DbProjectHost.objects.filter(project_id=oid)
         res = {"project": project, "Cases": Cases, "apis": apis, 'project_header': project_header, 'hosts': hosts,
                'project_host': project_host}
 
     if eid == 'P_global_data.html':
-        project = DB_project.objects.filter(id=oid)[0]
+        project = DbProject.objects.filter(id=oid)[0]
         global_data = DB_global_data.objects.filter(user_id=project.user_id)
         res = {"project": project, "global_data": global_data}
         ic(res)
@@ -250,7 +250,7 @@ def delete_project(request):
 
         all_Case = DB_cases.objects.filter(project_id=Id)
         for i in all_Case:
-            DB_step.objects.filter(Case_id=i.id).update(is_delete=1)  # 删除步骤
+            DbStep.objects.filter(Case_id=i.id).update(is_delete=1)  # 删除步骤
             i.update(is_delete=1)  # 用例删除自己
         return HttpResponseRedirect('')
     else:
@@ -374,190 +374,212 @@ def get_bz(request):
 
 # 保存接口
 def Api_save(request):
-    api_id = request.GET['api_id']
-    ts_method = request.GET['ts_method']
-    ts_url = request.GET['ts_url']
-    ts_host = request.GET['ts_host']
-    ts_login = request.GET['ts_login']
-    ts_header = request.GET['ts_header']
-    ts_body_method = request.GET['ts_body_method']
-    api_name = request.GET['api_name']
-    ts_project_headers = request.GET['ts_project_headers']
-    ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        api_id = data['api_id']
+        ts_method = data['ts_method']
+        ts_url = data['ts_url']
+        ts_host = data['ts_host']
+        ts_login = data['ts_login']
+        ts_header = data['ts_header']
+        ts_body_method = data['ts_body_method']
+        api_name = data['api_name']
+        ts_project_headers = data['ts_project_headers']
+        ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
 
-    if ts_body_method == '返回体':
-        api = DbApis.objects.filter(id=api_id).values()[0]
-        ts_body_method = api['last_body_method']
-        ts_api_body = api['last_api_body']
-        ic(ts_body_method, ts_body_method)
+        if ts_body_method == '返回体':
+            api = DbApis.objects.filter(id=api_id).values()[0]
+            ic(api)
+            ts_body_method = api['last_body_method']
+            ts_api_body = api['last_api_body']
+            ic(ts_body_method, ts_body_method)
+        else:
+            ts_api_body = data['ts_api_body']
+            ic(ts_api_body)
+        print(ts_project_headers)
+        # 保存数据
+        DbApis.objects.filter(id=api_id).update(
+            api_models=ts_method,
+            api_url=ts_url,
+            api_login=ts_login,
+            api_host=ts_host,
+            api_header=ts_header,
+            body_method=ts_body_method,
+            api_body=ts_api_body,
+            name=api_name,
+            public_header=ts_project_headers
+        )
+
+        dic = json.dumps({"code": 200, "data": "true", "message": "success"})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        ts_api_body = request.GET['ts_api_body']
-        ic(ts_api_body)
-    print(ts_project_headers)
-    # 保存数据
-    DbApis.objects.filter(id=api_id).update(
-        api_models=ts_method,
-        api_url=ts_url,
-        api_login=ts_login,
-        api_host=ts_host,
-        api_header=ts_header,
-        body_method=ts_body_method,
-        api_body=ts_api_body,
-        name=api_name,
-        public_header=ts_project_headers
-    )
-
-    return HttpResponse('success')
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 查询接口内容
 def get_api_data(request):
-    api_id = request.GET['api_id']
-    api = DbApis.objects.filter(id=api_id).values()[0]
-    return HttpResponse(json.dumps(api), content_type='application/json')
+    if request.method == 'GET':
+        api_id = request.GET['api_id']
+        api = DbApis.objects.filter(id=api_id).values()[0]
+        return HttpResponse(json.dumps(api), content_type='application/json')
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 调试层发送请求
 def Api_send(request):
-    # 提取所有数据
-    api_id = request.GET['api_id']
-    ts_method = request.GET['ts_method']
-    ts_url = request.GET['ts_url']
-    ts_host = request.GET['ts_host']
-    ts_header = request.GET['ts_header']
-    api_name = request.GET['api_name']
-    ts_body_method = request.GET['ts_body_method']
-    ts_project_headers = request.GET['ts_project_headers'].split(',')
-    ts_login = request.GET['ts_login']
-    if ts_login == 'yes':  # 说明要调用登陆态了
-        login_res = project_login_send_for_other(project_id=DB_apis.objects.filter(id=api_id)[0].project_id)
-    else:
-        login_res = {}
-    # 处理域名host
-    if ts_host[:4] == '全局域名':
-        project_host_id = ts_host.split('-')[1]
-        ts_host = DB_project_host.objects.filter(id=project_host_id)[0].host
-    if ts_body_method == '返回体':
-        api = DB_apis.objects.filter(id=api_id)[0]
-        ts_body_method = api.last_body_method
-        ts_api_body = api.last_api_body
-        if ts_body_method in ['', None]:
-            return HttpResponse('请先选择好请求体编码格式和请求体，再点击Send按钮发送请求！')
-    else:
-        ts_api_body = request.GET['ts_api_body']
-        api = DB_apis.objects.filter(id=api_id)
-        api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
-    # 发送请求获取返回值
-    if ts_header == '':
-        ts_header = '{}'
-    try:
-        header = json.loads(ts_header)  # 处理header
-    except:
-        return HttpResponse('请求头不符合json格式！')
+    if request.method == 'POST':
+        datas = json.loads(request.body)
+        ic(datas)
+        # 提取所有数据
+        api_id = datas['api_id']
+        ts_method = datas['ts_method']
+        ts_url = datas['ts_url']
+        ts_host = datas['ts_host']
+        ts_header = datas['ts_header']
+        api_name = datas['api_name']
+        ts_body_method = datas['ts_body_method']
+        ts_project_headers = datas['ts_project_headers'].split(',')
+        ts_login = datas['ts_login']
+        if ts_login == 'yes':  # 说明要调用登陆态了
+            login_res = project_login_send_for_other(project_id=DB_apis.objects.filter(id=api_id)[0].project_id)
+        else:
+            login_res = {}
+        # 处理域名host
+        if ts_host[:4] == '全局域名':
+            project_host_id = ts_host.split('-')[1]
+            ts_host = DbProjectHost.objects.filter(id=project_host_id)[0].host
+        if ts_body_method == '返回体':
+            api = DbApis.objects.filter(id=api_id)[0]
+            ts_body_method = api.last_body_method
+            ts_api_body = api.last_api_body
+            if ts_body_method in ['', None]:
+                return HttpResponse('请先选择好请求体编码格式和请求体，再点击Send按钮发送请求！')
+        else:
+            ts_api_body = datas['ts_api_body']
+            api = DbApis.objects.filter(id=api_id)
+            api.update(last_body_method=ts_body_method, last_api_body=ts_api_body)
+        # 发送请求获取返回值
+        if ts_header == '':
+            ts_header = '{}'
+        try:
+            header = json.loads(ts_header)  # 处理header
+        except:
+            return HttpResponse('请求头不符合json格式！')
 
-    for i in ts_project_headers:
-        if i != '':
-            project_header = DB_project_header.objects.filter(id=i)[0]
-            header[project_header.key] = project_header.value
-    # 拼接完整url
-    if ts_host[-1] == '/' and ts_url[0] == '/':  # 都有/
-        url = ts_host[:-1] + ts_url
-    elif ts_host[-1] != '/' and ts_url[0] != '/':  # 都没有/
-        url = ts_host + '/' + ts_url
-    else:  # 肯定有一个有/
-        url = ts_host + ts_url
-    # 插入登陆态字段
-    ## url插入
-    if '?' not in url:
-        url += '?'
+        for i in ts_project_headers:
+            if i != '':
+                project_header = DB_project_header.objects.filter(id=i)[0]
+                header[project_header.key] = project_header.value
+        # 拼接完整url
+        if ts_host[-1] == '/' and ts_url[0] == '/':  # 都有/
+            url = ts_host[:-1] + ts_url
+        elif ts_host[-1] != '/' and ts_url[0] != '/':  # 都没有/
+            url = ts_host + '/' + ts_url
+        else:  # 肯定有一个有/
+            url = ts_host + ts_url
+        # 插入登陆态字段
+        ## url插入
+        if '?' not in url:
+            url += '?'
+            if type(login_res) == dict:
+                for i in login_res.keys():
+                    url += i + '=' + login_res[i] + '&'
+        else:  # 证明已经有参数了
+            if type(login_res) == dict:
+                for i in login_res.keys():
+                    url += '&' + i + '=' + login_res[i]
+
+        ## header插入
         if type(login_res) == dict:
-            for i in login_res.keys():
-                url += i + '=' + login_res[i] + '&'
-    else:  # 证明已经有参数了
-        if type(login_res) == dict:
-            for i in login_res.keys():
-                url += '&' + i + '=' + login_res[i]
+            header.update(login_res)
 
-    ## header插入
-    if type(login_res) == dict:
-        header.update(login_res)
+        try:
+            if ts_body_method == 'none':
+                if type(login_res) == dict:
+                    response = requests.request(ts_method.upper(), url, headers=header, data={})
+                else:
+                    response = login_res.request(ts_method.upper(), url, headers=header, data={})
 
-    try:
-        if ts_body_method == 'none':
-            if type(login_res) == dict:
-                response = requests.request(ts_method.upper(), url, headers=header, data={})
-            else:
-                response = login_res.request(ts_method.upper(), url, headers=header, data={})
+            elif ts_body_method == 'form-data':
+                files = []
+                payload = {}
+                for i in eval(ts_api_body):
+                    payload[i[0]] = i[1]
+                if type(login_res) == dict:
+                    for i in login_res.keys():
+                        payload[i] = login_res[i]
+                    response = requests.request(ts_method.upper(), url, headers=header, data=payload, files=files)
+                else:
+                    response = login_res.request(ts_method.upper(), url, headers=header, data=payload, files=files)
 
-        elif ts_body_method == 'form-data':
-            files = []
-            payload = {}
-            for i in eval(ts_api_body):
-                payload[i[0]] = i[1]
-            if type(login_res) == dict:
-                for i in login_res.keys():
-                    payload[i] = login_res[i]
-                response = requests.request(ts_method.upper(), url, headers=header, data=payload, files=files)
-            else:
-                response = login_res.request(ts_method.upper(), url, headers=header, data=payload, files=files)
+            elif ts_body_method == 'x-www-form-urlencoded':
+                header['Content-Type'] = 'application/x-www-form-urlencoded'
+                payload = {}
+                for i in eval(ts_api_body):
+                    payload[i[0]] = i[1]
+                if type(login_res) == dict:
+                    for i in login_res.keys():
+                        payload[i] = login_res[i]
+                        ic(url, i)
+                    response = requests.request(ts_method.upper(), url, headers=header, data=payload)
+                else:
+                    response = login_res.request(ts_method.upper(), url, headers=header, data=payload)
 
-        elif ts_body_method == 'x-www-form-urlencoded':
-            header['Content-Type'] = 'application/x-www-form-urlencoded'
-            payload = {}
-            for i in eval(ts_api_body):
-                payload[i[0]] = i[1]
-            if type(login_res) == dict:
-                for i in login_res.keys():
-                    payload[i] = login_res[i]
-                response = requests.request(ts_method.upper(), url, headers=header, data=payload)
-            else:
-                response = login_res.request(ts_method.upper(), url, headers=header, data=payload)
+            elif ts_body_method == 'GraphQL':
+                header['Content-Type'] = 'application/json'
+                query = ts_api_body.split('*WQRF*')[0]
+                graphql = ts_api_body.split('*WQRF*')[1]
+                try:
+                    eval(graphql)
+                except:
+                    graphql = '{}'
+                payload = '{"query":"%s","variables":%s}' % (query, graphql)
+                if type(login_res) == dict:
+                    response = requests.request(ts_method.upper(), url, headers=header, data=payload)
+                else:
+                    response = login_res.request(ts_method.upper(), url, headers=header, data=payload)
 
-        elif ts_body_method == 'GraphQL':
-            header['Content-Type'] = 'application/json'
-            query = ts_api_body.split('*WQRF*')[0]
-            graphql = ts_api_body.split('*WQRF*')[1]
-            try:
-                eval(graphql)
-            except:
-                graphql = '{}'
-            payload = '{"query":"%s","variables":%s}' % (query, graphql)
-            if type(login_res) == dict:
-                response = requests.request(ts_method.upper(), url, headers=header, data=payload)
-            else:
-                response = login_res.request(ts_method.upper(), url, headers=header, data=payload)
+            else:  # 这时肯定是raw的五个子选项：
+                if ts_body_method == 'Text':
+                    header['Content-Type'] = 'text/plain'
 
-        else:  # 这时肯定是raw的五个子选项：
-            if ts_body_method == 'Text':
-                header['Content-Type'] = 'text/plain'
+                if ts_body_method == 'JavaScript':
+                    header['Content-Type'] = 'text/plain'
 
-            if ts_body_method == 'JavaScript':
-                header['Content-Type'] = 'text/plain'
+                if ts_body_method == 'Json':
+                    ts_api_body = json.loads(ts_api_body)
+                    for i in login_res.keys():
+                        ts_api_body[i] = login_res[i]
+                    ts_api_body = json.dumps(ts_api_body)
+                    header['Content-Type'] = 'text/plain'
 
-            if ts_body_method == 'Json':
-                ts_api_body = json.loads(ts_api_body)
-                for i in login_res.keys():
-                    ts_api_body[i] = login_res[i]
-                ts_api_body = json.dumps(ts_api_body)
-                header['Content-Type'] = 'text/plain'
+                if ts_body_method == 'Html':
+                    header['Content-Type'] = 'text/plain'
 
-            if ts_body_method == 'Html':
-                header['Content-Type'] = 'text/plain'
+                if ts_body_method == 'Xml':
+                    header['Content-Type'] = 'text/plain'
+                if type(login_res) == dict:
+                    response = requests.request(ts_method.upper(), url, headers=header,
+                                                data=ts_api_body.encode('utf-8'))
+                else:
+                    response = login_res.request(ts_method.upper(), url, headers=header,
+                                                 data=ts_api_body.encode('utf-8'))
+            # 把返回值传递给前端页面
+            response.encoding = "utf-8"
 
-            if ts_body_method == 'Xml':
-                header['Content-Type'] = 'text/plain'
-            if type(login_res) == dict:
-                response = requests.request(ts_method.upper(), url, headers=header, data=ts_api_body.encode('utf-8'))
-            else:
-                response = login_res.request(ts_method.upper(), url, headers=header, data=ts_api_body.encode('utf-8'))
-        # 把返回值传递给前端页面
-        response.encoding = "utf-8"
+            DbHost.objects.update_or_create(host=ts_host)
 
-        DB_host.objects.update_or_create(host=ts_host)
-
-        return HttpResponse(response.text)
-    except Exception as e:
-        return HttpResponse(str(e))
+            dic = json.dumps({'code': 200, 'data': True, 'massage': f'{response.text}'})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        except Exception as e:
+            dic = json.dumps({'code': 10010, 'data': False, 'massage': f'{e}'})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 复制接口
@@ -621,8 +643,8 @@ def error_request(request):
     # 处理域名host
     if host[:4] == '全局域名':
         project_host_id = host.split('-')[1]
-        ic(DB_project_host.objects.filter(id=project_host_id)[0])
-        host = DB_project_host.objects.filter(id=project_host_id)[0].host
+        ic(DbProjectHost.objects.filter(id=project_host_id)[0])
+        host = DbProjectHost.objects.filter(id=project_host_id)[0].host
 
     try:
         # 发送请求获取返回值
@@ -922,12 +944,12 @@ def save_project_header(request):
     for i in range(len(ids)):
         if names[i] != '':
             if ids[i] == 'new':
-                DB_project_header.objects.create(project_id=project_id, name=names[i], key=keys[i], value=values[i])
+                DbProjectHeader.objects.create(project_id=project_id, name=names[i], key=keys[i], value=values[i], is_delete=0)
             else:
-                DB_project_header.objects.filter(id=ids[i]).update(name=names[i], key=keys[i], value=values[i])
+                DbProjectHeader.objects.filter(id=ids[i]).update(name=names[i], key=keys[i], value=values[i], is_delete=0)
         else:
             try:
-                DB_project_header.objects.filter(id=ids[i]).delete()
+                DbProjectHeader.objects.filter(id=ids[i]).delete()
             except:
                 pass
     return HttpResponse('')
@@ -954,12 +976,12 @@ def save_project_host(request):
     for i in range(len(ids)):
         if names[i] != '':
             if ids[i] == 'new':
-                DB_project_host.objects.create(project_id=project_id, name=names[i], host=hosts[i])
+                DbProjectHost.objects.create(project_id=project_id, name=names[i], host=hosts[i], is_delete=0)
             else:
-                DB_project_host.objects.filter(id=ids[i]).update(name=names[i], host=hosts[i])
+                DbProjectHost.objects.filter(id=ids[i]).update(name=names[i], host=hosts[i])
         else:
             try:
-                DB_project_host.objects.filter(id=ids[i]).delete()
+                DbProjectHost.objects.filter(id=ids[i]).delete()
             except:
                 pass
     return HttpResponse('')
@@ -970,7 +992,7 @@ def project_get_login(request):
     project_id = request.GET['project_id']
     ic(project_id)
     try:
-        login = DB_login.objects.filter(project_id=project_id).values()[0]
+        login = DbLogin.objects.filter(project_id=project_id).values()[0]
     except:
         login = {}
     return HttpResponse(json.dumps(login), content_type='application/json')
@@ -988,7 +1010,7 @@ def project_login_save(request):
     login_api_body = request.GET['login_api_body']
     login_response_set = request.GET['login_response_set']
     # 保存数据
-    DB_login.objects.filter(project_id=project_id).update(
+    DbLogin.objects.filter(project_id=project_id).update(
         api_method=login_method,
         api_url=login_url,
         api_header=login_header,

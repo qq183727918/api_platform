@@ -396,88 +396,95 @@
         clear_ts_api();
         document.getElementById('ts').style.display = 'block';
         document.getElementById('ts_api_id').innerText = id;
-        $.get('/get_api_data/', {
-            'api_id': id,
-        }, function (ret) {
-            console.log(ret)
-            document.getElementById('ts_api_name').value = ret.name;
-            document.getElementById('ts_method').value = ret.api_models;
-            document.getElementById('ts_url').value = ret.api_url;
-            document.getElementById('ts_host').value = ret.api_host;
-            document.getElementById('ts_header').value = ret.api_header;
-            if (ret.api_login != null && ret.api_login != '') {
-                document.getElementById("ts_login").value = ret.api_login;
-            }
+        $.ajax({
+            url: "/get_api_data/",
+            type: "get",
+            data: {
+                'api_id': id,
+            },
+            dataType: 'json',
+            success: function (data) {
 
-            //公共请求头
-            if (ret.public_header != null) {
-                var project_headers = ret.public_header.split(',')
-                for (var i = 0; i < project_headers.length; i++) {
-                    try {
-                        document.getElementById('checkbox_' + project_headers[i]).checked = 'checked';
-                    } catch (e) {
+                console.log(data)
+                document.getElementById('ts_api_name').value = data.name;
+                document.getElementById('ts_method').value = data.api_models;
+                document.getElementById('ts_url').value = data.api_url;
+                document.getElementById('ts_host').value = data.api_host;
+                document.getElementById('ts_header').value = data.api_header;
+                if (data.api_login != null && data.api_login != '') {
+                    document.getElementById("ts_login").value = data.api_login;
+                }
 
+                //公共请求头
+                if (data.public_header != null) {
+                    var project_headers = data.public_header.split(',')
+                    for (var i = 0; i < project_headers.length; i++) {
+                        try {
+                            document.getElementById('checkbox_' + project_headers[i]).checked = 'checked';
+                        } catch (e) {
+
+                        }
                     }
                 }
-            }
-            // 请求体编码格式
-            var body_method = '#' + ret.body_method;
-            console.log(body_method)
-            $("li a[href=" + body_method + "]").click();
-            // 请求体显示
-            if (ret.body_method === 'Text') {
-                document.getElementById('raw_Text').value = ret.api_body;
-                console.log(ret.api_body)
-            }
-            if (ret.body_method === 'JavaScript') {
-                document.getElementById('raw_JavaScript').value = ret.api_body;
-            }
-            if (ret.body_method === 'Json') {
-                document.getElementById('raw_Json').value = ret.api_body;
-            }
-            if (ret.body_method === 'Html') {
-                document.getElementById('raw_Html').value = ret.api_body;
-            }
-            if (ret.body_method === 'Xml') {
-                document.getElementById('raw_Xml').value = ret.api_body;
-            }
-            if (ret.body_method === 'form-data') {
-                var tbody = document.getElementById('mytbody'); // 定位表格中的tbody部分
-                body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
-                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
-                    key = body[i][0]; //拿出每一个键值对的key
-                    value = body[i][1];//拿出每一个键值对的value
-                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
-                    // 每个tr下的children得到的是 td列表，只有俩个。
-                    childs_tr[i].children[0].innerText = key; //第一个td放key
-                    childs_tr[i].children[1].innerText = value;//第二个td放value
-                    //判断是否是最后一次遍历，来决定是否点击新增参数按钮
-                    if (i < body.length - 1) {
-                        document.getElementById('add').click()
+                // 请求体编码格式
+                var body_method = '#' + data.body_method;
+                console.log(body_method)
+                $("li a[href=" + body_method + "]").click();
+                // 请求体显示
+                if (data.body_method === 'Text') {
+                    document.getElementById('raw_Text').value = data.api_body;
+                    console.log(data.api_body)
+                }
+                if (data.body_method === 'JavaScript') {
+                    document.getElementById('raw_JavaScript').value = data.api_body;
+                }
+                if (data.body_method === 'Json') {
+                    document.getElementById('raw_Json').value = data.api_body;
+                }
+                if (data.body_method === 'Html') {
+                    document.getElementById('raw_Html').value = data.api_body;
+                }
+                if (data.body_method === 'Xml') {
+                    document.getElementById('raw_Xml').value = data.api_body;
+                }
+                if (data.body_method === 'form-data') {
+                    var tbody = document.getElementById('mytbody'); // 定位表格中的tbody部分
+                    body = eval(data.api_body); //把这个像列表的字符串请求体变成真正的列表
+                    for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                        key = body[i][0]; //拿出每一个键值对的key
+                        value = body[i][1];//拿出每一个键值对的value
+                        var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                        // 每个tr下的children得到的是 td列表，只有俩个。
+                        childs_tr[i].children[0].innerText = key; //第一个td放key
+                        childs_tr[i].children[1].innerText = value;//第二个td放value
+                        //判断是否是最后一次遍历，来决定是否点击新增参数按钮
+                        if (i < body.length - 1) {
+                            document.getElementById('add').click()
+                        }
                     }
                 }
-            }
-            if (ret.body_method === 'x-www-form-urlencoded') {
-                var tbody = document.getElementById('mytbody2'); // 定位表格中的tbody部分
-                body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
-                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
-                    key = body[i][0]; //拿出每一个键值对的key
-                    value = body[i][1];//拿出每一个键值对的value
-                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
-                    // 每个tr下的children得到的是 td列表，只有俩个。
-                    childs_tr[i].children[0].innerText = key; //第一个td放key
-                    childs_tr[i].children[1].innerText = value;//第二个td放value
-                    //判断是否是最后一次遍历，来决定是否点击新增参数按钮
-                    if (i < body.length - 1) {
-                        document.getElementById('add2').click()
+                if (data.body_method === 'x-www-form-urlencoded') {
+                    var tbody = document.getElementById('mytbody2'); // 定位表格中的tbody部分
+                    body = eval(data.api_body); //把这个像列表的字符串请求体变成真正的列表
+                    for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                        key = body[i][0]; //拿出每一个键值对的key
+                        value = body[i][1];//拿出每一个键值对的value
+                        var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                        // 每个tr下的children得到的是 td列表，只有俩个。
+                        childs_tr[i].children[0].innerText = key; //第一个td放key
+                        childs_tr[i].children[1].innerText = value;//第二个td放value
+                        //判断是否是最后一次遍历，来决定是否点击新增参数按钮
+                        if (i < body.length - 1) {
+                            document.getElementById('add2').click()
+                        }
                     }
                 }
-            }
-            if (ret.body_method === 'GraphQL') {
-                body_plan_G_Q = ret.body_method.split('*WQRF*')[0];
-                body_plan_G_G = ret.body_method.split('*WQRF*')[1];
-                document.getElementById('body_plan_G_Q').value = body_plan_G_Q;
-                document.getElementById('body_plan_G_G').value = body_plan_G_G;
+                if (data.body_method === 'GraphQL') {
+                    body_plan_G_Q = data.body_method.split('*WQRF*')[0];
+                    body_plan_G_G = data.body_method.split('*WQRF*')[1];
+                    document.getElementById('body_plan_G_Q').value = body_plan_G_Q;
+                    document.getElementById('body_plan_G_G').value = body_plan_G_G;
+                }
             }
         })
     }
@@ -507,25 +514,50 @@
 
         // 判断顶部的数据是否填充完
         if (api_name == '') {
-            alert('请输入接口名字！');
+            Swal.fire({
+                icon: 'error',
+                title: '请输入接口名字！',
+                showConfirmButton: false,
+                timer: 2000
+            })
             return
         }
         if (ts_method == 'none') {
-            alert('请选择请求方式！');
+            Swal.fire({
+                icon: 'error',
+                title: '请选择请求方式！',
+                showConfirmButton: false,
+                timer: 2000
+            })
             return
         }
         if (ts_url == '') {
-            alert('请输入url！');
+            Swal.fire({
+                icon: 'error',
+                title: '请输入url！',
+                showConfirmButton: false,
+                timer: 2000
+            })
             return
         }
         if (ts_host == '') {
-            alert('请输入host！');
+            Swal.fire({
+                icon: 'error',
+                title: '请输入host！',
+                showConfirmButton: false,
+                timer: 2000
+            })
             return
         }
 
         // 判断关键数据是否符合规则
         if (ts_host.slice(0, 7) != 'http://' && ts_host.slice(0, 8) != 'https://' && ts_host.slice(0, 4) != '全局域名') {
-            alert('host必须以http://或者https://开头！');
+            Swal.fire({
+                icon: 'error',
+                title: 'host必须以http://或者https://开头！',
+                showConfirmButton: false,
+                timer: 2000
+            })
             return
         }
 
@@ -534,7 +566,12 @@
             try {
                 JSON.parse(ts_header)
             } catch (e) {
-                alert('header请求头不符合JSON规范！')
+                Swal.fire({
+                    icon: 'error',
+                    title: 'header请求头不符合JSON规范！',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 return
             }
         }
@@ -594,27 +631,36 @@
         var api_id = document.getElementById('ts_api_id').innerText; //获取到了接口id
         console.log(project_headers)
         console.log(ts_project_headers.toString())
-        $.get('/Api_save/', {
-            'api_id': api_id,
-            'api_name': api_name,
-            'ts_method': ts_method,
-            'ts_url': ts_url,
-            'ts_host': ts_host,
-            'ts_login': ts_login,
-            'ts_header': ts_header,
-            'ts_body_method': ts_body_method,
-            'ts_api_body': ts_api_body,
-            'ts_project_headers': ts_project_headers.toString(),
+        $.ajax({
+            url: "/Api_save/",
+            type: "post",
+            data: JSON.stringify({
+                'api_id': api_id,
+                'api_name': api_name,
+                'ts_method': ts_method,
+                'ts_url': ts_url,
+                'ts_host': ts_host,
+                'ts_login': ts_login,
+                'ts_header': ts_header,
+                'ts_body_method': ts_body_method,
+                'ts_api_body': ts_api_body,
+                'ts_project_headers': ts_project_headers.toString(),
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                Swal.fire({
+                    icon: 'success',
+                    title: '保存成功！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
 
-        }, function (ret) {
-            console.log(ret)
-            Swal.fire({
-                icon: 'success',
-                title: '保存成功！',
-                showConfirmButton: false,
-                timer: 2000
-            })
         })
+
+
     }
 
     function ts_send() {
@@ -640,25 +686,50 @@
 
         // 判断顶部的数据是否填充完
         if (api_name == '') {
-            alert('请输入接口名字！');
+            Swal.fire({
+                icon: 'error',
+                title: '请输入接口名字！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
         if (ts_method == 'none') {
-            alert('请选择请求方式！');
+            Swal.fire({
+                icon: 'error',
+                title: '请选择请求方式！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
         if (ts_url == '') {
-            alert('请输入url！');
+            Swal.fire({
+                icon: 'error',
+                title: '请输入url！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
         if (ts_host == '') {
-            alert('请输入host！');
+            Swal.fire({
+                icon: 'error',
+                title: '请输入host！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
 
         // 判断关键数据是否符合规则
         if (ts_host.slice(0, 7) != 'http://' && ts_host.slice(0, 8) != 'https://' && ts_host.slice(0, 4) != '全局域名') {
-            alert('host必须以http://或者https://开头！');
+            Swal.fire({
+                icon: 'error',
+                title: 'host必须以http://或者https://开头！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
 
@@ -667,7 +738,12 @@
             try {
                 JSON.parse(ts_header)
             } catch (e) {
-                alert('header请求头不符合JSON规范！')
+                Swal.fire({
+                    icon: 'error',
+                    title: 'header请求头不符合JSON规范！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 return
             }
         }
@@ -731,20 +807,29 @@
             ts_header,
             project_headers)
         var api_id = document.getElementById('ts_api_id').innerText; //获取到了接口id
-        $.get('/Api_send/', {
-            'api_id': api_id,
-            'api_name': api_name,
-            'ts_login': ts_login,
-            'ts_method': ts_method,
-            'ts_url': ts_url,
-            'ts_host': ts_host,
-            'ts_header': ts_header,
-            'ts_body_method': ts_body_method,
-            'ts_api_body': ts_api_body,
-            'ts_project_headers': ts_project_headers.toString(),
-        }, function (ret) {
-            $("li a[href='#response']").click()
-            document.getElementById('ts_response_body').value = ret;
+        console.log('=========================================')
+        $.ajax({
+            url: "/Api_send/",
+            type: "post",
+            data: JSON.stringify({
+                'api_id': api_id,
+                'api_name': api_name,
+                'ts_login': ts_login,
+                'ts_method': ts_method,
+                'ts_url': ts_url,
+                'ts_host': ts_host,
+                'ts_header': ts_header,
+                'ts_body_method': ts_body_method,
+                'ts_api_body': ts_api_body,
+                'ts_project_headers': ts_project_headers.toString(),
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                $("li a[href='#response']").click()
+                document.getElementById('ts_response_body').value = data.massage;
+            }
         })
     }
 

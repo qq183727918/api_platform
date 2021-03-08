@@ -198,7 +198,7 @@ class DbApis(models.Model):
     file_key = models.CharField(max_length=50, blank=True, null=True)
     file_name = models.CharField(max_length=50, blank=True, null=True)
     public_header = models.CharField(max_length=1000, blank=True, null=True)
-    last_body_method = models.CharField(max_length=20, blank=True, null=True)
+    last_body_method = models.CharField(max_length=200, blank=True, null=True)
     last_api_body = models.CharField(max_length=1000, blank=True, null=True)
     body_method = models.CharField(max_length=50, blank=True, null=True)
     is_delete = models.IntegerField()
