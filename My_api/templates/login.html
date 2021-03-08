@@ -86,7 +86,7 @@
             "password": password
         }, function (ret) {
             console.log(ret)
-            if (ret === 'True') {
+            if (ret === '成功') {
                 Swal.fire({
                     icon: 'success',
                     title: '恭喜，注册成功！！',
@@ -96,7 +96,7 @@
             } else {
                 Swal.fire({
                     icon: 'error',
-                    title: ret,
+                    title: '注册失败~用户名好像已经存在了~',
                     showConfirmButton: false,
                     timer: 1500
                 });

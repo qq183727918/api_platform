@@ -147,7 +147,7 @@ def login_action(request):
     p_word = request.GET['password']
     ic(u_name, p_word)
 
-    # 开始联通用户库，查看用户密码是否正确
+    # 开始联通django用户库，查看用户密码是否正确
     from django.contrib import auth
     user = auth.authenticate(username=u_name, password=p_word)
 
@@ -155,7 +155,9 @@ def login_action(request):
         # 进行正确的动作
         auth.login(request, user)
         request.session['user'] = u_name
+        # return HttpResponseRedirect('/home/')
         return HttpResponse('成功')
+        # return redirect('/home/')
     else:
         # 返回前端告诉前端用户用户名或者密码不正确
         return HttpResponse('失败')
@@ -168,26 +170,14 @@ def sign_action(request):
     ic(u_name, p_word)
 
     # 开始关联django用户表
+    from django.contrib.auth.models import User
     try:
-        a = []
-        name = DbUser.objects.filter().values()
-        a.append(name)
-        ic(a)
-        ic(type(name))
-        if name != '[<QuerySet []>]':
-            for i in name:
-                ic(i)
-                if i['username'] == u_name:
-                    return HttpResponse('注册失败~用户名好像已经存在了~')
-                else:
-                    DbUser.objects.create(username=u_name, password=p_word, is_active=0, is_delete=0)
-                    return HttpResponse(True)
-        else:
-            DbUser.objects.create(username=u_name, password=p_word, is_active=0, is_delete=0)
-            return HttpResponse(True)
+        user = User.objects.create_user(username=u_name, password=p_word)
+        user.save()
+        return HttpResponse('注册成功！')
     except Exception as e:
         ic(e)
-        return HttpResponse('不好意思，好像出错了，请联系官员！')
+        return HttpResponse('注册失败~用户名好像已经存在了~')
 
 
 # 退出

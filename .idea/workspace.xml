@@ -22,71 +22,53 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/__pycache__/views_tools.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/migrations/0011_db_step_api_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/migrations/0012_db_global_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/migrations/0013_db_project_user_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0011_db_step_api_login.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0012_db_global_data.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0013_db_project_user_id.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/css/htmleaf-demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/css/progresscircle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/jQuery之家.url" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/js/progresscircle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/readme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/related/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/bingxingtu/related/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_api/login/login_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_api/sign/sign_user_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_service/login/login_user_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/lxq_platform_service/sign/sign_user_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/params/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/magicalValue.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/return_params.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/params/magicalValue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/params/return_params.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/static/public_method/public_method.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/My_api/templates/P_global_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
+    <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="django">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bdd3f9b-505c-443c-b0ba-e17caef155ae.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bdd3f9b-505c-443c-b0ba-e17caef155ae.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7428a70a-2c0c-4487-ad57-5ad147a46421.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/__init__.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/apps.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/apps.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views_tools.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views_tools.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0002_auto_20210226_1558.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0003_db_cases.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0004_db_step.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0005_db_step_mock_res.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0006_db_project_header.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0007_db_step_public_header.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0008_db_host.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0009_db_project_host.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0010_db_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0011_db_step_api_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0012_db_global_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/0013_db_project_user_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0002_auto_20210226_1558.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0003_db_cases.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0004_db_step.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0005_db_step_mock_res.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0006_db_project_header.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0007_db_step_public_header.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0008_db_host.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0009_db_project_host.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0011_db_step_api_login.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0012_db_global_data.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0013_db_project_user_id.cpython-38.pyc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/__init__.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/run_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/P_apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_apis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/P_cases.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_cases.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/P_project_set.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_project_set.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/Reports/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/Reports/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/project_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/zhengjiao.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/zhengjiao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/views_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/__init__.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/wsgi.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/wsgi.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +121,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JupyterTrust" id="34008d0a-34b9-4808-8668-53367c8151a0" />
+  <component name="JupyterTrust" id="109e07be-89dd-4efb-8d62-7484ec0c92d3" />
   <component name="ProjectId" id="1oso5R90bBdDsstiDNOfqhyGsnM" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="新增" />
@@ -288,8 +270,9 @@
     </configuration>
     <list>
       <item itemvalue="Django 服务器.api_platform" />
-      <item itemvalue="Python.main" />
       <item itemvalue="JavaScript 调试.P_global_data.html" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.tests" />
     </list>
     <recent_temporary>
       <list>
@@ -324,6 +307,8 @@
       <workItem from="1614307993036" duration="33089000" />
       <workItem from="1614400876074" duration="18389000" />
       <workItem from="1614258830381" duration="6035000" />
+      <workItem from="1614932707599" duration="5604000" />
+      <workItem from="1615163244082" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -414,41 +399,46 @@
     <option name="LAST_COMMIT_MESSAGE" value="django" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614930696230">
+    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614935293144">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614930696230" />
+    <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614935293144" />
     <state x="746" y="379" key="#通知" timestamp="1614912186832">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="746" y="379" key="#通知/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614912186832" />
-    <state x="436" y="0" key="CommitChangelistDialog2" timestamp="1614519405994">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="202" y="0" width="1567" height="994" key="CommitChangelistDialog2" timestamp="1614938111330">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="202" y="0" width="1567" height="994" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614938111330" />
     <state x="436" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614519405994" />
+    <state x="93" y="93" width="1862" height="926" key="DiffContextDialog" timestamp="1615163964138">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="93" y="93" width="1862" height="926" key="DiffContextDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615163964138" />
     <state x="844" y="313" key="FileChooserDialogImpl" timestamp="1614299873332">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="844" y="313" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299873332" />
-    <state width="1651" height="362" key="GridCell.Tab.0.bottom" timestamp="1614931278725">
+    <state width="1651" height="295" key="GridCell.Tab.0.bottom" timestamp="1615163977123">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="362" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
+    <state width="1651" height="295" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615163977123" />
     <state width="1223" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1651" height="362" key="GridCell.Tab.0.center" timestamp="1614931278725">
+    <state width="1651" height="295" key="GridCell.Tab.0.center" timestamp="1615163977123">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="362" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
+    <state width="1651" height="295" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615163977123" />
     <state width="1223" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1651" height="362" key="GridCell.Tab.0.left" timestamp="1614931278725">
+    <state width="1651" height="295" key="GridCell.Tab.0.left" timestamp="1615163977123">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="362" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
+    <state width="1651" height="295" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615163977123" />
     <state width="1223" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
-    <state width="1651" height="362" key="GridCell.Tab.0.right" timestamp="1614931278725">
+    <state width="1651" height="295" key="GridCell.Tab.0.right" timestamp="1615163977123">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1651" height="362" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614931278725" />
+    <state width="1651" height="295" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615163977123" />
     <state width="1223" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614519438030" />
     <state width="1651" height="259" key="GridCell.Tab.1.bottom" timestamp="1614742566067">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -470,18 +460,27 @@
     </state>
     <state width="1651" height="259" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742566067" />
     <state width="1223" height="243" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1614504934054" />
+    <state width="146" height="477" key="HiddenNamespacesPopup" timestamp="1615164098739">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="146" height="477" key="HiddenNamespacesPopup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615164098739" />
     <state x="565" y="226" width="996" height="707" key="SettingsEditor" timestamp="1614299998516">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="565" y="226" width="996" height="707" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299998516" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1614519545295">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="481" y="196" key="Vcs.Push.Dialog.v2" timestamp="1614938090602">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
+    <state x="481" y="196" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614938090602" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614519545295" />
     <state width="1031" height="563" key="XDebugger.FullValuePopup" timestamp="1614742505785">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1031" height="563" key="XDebugger.FullValuePopup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614742505785" />
+    <state x="853" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1614934944761">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="853" y="0" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614934944761" />
     <state x="822" y="413" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1614846365469">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -494,10 +493,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="840" y="453" width="588" height="281" key="org.intellij.images.editor.actions.BackgroundImageDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614299994586" />
-    <state x="573" y="197" width="896" height="915" key="search.everywhere.popup" timestamp="1614758578884">
+    <state x="573" y="197" width="896" height="915" key="search.everywhere.popup" timestamp="1614935011181">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="573" y="197" width="896" height="915" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614758578884" />
+    <state x="573" y="197" width="896" height="915" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1614935011181" />
     <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614407368446" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
