@@ -18,3 +18,8 @@ admin.site.register(DB_host)
 admin.site.register(DB_project_host)
 admin.site.register(DB_login)
 admin.site.register(DB_global_data)
+# 使用mysql表
+admin.site.register(DbUser)
+admin.site.register(DbProject)
+admin.site.register(DbApis)
+admin.site.register(DbStep)

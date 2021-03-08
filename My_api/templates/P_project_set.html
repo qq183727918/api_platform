@@ -45,19 +45,28 @@
         const remark = document.getElementById('remark').value;
         const other_user = document.getElementById('other_user').value;
         console.log(name, remark, other_user)
-        $.get('/save_project_set/' + '{{ project.id }}' + '/', {
-            'name': name,
-            'remark': remark,
-            'other_user': other_user,
-        }, function (ret) {
-            console.log(ret)
-            Swal.fire({
-                icon: 'success',
-                title: '保存成功！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+        $.ajax({
+            url: '/save_project_set/' + '{{ project.id }}' + '/',
+            type: "post",
+            data: JSON.stringify({
+                'name': name,
+                'remark': remark,
+                'other_user': other_user,
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                Swal.fire({
+                    icon: 'success',
+                    title: '保存成功！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+
         })
+
     }
 
 </script>

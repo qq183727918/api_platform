@@ -8,6 +8,7 @@ from django.shortcuts import render
 from icecream import ic
 
 from My_api.models import *
+from My_api.static.params.return_params import RE
 
 
 @login_required
@@ -21,20 +22,24 @@ def case_list(request):
 
 # 返回子页面
 def child(request, eid, oid, ooid):
-    ic(eid, oid, ooid)
+    ic('child', eid, oid, ooid)
     res = child_json(eid, oid, ooid)
     return render(request, eid, res)
+
+
+# 用户管理页面
+def user(request):
+    return render(request, 'welcome.html', {"whichHTML": "user.html"})
 
 
 # 控制不同页面返回不同的数据：数据分发器
 def child_json(eid, oid='', ooid=''):
     res = {}
-    if eid == 'Home.html':
+    if eid == 'home.html':
         date = DB_home_href.objects.all()
         home_log = DB_apis_log.objects.filter(user_id=oid)[::-1]
         hosts = DB_host.objects.all()
-        from django.contrib.auth.models import User
-        user_projects = DB_project.objects.filter(user=User.objects.filter(id=oid)[0].username)
+        user_projects = DB_project.objects.filter(user=DbUser.objects.filter(id=oid)[0].username)
 
         # 个人数据看板
         count_project = len(user_projects)
@@ -43,7 +48,10 @@ def child_json(eid, oid='', ooid=''):
 
         ziyuan_all = len(DB_project.objects.all()) + len(DB_apis.objects.all()) + len(DB_cases.objects.all())
         ziyuan_user = count_project + count_api + count_case
-        ziyuan = ziyuan_user / ziyuan_all * 100
+        if ziyuan_all == 0:
+            ziyuan = ziyuan_user * 100
+        else:
+            ziyuan = ziyuan_user / ziyuan_all * 100
 
         new_res = {
             "count_project": count_project,
@@ -60,12 +68,13 @@ def child_json(eid, oid='', ooid=''):
         res.update(new_res)
 
     if eid == 'project_list.html':
-        date = DB_project.objects.all()
+        date = DbProject.objects.filter(is_delete=0)
         res = {"projects": date}
+        ic(date)
 
     if eid == 'P_apis.html':
-        project = DB_project.objects.filter(id=oid)[0]
-        apis = DB_apis.objects.filter(project_id=oid)
+        project = DbProject.objects.filter(id=oid)[0]
+        apis = DbApis.objects.filter(project_id=oid, is_delete=0)
 
         for i in apis:
             try:
@@ -80,15 +89,15 @@ def child_json(eid, oid='', ooid=''):
         ic(project)
 
     if eid == 'P_project_set.html':
-        project = DB_project.objects.filter(id=oid)[0]
+        project = DbProject.objects.filter(id=oid)[0]
         res = {"project": project}
         ic(project)
 
     if eid == 'P_cases.html':
         # 这里应该是去数据库拿到这个项目的所有用例
-        project = DB_project.objects.filter(id=oid)[0]
+        project = DbProject.objects.filter(id=oid)[0]
         Cases = DB_cases.objects.filter(project_id=oid)
-        apis = DB_apis.objects.filter(project_id=oid)
+        apis = DbApis.objects.filter(project_id=oid)
         project_header = DB_project_header.objects.filter(project_id=oid)
         hosts = DB_host.objects.all()
         project_host = DB_project_host.objects.filter(project_id=oid)
@@ -96,7 +105,6 @@ def child_json(eid, oid='', ooid=''):
                'project_host': project_host}
 
     if eid == 'P_global_data.html':
-        from django.contrib.auth.models import User
         project = DB_project.objects.filter(id=oid)[0]
         global_data = DB_global_data.objects.filter(user_id=project.user_id)
         res = {"project": project, "global_data": global_data}
@@ -130,11 +138,10 @@ def user_upload(request):
 
 
 # 进入主页
-@login_required
 def home(request, log_id=''):
-    ic(request.user.id, request.user.username)
+    ic('home', request.user.id, request.user.username, log_id)
     return render(request, 'welcome.html',
-                  {"whichHTML": "Home.html", "oid": request.user.id, "ooid": log_id, **glodict(request)})
+                  {"whichHTML": "home.html", "oid": '1', "ooid": log_id, **glodict(request)})
 
 
 # 进入登录页面
@@ -142,42 +149,65 @@ def login(request):
     return render(request, 'login.html')
 
 
+# 登录
 def login_action(request):
-    u_name = request.GET['username']
-    p_word = request.GET['password']
-    ic(u_name, p_word)
+    if request.method == "POST":
+        data = json.loads(request.body)
+        u_name = data['username']
+        p_word = data['password']
+        ic(u_name, p_word, data)
+        if u_name == '':
+            dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        if p_word == '':
+            dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        # 开始联通用户库，查看用户密码是否正确
+        username = DbUser.objects.filter(username=u_name).values()
 
-    # 开始联通django用户库，查看用户密码是否正确
-    from django.contrib import auth
-    user = auth.authenticate(username=u_name, password=p_word)
-
-    if user is not None:
-        # 进行正确的动作
-        auth.login(request, user)
-        request.session['user'] = u_name
-        # return HttpResponseRedirect('/home/')
-        return HttpResponse('成功')
-        # return redirect('/home/')
+        if username.count() == 0:
+            dic = json.dumps({"code": 30003, "data": "false", "message": "用户名不存在请检查"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        else:
+            for name in username:
+                if u_name == name['username']:
+                    if p_word == name['password']:
+                        dic = json.dumps({"code": 200, "data": "false", "message": "成功"})
+                        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+                    else:
+                        dic = json.dumps({"code": 30004, "data": "false", "message": "密码错误，请重试！"})
+                        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        # 返回前端告诉前端用户用户名或者密码不正确
-        return HttpResponse('失败')
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 注册
 def sign_action(request):
-    u_name = request.GET['username']
-    p_word = request.GET['password']
-    ic(u_name, p_word)
-
-    # 开始关联django用户表
-    from django.contrib.auth.models import User
-    try:
-        user = User.objects.create_user(username=u_name, password=p_word)
-        user.save()
-        return HttpResponse('注册成功！')
-    except Exception as e:
-        ic(e)
-        return HttpResponse('注册失败~用户名好像已经存在了~')
+    if request.method == "POST":
+        data = json.loads(request.body)
+        u_name = data["username"]
+        p_word = data["password"]
+        ic(u_name, p_word)
+        if u_name in ['', None]:
+            dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        if p_word in ['', None]:
+            dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        username = DbUser.objects.filter(username=u_name).values().count()
+        ic(username)
+        if username == 0:
+            # 开始关联django用户表
+            DbUser.objects.create(username=u_name, password=p_word, is_delete=0, is_active=0)
+            dic = json.dumps({"code": 200, "data": "false", "message": "注册成功！"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        else:
+            dic = json.dumps({"code": 30005, "data": "false", "message": "注册失败~用户名好像已经存在了~"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 退出
@@ -211,26 +241,44 @@ def project_list(request):
 
 # 删除项目
 def delete_project(request):
-    Id = request.GET['id']
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        Id = data['id']
+        ic(Id)
+        DbProject.objects.filter(id=Id).update(is_delete=1)
+        DbApis.objects.filter(project_id=Id).update(is_delete=1)  # 删除旗下接口
 
-    DB_project.objects.filter(id=Id).delete()
-    DB_apis.objects.filter(project_id=Id).delete()  # 删除旗下接口
-
-    all_Case = DB_cases.objects.filter(project_id=Id)
-    for i in all_Case:
-        DB_step.objects.filter(Case_id=i.id).delete()  # 删除步骤
-        i.delete()  # 用例删除自己
-    return HttpResponseRedirect('')
+        all_Case = DB_cases.objects.filter(project_id=Id)
+        for i in all_Case:
+            DB_step.objects.filter(Case_id=i.id).update(is_delete=1)  # 删除步骤
+            i.update(is_delete=1)  # 用例删除自己
+        return HttpResponseRedirect('')
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 新增项目
 def add_project(request):
-    project_name = request.GET['project_name']
-    project_remark = request.GET['project_remark']
-    DB_project.objects.create(name=project_name, remark=project_remark, user=request.user.username,
-                              user_id=request.user.id,
-                              other='')
-    return HttpResponse('')
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        list_po = data['list_po']
+        project_name = data['project_name']
+        project_remark = data['project_remark']
+        ic(list_po, project_name, project_remark)
+        username = DbUser.objects.filter(username=list_po, is_delete=0, is_active=0).values().count()
+        if username == 0:
+            return HttpResponse('输入管理员不存在或未启用，请重新输入！')
+        else:
+            others = DbUser.objects.filter(username=list_po, is_delete=0, is_active=0).values()[0]
+            ic(others)
+            DbProject.objects.create(name=project_name,
+                                     remark=project_remark,
+                                     user=others['username'],
+                                     user_id=others['id'],
+                                     other=list_po,
+                                     is_delete=0)
+            return HttpResponse('成功')
 
 
 # 进入接口库
@@ -253,45 +301,75 @@ def open_project_set(request, id):
 
 # 保存项目设置
 def save_project_set(request, id):
-    project_id = id
-    name = request.GET['name']
-    remark = request.GET['remark']
-    other_user = request.GET['other_user']
-    ic(project_id, name, remark, other_user)
-    DB_project.objects.filter(id=project_id).update(name=name, remark=remark, other=other_user)
-
-    return HttpResponse('')
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        project_id = id
+        ic(project_id)
+        name = data['name']
+        remark = data['remark']
+        other_user = data['other_user']
+        ic(project_id, name, remark, other_user)
+        username = DbUser.objects.filter(username=other_user, is_delete=0, is_active=0).values().count()
+        if username == 0:
+            dic = json.dumps({'code': 31002, 'data': True, 'message': '输入管理员不存在或未启用，请重新输入!'})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        else:
+            others = DbUser.objects.filter(username=other_user, is_delete=0, is_active=0).values()[0]
+            ic(others)
+            DbProject.objects.filter(id=project_id).update(name=name, remark=remark, other=other_user)
+            dic = json.dumps({'code': 200, 'data': True, 'message': 'ok'})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 新增接口
 def project_api_add(request, Pid):
     project_id = Pid
     ic(project_id)
-    DB_apis.objects.create(project_id=project_id, api_models='none', api_url='')
+    DbApis.objects.create(project_id=project_id,
+                          name='',
+                          api_models='',
+                          api_url='',
+                          api_header='',
+                          is_delete=0)
     return HttpResponseRedirect('/apis/%s/' % project_id)
 
 
 # 删除接口
 def project_api_del(request, id):
-    project_id = DB_apis.objects.filter(id=id)[0].project_id
-    DB_apis.objects.filter(id=id).delete()
+    project_id = DbApis.objects.filter(id=id)[0].project_id
+    DbApis.objects.filter(id=id).update(is_delete=1)
     return HttpResponseRedirect('/apis/%s/' % project_id)
 
 
 # 备注保存接口
 def save_bz(request):
-    api_id = request.GET['api_id']
-    bz_value = request.GET['bz_value']
-    DB_apis.objects.filter(id=api_id).update(des=bz_value)
-    return HttpResponse('')
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        api_id = data['api_id']
+        bz_value = data['bz_value']
+        ic(bz_value)
+        DbApis.objects.filter(id=api_id).update(des=bz_value)
+        dic = json.dumps({'code': 200, 'data': True, 'message': '成功'})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 备注获取接口
 def get_bz(request):
-    api_id = request.GET['api_id']
-    bz_value = DB_apis.objects.filter(id=api_id)[0].des
-    ic(bz_value)
-    return HttpResponse(bz_value)
+    if request.method == 'GET':
+        api_id = request.GET['api_id']
+        bz_value = DbApis.objects.filter(id=api_id)[0].des
+        ic(bz_value)
+        dic = json.dumps({"code": 200, "data": "true", "message": {"bz_value": f"{bz_value}"}})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 保存接口
@@ -308,7 +386,7 @@ def Api_save(request):
     ic(api_id, ts_method, ts_url, ts_host, ts_header, ts_body_method, api_name)
 
     if ts_body_method == '返回体':
-        api = DB_apis.objects.filter(id=api_id).values()[0]
+        api = DbApis.objects.filter(id=api_id).values()[0]
         ts_body_method = api['last_body_method']
         ts_api_body = api['last_api_body']
         ic(ts_body_method, ts_body_method)
@@ -317,7 +395,7 @@ def Api_save(request):
         ic(ts_api_body)
     print(ts_project_headers)
     # 保存数据
-    DB_apis.objects.filter(id=api_id).update(
+    DbApis.objects.filter(id=api_id).update(
         api_models=ts_method,
         api_url=ts_url,
         api_login=ts_login,
@@ -335,7 +413,7 @@ def Api_save(request):
 # 查询接口内容
 def get_api_data(request):
     api_id = request.GET['api_id']
-    api = DB_apis.objects.filter(id=api_id).values()[0]
+    api = DbApis.objects.filter(id=api_id).values()[0]
     return HttpResponse(json.dumps(api), content_type='application/json')
 
 
@@ -484,31 +562,39 @@ def Api_send(request):
 
 # 复制接口
 def copy_api(request):
-    api_id = request.GET['api_id']
-    # 开始复制接口
-    old_api = DB_apis.objects.filter(id=api_id)[0]
-    ic(DB_apis.objects.filter(id=api_id).values()[0])
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        api_id = data['api_id']
+        # 开始复制接口
+        old_api = DbApis.objects.filter(id=api_id)[0]
+        ic(old_api)
+        ic(DbApis.objects.filter(id=api_id).values()[0])
 
-    DB_apis.objects.create(project_id=old_api.project_id,
-                           name=old_api.name + '_副本',
-                           api_models=old_api.api_models,
-                           api_url=old_api.api_url,
-                           api_header=old_api.api_header,
-                           api_login=old_api.api_login,
-                           api_host=old_api.api_host,
-                           des=old_api.des,
-                           body_method=old_api.body_method,
-                           api_body=old_api.api_body,
-                           result=old_api.result,
-                           sign=old_api.sign,
-                           file_key=old_api.file_key,
-                           file_name=old_api.file_name,
-                           public_header=old_api.public_header,
-                           last_body_method=old_api.last_body_method,
-                           last_api_body=old_api.last_api_body
-                           )
-    # 返回
-    return HttpResponse('')
+        DbApis.objects.create(project_id=old_api.project_id,
+                              name=old_api.name + '_副本',
+                              api_models=old_api.api_models,
+                              api_url=old_api.api_url,
+                              api_header=old_api.api_header,
+                              api_login=old_api.api_login,
+                              api_host=old_api.api_host,
+                              des=old_api.des,
+                              body_method=old_api.body_method,
+                              api_body=old_api.api_body,
+                              result=old_api.result,
+                              sign=old_api.sign,
+                              file_key=old_api.file_key,
+                              file_name=old_api.file_name,
+                              public_header=old_api.public_header,
+                              last_body_method=old_api.last_body_method,
+                              last_api_body=old_api.last_api_body,
+                              is_delete=0
+                              )
+        # 返回
+        dic = json.dumps({'code': 200, 'data': True, 'message': 'ok'})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 异常值发送请求
@@ -522,7 +608,7 @@ def error_request(request):
     # 验证下请求体是不是新的替换过
     # ic(api_id)
 
-    api = DB_apis.objects.filter(id=api_id)[0]
+    api = DbApis.objects.filter(id=api_id)[0]
     method = api.api_models
     url = api.api_url
     host = api.api_host

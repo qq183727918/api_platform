@@ -25,7 +25,7 @@
             <label for="login-password"></label><input type="password" id="login-password"
                                                        placeholder="Input your password">
         </div>
-        <div class="btn login-btn" onclick="login()">
+        <div class="btn login-btn" id="login">
             <span>登录</span>
         </div>
         <div class="change-box login-change">
@@ -48,7 +48,7 @@
         <div class="input">
             <label for="sign-password"></label><input type="password" id="sign-password" placeholder="Keep Secret">
         </div>
-        <div class="btn sign-btn" onclick="register()">
+        <div class="btn sign-btn" id="sign">
             <span>注册</span>
         </div>
         <div class="change-box sign-change">
@@ -61,49 +61,74 @@
 
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-    function login() {
-        const username = document.getElementById('login-user').value;
-        const password = document.getElementById('login-password').value;
-        $.get("/login_action/", {
-            "username": username,
-            "password": password
-        }, function (ret) {
-            if (ret === "成功") {
-                console.log(ret)
-                document.location.href = '/home/'
-            } else {
-                alert('您的用户名或密码错误！')
-            }
-        })
-    }
-
-    function register() {
-        const username = document.getElementById('sign-user').value;
-        const password = document.getElementById('sign-password').value;
-
-        $.get("/sign_action/", {
-            "username": username,
-            "password": password
-        }, function (ret) {
-            console.log(ret)
-            if (ret === '成功') {
-                Swal.fire({
-                    icon: 'success',
-                    title: '恭喜，注册成功！！',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: '注册失败~用户名好像已经存在了~',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+    $('#login').click(function() {
+        var username = document.getElementById('login-user').value;
+        var password = document.getElementById('login-password').value;
+        console.log(username, password)
+        $.ajax({
+            url: "/login_action/",
+            type: "post",
+            data: JSON.stringify({
+                "username": username,
+                "password": password
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                if (data.message === '成功') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '登录成功！！',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    document.location.href = '/home/'
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: data,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
             }
 
         })
-    }
+    })
+
+    $('#sign').click(function() {
+        var username = document.getElementById('sign-user').value;
+        var password = document.getElementById('sign-password').value;
+        $.ajax({
+            url: "/sign_action/",
+            type: "POST",
+            data: JSON.stringify({
+                "username": username,
+                "password": password
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                if (data.message === '注册成功！') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '恭喜，注册成功！！',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: data.message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            }
+
+        })
+    })
 </script>
 <script>
     /*

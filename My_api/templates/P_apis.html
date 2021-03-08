@@ -86,60 +86,62 @@
     <button onclick="close_bz()" style="width: 49.3%;height: 20%;">取消</button>
 </div>
 <script>
-    function bzzz(id) {
-        document.getElementById('bz_value').value = '';
-        $.get('/get_bz/', {
-            'api_id': id,
-        }, function (ret) {
-            {#document.getElementById('bz').style.display = 'block';#}
-            {#document.getElementById('which_api').value = id;#}
-            {#document.getElementById('bz_value').value = ret;#}
-            Swal.fire({
-                input: 'textarea',
-                inputLabel: '备注',
-                inputPlaceholder: ret,
-                inputAttributes: {
-                    'aria-label': 'Type your message here',
-                    "width": "10000px"
-                },
-                showCancelButton: true
-            })
-        })
-    }
 
     function copy_api(api_id) {
-        $.get('/copy_api/', {
-            'api_id': api_id
-        }, function (ret) {
-            document.location.reload()
+        console.log(api_id)
+        $.ajax({
+            url: "/copy_api/",
+            type: "POST",
+            data: JSON.stringify({
+                'api_id': api_id
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                document.location.reload();
+            }
         })
     }
 
     function open_bz(id) {
         document.getElementById('bz_value').value = '';
-        $.get('/get_bz/', {
-            'api_id': id,
-        }, function (ret) {
-            document.getElementById('bz').style.display = 'block';
-            document.getElementById('which_api').value = id;
-            document.getElementById('bz_value').value = ret;
+        $.ajax({
+            url: "/get_bz/",
+            type: "GET",
+            data: JSON.stringify({
+                'api_id': id,
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                document.getElementById('bz').style.display = 'block';
+                document.getElementById('which_api').value = id;
+                document.getElementById('bz_value').value = data.message.bz_value;
+            }
         })
     }
 
     function save_bz(id) {
         id = document.getElementById('which_api').value;
         bz_value = document.getElementById('bz_value').value;
-        $.get('/save_bz/', {
-            'api_id': id,
-            'bz_value': bz_value,
-        }, function (ret) {
-            document.getElementById('bz').style.display = 'none';
-            Swal.fire({
-                icon: 'success',
-                title: '保存成功！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+        $.ajax({
+            url: "/save_bz/",
+            type: "POST",
+            data: JSON.stringify({
+                'api_id': id,
+                'bz_value': bz_value,
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                document.getElementById('bz').style.display = 'none';
+                Swal.fire({
+                    icon: 'success',
+                    title: '保存成功！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
         })
     }
 

@@ -4,32 +4,52 @@
     <meta charset="UTF-8">
     <title>项目列表</title>
     <style>
-    #add_project_div {
-        width: 50%;
-        background-color: white;
-        border: 1px solid black;
-        position: absolute;
-        left: 25%;
-        top: 200px;
-        padding-left: 10px;
-        box-shadow: 4px 4px 8px grey;
-        border-radius: 5px;
-        display: none;
-    }
-    #button{
-        margin-left: 200px;
-        margin-top: 0px;
-    }
-</style>
+        #add_project_div {
+            width: 50%;
+            background-color: white;
+            border: 1px solid black;
+            position: absolute;
+            left: 25%;
+            top: 200px;
+            padding-left: 10px;
+            box-shadow: 4px 4px 8px grey;
+            border-radius: 5px;
+            display: none;
+        }
+
+        #button {
+            margin-left: 200px;
+            margin-top: 0px;
+        }
+    </style>
 </head>
 <body>
 
 <h3 style="padding-left: 10px;color: #353c48">项目列表：
     <span style="font-size: small;color: grey;">
-        点击 <a href="#" onclick="javascript:document.getElementById('add_project_div').style.display='block'">新增项目</a>
-        即可创建属于您的新项目！
+         <button class="btn btn-success" onclick="open_list()">新增项目</button>
     </span>
 </h3>
+<div id="new" style="display: none;position: absolute;background-color: rgb(241,245,234);width: 55%;height: 300px;top: 200px;
+        left: 300px;padding-top: 30px">
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">项目名称</span>
+        <input id="list_name" type="text" class="form-control" placeholder="请输入项目名称">
+    </div>
+    <br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">项目描述</span>
+        <input id="list_remark" type="text" class="form-control" placeholder="请输入项目描述">
+    </div>
+    <br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">管理员</span>
+        <input id="list_po" type="text" class="form-control" placeholder="请输入管理员">
+    </div>
+    <br><br>
+    <button style="left: 560px;position: absolute;" class="btn btn-success" id="new_list">确 定</button>
+    <button style="left: 220px;position: absolute;" class="btn btn-danger" onclick="close_new()">取 消</button>
+</div>
 <table class="table table-striped">
     <thead>
     <tr>
@@ -58,16 +78,22 @@
 <script>
     function delete_project(id) {
         if (confirm('确定是否要删除该项目么？') === false) {
-            return
+        } else {
+            $.ajax({
+                url: "/delete_project/",//后台提供的接口
+                type: "post",   //请求方式是GET
+                data: JSON.stringify({
+                    'id': id
+                }),
+                jsonType: 'json',
+                success: function (data) {
+                    console.log(data)
+                    {#document.location.reload();#}
+                }
+            })
         }
-        $.get('/delete_project/', {
-            'id': id
-        }, function (ret) {
-            document.location.reload()
-        })
     }
 </script>
-
 
 
 <div id="add_project_div">
@@ -77,24 +103,70 @@
     <h3>项目描述</h3>
     <input id="project_remark" type="text" placeholder="请输入项目描述" style="width: 95%;">
     <br><br>
-    <button id="button" onclick="document.getElementById('add_project_div').style.display='none';" class="btn btn-danger">取消
+    <button id="button" onclick="document.getElementById('add_project_div').style.display='none';"
+            class="btn btn-danger">取消
     </button>
     <button id="button" onclick="add_project()" class="btn btn-success">确定</button>
     <br><br>
 </div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-    function add_project() {
-        var project_name = document.getElementById('project_name').value;
-        var project_remark = document.getElementById('project_remark').value;
-        $.get('/add_project/', {
-            'project_name': project_name,
-            'project_remark': project_remark
-        }, function (ret) {
-            alert('新增成功！')
-            document.location.reload();
-        })
-
+    function close_new() {
+        document.getElementById('new').style.display = 'none';
+        document.getElementById('mengceng').style.display = 'none';
     }
+
+    function open_list() {
+        document.getElementById('mengceng').style.display = 'block';
+        document.getElementById('mengceng').style.zIndex = '998';
+        document.getElementById('new').style.zIndex = '999';
+        document.getElementById('new').style.display = 'block';
+    }
+
+    $('#new_list').click(function () {
+        var project_name = document.getElementById('list_name').value;
+        var project_remark = document.getElementById('list_remark').value;
+        var list_po = document.getElementById('list_po').value;
+        console.log(project_name,
+            project_remark,
+            list_po)
+        $.ajax({
+            url: "/add_project/",
+            type: "post",
+            data: JSON.stringify({
+                "list_po": list_po,
+                "project_name": project_name,
+                "project_remark": project_remark
+            }),
+            jsonType: 'json',
+            success: function (data) {
+                console.log(data)
+                if (data === '成功') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '新增成功！',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    document.location.reload();
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: data,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            }
+
+        })
+    })
+</script>
+<div id="mengceng" style="display: none;opacity:0.5;position: absolute;left: 0;top: -105px;
+                          background-color: gray;width: 100%">
+</div>
+<script>
+    document.getElementById('mengceng').style.height = window.screen.availHeight.toString() + 'px';
 </script>
 </body>
 </html>

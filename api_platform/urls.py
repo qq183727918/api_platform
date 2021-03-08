@@ -21,7 +21,9 @@ from My_api.views_tools import *
 
 urlpatterns = [
 
+    url(r'^$', login),
     url(r'^admin/', admin.site.urls),
+    url(r'^user/', user),   # 用户管理页面
     url(r'^welcome/$', welcome),  # 获取菜单
     url(r'^case_list/$', case_list),
     url(r'^home/$', home),  # 进入首页
