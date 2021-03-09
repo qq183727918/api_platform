@@ -343,7 +343,7 @@ class DbRoast(models.Model):
 
 class DbStep(models.Model):
     id = models.IntegerField(primary_key=True)
-    case_id = models.CharField(db_column='Case_id', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    Case_id = models.CharField(max_length=10, blank=True, null=True)  # Field name made lowercase.
     name = models.CharField(max_length=50, blank=True, null=True)
     index = models.IntegerField(blank=True, null=True)
     api_method = models.CharField(max_length=10, blank=True, null=True)

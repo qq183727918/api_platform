@@ -34,6 +34,9 @@ urlpatterns = [
     url(r'^logout/$', logout),  # 退出
     url(r"^login_action/$", login_action),  # 登录
     url(r"^sign_action/$", sign_action),  # 注册
+    url(r"^sign_change/$", sign_change),  # 修改密码
+    url(r"^sign_select/$", sign_select),  # 查询账号信息
+    url(r"^delete_user/$", delete_user),  # 删除用户信息
 
     url(r"^pei/$", pei),  # 匿名吐槽
 

@@ -29,24 +29,26 @@ def child(request, eid, oid, ooid):
 
 # 用户管理页面
 def user(request):
-    return render(request, 'welcome.html', {"whichHTML": "user.html"})
+    return render(request, 'welcome.html',  {"whichHTML": "user.html", **glodict(request)})
+
 
 
 # 控制不同页面返回不同的数据：数据分发器
 def child_json(eid, oid='', ooid=''):
+    ic(eid, oid, ooid)
     res = {}
     if eid == 'home.html':
-        date = DB_home_href.objects.all()
-        home_log = DB_apis_log.objects.filter(user_id=oid)[::-1]
-        hosts = DB_host.objects.all()
-        user_projects = DB_project.objects.filter(user=DbUser.objects.filter(id=oid)[0].username)
+        date = DbHomeHref.objects.all()
+        home_log = DbApisLog.objects.filter(user_id=oid)[::-1]
+        hosts = DbHost.objects.all()
+        user_projects = DbProject.objects.filter(user=DbUser.objects.filter(id=oid)[0].username)
 
         # 个人数据看板
         count_project = len(user_projects)
-        count_api = sum([len(DB_apis.objects.filter(project_id=i.id)) for i in user_projects])
-        count_case = sum([len(DB_cases.objects.filter(project_id=i.id)) for i in user_projects])
+        count_api = sum([len(DbApis.objects.filter(project_id=i.id)) for i in user_projects])
+        count_case = sum([len(DbCases.objects.filter(project_id=i.id)) for i in user_projects])
 
-        ziyuan_all = len(DB_project.objects.all()) + len(DB_apis.objects.all()) + len(DB_cases.objects.all())
+        ziyuan_all = len(DbProject.objects.all()) + len(DbApis.objects.all()) + len(DbCases.objects.all())
         ziyuan_user = count_project + count_api + count_case
         if ziyuan_all == 0:
             ziyuan = ziyuan_user * 100
@@ -63,7 +65,7 @@ def child_json(eid, oid='', ooid=''):
         if ooid == '':
             res = {"hrefs": date, "home_log": home_log, "hosts": hosts, "user_projects": user_projects}
         else:
-            log = DB_apis_log.objects.filter(id=ooid)[0]
+            log = DbApisLog.objects.filter(id=ooid)[0]
             res = {"hrefs": date, "home_log": home_log, "log": log, hosts: "hosts", "user_projects": user_projects}
         res.update(new_res)
 
@@ -86,7 +88,7 @@ def child_json(eid, oid='', ooid=''):
         project_host = DbProjectHost.objects.filter(project_id=oid)
         res = {"project": project, 'apis': apis, 'project_header': project_header, 'hosts': hosts,
                'project_host': project_host}
-        ic(project)
+        ic(res)
 
     if eid == 'P_project_set.html':
         project = DbProject.objects.filter(id=oid)[0]
@@ -96,10 +98,10 @@ def child_json(eid, oid='', ooid=''):
     if eid == 'P_cases.html':
         # 这里应该是去数据库拿到这个项目的所有用例
         project = DbProject.objects.filter(id=oid)[0]
-        Cases = DB_cases.objects.filter(project_id=oid)
+        Cases = DbCases.objects.filter(project_id=oid)
         apis = DbApis.objects.filter(project_id=oid)
         project_header = DbProjectHeader.objects.filter(project_id=oid)
-        hosts = DB_host.objects.all()
+        hosts = DbHost.objects.all()
         project_host = DbProjectHost.objects.filter(project_id=oid)
         res = {"project": project, "Cases": Cases, "apis": apis, 'project_header': project_header, 'hosts': hosts,
                'project_host': project_host}
@@ -110,13 +112,24 @@ def child_json(eid, oid='', ooid=''):
         res = {"project": project, "global_data": global_data}
         ic(res)
 
+    if eid == 'user.html':
+        add = []
+        users = DbUser.objects.filter(is_delete=0).values()
+        for i in users:
+            i['is_active'] = '启用'
+            add.append(i)
+        ic(add)
+        res = {"users": users}
+        ic(users)
+
     return res
 
 
 # 获取公共字典
 def glodict(request):
-    userimg = str(request.user.id) + '.png'  # 这里我们写死png后缀，因为上传时候我们也可以强行弄成这个png后缀
-    res = {"username": request.user.username, "userimg": userimg}
+    user_data = DbUser.objects.filter(id=1).values()[0]
+    userimg = str(user_data['id']) + '.png'  # 这里我们写死png后缀，因为上传时候我们也可以强行弄成这个png后缀
+    res = {"username": user_data['username'], "userimg": userimg}
     return res
 
 
@@ -129,7 +142,7 @@ def user_upload(request):
 
     new_name = str(request.user.id) + '.png'  # 设置好这个新图片的名字
     ic(new_name)
-    destination = open("/My_api/static/img/" + new_name, 'wb')  # 打开特定的文件进行二进制的写操作
+    destination = open(r"D:\platform\My_api\static\img\\" + new_name, 'wb')  # 打开特定的文件进行二进制的写操作
     for chunk in file.chunks():  # 分块写入文件
         destination.write(chunk)
     destination.close()
@@ -248,7 +261,7 @@ def delete_project(request):
         DbProject.objects.filter(id=Id).update(is_delete=1)
         DbApis.objects.filter(project_id=Id).update(is_delete=1)  # 删除旗下接口
 
-        all_Case = DB_cases.objects.filter(project_id=Id)
+        all_Case = DbCases.objects.filter(project_id=Id)
         for i in all_Case:
             DbStep.objects.filter(Case_id=i.id).update(is_delete=1)  # 删除步骤
             i.update(is_delete=1)  # 用例删除自己
@@ -711,14 +724,15 @@ def Api_send_home(request):
     except Exception as e:
         return HttpResponse(f'请求头不符合json格式！,原因为：{e}')
     # 写入到数据库请求记录中
-    DB_apis_log.objects.create(
-        user_id=request.user.id,
+    DbApisLog.objects.create(
+        user_id=1,
         api_method=ts_method,
         api_url=ts_url,
         api_header=ts_header,
         api_host=ts_host,
         body_method=ts_body_method,
         api_body=ts_api_body,
+        is_delete=0
     )
 
     # 拼接完整url
@@ -776,7 +790,7 @@ def Api_send_home(request):
 
         # 把返回值传递给前端页面
         response.encoding = "utf-8"
-        DB_host.objects.update_or_create(host=ts_host)
+        DbHost.objects.update_or_create(host=ts_host)
         return HttpResponse(response.text)
     except Exception as e:
         return HttpResponse(str(e))
@@ -785,7 +799,7 @@ def Api_send_home(request):
 # 首页获取请求记录
 def get_home_log(request):
     user_id = request.user.id
-    all_logs = DB_apis_log.objects.filter(user_id=user_id).values()
+    all_logs = DbApisLog.objects.filter(user_id=1).values()
     ret = {"all_log": list(all_logs.values("id", "api_method", 'api_host', "api_url"))[::-1]}
     return HttpResponse(json.dumps(ret), content_type='application/json')
 
@@ -793,7 +807,7 @@ def get_home_log(request):
 # 获取完整的单一的请求记录数据
 def get_api_log_home(request):
     log_id = request.GET['log_id']
-    log = DB_apis_log.objects.filter(id=log_id)
+    log = DbApisLog.objects.filter(id=log_id)
     ret = {"log": list(log.values())[0]}
     ic(ret)
     return HttpResponse(json.dumps(ret), content_type='application/json')
@@ -801,27 +815,28 @@ def get_api_log_home(request):
 
 # 增加用例
 def add_case(request, eid):
-    DB_cases.objects.create(project_id=eid, name='')
+    DbCases.objects.create(project_id=eid, name='', is_delete=0)
     return HttpResponseRedirect('/cases/%s/' % eid)
 
 
 # 删除用例
 def del_case(request, eid, oid):
-    DB_cases.objects.filter(id=oid).delete()
+    DbCases.objects.filter(id=oid).delete()
     return HttpResponseRedirect('/cases/%s/' % eid)
 
 
 # 复制用例
 def copy_case(request, eid, oid):
-    old_case = DB_cases.objects.filter(id=oid)[0]
-    DB_cases.objects.create(project_id=old_case.project_id, name=old_case.name + '_副本')
+    old_case = DbCases.objects.filter(id=oid)[0]
+    DbCases.objects.create(project_id=old_case.project_id, name=old_case.name + '_副本')
     return HttpResponseRedirect('/cases/%s/' % eid)
 
 
 # 获取小用例步骤的数据
 def get_small(request):
     case_id = request.GET['case_id']
-    steps = DB_step.objects.filter(Case_id=case_id).order_by('index')
+    ic(case_id)
+    steps = DbStep.objects.filter(Case_id=case_id).order_by('index')
     ret = {"all_steps": list(steps.values("index", "id", "name"))}
     return HttpResponse(json.dumps(ret), content_type='application/json')
 
@@ -829,21 +844,24 @@ def get_small(request):
 # 新增小步骤
 def add_new_step(request):
     Case_id = request.GET['Case_id']
-    all_len = len(DB_step.objects.filter(Case_id=Case_id))
-    DB_step.objects.create(Case_id=Case_id, name='我是新步骤', index=all_len + 1)
+    ic('add', Case_id)
+    a = DbStep.objects.filter(Case_id=Case_id)
+    ic(a)
+    all_len = len(DbStep.objects.filter(Case_id=Case_id))
+    DbStep.objects.create(Case_id=Case_id, name='我是新步骤', index=all_len + 1, is_delete=0)
     return HttpResponse('')
 
 
 # 删除小步骤
 def delete_step(request, eid):
     ic(eid)
-    step = DB_step.objects.filter(id=eid)[0]  # 获取待删除的step
+    step = DbStep.objects.filter(id=eid)[0]  # 获取待删除的step
     ic(step)
     index = step.index  # 获取目标index
     Case_id = step.Case_id  # 获取目标所属大用例id
     step.delete()  # 删除目标step
     # 遍历所有该大用例下的步骤中 顺序号大于目标index的步骤
-    for i in DB_step.objects.filter(Case_id=Case_id).filter(index=index):
+    for i in DbStep.objects.filter(Case_id=Case_id).filter(index=index):
         i.index -= 1  # 执行顺序自减1
         i.save()
 
@@ -853,7 +871,7 @@ def delete_step(request, eid):
 # 获取小步骤数据
 def get_step(request):
     step_id = request.GET['step_id']
-    step = DB_step.objects.filter(id=step_id)
+    step = DbStep.objects.filter(id=step_id)
     steplist = list(step.values())[0]
 
     return HttpResponse(json.dumps(steplist), content_type="application/json")
@@ -880,38 +898,38 @@ def save_step(request):
     assert_path = request.GET['assert_path']
     step_login = request.GET['step_login']
 
-    DB_step.objects.filter(id=step_id).update(name=name,
-                                              index=index,
-                                              api_method=step_method,
-                                              api_url=step_url,
-                                              api_host=step_host,
-                                              api_header=step_header,
-                                              public_header=ts_project_headers,
-                                              mock_res=mock_res,
-                                              api_body_method=step_body_method,
-                                              api_body=step_api_body,
-                                              get_path=get_path,
-                                              get_zz=get_zz,
-                                              assert_zz=assert_zz,
-                                              assert_qz=assert_qz,
-                                              assert_path=assert_path,
-                                              api_login=step_login,
-                                              )
+    DbStep.objects.filter(id=step_id).update(name=name,
+                                             index=index,
+                                             api_method=step_method,
+                                             api_url=step_url,
+                                             api_host=step_host,
+                                             api_header=step_header,
+                                             public_header=ts_project_headers,
+                                             mock_res=mock_res,
+                                             api_body_method=step_body_method,
+                                             api_body=step_api_body,
+                                             get_path=get_path,
+                                             get_zz=get_zz,
+                                             assert_zz=assert_zz,
+                                             assert_qz=assert_qz,
+                                             assert_path=assert_path,
+                                             api_login=step_login,
+                                             )
     return HttpResponse('')
 
 
 # 步骤详情页获取接口数据
 def step_get_api(request):
     api_id = request.GET['api_id']
-    api = DB_apis.objects.filter(id=api_id).values()[0]
+    api = DbApis.objects.filter(id=api_id).values()[0]
     return HttpResponse(json.dumps(api), content_type="application/json")
 
 
 # 运行大用例
 def Run_Case(request):
     Case_id = request.GET['Case_id']
-    Case = DB_cases.objects.filter(id=Case_id)[0]
-    steps = DB_step.objects.filter(Case_id=Case_id)
+    Case = DbCases.objects.filter(id=Case_id)[0]
+    steps = DbStep.objects.filter(Case_id=Case_id)
     ic(steps)
     from My_api.run_case import run
     run(Case.id, Case.name, steps)
@@ -944,9 +962,11 @@ def save_project_header(request):
     for i in range(len(ids)):
         if names[i] != '':
             if ids[i] == 'new':
-                DbProjectHeader.objects.create(project_id=project_id, name=names[i], key=keys[i], value=values[i], is_delete=0)
+                DbProjectHeader.objects.create(project_id=project_id, name=names[i], key=keys[i], value=values[i],
+                                               is_delete=0)
             else:
-                DbProjectHeader.objects.filter(id=ids[i]).update(name=names[i], key=keys[i], value=values[i], is_delete=0)
+                DbProjectHeader.objects.filter(id=ids[i]).update(name=names[i], key=keys[i], value=values[i],
+                                                                 is_delete=0)
         else:
             try:
                 DbProjectHeader.objects.filter(id=ids[i]).delete()
@@ -960,7 +980,7 @@ def save_case_name(request):
     Id = request.GET['id']
     name = request.GET['name']
     ic(Id, name)
-    DB_cases.objects.filter(id=Id).update(name=name)
+    DbCases.objects.filter(id=Id).update(name=name)
     return HttpResponse('')
 
 
@@ -989,38 +1009,70 @@ def save_project_host(request):
 
 # 获取项目登录态
 def project_get_login(request):
-    project_id = request.GET['project_id']
-    ic(project_id)
-    try:
-        login = DbLogin.objects.filter(project_id=project_id).values()[0]
-    except:
-        login = {}
-    return HttpResponse(json.dumps(login), content_type='application/json')
+    if request.method == 'GET':
+        project_id = request.GET['project_id']
+        ic(project_id)
+        try:
+            login = DbLogin.objects.filter(project_id=project_id).values()[0]
+        except:
+            login = {}
+        return HttpResponse(json.dumps(login), content_type='application/json')
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 保存登陆态接口
 def project_login_save(request):
-    # 提取所有数据
-    project_id = request.GET['project_id']
-    login_method = request.GET['login_method']
-    login_url = request.GET['login_url']
-    login_host = request.GET['login_host']
-    login_header = request.GET['login_header']
-    login_body_method = request.GET['login_body_method']
-    login_api_body = request.GET['login_api_body']
-    login_response_set = request.GET['login_response_set']
-    # 保存数据
-    DbLogin.objects.filter(project_id=project_id).update(
-        api_method=login_method,
-        api_url=login_url,
-        api_header=login_header,
-        api_host=login_host,
-        body_method=login_body_method,
-        api_body=login_api_body,
-        set=login_response_set
-    )
-    # 返回
-    return HttpResponse('success')
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        # 提取所有数据
+        project_id = data['project_id']
+        login_method = data['login_method']
+        login_url = data['login_url']
+        login_host = data['login_host']
+        login_header = data['login_header']
+        login_body_method = data['login_body_method']
+        login_api_body = data['login_api_body']
+        login_response_set = data['login_response_set']
+        # 保存数据
+        ic(project_id,
+           login_method,
+           login_url,
+           login_host,
+           login_header,
+           login_body_method,
+           login_api_body,
+           login_response_set)
+        if DbLogin.objects.filter(project_id=project_id).values().count() == 0:
+            DbLogin.objects.create(
+                project_id=project_id,
+                api_method=login_method,
+                api_url=login_url,
+                api_header=login_header,
+                api_host=login_host,
+                body_method=login_body_method,
+                api_body=login_api_body,
+                set=login_response_set,
+                is_delete=0
+            )
+        else:
+            DbLogin.objects.filter(project_id=project_id).update(
+                api_method=login_method,
+                api_url=login_url,
+                api_header=login_header,
+                api_host=login_host,
+                body_method=login_body_method,
+                api_body=login_api_body,
+                set=login_response_set,
+                is_delete=0
+            )
+        # 返回
+        dic = json.dumps({'code': 200, 'data': True, 'massage': 'success'})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 调试登陆态接口
@@ -1053,8 +1105,8 @@ def project_login_send(request):
         # 处理域名host
     if login_host[:4] == '全局域名':
         project_host_id = login_host.split('-')[1]
-        ic(DB_project_host.objects.filter(id=project_host_id)[0])
-        login_host = DB_project_host.objects.filter(id=project_host_id)[0].host
+        ic(DbProjectHost.objects.filter(id=project_host_id)[0])
+        login_host = DbProjectHost.objects.filter(id=project_host_id)[0].host
 
     # 拼接完整url
     if login_host[-1] == '/' and login_url[0] == '/':  # 都有/
@@ -1284,15 +1336,16 @@ def Home_save_api(request):
        ts_header,
        ts_body_method,
        ts_api_body)
-    DB_apis.objects.create(project_id=project_id,
-                           name='首页保存接口',
-                           api_models=ts_method,
-                           api_url=ts_url,
-                           api_header=ts_header,
-                           api_host=ts_host,
-                           body_method=ts_body_method,
-                           api_body=ts_api_body,
-                           )
+    DbApis.objects.create(project_id=project_id,
+                          name='首页保存接口',
+                          api_models=ts_method,
+                          api_url=ts_url,
+                          api_header=ts_header,
+                          api_host=ts_host,
+                          body_method=ts_body_method,
+                          api_body=ts_api_body,
+                          is_delete=0
+                          )
 
     return HttpResponse('')
 
@@ -1302,10 +1355,10 @@ def search(request):
     key = request.GET['key']
 
     # 项目名搜哦所
-    projects = DB_project.objects.filter(name__contains=key)  # 获取name包含key的所有项目
+    projects = DbProject.objects.filter(name__contains=key)  # 获取name包含key的所有项目
     plist = [{"url": "/apis/%s/" % i.id, "text": i.name, "type": "project"} for i in projects]
     # 接口名搜索
-    apis = DB_apis.objects.filter(name__contains=key)  # 获取name包含key的所有接口
+    apis = DbApis.objects.filter(name__contains=key)  # 获取name包含key的所有接口
     alist = [{"url": "/apis/%s/" % i.project_id, "text": i.name, "type": "api"} for i in apis]
 
     res = {"results": plist + alist}
@@ -1316,3 +1369,50 @@ def search(request):
 def global_data(request, Id):
     project_id = Id
     return render(request, 'welcome.html', {"whichHTML": "P_global_data.html", "oid": project_id})
+
+
+# 账号修改
+def sign_change(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        u_name = data["username"]
+        p_word = data["password"]
+        ic(u_name, p_word)
+        if p_word in ['', None]:
+            dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+        DbUser.objects.filter(username=u_name).update(password=p_word)
+        dic = json.dumps({"code": 200, "data": "false", "message": "修改成功！"})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+# 查询账号信息
+def sign_select(request):
+    if request.method == 'GET':
+        Id = request.GET['id']
+        user_s = DbUser.objects.filter(id=Id).values()[0]
+        ic(user_s)
+        dic = json.dumps(user_s)
+        # dic = json.dumps({'code': 200, 'data': True, 'massage': f'{user_s}'})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+# 删除用户
+def delete_user(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        ic(data)
+        Id = data['id']
+        DbUser.objects.filter(id=Id).update(is_delete=1)
+        dic = json.dumps({'code': 200, 'data': True, 'message': '删除成功！'})
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)

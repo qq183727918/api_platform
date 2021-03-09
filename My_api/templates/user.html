@@ -3,8 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <title>用户管理页面</title>
+    <style>
+        th {
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2.8px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-
+<div style="background: linear-gradient(to bottom,#f597bf,#7ef5e5);text-align: center;border-radius: 50px;width: 1000px;position: absolute;left: 260px;
+         height: 80px">
+    <h1>欢迎进入用户管理页面</h1>
+</div>
+<div style="position: absolute;width: 80%;left: 160px;top: 150px;border-radius: 5px">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>用户ID</th>
+            <th>用户账号</th>
+            <th>是否启用</th>
+            <th>是否启用</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in users %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.username }}</td>
+                <td>{{ i.is_active }}</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <div class="slider round"></div>
+                    </label>
+                </td>
+                <td>
+                    <button class="btn btn-success" onclick="open_user({{ i.id }})">编辑</button>
+                    <button onclick="delete_user({{ i.id }})" class="btn btn-danger">删除</button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div id="new" style="display: none;position: absolute;background-color: rgb(241,245,234);width: 55%;height: 300px;top: 200px;
+        left: 300px;padding-top: 30px;border-radius: 50px">
+    <br><br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">用户ID</span>
+        <input id="user_id" type="text" class="form-control" placeholder="" disabled value="">
+    </div>
+    <br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">账  号</span>
+        <input id="username" type="text" class="form-control" placeholder="" disabled value="">
+    </div>
+    <br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">密 码</span>
+        <input id="password" type="password" class="form-control" placeholder="请输入密码！">
+    </div>
+    <br>
+    <br><br>
+    <button style="left: 560px;position: absolute;" class="btn btn-success" id="new_list">确 定</button>
+    <button style="left: 220px;position: absolute;" class="btn btn-danger" onclick="close_user()">取 消</button>
+</div>
 </body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    function close_user() {
+        document.getElementById('new').style.display = 'none';
+    }
+
+    function open_user(id) {
+        document.getElementById('new').style.zIndex = '999';
+        document.getElementById('new').style.display = 'block';
+        $.ajax({
+            url: "/sign_select/",
+            type: "GET",
+            data: {
+                'id': id,
+            },
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                document.getElementById('user_id').value = data.id;
+                document.getElementById('username').value = data.username;
+            }
+
+        })
+
+    }
+
+    $('#new_list').click(function () {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        $.ajax({
+            url: "/sign_change/",
+            type: "POST",
+            data: JSON.stringify({
+                "username": username,
+                "password": password
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                if (data.code === 200) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '修改成功！！',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    close_user()
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: data.message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            }
+
+        })
+    })
+
+    function delete_user(id) {
+        $.ajax({
+            url: "/delete_user/",
+            type: "POST",
+            data: JSON.stringify({
+                'id': id,
+            }),
+            contentType: 'application/json',
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                Swal.fire({
+                    icon: 'success',
+                    title: data.message,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                document.location.reload();
+            }
+
+        })
+
+    }
+</script>
 </html>
