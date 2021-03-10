@@ -9,6 +9,9 @@ from icecream import ic
 
 from My_api.models import *
 from My_api.static.params.return_params import RE
+from My_api.static.public_method.log_setting import log_set
+
+logger = log_set()
 
 
 @login_required
@@ -22,15 +25,14 @@ def case_list(request):
 
 # 返回子页面
 def child(request, eid, oid, ooid):
-    ic('child', eid, oid, ooid)
+    logger.info('child', eid, oid, ooid)
     res = child_json(eid, oid, ooid)
     return render(request, eid, res)
 
 
 # 用户管理页面
 def user(request):
-    return render(request, 'welcome.html',  {"whichHTML": "user.html", **glodict(request)})
-
+    return render(request, 'welcome.html', {"whichHTML": "user.html", **glodict(request)})
 
 
 # 控制不同页面返回不同的数据：数据分发器
@@ -457,7 +459,7 @@ def Api_send(request):
         ts_project_headers = datas['ts_project_headers'].split(',')
         ts_login = datas['ts_login']
         if ts_login == 'yes':  # 说明要调用登陆态了
-            login_res = project_login_send_for_other(project_id=DB_apis.objects.filter(id=api_id)[0].project_id)
+            login_res = project_login_send_for_other(project_id=DbApis.objects.filter(id=api_id)[0].project_id)
         else:
             login_res = {}
         # 处理域名host
@@ -484,7 +486,7 @@ def Api_send(request):
 
         for i in ts_project_headers:
             if i != '':
-                project_header = DB_project_header.objects.filter(id=i)[0]
+                project_header = DbProjectHeader.objects.filter(id=i)[0]
                 header[project_header.key] = project_header.value
         # 拼接完整url
         if ts_host[-1] == '/' and ts_url[0] == '/':  # 都有/
@@ -1166,7 +1168,7 @@ def project_login_send(request):
 
         # 把返回值传递给前端页面
         response.encoding = "utf-8"
-        DB_host.objects.update_or_create(host=login_host)
+        DbHost.objects.update_or_create(host=login_host)
         res = response.json()
 
         # 第三步，对返回值进行提取
@@ -1194,7 +1196,7 @@ def project_login_send(request):
 # 调用登陆态接口
 def project_login_send_for_other(project_id):
     # 第一步，获取数据
-    login_api = DB_login.objects.filter(project_id=project_id)[0]
+    login_api = DbLogin.objects.filter(project_id=project_id)[0]
     login_method = login_api.api_method
     login_url = login_api.api_url
     login_host = login_api.api_host
@@ -1295,7 +1297,7 @@ def project_login_send_for_other(project_id):
                                             data=login_api_body.encode('utf-8'))
         # 把返回值传递给前端页面
         response.encoding = "utf-8"
-        DB_host.objects.update_or_create(host=login_host)
+        DbHost.objects.update_or_create(host=login_host)
         res = response.json()
 
         # 先判断是否是cookie持久化，若是，则不处理
