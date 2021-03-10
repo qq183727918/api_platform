@@ -9,9 +9,7 @@ from icecream import ic
 
 from My_api.models import *
 from My_api.static.params.return_params import RE
-from My_api.static.public_method.log_setting import log_set
 
-logger = log_set()
 
 
 @login_required
@@ -25,7 +23,7 @@ def case_list(request):
 
 # 返回子页面
 def child(request, eid, oid, ooid):
-    logger.info('child', eid, oid, ooid)
+    ic('child', eid, oid, ooid)
     res = child_json(eid, oid, ooid)
     return render(request, eid, res)
 
