@@ -72,9 +72,9 @@
     </style>
 </head>
 <body>
-<div style="background: linear-gradient(to bottom,#f597bf,#7ef5e5);text-align: center;border-radius: 50px;width: 1000px;position: absolute;left: 260px;
+<div style="background: linear-gradient(to bottom,#5c5832,#40310e,#716b05);text-align: center;border-radius: 50px;width: 1000px;position: absolute;left: 260px;
          height: 80px">
-    <h1>欢迎进入用户管理页面</h1>
+    <h1 style="color: #FFFFFFCC">欢迎进入用户管理页面</h1>
 </div>
 <div style="position: absolute;width: 80%;left: 160px;top: 150px;border-radius: 5px">
     <table class="table table-striped">
@@ -130,6 +130,31 @@
     <button style="left: 560px;position: absolute;" class="btn btn-success" id="new_list">确 定</button>
     <button style="left: 220px;position: absolute;" class="btn btn-danger" onclick="close_user()">取 消</button>
 </div>
+
+
+<div style="width: 98%;color: black;">
+                <table class="table table-bordered" id="mytable" style="background-color:white">
+                    <thead style="color: #337ab7;font-size: x-small">
+                    <tr>
+                        <td style="width: 30%">Key</td>
+                        <td style="width: 50%">Value</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="background-color: #eceaea">
+                            <input name="key" type="text"
+                                   style="border: none;outline:none;border-radius: 5px;width: 400px;height: 30px;">
+                        </td>
+                        <td style="background-color: #eceaea">
+                            <input name="value" type="text"
+                                   style="border: none;outline:none;border-radius: 5px;width: 700px;height: 30px;">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-default" id="add"><i class="fa fa-plus"></i>添加新参数</button>
+            </div>
 </body>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>

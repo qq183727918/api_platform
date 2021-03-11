@@ -29,8 +29,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/My_api/templates/Reports/1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/P_global_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/P_global_data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/case_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/home_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/home_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug/__pycache__/locust_test.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/debug/__pycache__/locust_test.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug/jiek.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug/jiek.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +113,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Django/PLATFORM" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -133,11 +145,57 @@
     <option name="configurationTypes">
       <set>
         <option value="Python.DjangoServer" />
-        <option value="PythonConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript 调试.home_test.html">
+    <configuration name="home_test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/home_test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ddd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="api_platform" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug/ddd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jiek" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="api_platform" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug/jiek.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="locust_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="api_platform" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,12 +287,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.locust_test (1)" />
       <item itemvalue="Django 服务器.api_platform" />
+      <item itemvalue="Python.locust_test (1)" />
+      <item itemvalue="Python.ddd" />
+      <item itemvalue="Python.jiek" />
+      <item itemvalue="JavaScript 调试.home_test.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript 调试.home_test.html" />
         <item itemvalue="Python.locust_test (1)" />
+        <item itemvalue="Python.jiek" />
+        <item itemvalue="Python.ddd" />
         <item itemvalue="Python.locust_test" />
       </list>
     </recent_temporary>
@@ -269,7 +333,7 @@
       <workItem from="1614932707599" duration="5604000" />
       <workItem from="1615163244082" duration="2645000" />
       <workItem from="1615170592810" duration="52463000" />
-      <workItem from="1615336019657" duration="17583000" />
+      <workItem from="1615336019657" duration="40576000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -355,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615377099185</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="locust_test">
+      <created>1615378356623</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615378356623</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -402,29 +473,37 @@
     <option name="LAST_COMMIT_MESSAGE" value="locust_test" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="697" y="136" key="CommitChangelistDialog2" timestamp="1615377097933">
+    <state x="755" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615442698772">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="697" y="136" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615377097933" />
-    <state width="1676" height="306" key="GridCell.Tab.0.bottom" timestamp="1615378325547">
+    <state x="755" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615442698772" />
+    <state x="697" y="136" key="CommitChangelistDialog2" timestamp="1615378354818">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="306" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615378325547" />
+    <state x="697" y="136" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615378354818" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1615424647374">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615424647374" />
+    <state width="824" height="278" key="GridCell.Tab.0.bottom" timestamp="1615460986764">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="824" height="278" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615460986764" />
     <state width="1493" height="215" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615360511911" />
-    <state width="1676" height="306" key="GridCell.Tab.0.center" timestamp="1615378325547">
+    <state width="824" height="278" key="GridCell.Tab.0.center" timestamp="1615460986764">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="306" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615378325547" />
+    <state width="824" height="278" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615460986764" />
     <state width="1493" height="215" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615360511911" />
-    <state width="1676" height="306" key="GridCell.Tab.0.left" timestamp="1615378325547">
+    <state width="824" height="278" key="GridCell.Tab.0.left" timestamp="1615460986764">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="306" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615378325547" />
+    <state width="824" height="278" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615460986764" />
     <state width="1493" height="215" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615360511911" />
-    <state width="1676" height="306" key="GridCell.Tab.0.right" timestamp="1615378325547">
+    <state width="824" height="278" key="GridCell.Tab.0.right" timestamp="1615460986764">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="306" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615378325547" />
+    <state width="824" height="278" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615460986764" />
     <state width="1493" height="215" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615360511911" />
     <state width="1676" height="306" key="GridCell.Tab.1.bottom" timestamp="1615366234819">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -446,10 +525,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615361240922" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1615377103852">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1615378359679">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615377103852" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615378359679" />
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1615283344717">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -457,13 +536,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/api_platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614325510564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-    <SUITE FILE_PATH="coverage/platform$ddd.coverage" NAME="ddd Coverage Results" MODIFIED="1615365464520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$ddd.coverage" NAME="ddd Coverage Results" MODIFIED="1615423313070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/api_platform$Unittest_in_run_case_py.coverage" NAME="Unittest in run_case.py Coverage Results" MODIFIED="1614564750688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-    <SUITE FILE_PATH="coverage/platform$locust_test__1_.coverage" NAME="locust_test (1) Coverage Results" MODIFIED="1615367088139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$locust_test__1_.coverage" NAME="locust_test (1) Coverage Results" MODIFIED="1615443267078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$locaust.coverage" NAME="locust Coverage Results" MODIFIED="1615364443599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$locust__1_.coverage" NAME="locust (1) Coverage Results" MODIFIED="1615364583006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$test_dingding.coverage" NAME="test_dingding Coverage Results" MODIFIED="1615288205355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
-    <SUITE FILE_PATH="coverage/platform$jiek.coverage" NAME="jiek Coverage Results" MODIFIED="1615355134196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$jiek.coverage" NAME="jiek Coverage Results" MODIFIED="1615424370012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/api$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614261898705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
     <SUITE FILE_PATH="coverage/platform$test.coverage" NAME="test Coverage Results" MODIFIED="1615366434306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
   </component>

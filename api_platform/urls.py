@@ -23,9 +23,8 @@ urlpatterns = [
 
     url(r'^$', login),
     url(r'^admin/', admin.site.urls),
-    url(r'^user/', user),   # 用户管理页面
+    url(r'^user/', user),  # 用户管理页面
     url(r'^welcome/$', welcome),  # 获取菜单
-    url(r'^case_list/$', case_list),
     url(r'^home/$', home),  # 进入首页
     url(r"^child/(?P<eid>.+)/(?P<oid>.*)/(?P<ooid>.*)/$", child),  # 返回子页面
     url(r"^login/$", login),  # 登录页面
@@ -88,6 +87,10 @@ urlpatterns = [
     url(r'^Home_save_api/$', Home_save_api),  # 首页保存请求数据
     url(r'^search/$', search),  # 首页搜索功能
     url(r'^global_data/(?P<Id>.*)/$', global_data),  # 进入全局变量
+    url(r'^global_data_new/$', global_data_new),  # 新增全局变量
+    url(r'^delete_data/$', delete_data),  # 删除全局变量
+    url(r'^show_data/$', show_data),  # 展示全局变量
+    url(r'^home_test/$', home_test),
 
     # --------------------小工具-------------------- #
     url(r'^tools_zhengjiao/$', zhengjiao),  # 进入小工具页面

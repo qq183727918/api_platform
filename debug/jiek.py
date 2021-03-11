@@ -18,17 +18,18 @@ import requests
 # 接口类型
 method = "post"
 # 接口地址
-url = "http://127.0.0.1:8080/save_bz/"
-# 接口参数    "bz_value": "wms656"
+url = "http://localhost:8080/login_action/"
+# 接口参数
 data = {
-    "api_id": "1",
+    "username": "admin",
+    "password": "admin"
 }
 # 线程数
-thread_num = 200
+thread_num = 100
 # 每个线程循环次数
-one_work_num = 10
+one_work_num = 100
 # 每次请求时间间隔
-loop_sleep = 1
+loop_sleep = 0
 # 平均响应时间列表
 response_time = []
 # 错误信息列表

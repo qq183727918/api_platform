@@ -11,14 +11,9 @@ from My_api.models import *
 from My_api.static.params.return_params import RE
 
 
-
 @login_required
 def welcome(request):
     return render(request, 'welcome.html')
-
-
-def case_list(request):
-    return render(request, 'case_list.html')
 
 
 # 返回子页面
@@ -1416,3 +1411,37 @@ def delete_user(request):
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+# 新增全局变量
+def global_data_new(request):
+    name = request.GET['name']
+    data = request.GET['data']
+    user_id = request.GET['user_id']
+    ic(name,
+       data,
+       user_id)
+    DbGlobalData.objects.create(name=name, data=data, user_id=user_id)
+
+    return HttpResponse('新增成功')
+
+
+# 删除全局变量
+def delete_data(request):
+    Id = request.GET['id']
+    DbGlobalData.objects.filter(id=Id).delete()
+
+    return HttpResponse('删除成功！')
+
+
+# 查询全局变量
+def show_data(request):
+    Id = request.GET['id']
+
+    dic = DbGlobalData.objects.filter(id=Id).values()[0]
+    ic(dic)
+    return HttpResponse(json.dumps(dic), content_type='application/json')
+
+
+def home_test(request):
+    return render(request, 'home_test.html')
