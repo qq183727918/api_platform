@@ -1451,3 +1451,12 @@ def save_data(request):
     DbGlobalData.objects.filter(id=data_id).update(name=name, data=data)
 
     return HttpResponse(json.dumps({'code': 200, 'data': True, 'message': '修改成功'}))
+
+
+# home改版
+def new_home(request):
+    return render(request, 'new_home.html')
+
+
+def index(request):
+    return render(request, 'welcome2.html')

@@ -25,9 +25,9 @@ data = {
     "password": "admin"
 }
 # 线程数
-thread_num = 100
+thread_num = 1
 # 每个线程循环次数
-one_work_num = 100
+one_work_num = 1000
 # 每次请求时间间隔
 loop_sleep = 0
 # 平均响应时间列表

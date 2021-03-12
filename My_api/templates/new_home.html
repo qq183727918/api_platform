@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>主页改版</title>
+    <style type="text/css">
+        ul li {
+            display: inline;
+            float: left;
+        }
+    </style>
+</head>
+<body style="background-color: #505050">
+
+<div style="position: absolute;top: 100px;left: 270px;width: -webkit-calc(100% - 390px);">
+    {#    <ul>#}
+    {#        <input type="text" value="接口名称" style="width: 500px;background-color: white;height: 26px;">#}
+    {#    </ul>#}
+    <ul style="width: 100%;list-style: none;white-space: nowrap;">
+        <li>
+            <select id="ts_method"
+                    style="height: 46px;border-radius: 5px;width: 100px;font-size: 20px;background-color: #f5f2f2">
+                <option value="none"> 请求方式</option>
+                <option value="post"> POST</option>
+                <option value="get"> GET</option>
+                <option value="put"> PUT</option>
+                <option value="delete"> DELETE</option>
+            </select>
+        </li>
+        <li style="width: -webkit-calc(100% - 225px);">
+            <input id="ts_url" style="color: black;padding-left: 10px;width: 97%;height: 40px;
+                    border-radius: 5px;font-size: 20px;background-color: #f5f2f2" type="text"
+                   placeholder='请输入请求地址...' value="">
+        </li>
+        <li>
+            <button onclick="" type="button"
+                    style="height: 46px;width: 100px;border-radius: 5px;background-color: #14a514"><span
+                    style="font-size: large">Send</span></button>
+        </li>
+    </ul>
+</div>
+<div style="position: absolute;background-color: white;width: 1000px;height: 200px;top: 200px;left: 310px">
+    <ul id="myTab">
+        <li href="#none" class="active"><a id="click_none" data-toggle="tab">none</a></li>
+        <li><a href="#form-data" data-toggle="tab">form-data</a></li>
+        <li><a href="#x-www-form-urlencoded" data-toggle="tab">x-www-form-urlencoded</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">raw <b class="caret"></b></a>
+        </li>
+        <li><a href="#GraphQL" data-toggle="tab">GraphQL</a></li>
+        <li><a href="#response" data-toggle="tab">返回体</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

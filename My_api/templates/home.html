@@ -129,7 +129,7 @@
 </script>
 
 
-<div style="height: 400px;overflow-y: scroll;margin-left: 15px;width: 300px;" class="panel-group test-1" id="accordion"
+<div style="position: absolute;top: 40px;height: 400px;overflow-y: scroll;margin-left: 15px;width: 300px;" class="panel-group test-1" id="accordion"
      role="tablist" aria-multiselectable="true">
     您的项目如下：
     {% for i in user_projects %}
@@ -358,7 +358,7 @@
     </ul>
     <br><br><br>
     <ul id="myTab" class="nav nav-tabs">
-        <li class="active"><a id="click_none" href="#none" data-toggle="tab">none</a></li>
+        <li href="#none" class="active"><a id="click_none" data-toggle="tab">none</a></li>
         <li><a href="#form-data" data-toggle="tab">form-data</a></li>
         <li><a href="#x-www-form-urlencoded" data-toggle="tab">x-www-form-urlencoded</a></li>
         <li class="dropdown">
@@ -381,7 +381,7 @@
             <h3>这个请求将不会携带任何请求体</h3>
             <h5>This request will not carry any request-body</h5>
         </div>
-        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         <div class="tab-pane fade" id="form-data">
             <div style="width: 98%;color: black;">
                 <table class="table table-bordered" id="mytable" style="background-color:white">
@@ -407,8 +407,9 @@
                 <button class="btn btn-default" id="add" onclick="add_word()"><i class="fa fa-plus"></i>添加新参数</button>
             </div>
         </div>
+        -->
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-        <!--
+
         <div class="tab-pane fade" id="form-data">
             <div class="table-responsive" style="width: 98%;color: black">
                 <table class="table table-bordered table-striped" id="mytable" style="background-color:white">
@@ -428,11 +429,11 @@
             <button class="btn btn-default" id="add"><i class="fa fa-plus"></i> 添加新参数</button>
             <script>window.jQuery || document.write('<script src="/static/201801271505/js/jquery-1.11.0.min.js"><\/script>')</script>
             <script type="text/javascript" src="/static/201801271505/js/bootstable.js"></script>
-            </div>
-            -->
+        </div>
+
 
         <div class="tab-pane fade" id="x-www-form-urlencoded">
-            <!--
+
             <div class="table-responsive" style="width: 98%;color: black">
                 <table class="table table-bordered table-striped" id="mytable2" style="background-color:white">
                     <thead style="color: #337ab7;font-size: x-small">
@@ -452,8 +453,8 @@
             <button class="btn btn-default" id="add2"><i class="fa fa-plus"></i> 添加新参数</button>
             <script>window.jQuery || document.write('<script src="/static/201801271505/js/jquery-1.11.0.min.js"><\/script>')</script>
             <script type="text/javascript" src="/static/201801271505/js/bootstable.js"></script>
-            -->
-            <!--!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+            <!--!!!!!!!!!!!!!!!!!!!!!!!!!
             <div style="width: 98%;color: black;">
                 <table class="table table-bordered" id="mytable2" style="background-color:white">
                     <thead style="color: #337ab7;font-size: x-small">
@@ -477,7 +478,7 @@
                 </table>
                 <button class="btn btn-default" id="add" onclick="add_word2()"><i class="fa fa-plus"></i>添加新参数</button>
             </div>
-            <!--!!!!!!!!!!!!!!!!!!!!!!!!!-->
+            !!!!!!!!!!!!!!!!!!!!!!!!!-->
         </div>
         <div class="tab-pane fade" id="Text">
             <textarea name="" id="raw_Text" style="color: black;width: 98%;height: 300px"></textarea>
@@ -592,56 +593,56 @@
     <script>
         {#新增参数#}
 
-        function add_word() {
-            var add_tbody = document.getElementById('mytable');
-            var t1 = document.createElement('tbody');
-            var t2 = document.createElement('tr');
-            var t3 = document.createElement('td');
-            var i0 = document.createElement("input");
-            i0.style = 'border: none;outline:none;border-radius: 5px;width: 400px;height: 30px;';
-            i0.type = 'text';
-            i0.name = 'key';
-            var t4 = document.createElement('td');
-            var i1 = document.createElement("input");
-            i1.style = 'border: none;outline:none;border-radius: 5px;width: 700px;height: 30px;';
-            i1.type = 'text';
-            i1.name = 'value';
-            add_tbody.appendChild(t1);
-            t1.appendChild(t2);
-            t2.appendChild(t3);
-            t3.appendChild(i0);
-            t2.appendChild(t4);
-            t4.appendChild(i1);
-        }
+        {#function add_word() {#}
+        {#    var add_tbody = document.getElementById('mytable');#}
+        {#    var t1 = document.createElement('tbody');#}
+        {#    var t2 = document.createElement('tr');#}
+        {#    var t3 = document.createElement('td');#}
+        {#    var i0 = document.createElement("input");#}
+        {#    i0.style = 'border: none;outline:none;border-radius: 5px;width: 400px;height: 30px;';#}
+        {#    i0.type = 'text';#}
+        {#    i0.name = 'key';#}
+        {#    var t4 = document.createElement('td');#}
+        {#    var i1 = document.createElement("input");#}
+        {#    i1.style = 'border: none;outline:none;border-radius: 5px;width: 700px;height: 30px;';#}
+        {#    i1.type = 'text';#}
+        {#    i1.name = 'value';#}
+        {#    add_tbody.appendChild(t1);#}
+        {#    t1.appendChild(t2);#}
+        {#    t2.appendChild(t3);#}
+        {#    t3.appendChild(i0);#}
+        {#    t2.appendChild(t4);#}
+        {#    t4.appendChild(i1);#}
+        //}
+        {##}
+        {#function add_word2() {#}
+        {#    var add_tbody = document.getElementById('mytable2');#}
+        {#    var t1 = document.createElement('tbody');#}
+        {#    var t2 = document.createElement('tr');#}
+        {#    var t3 = document.createElement('td');#}
+        {#    var i0 = document.createElement("input");#}
+        {#    i0.style = 'border: none;outline:none;border-radius: 5px;width: 400px;height: 30px;';#}
+        {#    i0.type = 'text';#}
+        {#    i0.name = 'key2';#}
+        {#    var t4 = document.createElement('td');#}
+        {#    var i1 = document.createElement("input");#}
+        {#    i1.style = 'border: none;outline:none;border-radius: 5px;width: 700px;height: 30px;';#}
+        {#    i1.type = 'text';#}
+        {#    i1.name = 'value2';#}
+        {#    add_tbody.appendChild(t1);#}
+        {#    t1.appendChild(t2);#}
+        {#    t2.appendChild(t3);#}
+        {#    t3.appendChild(i0);#}
+        {#    t2.appendChild(t4);#}
+        {#    t4.appendChild(i1);#}
+        //}
 
-        function add_word2() {
-            var add_tbody = document.getElementById('mytable2');
-            var t1 = document.createElement('tbody');
-            var t2 = document.createElement('tr');
-            var t3 = document.createElement('td');
-            var i0 = document.createElement("input");
-            i0.style = 'border: none;outline:none;border-radius: 5px;width: 400px;height: 30px;';
-            i0.type = 'text';
-            i0.name = 'key2';
-            var t4 = document.createElement('td');
-            var i1 = document.createElement("input");
-            i1.style = 'border: none;outline:none;border-radius: 5px;width: 700px;height: 30px;';
-            i1.type = 'text';
-            i1.name = 'value2';
-            add_tbody.appendChild(t1);
-            t1.appendChild(t2);
-            t2.appendChild(t3);
-            t3.appendChild(i0);
-            t2.appendChild(t4);
-            t4.appendChild(i1);
-        }
-
-        //$('#mytable').SetEditable({
-        //    $addButton: $('#add'),
-        //});
-        //$('#mytable2').SetEditable({
-        //    $addButton: $('#add2'),
-        //});
+        $('#mytable').SetEditable({
+            $addButton: $('#add'),
+        });
+        $('#mytable2').SetEditable({
+            $addButton: $('#add2'),
+        });
 
         function ts_send() {
             // 获取接口的所有数据
@@ -693,11 +694,11 @@
                     JSON.parse(ts_header)
                 } catch (e) {
                     Swal.fire({
-                    icon: 'error',
-                    title: 'header请求头不符合json规范！！',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                        icon: 'error',
+                        title: 'header请求头不符合json规范！！',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                     return
                 }
             }
