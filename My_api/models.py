@@ -240,7 +240,6 @@ class DbCases(models.Model):
 
 
 class DbGlobalData(models.Model):
-    id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=20, blank=True, null=True)
     user_id = models.CharField(max_length=10, blank=True, null=True)
     data = models.TextField(blank=True, null=True)

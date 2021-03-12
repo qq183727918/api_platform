@@ -103,8 +103,8 @@ def child_json(eid, oid='', ooid=''):
 
     if eid == 'P_global_data.html':
         project = DbProject.objects.filter(id=oid)[0]
-        global_data = DB_global_data.objects.filter(user_id=project.user_id)
-        res = {"project": project, "global_data": global_data}
+        global_data_s = DbGlobalData.objects.filter(user_id=project.user_id)
+        res = {"project": project, "global_data": global_data_s}
         ic(res)
 
     if eid == 'user.html':
@@ -1417,13 +1417,13 @@ def delete_user(request):
 def global_data_new(request):
     name = request.GET['name']
     data = request.GET['data']
-    user_id = request.GET['user_id']
+    user_a_id = request.GET['user_a_id']
     ic(name,
        data,
-       user_id)
-    DbGlobalData.objects.create(name=name, data=data, user_id=user_id)
+       user_a_id)
+    DbGlobalData.objects.create(name=name, data=data, user_id=user_a_id, is_delete=0)
 
-    return HttpResponse('新增成功')
+    return HttpResponse(json.dumps({'code': 200, 'data': True, 'message': '新增成功'}), content_type='application/json')
 
 
 # 删除全局变量
@@ -1443,5 +1443,11 @@ def show_data(request):
     return HttpResponse(json.dumps(dic), content_type='application/json')
 
 
-def home_test(request):
-    return render(request, 'home_test.html')
+def save_data(request):
+    name = request.GET['name']
+    data = request.GET['data']
+    data_id = request.GET['data_id']
+
+    DbGlobalData.objects.filter(id=data_id).update(name=name, data=data)
+
+    return HttpResponse(json.dumps({'code': 200, 'data': True, 'message': '修改成功'}))

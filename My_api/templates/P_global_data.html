@@ -38,22 +38,24 @@
         <br>
     {% endfor %}
     <br>
-    <button class="btn-primary" onclick="new_data()">新增</button>
+    <button class="btn-primary" onclick="new_data({{ project.user_id }})">新增</button>
 </div>
 <div id="new" style="display: none;position: absolute;background-color: rgb(241,245,234);width: 55%;height: 300px;top: 200px;
         left: 300px;padding-top: 30px;border-radius: 50px;">
+    <input type="text" style="display: none" id="id">
     <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
         <span class="input-group-addon">变量名称</span>
-        <input id="show_name" type="text" class="form-control" placeholder="变量名称" disabled>
+        <input id="show_name" type="text" class="form-control" placeholder="变量名称">
     </div>
     <br>
     <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
         <span class="input-group-addon">变量内容</span>
-        <textarea style="height: 145px" id="show_datas" type="text" class="form-control test-1" placeholder="" disabled value="">
+        <textarea style="height: 145px" id="show_datas" type="text" class="form-control test-1" placeholder="" value="">
         </textarea>
     </div>
     <br>
-    <button style="left: 400px;position: absolute;" class="btn btn-success" onclick="close_data()">关 闭</button>
+    <button style="left: 300px;position: absolute;" class="btn btn-success" onclick="save_data()">保 存</button>
+    <button style="left: 500px;position: absolute;" class="btn btn-danger" onclick="close_data()">关 闭</button>
 </div>
 <div style="position: absolute;left: 310px;top: 75px">
     <input id="name" type="text" style="width: 500px" placeholder="输入变量套的名字"> <br>
@@ -68,10 +70,10 @@
 </script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-    function new_data() {
+    function new_data(user_id) {
         var name = document.getElementById('name').value;
         var data = document.getElementById('data').value;
-        var user_id = {{ project.user_id }};
+        var user_a_id = user_id;
         if (name === '') {
             Swal.fire({
                 icon: 'error',
@@ -90,20 +92,27 @@
             });
             return
         }
-        console.log(name, data, user_id)
-        $.get('/global_data_new/', {
-            'name': name,
-            'data': data,
-            'user_id': user_id
-        }, function (ret) {
-            Swal.fire({
-                icon: 'success',
-                title: '新增成功！！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+        console.log(name, data, user_a_id)
+        $.ajax({
+            url: '/global_data_new/',
+            type: 'GET',
+            data: {
+                'name': name,
+                'data': data,
+                'user_a_id': user_a_id
+            },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                Swal.fire({
+                    icon: 'success',
+                    title: '新增成功！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                document.location.reload();
+            }
         })
-        document.location.reload();
     }
 
     function delete_data(id) {
@@ -138,11 +147,32 @@
             },
             dataType: "json",
             success: function (data) {
-                console.log(data,'  ',data.name)
+                console.log(data, '  ', data.name)
                 document.getElementById("show_name").value = data.name;
                 document.getElementById('show_datas').value = data.data;
+                document.getElementById('id').value = data.id;
             }
 
+        })
+    }
+
+    function save_data() {
+        var data_id = document.getElementById('id').value;
+        var name = document.getElementById('show_name').value;
+        var data = document.getElementById('show_datas').value;
+        $.ajax({
+            url: "/save_data/",
+            type: "GET",
+            data: {
+                'data_id': data_id,
+                'name': name,
+                'data': data,
+            },
+            dataType: "json",
+            success: function (data) {
+                console.log(data,)
+                document.location.reload();
+            }
         })
     }
 

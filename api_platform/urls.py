@@ -90,7 +90,7 @@ urlpatterns = [
     url(r'^global_data_new/$', global_data_new),  # 新增全局变量
     url(r'^delete_data/$', delete_data),  # 删除全局变量
     url(r'^show_data/$', show_data),  # 展示全局变量
-    url(r'^home_test/$', home_test),
+    url(r'^save_data/$', save_data),  # 修改全局变量
 
     # --------------------小工具-------------------- #
     url(r'^tools_zhengjiao/$', zhengjiao),  # 进入小工具页面

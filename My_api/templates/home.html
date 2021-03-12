@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/bingxingtu/css/progresscircle.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <style>
         .circlechart {
             float: left;
@@ -168,36 +169,61 @@
         var ts_host = document.getElementById('ts_host').value;
         var ts_header = document.getElementById('ts_header').value;
         // 判断顶部的数据是否填充完
-        if (ts_method == 'none') {
-            alert('请选择请求方式！');
+        if (ts_method === 'none') {
+            Swal.fire({
+                icon: 'error',
+                title: '请选择请求方式！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
-        if (ts_url == '') {
-            alert('请输入url！');
+        if (ts_url === '') {
+            Swal.fire({
+                icon: 'error',
+                title: '请输入url！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
-        if (ts_host == '') {
-            alert('请输入host！');
+        if (ts_host === '') {
+            Swal.fire({
+                icon: 'error',
+                title: '请输入host！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
         //判断关键数据是否符合规则
-        if (ts_host.slice(0, 7) != 'http://' && ts_host.slice(0, 8) != 'https://') {
-            alert('host必须以http://或https://开头！');
+        if (ts_host.slice(0, 7) !== 'http://' && ts_host.slice(0, 8) !== 'https://') {
+            Swal.fire({
+                icon: 'error',
+                title: 'host必须以http://或https://开头！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
             return
         }
-        if (ts_header != '') {
+        if (ts_header !== '') {
             try {
                 JSON.parse(ts_header)
             } catch (e) {
-                alert('header请求头不符合json规范！');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'header请求头不符合json规范！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 return
             }
         }
         var ts_body_method = $('ul#myTab li[class="active"]')[0].innerText;
-        if (ts_body_method == 'none') {
+        if (ts_body_method === 'none') {
             var ts_api_body = ''
         }
-        if (ts_body_method == 'form-data') {
+        if (ts_body_method === 'form-data') {
             var ts_api_body = []; //新建这个空列表用来存放后续的数据
             var tbody_ = $("table#mytable tbody")[0]; //获取该表格的内容部分
             var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
@@ -209,7 +235,7 @@
             }
             ts_api_body = JSON.stringify(ts_api_body);
         }
-        if (ts_body_method == 'x-www-form-urlencoded') {
+        if (ts_body_method === 'x-www-form-urlencoded') {
             var ts_api_body = []; //新建这个空列表用来存放后续的数据
             var tbody_ = $("table#mytable2 tbody")[0]; //获取该表格的内容部分
             var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
@@ -221,23 +247,23 @@
             }
             ts_api_body = JSON.stringify(ts_api_body);
         }
-        if (ts_body_method == 'Text') {
+        if (ts_body_method === 'Text') {
             var ts_api_body = document.getElementById('raw_Text').value;
         }
-        if (ts_body_method == 'JavaScript') {
+        if (ts_body_method === 'JavaScript') {
             var ts_api_body = document.getElementById('raw_JavaScript').value;
         }
-        if (ts_body_method == 'Json') {
+        if (ts_body_method === 'Json') {
             var ts_api_body = document.getElementById('raw_Json').value;
         }
-        if (ts_body_method == 'Html') {
+        if (ts_body_method === 'Html') {
             var ts_api_body = document.getElementById('raw_Html').value;
         }
-        if (ts_body_method == 'Xml') {
+        if (ts_body_method === 'Xml') {
             var ts_api_body = document.getElementById('raw_Xml').value;
         }
 
-        if (ts_body_method == 'GraphQL') {
+        if (ts_body_method === 'GraphQL') {
             body_plan_G_Q = document.getElementById('body_plan_G_Q').value;
             body_plan_G_G = document.getElementById('body_plan_G_G').value;
             var ts_api_body = body_plan_G_Q + '*WQRF*' + body_plan_G_G
@@ -252,7 +278,12 @@
             'ts_body_method': ts_body_method,
             'ts_api_body': ts_api_body,
         }, function (ret) {
-            alert('保存成功！')
+            Swal.fire({
+                icon: 'success',
+                title: '保存成功！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
         })
 
 
@@ -620,36 +651,61 @@
             var ts_header = document.getElementById('ts_header').value;
 
             // 判断顶部的数据是否填充完
-            if (ts_method == 'none') {
-                alert('请选择请求方式！');
+            if (ts_method === 'none') {
+                Swal.fire({
+                    icon: 'error',
+                    title: '请选择请求方式！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 return
             }
-            if (ts_url == '') {
-                alert('请输入url！');
+            if (ts_url === '') {
+                Swal.fire({
+                    icon: 'error',
+                    title: '请输入url！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 return
             }
-            if (ts_host == '') {
-                alert('请输入host！');
+            if (ts_host === '') {
+                Swal.fire({
+                    icon: 'error',
+                    title: '请输入host！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 return
             }
             //判断关键数据是否符合规则
-            if (ts_host.slice(0, 7) != 'http://' && ts_host.slice(0, 8) != 'https://') {
-                alert('host必须以http://或https://开头！');
+            if (ts_host.slice(0, 7) !== 'http://' && ts_host.slice(0, 8) !== 'https://') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'host必须以http://或https://开头！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 return
             }
-            if (ts_header != '') {
+            if (ts_header !== '') {
                 try {
                     JSON.parse(ts_header)
                 } catch (e) {
-                    alert('header请求头不符合json规范！');
+                    Swal.fire({
+                    icon: 'error',
+                    title: 'header请求头不符合json规范！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                     return
                 }
             }
             var ts_body_method = $('ul#myTab li[class="active"]')[0].innerText;
-            if (ts_body_method == 'none') {
+            if (ts_body_method === 'none') {
                 var ts_api_body = ''
             }
-            if (ts_body_method == 'form-data') {
+            if (ts_body_method === 'form-data') {
                 var keys = document.getElementsByName('key');
                 var names = document.getElementsByName('value');
                 console.log(keys, names)
@@ -675,11 +731,11 @@
                 //    var tdarr = trlist[i].children; // 获取tr下的俩个td
                 //    var key = tdarr[0].innerText; // 获取key
                 //    var value = tdarr[1].innerText; // 获取value
-                //    ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。
+                //    ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。6
                 //}
                 ts_api_body = JSON.stringify(ts_api_body);
             }
-            if (ts_body_method == 'x-www-form-urlencoded') {
+            if (ts_body_method === 'x-www-form-urlencoded') {
                 var keys = document.getElementsByName('key2');
                 var names = document.getElementsByName('value2');
                 var keys_k = [];
@@ -708,29 +764,29 @@
                 //}
                 ts_api_body = JSON.stringify(ts_api_body);
             }
-            if (ts_body_method == 'Text') {
+            if (ts_body_method === 'Text') {
                 var ts_api_body = document.getElementById('raw_Text').value;
             }
-            if (ts_body_method == 'JavaScript') {
+            if (ts_body_method === 'JavaScript') {
                 var ts_api_body = document.getElementById('raw_JavaScript').value;
             }
-            if (ts_body_method == 'Json') {
+            if (ts_body_method === 'Json') {
                 var ts_api_body = document.getElementById('raw_Json').value;
             }
-            if (ts_body_method == 'Html') {
+            if (ts_body_method === 'Html') {
                 var ts_api_body = document.getElementById('raw_Html').value;
             }
-            if (ts_body_method == 'Xml') {
+            if (ts_body_method === 'Xml') {
                 var ts_api_body = document.getElementById('raw_Xml').value;
             }
 
-            if (ts_body_method == 'GraphQL') {
+            if (ts_body_method === 'GraphQL') {
                 body_plan_G_Q = document.getElementById('body_plan_G_Q').value;
                 body_plan_G_G = document.getElementById('body_plan_G_G').value;
                 var ts_api_body = body_plan_G_Q + '*WQRF*' + body_plan_G_G
             }
 
-            if (ts_body_method == '返回体') {
+            if (ts_body_method === '返回体') {
                 Swal.fire({
                     icon: 'error',
                     title: '请返回参数页面在请求！',
