@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轻量级纯Javascript复选框checkbox动画插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    <link rel="stylesheet" href="css/highlight-9.5.0.min.css">
+    <link rel="stylesheet" href="dist/css/checkbix.min.css">
+    <link rel="stylesheet" href="demo/demo.css">
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="htmleaf-container">
+    <header class="htmleaf-header">
+        <h1>轻量级纯Javascript复选框checkbox动画插件
+            <span>Simple lightweight vanilla Javascript plugin for enhancing checkboxes</span></h1>
+        <div class="htmleaf-links">
+            <a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家"
+               target="_blank"><span> jQuery之家</span></a>
+            <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline"
+               href="http://www.htmleaf.com/jQuery/Form/201607243773.html" title="返回下载页"
+               target="_blank"><span> 返回下载页</span></a>
+        </div>
+    </header>
+    <div class="content">
+        <h3>Default</h3>
+        <input id="mycheckbox" type="checkbox" class="checkbix" data-text="Checkbix">
+
+        <pre><code class="html">
+		&lt;input id="mycheckbox" type="checkbox" class="checkbix" data-text="Checkbix"&gt;
+		</code></pre>
+
+        <h3>Size</h3>
+        <input id="mycheckbox2" type="checkbox" class="checkbix" data-text="Large, checked" data-size="large" checked>
+        <pre><code class="html">
+		&lt;input id="myothercheckbox" type="checkbox" class="checkbix" data-text="Checkbix. Large, checked" data-size="large" checked&gt;
+		</code></pre>
+
+        <h3>Shape</h3>
+
+        <p>Square is default</p>
+
+        <input id="mycheckbox3" type="checkbox" class="checkbix" data-shape="circled" data-text="Circled">
+        <pre><code class="html">
+		&lt;input id="mycheckbox3" type="checkbox" class="checkbix" data-text="Circled. Large, checked" data-shape="circled"&gt;
+		</code></pre>
+
+        <h3>Colors</h3>
+        <input id="mycheckbox4" type="checkbox" class="checkbix" data-shape="circled" data-color="black"
+               data-text="Black, circled" checked>
+        <pre><code class="html">
+		&lt;input id="mycheckbox4" type="checkbox" class="checkbix" data-shape="circled" data-color="black" data-text="Black, circled" checked&gt;
+		</code></pre>
+
+        <input id="mycheckbox5" type="checkbox" class="checkbix" data-color="blue" data-text="Blue" checked>
+        <pre><code class="html">
+		&lt;input id="mycheckbox5" type="checkbox" class="checkbix" data-color="blue" data-text="Blue" checked&gt;
+		</code></pre>
+
+        <input id="mycheckbox6" type="checkbox" class="checkbix" data-shape="circled" data-size="large" data-color="red"
+               data-text="Red, large" checked>
+        <pre><code class="html">
+		&lt;input id="mycheckbox6" type="checkbox" class="checkbix" data-size="large" data-color="red" data-text="Red, large" checked&gt;
+		</code></pre>
+
+        <input id="mycheckbox7" type="checkbox" class="checkbix" data-color="gray" data-text="Gray" checked>
+        <pre><code class="html">
+		&lt;input id="mycheckbox7" type="checkbox" class="checkbix" data-color="gray" data-text="Gray" checked&gt;
+		</code></pre>
+
+        <input id="mycheckbox8" type="checkbox" class="checkbix" data-shape="circled" data-color="orange"
+               data-text="Orange, circled" checked>
+        <pre><code class="html">
+		&lt;input id="mycheckbox8" type="checkbox" class="checkbix" data-shape="circled" data-color="orange" data-text="Orange, circled" checked&gt;
+		</code></pre>
+
+        <h3>Customize ARIA label</h3>
+        <input id="mycheckbox9" type="checkbox" class="checkbix" data-shape="circled" data-color="black"
+               data-text="Black, circled" data-arialabel="Checkbix is nice" checked>
+        <pre><code class="html">
+		&lt;input id="mycheckbox9" type="checkbox" class="checkbix" data-shape="circled" data-color="orange" data-text="Black, circled" data-arialabel="Checkbix is nice" checked&gt;
+		</code></pre>
+    </div>
+    <div class="related">
+        <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+        <a href="http://www.htmleaf.com/css3/css3donghua/201605233503.html">
+            <img src="related/1.jpg" width="300" alt="12种checkbox复选框CSS3动画特效"/>
+            <h3>12种checkbox复选框CSS3动画特效</h3>
+        </a>
+        <a href="http://www.htmleaf.com/jQuery/Form/201601083000.html">
+            <img src="related/2.jpg" width="300" alt="基于Bootstrap3的Checkbox元素美化jQuery插件"/>
+            <h3>基于Bootstrap3的Checkbox元素美化jQuery插件</h3>
+        </a>
+    </div>
+</div>
+
+<script src="demo/highlight-9.5.0.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="dist/js/checkbix.min.js"></script>
+<script type="text/javascript">
+    Checkbix.init();
+</script>
+</body>
+</html>

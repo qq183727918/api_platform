@@ -707,62 +707,62 @@
                 var ts_api_body = ''
             }
             if (ts_body_method === 'form-data') {
-                var keys = document.getElementsByName('key');
-                var names = document.getElementsByName('value');
-                console.log(keys, names)
-                var keys_k = [];
-                var keys_v = [];
-                var ts_api_body = [];
-                for (var x = 0; x < keys.length; x++) {
-                    var key_new = keys[x].value; // 获取tr下的俩个td
-                    keys_k.push(key_new)
-                }
-                for (var j = 0; j < names.length; j++) {
-                    var name_new = names[j].value; // 获取tr下的俩个td
-                    keys_v.push(name_new)
-                }
-                for (var l = 0; l < keys_k.length; l++) {
-                    ts_api_body.push([keys_k[l], keys_v[l]]);
-                }
-                console.log(ts_api_body)
-                //var ts_api_body = []; //新建这个空列表用来存放后续的数据
-                //var tbody_ = $("table#mytable tbody")[0]; //获取该表格的内容部分
-                //var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
-                //for (var i = 0; i < trlist.length; i++) {
-                //    var tdarr = trlist[i].children; // 获取tr下的俩个td
-                //    var key = tdarr[0].innerText; // 获取key
-                //    var value = tdarr[1].innerText; // 获取value
-                //    ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。6
+                //var keys = document.getElementsByName('key');
+                //var names = document.getElementsByName('value');
+                //console.log(keys, names)
+                //var keys_k = [];
+                //var keys_v = [];
+                //var ts_api_body = [];
+                //for (var x = 0; x < keys.length; x++) {
+                //    var key_new = keys[x].value; // 获取tr下的俩个td
+                //    keys_k.push(key_new)
                 //}
+                //for (var j = 0; j < names.length; j++) {
+                //    var name_new = names[j].value; // 获取tr下的俩个td
+                //    keys_v.push(name_new)
+                //}
+                //for (var l = 0; l < keys_k.length; l++) {
+                //    ts_api_body.push([keys_k[l], keys_v[l]]);
+                //}
+                //console.log(ts_api_body)
+                var ts_api_body = []; //新建这个空列表用来存放后续的数据
+                var tbody_ = $("table#mytable tbody")[0]; //获取该表格的内容部分
+                var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
+                for (var i = 0; i < trlist.length; i++) {
+                    var tdarr = trlist[i].children; // 获取tr下的俩个td
+                    var key = tdarr[0].innerText; // 获取key
+                    var value = tdarr[1].innerText; // 获取value
+                    ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。6
+                }
                 ts_api_body = JSON.stringify(ts_api_body);
             }
             if (ts_body_method === 'x-www-form-urlencoded') {
-                var keys = document.getElementsByName('key2');
-                var names = document.getElementsByName('value2');
-                var keys_k = [];
-                var keys_v = [];
-                var ts_api_body = [];
-                for (var x = 0; x < keys.length; x++) {
-                    var key_new = keys[x].value; // 获取tr下的俩个td
-                    keys_k.push(key_new)
-                }
-                for (var j = 0; j < names.length; j++) {
-                    var name_new = names[j].value; // 获取tr下的俩个td
-                    keys_v.push(name_new)
-                }
-                for (var l = 0; l < keys_k.length; l++) {
-                    ts_api_body.push([keys_k[l], keys_v[l]]);
-                }
-                console.log(ts_api_body)
-                //var ts_api_body = []; //新建这个空列表用来存放后续的数据
-                //var tbody_ = $("table#mytable2 tbody")[0]; //获取该表格的内容部分
-                //var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
-                //for (var i = 0; i < trlist.length; i++) {
-                //    var tdarr = trlist[i].children; // 获取tr下的俩个td
-                //    var key = tdarr[0].innerText; // 获取key
-                //    var value = tdarr[1].innerText; // 获取value
-                //    ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。
+                //var keys = document.getElementsByName('key2');
+                //var names = document.getElementsByName('value2');
+                //var keys_k = [];
+                //var keys_v = [];
+                //var ts_api_body = [];
+                //for (var x = 0; x < keys.length; x++) {
+                //    var key_new = keys[x].value; // 获取tr下的俩个td
+                //    keys_k.push(key_new)
                 //}
+                //for (var j = 0; j < names.length; j++) {
+                //    var name_new = names[j].value; // 获取tr下的俩个td
+                //    keys_v.push(name_new)
+                //}
+                //for (var l = 0; l < keys_k.length; l++) {
+                //    ts_api_body.push([keys_k[l], keys_v[l]]);
+                //}
+                //console.log(ts_api_body)
+                var ts_api_body = []; //新建这个空列表用来存放后续的数据
+                var tbody_ = $("table#mytable2 tbody")[0]; //获取该表格的内容部分
+                var trlist = tbody_.children; //获取下面所有tr，每个tr就是一个键值对实际上
+                for (var i = 0; i < trlist.length; i++) {
+                    var tdarr = trlist[i].children; // 获取tr下的俩个td
+                    var key = tdarr[0].innerText; // 获取key
+                    var value = tdarr[1].innerText; // 获取value
+                    ts_api_body.push([key, value]);// 作为一个数组，存放到这个大数组里。
+                }
                 ts_api_body = JSON.stringify(ts_api_body);
             }
             if (ts_body_method === 'Text') {

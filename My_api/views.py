@@ -1459,4 +1459,4 @@ def new_home(request):
 
 
 def index(request):
-    return render(request, 'welcome2.html')
+    return render(request, 'index.html')

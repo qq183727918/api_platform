@@ -1,0 +1,96 @@
+@import "compass/css3";
+
+/* =========
+   Get Fonts */
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/* ================
+   Assign Variables */
+$primary-color: #6EB590;
+$secondary-color: #777;
+$radius: 10px;
+$border-width: 1px;
+
+/* ===========================
+   Setup Mixins/Helper Classes */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* ==========
+   Setup Page */
+*, *:before, *:after { box-sizing: border-box; }
+body { padding: 3em; background-image: url(http://subtlepatterns.com/patterns/retina_wood.png); color: grey; font-family: 'Quicksand', sans-serif; }
+
+/* =================
+   Container Styling */
+.container {
+  position: relative;
+  background: white;
+  padding: 3em;
+  border-radius: $radius;
+  @extend .clearfix;
+}
+
+/* ===========
+   Tab Styling */
+
+
+.tab-group {
+  position: relative;
+  border: 1px solid #eee;
+  margin-top: 2.5em;
+  border-radius: 0 0 $radius $radius;
+  section {
+    opacity: 0;
+    height: 0;
+    padding: 0 1em;
+    overflow: hidden;
+    transition: opacity .4s ease, height .4s ease ;
+  }
+  section.active {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.tab-nav {
+  list-style: none;
+  margin: -2.5em -1px 0 0;
+  padding: 0;
+  @extend .clearfix;
+  height: 2.5em;
+  //background: #ff0;
+  overflow: hidden;
+  li {
+    display: inline;
+    a {
+      top: 1px;
+      position: relative;
+      display: block;
+      float: left;
+      border-radius: $radius $radius 0 0;
+      background: #eee;
+      line-height: 2em;
+      padding: 0 1em;
+      text-decoration: none;
+      color: grey;
+      margin-top: .5em;
+      margin-right: 1px;
+      transition: background .2s ease, line-height .2s ease, margin .2s ease;
+    }
+    &.active a { 
+      background: $primary-color; 
+      color: white;
+      line-height: 2.5em;
+      margin-top: 0;
+    }
+  }
+}
+
