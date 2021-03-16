@@ -8,4 +8,6 @@ logger.debug("Do something")
 logger.warning("Something maybe fail.")
 logger.info("Finish")
 
+i = 6
 
+print(i % 2)

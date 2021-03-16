@@ -129,7 +129,8 @@
 </script>
 
 
-<div style="position: absolute;top: 40px;height: 400px;overflow-y: scroll;margin-left: 15px;width: 300px;" class="panel-group test-1" id="accordion"
+<div style="position: absolute;top: 40px;height: 400px;overflow-y: scroll;margin-left: 15px;width: 300px;"
+     class="panel-group test-1" id="accordion"
      role="tablist" aria-multiselectable="true">
     您的项目如下：
     {% for i in user_projects %}
@@ -488,6 +489,8 @@
         </div>
         <div class="tab-pane fade" id="Json">
             <textarea name="" id="raw_Json" style="color: black;width: 98%;height: 300px"></textarea>
+            <button style="position: absolute;top: 190px;left: 600px;background-color: #0B7500;z-index: 10;
+                        " onclick="prettyPrints()">JSON格式化</button>
         </div>
         <div class="tab-pane fade" id="Html">
             <textarea name="" id="raw_Html" style="color: black;width: 98%;height: 300px"></textarea>
@@ -518,6 +521,8 @@
         <div class="tab-pane fade" id="response">
             <textarea class="test-1" name="" id="ts_response_body" disabled="disabled"
                       style="background-color: #e4f3f5;color: black;width: 98%;height: 300px"></textarea>
+            <button style="position: absolute;top: 190px;left: 600px;background-color: #0B7500;
+                        " onclick="prettyPrint()">JSON格式化</button>
         </div>
     </div>
     <br>
@@ -591,6 +596,19 @@
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
+        function prettyPrint() {
+            var ugly = document.getElementById('ts_response_body').value;
+            var obj = JSON.parse(ugly);
+            var pretty = JSON.stringify(obj, undefined, 4);
+            document.getElementById('ts_response_body').value = pretty;
+        }
+        function prettyPrints() {
+            var ugly = document.getElementById('raw_Json').value;
+            var obj = JSON.parse(ugly);
+            var pretty = JSON.stringify(obj, undefined, 4);
+            document.getElementById('raw_Json').value = pretty;
+        }
+
         {#新增参数#}
 
         {#function add_word() {#}

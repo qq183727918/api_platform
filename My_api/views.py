@@ -435,7 +435,6 @@ def get_api_data(request):
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
-
 # 调试层发送请求
 def Api_send(request):
     if request.method == 'POST':
@@ -578,9 +577,9 @@ def Api_send(request):
             # 把返回值传递给前端页面
             response.encoding = "utf-8"
 
-            DbHost.objects.update_or_create(host=ts_host)
-
-            dic = json.dumps({'code': 200, 'data': True, 'massage': f'{response.text}'})
+            DbHost.objects.update_or_create(host=ts_host, is_delete=0)
+            ic(response.json())
+            dic = json.dumps({"code": 200, "data": True, "massage": f"{response.text}"})
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         except Exception as e:
             dic = json.dumps({'code': 10010, 'data': False, 'massage': f'{e}'})
@@ -785,7 +784,7 @@ def Api_send_home(request):
 
         # 把返回值传递给前端页面
         response.encoding = "utf-8"
-        DbHost.objects.update_or_create(host=ts_host)
+        DbHost.objects.update_or_create(host=ts_host, is_delete=0)
         return HttpResponse(response.text)
     except Exception as e:
         return HttpResponse(str(e))

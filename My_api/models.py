@@ -262,7 +262,6 @@ class DbHomeHref(models.Model):
 
 
 class DbHost(models.Model):
-    id = models.IntegerField(primary_key=True)
     host = models.CharField(max_length=100, blank=True, null=True)
     des = models.CharField(max_length=100, blank=True, null=True)
     is_delete = models.IntegerField(blank=True, null=True)
