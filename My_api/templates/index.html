@@ -35,6 +35,7 @@
 
         body {
             font-family: 'Quicksand', sans-serif;
+            background-color: #2f3132 !important;
         }
 
         /* =================
@@ -86,8 +87,7 @@
             display: block;
             float: left;
             border-radius: 10px 10px 0 0;
-            background: #eee;
-            line-height: 2em;
+        {#background: #eee;#} line-height: 2em;
             padding: 0 1em;
             text-decoration: none;
             color: grey;
@@ -97,10 +97,17 @@
         }
 
         .tab-nav li.active a {
-            background: #6EB590;
-            color: white;
+            background: #a1aaa5;
+            color: #FFFFFFCC;
             line-height: 2.5em;
             margin-top: 0;
+        }
+
+        .htmleaf-header {
+            padding: 1em 190px 1em;
+            letter-spacing: -1px;
+            text-align: center;
+            background: #504c4c;
         }
     </style>
     <script src="../static/xuanxiangla/201610091515/js/prefixfree.min.js"></script>
@@ -128,11 +135,12 @@
             <button style="background-color: #009d75">测试请求</button>
         </div>
     </header>
-    <div class="container" style="left: 260px;width: 1200px">
+    <div class="container" style="left: 260px;width: 1200px;background-color: #242424">
         <div class="tab-group">
             <section id="tab1" title="请求头部">
                 <div style="color: black;">
-                    <table class="table table-bordered" id="myheader" style="background-color:white;text-align: center">
+                    <table class="table table-bordered" id="myheader"
+                           style="background-color: #242424;text-align: center">
                         <thead style="color: #337ab7;">
                         <tr>
                             <td style="width: 400px;border-radius: 5px;height: 30px;">Key</td>
@@ -144,14 +152,14 @@
                         <tr>
                             <td>
                                 <input name="key3" type="text"
-                                       style="border-radius: 5px;width: 400px;height: 30px;">
+                                       style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                             </td>
                             <td>
                                 <input name="value3" type="text"
-                                       style="border-radius: 5px;width: 600px;height: 30px;">
+                                       style="border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                             </td>
                             <td>
-                                <button style="color: black;font-size: 15px"
+                                <button style="background-color: #535151;color: #FFFFFFCC;font-size: 15px"
                                         onclick="delTr(this)"> 删除
                                 </button>
                             </td>
@@ -159,12 +167,14 @@
                         </tbody>
                     </table>
                     <br>
-                    <button class="btn btn-default" id="add_header" onclick="add_header()">添加新参数
+                    <button class="btn btn-default" id="add_header" onclick="add_header()"
+                            style="background-color: #1f1102;color: #d5b3d5;border-radius: 5px">添加新参数
                     </button>
                 </div>
+                <br>
             </section>
             <section id="tab2" title="请求体">
-                <div class="admin-content-task" style="padding-top: 10px;height: 20px;width: 100%">
+                <div class="admin-content-task" style="color: #FFFFFFCC;;padding-top: 10px;height: 20px;width: 100%">
                     <input type="radio" id="none" name="mode" value="none"/> None&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="Form-data" name="mode" value="Form-data"/> Form-data&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="X-www-form-urlencoded" name="mode" value="X-www-form-urlencoded"/>
@@ -172,7 +182,8 @@
                     <input type="radio" id="Raw" name="mode" value="Raw"/> Raw&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="Binary" name="mode" value="Binary"/> Binary
                     <span id="content-type" style="position:absolute;display: none;left: 600px;top: 10px">|&nbsp;&nbsp;&nbsp;&nbsp;Content-Type :
-                        <select class="btn-select" style="position: absolute;width: 280px;height: 25px;left: 140px;top: 0;border-radius: 5px;border: 0;appearance: inherit;">
+                        <select class="btn-select"
+                                style="background-color: #242424;color: #FFFFFFCC;;position: absolute;width: 280px;height: 25px;left: 140px;top: 0;border-radius: 5px;border: 0;appearance: inherit;">
                             <option>Auto</option>
                             <option>Text(test/plain)</option>
                             <option>JSON(application/json)</option>
@@ -197,7 +208,7 @@
                     <div class="tab-pane fade" id="form-datas" style="display: none">
                         <div style="width: 100%;color: black;">
                             <table class="table table-bordered" id="mytable"
-                                   style="background-color:white;text-align: center;">
+                                   style="text-align: center;background-color: #242424">
                                 <thead style="color: #337ab7;">
                                 <tr>
                                     <td style="width: 400px;border-radius: 5px;height: 30px;">Key</td>
@@ -209,14 +220,14 @@
                                 <tr>
                                     <td>
                                         <input name="key" type="text"
-                                               style="border-radius: 5px;width: 400px;height: 30px;">
+                                               style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
                                         <input name="value" type="text"
-                                               style="border-radius: 5px;width: 600px;height: 30px;">
+                                               style="border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
-                                        <button style="color: black;font-size: 15px"
+                                        <button style="background-color: #535151;color: #FFFFFFCC;font-size: 15px"
                                                 onclick="delTr(this)"> 删除
                                         </button>
                                     </td>
@@ -224,15 +235,16 @@
                                 </tbody>
                             </table>
                             <br>
-                            <button class="btn btn-default" id="add" onclick="add_params()">添加新参数
+                            <button class="btn btn-default" id="add" onclick="add_params()"
+                                    style="background-color: #1f1102;color: #d5b3d5;border-radius: 5px">添加新参数
                             </button>
                         </div>
                         <br>
                     </div>
-                    <div class="tab-pane fade" id="x-www-form-urlencodeds" style="display: none">
+                    <div class="tab-pane fade" id="x-www-form-urlencodeds" style="display: none;">
                         <div style="width: 100%;color: black;">
                             <table class="table table-bordered" id="mytable2"
-                                   style="background-color:white;text-align: center">
+                                   style="background-color: #242424;text-align: center;">
                                 <thead style="color: #337ab7;">
                                 <tr>
                                     <td style="width: 400px;border-radius: 5px;height: 30px;">Key</td>
@@ -244,14 +256,14 @@
                                 <tr>
                                     <td>
                                         <input name="key2" type="text"
-                                               style="border-radius: 5px;width: 400px;height: 30px;">
+                                               style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
                                         <input name="value2" type="text"
-                                               style="border-radius: 5px;width: 600px;height: 30px;">
+                                               style="border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
-                                        <button style="color: black;font-size: 15px"
+                                        <button style="background-color: #535151;color: #FFFFFFCC;font-size: 15px"
                                                 onclick="delTr(this)"> 删除
                                         </button>
                                     </td>
@@ -259,23 +271,42 @@
                                 </tbody>
                             </table>
                             <br>
-                            <button class="btn btn-default" id="add" onclick="add_word2()">添加新参数
+                            <button class="btn btn-default" id="add" onclick="add_word2()"
+                                    style="background-color: #1f1102;color: #d5b3d5;border-radius: 5px">添加新参数
                             </button>
                         </div>
                         <br>
                     </div>
                     <div class="tab-pane fade" id="raws" style="display: none">
-                        <textarea name="" id="raw_Text" style="color: black;width: 98%;height: 300px"></textarea>
+                        <div id="hengs"
+                             style="width: 100%;height: 1px;background-color: #e7e5e5;position: absolute;left:0px;top: 80px;bottom: 360px">
+                            &nbsp;
+                        </div>
+                        <div style="height: 40px;padding-top: 8px">
+                            <span style="color: #FFFFFFCC;">内容类型：</span>
+                            <select style="border-radius: 5px;background-color: #3052b6">
+                                <option>TEXT</option>
+                                <option>JSON</option>
+                                <option>XML</option>
+                                <option>HTML</option>
+                            </select>
+                            <button style="position: absolute;top: 47px;left: 200px;background-color: #0B7500;z-index: 10;border-radius: 5px;"
+                                    onclick="prettyPrints()">整理格式
+                            </button>
+                        </div>
+                        <textarea name="" id="raw_Text"
+                                  style="background-color: #323232;color: #FFFFFFCC;width: 100%;height: 300px;border: 0;outline:none;"></textarea>
                     </div>
                     <div id="binarys" style="display: none;height: 80px;">
                         <br>
-                        <input type="file" id="myFile" style=";outline:none;"/>
+                        <input type="file" id="myFile" style="color: #FFFFFFCC;outline:none;"/>
                     </div>
                 </div>
             </section>
             <section id="tab3" title="Query参数">
                 <div style="width: 100%;color: black;">
-                    <table class="table table-bordered" id="myquery" style="background-color:white;text-align: center">
+                    <table class="table table-bordered" id="myquery"
+                           style="background-color: #242424;text-align: center;">
                         <thead style="color: #337ab7;">
                         <tr>
                             <td style="width: 400px;border-radius: 5px;height: 30px;">Key</td>
@@ -287,14 +318,14 @@
                         <tr>
                             <td>
                                 <input name="key4" type="text"
-                                       style="border-radius: 5px;width: 400px;height: 30px;">
+                                       style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                             </td>
                             <td>
                                 <input name="value4" type="text"
-                                       style="border-radius: 5px;width: 600px;height: 30px;">
+                                       style="border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                             </td>
                             <td>
-                                <button style="color: black;font-size: 15px"
+                                <button style="background-color: #535151;color: #FFFFFFCC;font-size: 15px"
                                         onclick="delTr(this)"> 删除
                                 </button>
                             </td>
@@ -302,14 +333,16 @@
                         </tbody>
                     </table>
                     <br>
-                    <button class="btn btn-default" id="add" onclick="add_query()">添加新参数
+                    <button style="background-color: #1f1102;color: #d5b3d5;border-radius: 5px" class="btn btn-default"
+                            id="add" onclick="add_query()">添加新参数
                     </button>
                 </div>
+                <br>
             </section>
         </div>
     </div>
     <br>
-    <div class="container" style="left: 260px;width: 1200px">
+    <div class="container" style="left: 260px;width: 1200px;background-color: #242424">
         <div class="tab-group">
             <br>
             <section id="tab6" title="时间分析">
@@ -439,17 +472,17 @@
         var t2 = document.createElement('tr');
         var t3 = document.createElement('td');
         var i0 = document.createElement("input");
-        i0.style = 'border-radius: 5px;width: 400px;height: 30px;';
+        i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key';
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
-        i1.style = 'border-radius: 5px;width: 600px;height: 30px;';
+        i1.style = 'border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value';
         var t5 = document.createElement('td');
         var a = document.createElement('button');
-        a.style = 'color: black;font-size: 15px;';
+        a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
         a.onclick = Function("delTr(this)");
         add_tbody.appendChild(t1);
         t1.appendChild(t2);
@@ -468,17 +501,17 @@
         var t2 = document.createElement('tr');
         var t3 = document.createElement('td');
         var i0 = document.createElement("input");
-        i0.style = 'border-radius: 5px;width: 400px;height: 30px;';
+        i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key2';
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
-        i1.style = 'border-radius: 5px;width: 600px;height: 30px;';
+        i1.style = 'border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value2';
         var t5 = document.createElement('td');
         var a = document.createElement('button');
-        a.style = 'color: black;font-size: 15px;';
+        a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
         a.onclick = Function("delTr(this)");
         add_tbody.appendChild(t1);
         t1.appendChild(t2);
@@ -497,17 +530,17 @@
         var t2 = document.createElement('tr');
         var t3 = document.createElement('td');
         var i0 = document.createElement("input");
-        i0.style = 'border-radius: 5px;width: 400px;height: 30px;';
+        i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key3';
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
-        i1.style = 'border-radius: 5px;width: 600px;height: 30px;';
+        i1.style = 'border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value3';
         var t5 = document.createElement('td');
         var a = document.createElement('button');
-        a.style = 'color: black;font-size: 15px;';
+        a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
         a.onclick = Function("delTr(this)");
         add_tbody.appendChild(t1);
         t1.appendChild(t2);
@@ -526,17 +559,17 @@
         var t2 = document.createElement('tr');
         var t3 = document.createElement('td');
         var i0 = document.createElement("input");
-        i0.style = 'border-radius: 5px;width: 400px;height: 30px;';
+        i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key4';
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
-        i1.style = 'border-radius: 5px;width: 600px;height: 30px;';
+        i1.style = 'border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value4';
         var t5 = document.createElement('td');
         var a = document.createElement('button');
-        a.style = 'color: black;font-size: 15px;';
+        a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
         a.onclick = Function("delTr(this)");
         add_tbody.appendChild(t1);
         t1.appendChild(t2);
