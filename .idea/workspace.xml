@@ -29,9 +29,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/0004_dbapi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0004_dbapi.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/static/xuanxiangla/201610091515/css/htmleaf-demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/xuanxiangla/201610091515/css/htmleaf-demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/xuanxiangla/201610091515/fuxaunkuang/demo/highlight-9.5.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/xuanxiangla/201610091515/fuxaunkuang/demo/highlight-9.5.0.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/new_home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +117,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static/xuanxiangla/201610091515" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/static" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -114,22 +128,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="service.view.auto.scroll.from.source" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.配色方案字体" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\platform\My_api\static" />
+      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515" />
+      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\scss" />
+      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\js" />
+      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\platform\My_api\templates" />
       <recent name="D:\automate\api_platform\My_api\static" />
       <recent name="D:\automate\api_platform\My_api\static\img" />
       <recent name="D:\automate\api_platform\My_api\static\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515" />
-      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\scss" />
-      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\js" />
-      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\css" />
-      <recent name="D:\platform\My_api\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,17 +153,17 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/static/201801271505/index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript 调试.new_home.html">
+    <configuration name="buju2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/buju2.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html (2)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/static/xuanxiangla/201610091515/fuxaunkuang/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/static/xuanxiangka/index.html" useBuiltInWebServerPort="true">
+    <configuration name="buju.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/buju.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="new_home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/new_home.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="ddd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -244,19 +258,19 @@
     </configuration>
     <list>
       <item itemvalue="Django 服务器.api_platform" />
-      <item itemvalue="JavaScript 调试.index.html" />
-      <item itemvalue="JavaScript 调试.index.html (1)" />
-      <item itemvalue="JavaScript 调试.index.html (2)" />
       <item itemvalue="Python.ddd" />
       <item itemvalue="Python.test" />
+      <item itemvalue="JavaScript 调试.buju.html" />
+      <item itemvalue="JavaScript 调试.buju2.html" />
+      <item itemvalue="JavaScript 调试.new_home.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript 调试.new_home.html" />
+        <item itemvalue="JavaScript 调试.buju2.html" />
+        <item itemvalue="JavaScript 调试.buju.html" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.ddd" />
-        <item itemvalue="JavaScript 调试.index.html (1)" />
-        <item itemvalue="JavaScript 调试.index.html (1)" />
-        <item itemvalue="JavaScript 调试.index.html (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -294,6 +308,7 @@
       <workItem from="1615508927043" duration="16555000" />
       <workItem from="1615768140397" duration="29687000" />
       <workItem from="1615861574678" duration="17335000" />
+      <workItem from="1615940868320" duration="23218000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -447,10 +462,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="locust_test" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="755" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615442698772">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="566" y="225" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615967324243">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="755" y="303" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615442698772" />
+    <state x="566" y="225" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1615967324243" />
     <state x="523" y="0" key="CommitChangelistDialog2" timestamp="1615888046684">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -464,46 +480,55 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615424647374" />
-    <state width="1242" height="211" key="GridCell.Tab.0.bottom" timestamp="1615894892056">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1676" height="278" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809542" />
-    <state width="1242" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615894892056" />
-    <state width="1242" height="211" key="GridCell.Tab.0.center" timestamp="1615894892056">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1676" height="278" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809542" />
-    <state width="1242" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615894892056" />
-    <state width="1242" height="211" key="GridCell.Tab.0.left" timestamp="1615894892056">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1676" height="278" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809542" />
-    <state width="1242" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615894892056" />
-    <state width="1242" height="211" key="GridCell.Tab.0.right" timestamp="1615894892056">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1676" height="278" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809542" />
-    <state width="1242" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615894892056" />
-    <state width="1676" height="278" key="GridCell.Tab.1.bottom" timestamp="1615873809454">
+    <state width="1676" height="240" key="GridCell.Tab.0.bottom" timestamp="1615983418415">
       <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="240" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615983418415" />
+    <state width="1242" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
+    <state width="1676" height="240" key="GridCell.Tab.0.center" timestamp="1615983418415">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="240" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615983418415" />
+    <state width="1242" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
+    <state width="1676" height="240" key="GridCell.Tab.0.left" timestamp="1615983418415">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="240" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615983418415" />
+    <state width="1242" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
+    <state width="1676" height="240" key="GridCell.Tab.0.right" timestamp="1615983418415">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="240" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615983418415" />
+    <state width="1242" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
+    <state width="1242" height="251" key="GridCell.Tab.1.bottom" timestamp="1615981244116">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1676" height="278" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809454" />
-    <state width="1676" height="278" key="GridCell.Tab.1.center" timestamp="1615873809453">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1242" height="251" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615981244116" />
+    <state width="1242" height="251" key="GridCell.Tab.1.center" timestamp="1615981244116">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1676" height="278" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809453" />
-    <state width="1676" height="278" key="GridCell.Tab.1.left" timestamp="1615873809453">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1242" height="251" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1615981244116" />
+    <state width="1242" height="251" key="GridCell.Tab.1.left" timestamp="1615981244116">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1676" height="278" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809453" />
-    <state width="1676" height="278" key="GridCell.Tab.1.right" timestamp="1615873809454">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1242" height="251" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1615981244116" />
+    <state width="1242" height="251" key="GridCell.Tab.1.right" timestamp="1615981244116">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1676" height="278" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873809454" />
-    <state x="526" y="201" key="SettingsEditor" timestamp="1615361240922">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1242" height="251" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1615981244116" />
+    <state x="630" y="132" key="RollbackChangesDialog" timestamp="1615945809675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="630" y="132" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1615945809675" />
+    <state x="331" y="74" key="SettingsEditor" timestamp="1615948533306">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615361240922" />
+    <state x="331" y="74" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1615948533306" />
     <state x="463" y="214" key="Vcs.Push.Dialog.v2" timestamp="1615888053717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -513,11 +538,11 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1031" height="563" key="XDebugger.FullValuePopup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873607618" />
-    <state x="515" y="180" width="672" height="503" key="search.everywhere.popup" timestamp="1615894649483">
+    <state x="515" y="180" width="672" height="503" key="search.everywhere.popup" timestamp="1615963089478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615528191445" />
-    <state x="515" y="180" width="672" height="503" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1615894649483" />
+    <state x="515" y="180" width="672" height="503" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1615963089478" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

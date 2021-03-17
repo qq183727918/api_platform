@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../static/xuanxiangla/201610091515/css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="../static/xuanxiangla/201610091515/css/htmleaf-demo.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <style type="text/css">
         /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
         /* =========
@@ -31,11 +32,6 @@
            Setup Page */
         *, *:before, *:after {
             box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: #2f3132 !important;
         }
 
         /* =================
@@ -102,13 +98,6 @@
             line-height: 2.5em;
             margin-top: 0;
         }
-
-        .htmleaf-header {
-            padding: 1em 190px 1em;
-            letter-spacing: -1px;
-            text-align: center;
-            background: #504c4c;
-        }
     </style>
     <script src="../static/xuanxiangla/201610091515/js/prefixfree.min.js"></script>
     <!--[if IE]>
@@ -124,15 +113,15 @@
         <h1>接口请求测试平台</h1>
         <br>
         <div style="padding-left: 120px">
-            <select>
-                <option>请求方式</option>
-                <option>POST</option>
-                <option>GET</option>
-                <option>PUT</option>
-                <option>DELETE</option>
+            <select id="ts_method">
+                <option value="none">请求方式</option>
+                <option value="POST">POST</option>
+                <option value="GET">GET</option>
+                <option value="PUT">PUT</option>
+                <option value="DELETE">DELETE</option>
             </select>
-            <input type="text" style="width: 700px">
-            <button style="background-color: #009d75">测试请求</button>
+            <input id="ts_url" type="text" style="width: 700px">
+            <button style="background-color: #009d75" onclick="ho_send()">测试请求</button>
         </div>
     </header>
     <div class="container" style="left: 260px;width: 1200px;background-color: #242424">
@@ -181,9 +170,9 @@
                     X-www-form-urlencoded&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="Raw" name="mode" value="Raw"/> Raw&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="Binary" name="mode" value="Binary"/> Binary
-                    <span id="content-type" style="position:absolute;display: none;left: 600px;top: 10px">|&nbsp;&nbsp;&nbsp;&nbsp;Content-Type :
+                    <span id="content-type" style="position:absolute;display: none;left: 600px;top: 10px">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Content-Type :
                         <select class="btn-select"
-                                style="background-color: #242424;color: #FFFFFFCC;;position: absolute;width: 280px;height: 25px;left: 140px;top: 0;border-radius: 5px;border: 0;appearance: inherit;">
+                                style="background-color: #242424;color: #FFFFFFCC;;position: absolute;width: 280px;height: 25px;left: 180px;top: 0;border-radius: 5px;border: 0;appearance: inherit;">
                             <option>Auto</option>
                             <option>Text(test/plain)</option>
                             <option>JSON(application/json)</option>
@@ -355,12 +344,8 @@
                 </p>
             </section>
             <section id="tab7" title="返回结果">
-                <h3>
-                    Content 9
-                </h3>
-                <p>
-                    Aliquam eleifend magna mauris, id egestas eros dictum ac. Vivamus ac turpis at nisi mattis aliquam.
-                    In hac habitasse platea dictumst.
+                <p id="result" style="color: #FFFFFFCC">
+                    返回结果
                 </p>
             </section>
             <section id="tab8" title="返回头部">
@@ -394,7 +379,156 @@
         </div>
     </div>
 </div>
+{#发送请求#}
+<script>
+    function ho_send() {
+        // 获取接口的所有数据
+        var ts_method = document.getElementById('ts_method').value;
+        var ts_url = document.getElementById('ts_url').value;
+        //获取headers
+        var keys3 = document.getElementsByName('key3');
+        var values3 = document.getElementsByName('value3');
+        var keys_3 = [];
+        var values_3 = [];
+        var ts_api_header = [];
+        for (var x3 = 0; x3 < keys3.length; x3++) {
+            var key_3 = keys3[x3].value; // 获取tr下的俩个td
+            keys_3.push(key_3)
+        }
+        for (var j3 = 0; j3 < values3.length; j3++) {
+            var name_3 = values3[j3].value; // 获取tr下的俩个td
+            values_3.push(name_3)
+        }
+        for (var l3 = 0; l3 < keys_3.length; l3++) {
+            ts_api_header.push([keys_3[l3], values_3[l3]]);
+        }
+        // 判断顶部的数据是否填充完
+        if (ts_method === 'none') {
+            Swal.fire({
+                icon: 'error',
+                title: '请选择请求方式！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return
+        }
+        if (ts_url === '') {
+            Swal.fire({
+                icon: 'error',
+                title: '请选择输入请求地址....！',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return
+        }
+        //判断关键数据是否符合规则
+        if (ts_url.slice(0, 7) !== 'http://' && ts_url.slice(0, 8) !== 'https://') {
+            Swal.fire({
+                icon: 'error',
+                title: 'host必须以http://或https://开头！！',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return
+        }
+        console.log(ts_api_header, keys_3, values_3)
 
+        var ts_body_method = $('ul.tab-nav li[class="active"]')[0].innerText;
+        if (ts_body_method === '请求体') {
+            if (document.getElementById("none").checked) {
+                var ts_api_body = ''
+            }
+            if (document.getElementById("Form-data").checked) {
+                var keys = document.getElementsByName('key');
+                var values = document.getElementsByName('value');
+                var keys_ = [];
+                var values_ = [];
+                var ts_api_form = [];
+                for (var x = 0; x < keys.length; x++) {
+                    var key_ = keys[x].value; // 获取tr下的俩个td
+                    keys_.push(key_)
+                }
+                for (var j = 0; j < values.length; j++) {
+                    var name_ = values[j].value; // 获取tr下的俩个td
+                    values_.push(name_)
+                }
+                for (var l = 0; l < keys_.length; l++) {
+                    ts_api_form.push([keys_[l], values_[l]]);
+                }
+                console.log(ts_api_form, keys_, values_)
+                ts_api_body = JSON.stringify(ts_api_form);
+                var ts_api_method = 'form-data';
+            }
+            if (document.getElementById("X-www-form-urlencoded").checked) {
+                var keys2 = document.getElementsByName('key2');
+                var values2 = document.getElementsByName('value2');
+                var keys_2 = [];
+                var values_2 = [];
+                var ts_api_www = [];
+                for (var x2 = 0; x2 < keys2.length; x2++) {
+                    var key_2 = keys2[x2].value; // 获取tr下的俩个td
+                    keys_2.push(key_2)
+                }
+                for (var j2 = 0; j2 < values2.length; j2++) {
+                    var name_2 = values2[j2].value; // 获取tr下的俩个td
+                    values_2.push(name_2)
+                }
+                for (var l2 = 0; l2 < keys_2.length; l2++) {
+                    ts_api_www.push([keys_2[l2], values_2[l2]]);
+                }
+                console.log(ts_api_www, keys_2, values_2)
+                ts_api_body = JSON.stringify(ts_api_www);
+            }
+            if (document.getElementById("Raw").checked) {
+                {#需要获取conten-type#}
+                var ts_api_body = document.getElementById('raw_Text').value;
+            }
+            if (document.getElementById("Binary").checked) {
+                console.log('Binary')
+            }
+        }
+
+        if (ts_body_method === 'Query参数') {
+            var keys4 = document.getElementsByName('key4');
+            var values4 = document.getElementsByName('value4');
+            var keys_4 = [];
+            var values_4 = [];
+            var ts_api_query = [];
+            for (var x4 = 0; x4 < keys4.length; x4++) {
+                var key_4 = keys4[x4].value; // 获取tr下的俩个td
+                keys_4.push(key_4)
+            }
+            for (var j4 = 0; j4 < values4.length; j4++) {
+                var name_4 = values4[j4].value; // 获取tr下的俩个td
+                values_4.push(name_4)
+            }
+            for (var l4 = 0; l4 < keys_4.length; l4++) {
+                ts_api_query.push([keys_4[l4], values_4[l4]]);
+            }
+            console.log(ts_api_query, keys_4, values_4)
+        }
+        console.log(ts_method, ts_url, ts_api_body)
+        $.ajax({
+            url: '/Api_send_index/',
+            type: 'POST',
+            data: JSON.stringify({
+                'ts_method': ts_method, //请求方式
+                'ts_url': ts_url,   //请求地址
+                'ts_api_header': ts_api_header,  //请求头
+                'ts_body_method': ts_body_method,  //参数位置
+                'ts_api_method': ts_api_method,
+                'ts_api_body': ts_api_body,   //参数
+            }),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function (data){
+                console.log(data)
+                $("li a[href=#tab7]").click();
+                document.getElementById('result').innerText = data;
+            }
+        })
+    }
+</script>
 <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 <script>window.jQuery || document.write('<script src="../static/xuanxiangla/201610091515/js/jquery-1.11.0.min.js"><\/script>')</script>
 <script type="text/javascript" src="../static/xuanxiangla/201610091515/js/jquery-tab.js"></script>

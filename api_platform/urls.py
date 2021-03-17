@@ -91,8 +91,10 @@ urlpatterns = [
     url(r'^delete_data/$', delete_data),  # 删除全局变量
     url(r'^show_data/$', show_data),  # 展示全局变量
     url(r'^save_data/$', save_data),  # 修改全局变量
-    url(r'^new_home/$', new_home),  # 主要自改版
     url(r'^index/$', index),  # 主要自改版
+
+    url(r'^Api_send_index/$', Api_send_index),  # 改版发送请求
+
 
     # --------------------小工具-------------------- #
     url(r'^tools_zhengjiao/$', zhengjiao),  # 进入小工具页面

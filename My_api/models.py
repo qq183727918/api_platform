@@ -376,6 +376,21 @@ class DbUser(models.Model):
         db_table = 'db_user'
 
 
+class DbApi(models.Model):
+    ts_method = models.CharField(max_length=255, null=True)
+    ts_url = models.CharField(max_length=255, null=True)
+    ts_header = models.CharField(max_length=255, null=True)
+    ts_body_method = models.CharField(max_length=255, null=True)
+    ts_api_body = models.CharField(max_length=255, null=True)
+    ts_api_method = models.CharField(max_length=255, null=True)
+    result = models.TextChoices()
+    is_delete = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'db_api'
+
+
 class MyApiDbApis(models.Model):
     project_id = models.CharField(max_length=10, blank=True, null=True)
     name = models.CharField(max_length=100, blank=True, null=True)

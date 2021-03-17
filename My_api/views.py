@@ -435,6 +435,7 @@ def get_api_data(request):
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
+
 # 调试层发送请求
 def Api_send(request):
     if request.method == 'POST':
@@ -1453,9 +1454,84 @@ def save_data(request):
 
 
 # home改版
-def new_home(request):
-    return render(request, 'new_home.html')
-
-
 def index(request):
     return render(request, 'index.html')
+
+
+def Api_send_index(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        # 提取所有数据
+        ts_method = data['ts_method']  # post
+        ts_url = data['ts_url']  # url
+        ts_header = data['ts_api_header']  # header
+        ts_body_method = data['ts_body_method']  # 请求体
+        ts_api_body = data['ts_api_body']  # form-data
+        ts_api_method = data['ts_api_method']  # 请求参数
+        ic(ts_method,
+           ts_url,
+           ts_header,
+           ts_body_method,
+           ts_api_body,
+           ts_api_method)
+        # 发送请求获取返回值
+        ts_headers = {}
+        if ts_header == '':
+            ts_header = '{}'
+        else:
+            for i in ts_header:
+                ic(i)
+                ts_headers[i[0]] = i[1]
+        ic(ts_headers)
+
+        # 拼接完整url
+        if ts_body_method == 'Query参数':
+            url = ts_url + 'Query参数'
+        else:
+            url = ts_url
+        try:
+            if ts_api_method == 'none':
+                response = requests.request(ts_method.upper(), url, headers=ts_headers, data={})
+
+            elif ts_api_method == 'form-data':
+                files = []
+                payload = {}
+                for i in eval(ts_api_body):
+                    payload[i[0]] = i[1]
+                response = requests.request(ts_method.upper(), url, headers=ts_headers, data=payload, files=files)
+                head = response.headers
+                ic(head)
+            elif ts_api_method == 'x-www-form-urlencoded':
+                ts_headers['Content-Type'] = 'application/x-www-form-urlencoded'
+                ic(ts_headers)
+                payload = {}
+                for i in eval(ts_api_body):
+                    payload[i[0]] = i[1]
+                response = requests.request(ts_method.upper(), url, headers=ts_headers, data=payload)
+
+            else:  # 这时肯定是raw的五个子选项：
+                if ts_api_method == 'raw':
+                    ts_headers['Content-Type'] = 'text/plain'
+
+                response = requests.request(ts_method.upper(), url, headers=ts_headers,
+                                            data=ts_api_body.encode('utf-8'))
+
+            DbApi.objects.create(ts_method=ts_method,
+                                 ts_url=ts_url,
+                                 ts_header=ts_header,
+                                 ts_body_method=ts_body_method,
+                                 ts_api_body=ts_api_body,
+                                 ts_api_method=ts_api_method,
+                                 result=response.text,
+                                 is_delete=0)
+
+            # 把返回值传递给前端页面
+            response.encoding = "utf-8"
+            ic(json.dumps(response.text))
+            return HttpResponse(json.dumps(response.text))
+        except Exception as e:
+            ic(e)
+            return HttpResponse(str(e))
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
