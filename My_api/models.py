@@ -377,18 +377,20 @@ class DbUser(models.Model):
 
 
 class DbApi(models.Model):
-    ts_method = models.CharField(max_length=255, null=True)
-    ts_url = models.CharField(max_length=255, null=True)
-    ts_header = models.CharField(max_length=255, null=True)
-    ts_body_method = models.CharField(max_length=255, null=True)
-    ts_api_body = models.CharField(max_length=255, null=True)
-    ts_api_method = models.CharField(max_length=255, null=True)
-    result = models.TextChoices()
-    is_delete = models.IntegerField(blank=True, null=True)
+    ts_method = models.CharField(max_length=255)
+    ts_url = models.CharField(max_length=255)
+    ts_header = models.CharField(max_length=255)
+    ts_body_method = models.CharField(max_length=255)
+    ts_api_body = models.CharField(max_length=255)
+    ts_api_method = models.CharField(max_length=255)
+    result = models.TextField(blank=True, null=True)
+    head = models.TextField(blank=True, null=True)
+    is_delete = models.IntegerField()
 
     class Meta:
         managed = False
         db_table = 'db_api'
+
 
 
 class MyApiDbApis(models.Model):

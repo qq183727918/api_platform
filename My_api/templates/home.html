@@ -296,7 +296,7 @@
     {% for i in home_log %}
         <div style="background-color: #eefaff;margin-bottom: 3px;border-radius: 5px;padding: 1px">
             <a href="/home_log/{{ i.id }}/" style=";text-decoration: none" class="log">
-                <span style="font-size: large;;color: black">{{ i.api_method }}</span><br>
+                <span style="font-size: large;color: black">{{ i.api_method }}</span><br>
                 {{ i.api_host }}{{ i.api_url }}
             </a>
         </div>
@@ -825,6 +825,8 @@
                 'ts_api_body': ts_api_body,
             }, function (ret) {
                 console.info('===========================')
+                console.log(ret)
+                console.log(typeof ret)
                 log_refersh();
                 $("li a[href=#response]").click(); //点击一下返回体按钮
                 document.getElementById('ts_response_body').value = ret;//把返回值显示到返回值多行文本框中

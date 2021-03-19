@@ -24,15 +24,24 @@
             background-repeat: no-repeat;
 
         }
+        .test-1::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width: 0; /*高宽分别对应横竖滚动条的尺寸*/
+        }
     </style>
 </head>
-<body>
+<body class="test-1">
 <div class="fat-nav">
     <div class="fat-nav__wrapper">
         <ul>
             <li>
                 <a class="active" href="/project_list/">
                     项目列表
+                </a>
+            </li>
+            <li>
+                <a class="active" href="/index/">
+                    新主页
                 </a>
             </li>
             <li>
