@@ -29,15 +29,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/admin.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0001_initial.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0002_authuser_dbapis_dbapislog_dbcases_dbglobaldata_dbhomehref_dbhost_dblogin_dbproject_dbprojectheader_d.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0002_authuser_dbapis_dbapislog_dbcases_dbglobaldata_dbhomehref_dbhost_dblogin_dbproject_dbprojectheader_d.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0003_dbsession.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0003_dbsession.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/migrations/__pycache__/0004_dbapi.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/migrations/__pycache__/0004_dbapi.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/__init__.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/__init__.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +86,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="platform" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -485,25 +494,25 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616146012925" />
-    <state width="1676" height="240" key="GridCell.Tab.0.bottom" timestamp="1616124261696">
+    <state width="824" height="326" key="GridCell.Tab.0.bottom" timestamp="1616412816175">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="240" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616124261696" />
+    <state width="824" height="326" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616412816175" />
     <state width="1242" height="251" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
-    <state width="1676" height="240" key="GridCell.Tab.0.center" timestamp="1616124261696">
+    <state width="824" height="326" key="GridCell.Tab.0.center" timestamp="1616412816175">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="240" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616124261696" />
+    <state width="824" height="326" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616412816175" />
     <state width="1242" height="251" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
-    <state width="1676" height="240" key="GridCell.Tab.0.left" timestamp="1616124261696">
+    <state width="824" height="326" key="GridCell.Tab.0.left" timestamp="1616412816175">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="240" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616124261696" />
+    <state width="824" height="326" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616412816175" />
     <state width="1242" height="251" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
-    <state width="1676" height="240" key="GridCell.Tab.0.right" timestamp="1616124261696">
+    <state width="824" height="326" key="GridCell.Tab.0.right" timestamp="1616412816175">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="240" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616124261696" />
+    <state width="824" height="326" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616412816175" />
     <state width="1242" height="251" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615981244232" />
     <state width="1242" height="251" key="GridCell.Tab.1.bottom" timestamp="1615981244116">
       <screen x="0" y="0" width="1536" height="824" />
@@ -543,10 +552,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1031" height="563" key="XDebugger.FullValuePopup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615873607618" />
-    <state x="515" y="180" width="672" height="503" key="search.everywhere.popup" timestamp="1615963089478">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1616415873550">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1615528191445" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1616415873550" />
     <state x="515" y="180" width="672" height="503" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1615963089478" />
   </component>
   <component name="XDebuggerManager">

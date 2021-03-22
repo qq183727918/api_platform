@@ -130,110 +130,39 @@
             font-weight: bold;
         }
 
+        li:hover {
+            background-color: #463949;
+        }
+
     </style>
 </head>
 <body class="test-1">
 <div class="htmleaf-container"
-     style="background-color: #051d0e;width: 235px;position:fixed;z-index: 2;left: 0;height: 100%;">
+     style="background-color: #051d0e;width: 235px;position:fixed;z-index: 2;left: 0;height: 100%;" id="new_home_logs">
     <br><br><br>
     <p style="padding-left: 10px;color: #17efde">测试历史：</p>
     <div style="width: 100%;" class="test-1">
         <ul style="list-style: none;padding-left: 0;overflow-y: scroll;height: 610px" class="test-1">
             <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor.net/api/wms-outbound-orders-service/controller-overseasOutboundUnusual/front/queryBillByPage?startTime=&endTime=&currentPage=1&pageSize=10
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor.net/api/wms-outbound-orders-service/controller-overseasOutboundUnusual/front/queryBillByPage?startTime=&endTime=&currentPage=1&pageSize=10
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor.net/api/wms-outbound-orders-service/controller-overseasOutboundUnusual/front/queryBillByPage?startTime=&endTime=&currentPage=1&pageSize=10
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor.net/api/wms-outbound-orders-service/controller-overseasOutboundUnusual/front/queryBillByPage?startTime=&endTime=&currentPage=1&pageSize=10
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor.net/api/wms-outbound-orders-service/controller-overseasOutboundUnusual/front/queryBillByPage?startTime=&endTime=&currentPage=1&pageSize=10
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor.net/api/wms-outbound-orders-service/controller-overseasOutboundUnusual/front/queryBillByPage?startTime=&endTime=&currentPage=1&pageSize=10
-                </p>
-            </li>
-            <hr>
-            <li style="height: 60px;font-size: 10px;">
-                <span>POST</span>
-                <p class="news_info" style="padding-left: 3px;">
-                    https://wms.vevor
-                </p>
-            </li>
-            <hr>
+            {% for log in logs %}
+                <li style="height: 60px;font-size: 10px;" onclick="show_send_log({{ log.id }})">
+                    <span>{{ log.ts_method }}</span>
+                    <p class="news_info" style="padding-left: 3px;">
+                        {{ log.ts_url }}
+                    </p>
+                </li>
+                <hr>
+            {% endfor %}
         </ul>
     </div>
 </div>
 
 
-<div class="htmleaf-container" style="background-color: #2fa8ec;width: 100%;position:fixed;z-index: 1;">
+<div id="clear_url" class="htmleaf-container" style="background-color: #2fa8ec;width: 100%;position:fixed;z-index: 1;">
     <header class="htmleaf-header">
-        <h1>接口请求测试平台</h1>
+        <h1 style="padding-left: 100px">接口请求测试平台</h1>
         <br>
-        <div style="padding-left: 120px">
+        <div style="padding-left: 150px">
             <select id="ts_method">
                 <option value="none">请求方式</option>
                 <option value="POST">POST</option>
@@ -244,10 +173,14 @@
             <input id="ts_url" type="text" style="width: 700px" onkeyup="update()"
                    value="">
             <button style="background-color: #009d75" onclick="ho_send()">测试请求</button>
+            <button id="save_button" style="display: none;
+                position: fixed;top: 94px;left: 1300px;background-color: darkgoldenrod;"
+                    onclick="open_save()">保存接口
+            </button>
         </div>
     </header>
 </div>
-<div class="htmleaf-container" style="position: absolute;top: 150px">
+<div id="clear" class="htmleaf-container" style="position: absolute;top: 150px">
     <div class="container" style="left: 260px;width: 1200px;background-color: #242424">
         <div class="tab-group">
             <section id="tab1" title="请求头部">
@@ -264,11 +197,11 @@
                         <tbody>
                         <tr>
                             <td>
-                                <input name="key3" type="text" value=""
+                                <input id="header_key1" name="key3" type="text" value=""
                                        style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                             </td>
                             <td>
-                                <input name="value3" type="text" value=""
+                                <input id="header_value1" name="value3" type="text" value=""
                                        style="border-radius: 5px;width: 550px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                             </td>
                             <td>
@@ -325,19 +258,19 @@
                                 <thead style="color: #337ab7;">
                                 <tr>
                                     <td style="width: 400px;border-radius: 5px;height: 30px;">Key</td>
-                                    <td style="width: 600px;border-radius: 5px;height: 30px;">Value</td>
+                                    <td style="width: 550px;border-radius: 5px;height: 30px;">Value</td>
                                     <td style="width: 270px;border-radius: 5px;height: 30px;">操作</td>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <input name="key" type="text"
+                                        <input id="params_key1" name="key" type="text"
                                                style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
-                                        <input name="value" type="text"
-                                               style="border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC">
+                                        <input id="params_value1" name="value" type="text"
+                                               style="border-radius: 5px;width: 550px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
                                         <button style="background-color: #535151;color: #FFFFFFCC;font-size: 15px"
@@ -361,19 +294,19 @@
                                 <thead style="color: #337ab7;">
                                 <tr>
                                     <td style="width: 400px;border-radius: 5px;height: 30px;">Key</td>
-                                    <td style="width: 600px;border-radius: 5px;height: 30px;">Value</td>
+                                    <td style="width: 550px;border-radius: 5px;height: 30px;">Value</td>
                                     <td style="width: 270px;border-radius: 5px;height: 30px;">操作</td>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <input name="key2" type="text"
+                                        <input id="word_key1" name="key2" type="text"
                                                style="border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
-                                        <input name="value2" type="text"
-                                               style="border-radius: 5px;width: 600px;height: 30px;background-color: #323232;color: #FFFFFFCC">
+                                        <input id="word_value1" name="value2" type="text"
+                                               style="border-radius: 5px;width: 550px;height: 30px;background-color: #323232;color: #FFFFFFCC">
                                     </td>
                                     <td>
                                         <button style="background-color: #535151;color: #FFFFFFCC;font-size: 15px"
@@ -465,9 +398,12 @@
                 </pre>
             </section>
             <section id="tab6" title="时间分析">
-                <h3 style="color: #adfdee">
+                <h4 style="color: #adfdee">
                     响应时间：<span id="times" style="color: white"></span>
-                </h3>
+                </h4>
+                <h4 style="color: #adfdee">
+                    总时间：<span id="timea" style="color: white"></span>
+                </h4>
             </section>
             <section id="tab8" title="返回头部">
                 <ul id="head" style="color: #FFFFFFCC">
@@ -602,6 +538,7 @@
         }
 
         if (ts_body_method === 'Query参数') {
+            console.log('Query参数')
             var keys4 = document.getElementsByName('key4');
             var values4 = document.getElementsByName('value4');
             var keys_4 = [];
@@ -619,7 +556,7 @@
                 ts_api_query.push([keys_4[l4], values_4[l4]]);
             }
             console.log(ts_api_query, keys_4, values_4)
-            ts_api_body = JSON.stringify(ts_api_query);
+            var ts_api_body = JSON.stringify(ts_api_query);
             var ts_api_method = 'Query参数';
         }
         console.log(ts_method, ts_url, ts_api_header, ts_body_method, ts_api_method, ts_api_body)
@@ -640,10 +577,11 @@
                 console.log(data.re);
                 $("li a[href=#tab7]").click();
                 document.getElementById('result').innerText = data.re;
-                prettyPrints()
+                prettyPrint()
                 var heads = JSON.parse(data.head);
                 console.log(typeof heads)
                 document.getElementById('times').innerText = data.times;
+                document.getElementById('timea').innerText = data.timea;
                 document.getElementById('head1').innerText = heads.head1;
                 document.getElementById('head2').innerText = heads.head2;
                 document.getElementById('head3').innerText = heads.head3;
@@ -654,21 +592,215 @@
                 document.getElementById('head8').innerText = heads.head8;
                 document.getElementById('head9').innerText = heads.head9;
                 document.getElementById('head10').innerText = heads.head10;
+                $("#new_home_logs").load(location.href + " #new_home_logs");
+                document.getElementById('save_button').style.display = 'block';
             }
         })
     }
 
-    function prettyPrints() {
+    function prettyPrint() {
         var ugly = document.getElementById('result').innerText;
-        console.log(ugly)
         var obj = JSON.parse(ugly);
         var pretty = JSON.stringify(obj, null, 4);
         document.getElementById('result').innerText = pretty;
     }
+
+    function prettyPrints() {
+        var ugly = document.getElementById('raw_Text').value;
+        console.log(ugly)
+        var obj = JSON.parse(ugly);
+        var pretty = JSON.stringify(obj, null, 4);
+        document.getElementById('raw_Text').value = pretty;
+    }
+</script>
+{#保存接口#}
+<div id="new_send" style="display: none;position: absolute;background-color: rgb(241,245,234,.7);width: 55%;height: 300px;top: 200px;
+        left: 380px;padding-top: 30px;border-radius: 50px;padding-left: 80px">
+    <br><br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">项目名称：</span>
+        <select id="project_name" style="width: 200px;height: 30px;">
+            <option value="0">请选择项目</option>
+            {% for i in project %}
+            <option value="{{ i.id }}">{{ i.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <br>
+    <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
+        <span class="input-group-addon">接口名称：</span>
+        <input id="api_name" type="text" class="form-control" placeholder="请输入接口名称" value="">
+    </div>
+    <br><br>
+    <button style="left: 560px;position: absolute;background-color: #0B7500" class="btn btn-success" id="new_list" onclick="save_send()">确 定
+    </button>
+    <button style="left: 220px;position: absolute;background-color: #761c19" class="btn btn-danger" onclick="close_send()">取 消</button>
+</div>
+<script>
+    function save_send() {
+        var project_name = document.getElementById('project_name').value;
+        var api_name = document.getElementById('api_name').value;
+        if (project_name === 0) {
+            Swal.fire({
+                icon: 'error',
+                title: '请选择项目',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return
+        }
+        if (api_name === '') {
+            Swal.fire({
+                icon: 'error',
+                title: '请输入接口名称！',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return
+        }
+        console.log(project_name)
+        $.ajax({
+            url: '/Api_new_save/',
+            type: "POST",
+            data: JSON.stringify({
+                "project_name": project_name,
+                "api_name": api_name,
+            }),
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                Swal.fire({
+                    icon: 'success',
+                    title: '保存成功！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                document.getElementById("new_send").style.display = 'none';
+                document.getElementById('mengceng').style.display = 'none';
+            }
+        })
+
+    }
+
+    function open_save() {
+        document.getElementById('mengceng').style.display = 'block';
+        document.getElementById('mengceng').style.zIndex = 998;
+        document.getElementById('new_send').style.display = 'block';
+        document.getElementById('new_send').style.zIndex = 999;
+    }
+
+    function close_send() {
+        document.getElementById('new_send').style.display = 'none';
+        document.getElementById('mengceng').style.display = 'none';
+    }
+</script>
+{#展示接口到请求页面#}
+<script>
+    function show_send_log(id) {
+        $.ajax({
+                url: '/select_api/',
+                type: 'GET',
+                data: {"Id": id},
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data)
+                    var log = data.message
+                    document.getElementById('ts_method').value = log.ts_method;
+                    document.getElementById('ts_url').value = log.ts_url;
+                    var heads = JSON.parse(data.head)
+                    document.getElementById('result').innerText = log.result;
+                    prettyPrint()
+                    document.getElementById('times').innerText = log.api_time;
+                    document.getElementById('timea').innerText = log.all_time;
+                    document.getElementById('head1').innerText = heads.head1;
+                    document.getElementById('head2').innerText = heads.head2;
+                    document.getElementById('head3').innerText = heads.head3;
+                    document.getElementById('head4').innerText = heads.head4;
+                    document.getElementById('head5').innerText = heads.head5;
+                    document.getElementById('head6').innerText = heads.head6;
+                    document.getElementById('head7').innerText = heads.head7;
+                    document.getElementById('head8').innerText = heads.head8;
+                    document.getElementById('head9').innerText = heads.head9;
+                    document.getElementById('head10').innerText = heads.head10;
+                    {#headers#}
+                    var headers = log.ts_header
+                    var header = headers.replace(/'/g, '"');
+                    var header_json = JSON.parse(header)
+                    var i = 0;
+                    var header_key = 'header_key';
+                    var header_value = 'header_value';
+                    for (let key in header_json) {
+                        i += 1;
+                        document.getElementById(header_key + i).value = key;
+                        document.getElementById(header_value + i).value = header_json[key];
+                        add_header()
+                    }
+
+                    if (log.ts_body_method === '请求体') {
+                        $("li a[href=#tab2]").click();
+                        if (log.ts_api_method === 'none') {
+                            return
+                        }
+                        if (log.ts_api_method === 'form-data') {
+                            $("input[type=radio][name=mode][value=Form-data]").click();
+                            var api_body = eval(log.ts_api_body)
+                            console.log(api_body)
+                            var j = 0;
+                            var params_key = 'params_key';
+                            var params_value = 'params_value';
+                            for (var i = 0; i < api_body.length; i++) {
+                                j += 1;
+                                console.log(api_body[i])
+                                document.getElementById(params_key + j).value = api_body[i][0];
+                                document.getElementById(params_value + j).value = api_body[i][1];
+                                add_params()
+                            }
+                        }
+                        if (log.ts_api_method === 'X-www-form-urlencoded') {
+                            $("input[type=radio][name=mode][value=X-www-form-urlencoded]").click();
+                            var api_body = eval(log.ts_api_body)
+                            console.log(api_body)
+                            var a = 0;
+                            var word_key = 'word_key';
+                            var word_value = 'word_value';
+                            for (var i = 0; i < api_body.length; i++) {
+                                a += 1;
+                                console.log(api_body[i])
+                                document.getElementById(word_key + a).value = api_body[i][0];
+                                document.getElementById(word_value + a).value = api_body[i][1];
+                                add_word2()
+                            }
+                        }
+
+                        if (log.ts_api_method === 'Raw') {
+                            $("input[type=radio][name=mode][value=Raw]").click();
+                        }
+                        if (log.ts_api_method === 'Binary') {
+                            $("input[type=radio][name=mode][value=Binary]").click();
+                        }
+                    }
+                    if (log.ts_body_method === 'Query参数') {
+                        $("li a[href=#tab3]").click();
+                        var query = eval(log.ts_api_body)
+                        var i = 0;
+                        console.log(query)
+                        var query_key = 'key';
+                        var query_value = 'value';
+                        for (var w = 0; w < query.length; w++) {
+                            i += 1;
+                            document.getElementById(query_key + i).value = query[w][0];
+                            document.getElementById(query_value + i).value = query[w][1];
+                            add_query()
+                        }
+                    }
+                }
+            }
+        )
+    }
 </script>
 <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
-<script>window.jQuery || document.write('<script src="../static/xuanxiangla/201610091515/js/jquery-1.11.0.min.js"><\/script>')</script>
-<script type="text/javascript" src="../static/xuanxiangla/201610091515/js/jquery-tab.js"></script>
+<script>window.jQuery || document.write('<script src="/static/xuanxiangla/201610091515/js/jquery-1.11.0.min.js"><\/script>')</script>
+<script type="text/javascript" src="/static/xuanxiangla/201610091515/js/jquery-tab.js"></script>
 <script type="text/javascript">
     $(function () {
         // Calling the plugin
@@ -738,6 +870,8 @@
     }
 
     function add_params() {
+        var names = document.getElementsByName('key')
+        var num = names.length + 1;
         var add_tbody = document.getElementById('mytable');
         var t1 = document.createElement('tbody');
         var t2 = document.createElement('tr');
@@ -746,11 +880,13 @@
         i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key';
+        i0.id = 'params_key' + num;
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
         i1.style = 'border-radius: 5px;width: 550px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value';
+        i1.id = 'params_value' + num;
         var t5 = document.createElement('td');
         var a = document.createElement('button');
         a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
@@ -767,6 +903,8 @@
     }
 
     function add_word2() {
+        var names = document.getElementsByName('key2')
+        var num = names.length + 1;
         var add_tbody = document.getElementById('mytable2');
         var t1 = document.createElement('tbody');
         var t2 = document.createElement('tr');
@@ -775,11 +913,13 @@
         i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key2';
+        i0.id = 'word_key' + num;
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
         i1.style = 'border-radius: 5px;width: 550px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value2';
+        i1.id = 'word_value' + num;
         var t5 = document.createElement('td');
         var a = document.createElement('button');
         a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
@@ -796,6 +936,8 @@
     }
 
     function add_header() {
+        var names = document.getElementsByName('key3')
+        var num = names.length + 1;
         var add_tbody = document.getElementById('myheader');
         var t1 = document.createElement('tbody');
         var t2 = document.createElement('tr');
@@ -804,11 +946,13 @@
         i0.style = 'border-radius: 5px;width: 400px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i0.type = 'text';
         i0.name = 'key3';
+        i0.id = 'header_key' + num;
         var t4 = document.createElement('td');
         var i1 = document.createElement("input");
         i1.style = 'border-radius: 5px;width: 550px;height: 30px;background-color: #323232;color: #FFFFFFCC';
         i1.type = 'text';
         i1.name = 'value3';
+        i1.id = 'header_value' + num;
         var t5 = document.createElement('td');
         var a = document.createElement('button');
         a.style = 'background-color: #535151;color: #FFFFFFCC;font-size: 15px;';
@@ -860,6 +1004,7 @@
 </script>
 {#Query参数自动添加#}
 <script>
+
     function update() {
         console.log('初始开始')
         var params = []
@@ -881,23 +1026,22 @@
             } else {
                 document.getElementById(value).value = word[1];
             }
+            console.log(key)
         }
         console.log(params)
+        var kkk = document.getElementsByName('key4');
+        var sss = kkk.length
+        var sk = 'key' + sss;
+        var keya = document.getElementById(sk).value;
+        if (keya !== '') {
+            add_query()
+        }
     }
 </script>
-{#自动添加输入框#}
-<script>
-    //var kkk = document.getElementsByName('key4');
-    //var sss = kkk.length
-    //var sk = 'key' + sss;
-    //var keya = document.getElementById(sk).value;
-    //if (keya !== ''){
-    //    add_query()
-    //}
-</script>
-
-
-<div id="menu" style="position:fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);z-index: 100;display: none">
+<div id="mengceng"
+     style="position:fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);z-index: 100;display: none"></div>
+<div id="menu"
+     style="position:fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);z-index: 100;display: none">
     <button style="color: #2fa8ec;background-color: #0B7500" onclick="close_menu()">关 闭</button>
     <div style="text-align: center;font-size: 30px;padding-top: 50px">
         <div class="fat-nav__wrapper">
@@ -945,10 +1089,11 @@
     <button style="background-color: #0B7500;color: #2fa8ec;z-index: 100" onclick="open_menu()">菜 单</button>
 </div>
 <script>
-    function open_menu(){
+    function open_menu() {
         document.getElementById('menu').style.display = 'block';
     }
-    function close_menu(){
+
+    function close_menu() {
         document.getElementById('menu').style.display = 'none';
     }
 

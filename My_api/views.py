@@ -1,4 +1,5 @@
 import json
+import time
 
 import requests
 from django.contrib.auth.decorators import login_required
@@ -1455,11 +1456,13 @@ def save_data(request):
 
 # home改版
 def index(request):
-    return render(request, 'index.html')
-    # return render(request, 'welcome.html', {"whichHTML": "index.html", "oid": "", **glodict(request)})
+    logs = DbApi.objects.all().order_by("-id")
+    project = DbProject.objects.all()
+    return render(request, 'index.html', {"logs": logs, "project": project})
 
 
 def Api_send_index(request):
+    start_time = time.time()
     if request.method == 'POST':
         data = json.loads(request.body)
         ic(data)
@@ -1468,16 +1471,17 @@ def Api_send_index(request):
         ts_url = data['ts_url']  # url
         ts_header = data['ts_api_header']  # header
         ts_body_method = data['ts_body_method']  # 请求体
-
+        ts_api_body = data['ts_api_body']
         ts_api_method = data['ts_api_method']  # 请求参数
+        url = ts_url
 
-        # 拼接完整url
-        if ts_body_method == 'Query参数':
-            ts_api_body = 'Query参数'  # form-data
-            url = ts_url
-        else:
-            ts_api_body = data['ts_api_body']  # form-data
-            url = ts_url
+        # # 拼接完整url
+        # if ts_body_method == 'Query参数':
+        #     ts_api_body = 'Query参数'  # form-data
+        #     url = ts_url
+        # else:
+        #     ts_api_body = data['ts_api_body']  # form-data
+        #     url = ts_url
 
         ic(ts_method,
            ts_url,
@@ -1487,13 +1491,20 @@ def Api_send_index(request):
            ts_api_method)
         # 发送请求获取返回值
         ts_headers = {}
+        ic(ts_header)
+        for i in ts_header:
+            ic(i)
+            if i[0] == '':
+                ts_header.remove(i)
+            else:
+                pass
+        ic(ts_header)
         if ts_header == [['', '']]:
             ts_header = '{}'
         else:
             for i in ts_header:
                 ts_headers[i[0]] = i[1]
         ic(ts_headers)
-
 
         try:
             if ts_api_method == 'none':
@@ -1519,8 +1530,18 @@ def Api_send_index(request):
 
                 response = requests.request(ts_method.upper(), url, headers=ts_headers,
                                             data=ts_api_body.encode('utf-8'))
-            head = response.headers
-            ic(head)
+            times = response.elapsed.total_seconds()  # 获取实际的响应时间
+            ic(times)
+            end_time = time.time()
+            all_time = end_time - start_time
+            heada = response.headers
+            head1 = dict(heada)
+            if head1.get('Transfer-Encoding'):
+                pass
+            else:
+                head1['Transfer-Encoding'] = ''
+            ic(head1)
+            head = json.dumps(head1)
             DbApi.objects.create(ts_method=ts_method,
                                  ts_url=ts_url,
                                  ts_header=ts_headers,
@@ -1529,53 +1550,106 @@ def Api_send_index(request):
                                  ts_api_method=ts_api_method,
                                  result=response.text,
                                  head=head,
+                                 api_time=times,
+                                 all_time=all_time,
                                  is_delete=0)
 
             # 把返回值传递给前端页面
-            dic = {
-                "re": f"{response.text}",
-                "head": f"{head}"
-            }
             if response.json()['code'] != 200:
                 TE = ''
-                head = {
-                    "head1": f"{head['Server']}",
-                    "head2": f"{head['Date']}",
-                    "head3": f"{head['Content-Type']}",
+                heads = {
+                    "head1": f"{heada['Server']}",
+                    "head2": f"{heada['Date']}",
+                    "head3": f"{heada['Content-Type']}",
                     "head4": f"{TE}",
-                    "head5": f"{head['Connection']}",
-                    "head6": f"{head['X-Content-Type-Options']}",
-                    "head7": f"{head['X-XSS-Protection']}",
-                    "head8": f"{head['Cache-Control']}",
-                    "head9": f"{head['Pragma']}",
-                    "head10": f"{head['Expires']}"
+                    "head5": f"{heada['Connection']}",
+                    "head6": f"{heada['X-Content-Type-Options']}",
+                    "head7": f"{heada['X-XSS-Protection']}",
+                    "head8": f"{heada['Cache-Control']}",
+                    "head9": f"{heada['Pragma']}",
+                    "head10": f"{heada['Expires']}"
                 }
             else:
-                head = {
-                    "head1": f"{head['Server']}",
-                    "head2": f"{head['Date']}",
-                    "head3": f"{head['Content-Type']}",
-                    "head4": f"{head['Transfer-Encoding']}",
-                    "head5": f"{head['Connection']}",
-                    "head6": f"{head['X-Content-Type-Options']}",
-                    "head7": f"{head['X-XSS-Protection']}",
-                    "head8": f"{head['Cache-Control']}",
-                    "head9": f"{head['Pragma']}",
-                    "head10": f"{head['Expires']}"
+                heads = {
+                    "head1": f"{heada['Server']}",
+                    "head2": f"{heada['Date']}",
+                    "head3": f"{heada['Content-Type']}",
+                    "head4": f"{heada['Transfer-Encoding']}",
+                    "head5": f"{heada['Connection']}",
+                    "head6": f"{heada['X-Content-Type-Options']}",
+                    "head7": f"{heada['X-XSS-Protection']}",
+                    "head8": f"{heada['Cache-Control']}",
+                    "head9": f"{heada['Pragma']}",
+                    "head10": f"{heada['Expires']}"
                 }
-            ic(head)
-            ic(json.dumps(dic))
             response.encoding = "utf-8"
-            times = response.elapsed.total_seconds()  # 获取实际的响应时间
-            ic(times)
+
             return HttpResponse(json.dumps({
                 "re": response.text,
-                "head": f"{json.dumps(head)}",
-                "times": f"{times}"
+                "head": f"{json.dumps(heads)}",
+                "times": f"{times}",
+                "timea": f"{all_time}"
             }))
         except Exception as e:
             ic(e)
             return HttpResponse(json.dumps({"re": f"{e}"}))
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+# 新主页保存接口
+def Api_new_save(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        api_name = data["api_name"]
+        project_name = data["project_name"]
+        ic(data)
+        try:
+            logs = DbApi.objects.all().order_by("-id").values()[0]
+            DbApis.objects.create(
+                project_id=project_name,
+                name=api_name,
+                result=logs["result"],
+                api_body=logs["ts_api_body"],
+                body_method=logs["ts_api_method"],
+                api_header=logs["ts_header"],
+                api_models=logs["ts_method"],
+                api_host="取url前面部分",
+                api_url=logs["ts_url"],
+                is_delete=0
+            )
+        except Exception as e:
+            ic(e)
+            return HttpResponse(json.dumps({"re": f"{e}"}))
+        else:
+            return HttpResponse(json.dumps({'code': 200, 'data': True, 'message': '保存成功'}))
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+# 查询接口
+def select_api(request):
+    if request.method == 'GET':
+        Id = request.GET['Id']
+        log = DbApi.objects.filter(id=Id).values()[0]
+        head = eval(log['head'])
+        print(type(head))
+        heads = {
+            "head1": f"{head['Server']}",
+            "head2": f"{head['Date']}",
+            "head3": f"{head['Content-Type']}",
+            "head4": f"{head['Transfer-Encoding']}",
+            "head5": f"{head['Connection']}",
+            "head6": f"{head['X-Content-Type-Options']}",
+            "head7": f"{head['X-XSS-Protection']}",
+            "head8": f"{head['Cache-Control']}",
+            "head9": f"{head['Pragma']}",
+            "head10": f"{head['Expires']}"
+        }
+        ic(log)
+        return HttpResponse(json.dumps({'message': log, "head": json.dumps(heads)}))
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)

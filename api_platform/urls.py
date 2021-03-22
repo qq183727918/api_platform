@@ -94,7 +94,8 @@ urlpatterns = [
     url(r'^index/$', index),  # 主要自改版
 
     url(r'^Api_send_index/$', Api_send_index),  # 改版发送请求
-
+    url(r'^Api_new_save/$', Api_new_save),  # 改版保存请求
+    url(r'^select_api/$', select_api),  # 改版保存请求
 
     # --------------------小工具-------------------- #
     url(r'^tools_zhengjiao/$', zhengjiao),  # 进入小工具页面

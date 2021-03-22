@@ -385,6 +385,8 @@ class DbApi(models.Model):
     ts_api_method = models.CharField(max_length=255)
     result = models.TextField(blank=True, null=True)
     head = models.TextField(blank=True, null=True)
+    api_time = models.CharField(max_length=255)
+    all_time = models.CharField(max_length=255)
     is_delete = models.IntegerField()
 
     class Meta:
