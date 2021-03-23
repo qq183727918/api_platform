@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW_HOME</title>
-    <link rel="stylesheet" type="text/css" href="../static/xuanxiangla/201610091515/css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/xuanxiangla/201610091515/css/htmleaf-demo.css">
+    <link rel="stylesheet" type="text/css" href="/static/xuanxiangla/201610091515/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/xuanxiangla/201610091515/css/htmleaf-demo.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/cs-select.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/cs-skin-underline.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/dmaku.css"/>
+
     <style type="text/css">
         /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
         /* =========
@@ -99,11 +104,28 @@
             margin-top: 0;
         }
     </style>
-    <script src="../static/xuanxiangla/201610091515/js/prefixfree.min.js"></script>
+    <script src="/static/xuanxiangla/201610091515/js/prefixfree.min.js"></script>
     <!--[if IE]>
     <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <style>
+        div.cs-skin-underline {
+            background: transparent;
+            font-size: 10px;
+            max-width: 150px;
+            position: fixed;
+            left: 300px;
+            top: 86px;
+        }
+        div.cs-skin-underlines {
+            background: transparent;
+            font-size: 10px;
+            max-width: 150px;
+            position: fixed;
+            left: 730px;
+            top: 264px;
+        }
+
         .test-1::-webkit-scrollbar {
             /*滚动条整体样式*/
             width: 0; /*高宽分别对应横竖滚动条的尺寸*/
@@ -134,7 +156,18 @@
             background-color: #463949;
         }
 
+
     </style>
+    <script>
+        function borderColor() {
+            if (self['ts_url'].style.borderColor == 'red') {
+                self['ts_url'].style.borderColor = 'purple';
+            } else {
+                self['ts_url'].style.borderColor = 'red';
+            }
+            oTime = setTimeout('borderColor()', 400);
+        }
+    </script>
 </head>
 <body class="test-1">
 <div class="htmleaf-container"
@@ -146,7 +179,8 @@
             <hr>
             {% for log in logs %}
                 <li style="height: 60px;font-size: 10px;" onclick="show_send_log({{ log.id }})">
-                    <span>{{ log.ts_method }}</span>
+                    <span class="style_color" id="method{{ log.id }}">{{ log.ts_method }}</span><span
+                        style="color: white">{{ log.status_code }}</span>
                     <p class="news_info" style="padding-left: 3px;">
                         {{ log.ts_url }}
                     </p>
@@ -162,21 +196,31 @@
     <header class="htmleaf-header">
         <h1 style="padding-left: 100px">接口请求测试平台</h1>
         <br>
-        <div style="padding-left: 150px">
-            <select id="ts_method">
+        <div style="padding-left: 100px">
+            <select id="ts_method" class="cs-select cs-skin-underline">
                 <option value="none">请求方式</option>
                 <option value="POST">POST</option>
                 <option value="GET">GET</option>
                 <option value="PUT">PUT</option>
                 <option value="DELETE">DELETE</option>
+                <option value="HEAD">HEAD</option>
+                <option value="OPTIONS">OPTIONS</option>
+                <option value="PATCH">PATCH</option>
             </select>
-            <input id="ts_url" type="text" style="width: 700px" onkeyup="update()"
+            <input id="ts_url" type="text" style="border:4px dotted red;border-radius: 5px;color:#0c81a5;width: 700px"
+                   onfocus="borderColor(this);"
+                   onblur="clearTimeout(ts_url);" onkeyup="update()"
                    value="">
-            <button style="background-color: #009d75" onclick="ho_send()">测试请求</button>
-            <button id="save_button" style="display: none;
-                position: fixed;top: 94px;left: 1300px;background-color: darkgoldenrod;"
-                    onclick="open_save()">保存接口
-            </button>
+            <form style="position: fixed;top: 92px;left: 1180px">
+                <div style="width: 150px;">
+                    <a onclick="ho_send()" class="onload sky_blue">测试请求</a>
+                </div>
+            </form>
+            <form id="save_button"  style="display: none;position: fixed;top: 92px;left: 1320px">
+                <div style="width: 150px;">
+                    <a onclick="open_save()" class="onload orange">保存接口</a>
+                </div>
+            </form>
         </div>
     </header>
 </div>
@@ -228,15 +272,15 @@
                     <input type="radio" id="Raw" name="mode" value="Raw"/> Raw&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="Binary" name="mode" value="Binary"/> Binary
                     <span id="content-type" style="position:absolute;display: none;left: 600px;top: 10px">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Content-Type :
-                        <select class="btn-select"
+                        <select class="btn-select" id="content_type"
                                 style="background-color: #242424;color: #FFFFFFCC;;position: absolute;width: 280px;height: 25px;left: 180px;top: 0;border-radius: 5px;border: 0;appearance: inherit;">
-                            <option>Auto</option>
-                            <option>Text(test/plain)</option>
-                            <option>JSON(application/json)</option>
-                            <option>javascript(application/javascript)</option>
-                            <option>XML(application/xml)</option>
-                            <option>XML(text/xml)</option>
-                            <option>HTML(text/html)</option>
+                            <option value="Auto">Auto</option>
+                            <option value="test/plain">Text(test/plain)</option>
+                            <option value="application/json">JSON(application/json)</option>
+                            <option value="application/javascript">javascript(application/javascript)</option>
+                            <option value="application/xml">XML(application/xml)</option>
+                            <option value="text/xml">XML(text/xml)</option>
+                            <option value="text/html">HTML(text/html)</option>
                         </select>
                     </span>
                 </div>
@@ -340,7 +384,7 @@
                                     onclick="prettyPrints()">整理格式
                             </button>
                         </div>
-                        <textarea name="" id="raw_Text"
+                        <textarea class="test-1" name="" id="raw_Text"
                                   style="background-color: #323232;color: #FFFFFFCC;width: 100%;height: 300px;border: 0;outline:none;"></textarea>
                     </div>
                     <div id="binarys" style="display: none;height: 80px;">
@@ -433,6 +477,7 @@
         //获取headers
         var keys3 = document.getElementsByName('key3');
         var values3 = document.getElementsByName('value3');
+        var content_type = '';
         var keys_3 = [];
         var values_3 = [];
         var ts_api_header = [];
@@ -528,8 +573,10 @@
             }
             if (document.getElementById("Raw").checked) {
                 {#需要获取conten-type#}
+                var content_type = document.getElementById('content_type').value;
                 var ts_api_body = document.getElementById('raw_Text').value;
                 var ts_api_method = 'Raw';
+
             }
             if (document.getElementById("Binary").checked) {
                 console.log('Binary')
@@ -570,7 +617,11 @@
                 'ts_body_method': ts_body_method,  //参数位置
                 'ts_api_method': ts_api_method,
                 'ts_api_body': ts_api_body,   //参数
+                'content_type': content_type,
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "token");
+            },
             contentType: 'application/json',
             dataType: 'json',
             success: function (data) {
@@ -614,15 +665,15 @@
     }
 </script>
 {#保存接口#}
-<div id="new_send" style="display: none;position: absolute;background-color: rgb(241,245,234,.7);width: 55%;height: 300px;top: 200px;
+<div id="new_send" style="display: none;position: absolute;background-color: rgb(204,186,224);width: 55%;height: 300px;top: 200px;
         left: 380px;padding-top: 30px;border-radius: 50px;padding-left: 80px">
     <br><br>
     <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
         <span class="input-group-addon">项目名称：</span>
-        <select id="project_name" style="width: 200px;height: 30px;">
+        <select id="project_name" style="width: 200px;height: 30px;" class="cs-select cs-skin-underlines">
             <option value="0">请选择项目</option>
             {% for i in project %}
-            <option value="{{ i.id }}">{{ i.name }}</option>
+                <option value="{{ i.id }}">{{ i.name }}</option>
             {% endfor %}
         </select>
     </div>
@@ -632,9 +683,12 @@
         <input id="api_name" type="text" class="form-control" placeholder="请输入接口名称" value="">
     </div>
     <br><br>
-    <button style="left: 560px;position: absolute;background-color: #0B7500" class="btn btn-success" id="new_list" onclick="save_send()">确 定
+    <button style="left: 560px;position: absolute;background-color: #0B7500" class="btn btn-success" id="new_list"
+            onclick="save_send()">确 定
     </button>
-    <button style="left: 220px;position: absolute;background-color: #761c19" class="btn btn-danger" onclick="close_send()">取 消</button>
+    <button style="left: 220px;position: absolute;background-color: #761c19" class="btn btn-danger"
+            onclick="close_send()">取 消
+    </button>
 </div>
 <script>
     function save_send() {
@@ -729,11 +783,17 @@
                     var i = 0;
                     var header_key = 'header_key';
                     var header_value = 'header_value';
+                    console.log('header长度', Object.keys(header_json).length)
                     for (let key in header_json) {
                         i += 1;
                         document.getElementById(header_key + i).value = key;
                         document.getElementById(header_value + i).value = header_json[key];
-                        add_header()
+                        var headerna = document.getElementsByName('key3')
+                        console.log('获取到底有少个', headerna.length)
+                        if (Object.keys(header_json).length > headerna.length) {
+                            console.log('判断加不加')
+                            add_header()
+                        }
                     }
 
                     if (log.ts_body_method === '请求体') {
@@ -753,7 +813,12 @@
                                 console.log(api_body[i])
                                 document.getElementById(params_key + j).value = api_body[i][0];
                                 document.getElementById(params_value + j).value = api_body[i][1];
-                                add_params()
+                                var formdata = document.getElementsByName('key')
+                                console.log('获取到底有少个', formdata.length)
+                                if (api_body.length > formdata.length) {
+                                    console.log('判断加不加')
+                                    add_params()
+                                }
                             }
                         }
                         if (log.ts_api_method === 'X-www-form-urlencoded') {
@@ -768,12 +833,19 @@
                                 console.log(api_body[i])
                                 document.getElementById(word_key + a).value = api_body[i][0];
                                 document.getElementById(word_value + a).value = api_body[i][1];
-                                add_word2()
+                                var xform = document.getElementsByName('key2')
+                                console.log('获取到底有少个', xform.length)
+                                if (api_body.length > xform.length) {
+                                    console.log('判断加不加')
+                                    add_word2()
+                                }
                             }
                         }
 
                         if (log.ts_api_method === 'Raw') {
                             $("input[type=radio][name=mode][value=Raw]").click();
+                            document.getElementById('raw_Text').innerText = log.ts_api_body;
+                            prettyPrints()
                         }
                         if (log.ts_api_method === 'Binary') {
                             $("input[type=radio][name=mode][value=Binary]").click();
@@ -788,9 +860,15 @@
                         var query_value = 'value';
                         for (var w = 0; w < query.length; w++) {
                             i += 1;
+                            console.log(query.length)
                             document.getElementById(query_key + i).value = query[w][0];
                             document.getElementById(query_value + i).value = query[w][1];
-                            add_query()
+                            var qu = document.getElementsByName('key4')
+                            console.log('获取到底有少个', qu.length)
+                            if (query.length > qu.length) {
+                                console.log('判断加不加')
+                                add_query()
+                            }
                         }
                     }
                 }
@@ -1046,41 +1124,41 @@
     <div style="text-align: center;font-size: 30px;padding-top: 50px">
         <div class="fat-nav__wrapper">
             <ul style="list-style: none;">
-                <li>
+                <p>
                     <a style="color: white" class="active" href="/project_list/">
                         项目列表
                     </a>
-                </li>
+                </p>
                 <br>
-                <li>
+                <p>
                     <a style="color: white" class="active" href="/index/">
                         新主页
                     </a>
-                </li>
+                </p>
                 <br>
-                <li>
+                <p>
                     <a style="color: white" href="/user/">
                         用户管理页面
                     </a>
-                </li>
+                </p>
                 <br>
-                <li>
+                <p>
                     <a style="color: white" href="http://localhost:8089" target="_blank">
                         性能页面
                     </a>
-                </li>
+                </p>
                 <br>
-                <li>
+                <p>
                     <a style="color: white" href="/tools_zhengjiao/">
                         正交生成器
                     </a>
-                </li>
+                </p>
                 <br>
-                <li>
+                <p>
                     <a style="color: white" href="/help/">
                         帮助
                     </a>
-                </li>
+                </p>
             </ul>
         </div>
     </div>
@@ -1098,6 +1176,35 @@
     }
 
 </script>
+<script>
+    method = document.getElementsByClassName('style_color');
+    console.log(method)
+    for (const key in method) {
+        console.log(method[key].innerText);
+        const method_id = method[key].id;
+        if (method[key].innerText === "GET") {
+            document.getElementById(method_id).style.color = '#8920e5';
+        }
+        if (method[key].innerText === "POST") {
+            document.getElementById(method_id).style.color = '#e5203e';
+        }
+        if (method[key].innerText === "PUT") {
+            document.getElementById(method_id).style.color = '#2fb661';
+        }
+        if (method[key].innerText === "DELETE") {
+            document.getElementById(method_id).style.color = '#1675bd';
+        }
+    }
 
+</script>
+<script src="/static/xialakuang/js/classie.js"></script>
+<script src="/static/xialakuang/js/selectFx.js"></script>
+<script>
+    (function () {
+        [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+            new SelectFx(el);
+        });
+    })();
+</script>
 </body>
 </html>
