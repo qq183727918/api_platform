@@ -395,6 +395,17 @@ class DbApi(models.Model):
         db_table = 'db_api'
 
 
+class UserToken(models.Model):
+    user_id = models.IntegerField()
+    user_name = models.CharField(max_length=255)
+    token = models.CharField(max_length=255)
+    failure_time = models.DateTimeField()
+    is_failure = models.IntegerField()
+
+    class Meta:
+        managed = False
+        db_table = 'user_token'
+
 
 class MyApiDbApis(models.Model):
     project_id = models.CharField(max_length=10, blank=True, null=True)

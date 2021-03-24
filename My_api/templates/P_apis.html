@@ -95,6 +95,9 @@
             data: JSON.stringify({
                 'api_id': api_id
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {
@@ -111,6 +114,9 @@
             data: JSON.stringify({
                 'api_id': id,
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {
@@ -131,6 +137,9 @@
                 'api_id': id,
                 'bz_value': bz_value,
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {
@@ -320,7 +329,8 @@
         <div class="tab-pane fade" id="Json">
             <textarea name="" id="raw_Json" style="color: black;width: 99%;height: 300px;"></textarea>
             <button style="position: absolute;top: 235px;left: 600px;background-color: #0B7500;
-                        " onclick="prettyPrints()">JSON格式化</button>
+                        " onclick="prettyPrints()">JSON格式化
+            </button>
         </div>
         <div class="tab-pane fade" id="Html">
             <textarea name="" id="raw_Html" style="color: black;width: 99%;height: 300px;"></textarea>
@@ -352,7 +362,8 @@
             <textarea name="" id="ts_response_body" disabled="disabled"
                       style="color: black;width: 99%;height: 300px;"></textarea>
             <button style="position: absolute;top: 235px;left: 600px;background-color: #0B7500;
-                        " onclick="prettyPrint()">JSON格式化</button>
+                        " onclick="prettyPrint()">JSON格式化
+            </button>
         </div>
     </div>
     <br>
@@ -419,6 +430,9 @@
             type: "get",
             data: {
                 'api_id': id,
+            },
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
             },
             dataType: 'json',
             success: function (data) {
@@ -664,6 +678,9 @@
                 'ts_api_body': ts_api_body,
                 'ts_project_headers': ts_project_headers.toString(),
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {
@@ -841,6 +858,9 @@
                 'ts_api_body': ts_api_body,
                 'ts_project_headers': ts_project_headers.toString(),
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {
@@ -926,17 +946,25 @@
                         var span_text = '替换：' + new_body[i][0] + '-->' + r[j];
 
                         console.log('new_body', JSON.stringify(new_body))
-
-                        $.get('/error_request/', {
-                            'api_id': api_id,
-                            'new_body': JSON.stringify(new_body),
-                            'span_text': span_text,
-                        }, function (ret) {
-                            console.info('=====================================')
-                            console.log(ret)
-                            res = eval(ret);
-                            console.log(res)
-                            error_show_response(res.span_text, res.response);
+                        $.ajax({
+                            url: '/error_request/',
+                            type: 'GET',
+                            data: {
+                                'api_id': api_id,
+                                'new_body': JSON.stringify(new_body),
+                                'span_text': span_text,
+                            },
+                            beforeSend: function (request) {
+                                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                console.info('=====================================')
+                                console.log(data)
+                                res = eval(data);
+                                console.log(res)
+                                error_show_response(res.span_text, res.response);
+                            }
                         })
                     }
                 }
@@ -959,14 +987,25 @@
                         console.log(new_body)
 
                         var span_text = '替换：' + i + '-->' + r[j];
-
-                        $.get('/error_request/', {
-                            'api_id': api_id,
-                            'new_body': JSON.stringify(new_body),
-                            'span_text': span_text,
-                        }, function (ret) {
-                            res = eval(ret);
-                            error_show_response(res.span_text, res.response);
+                        $.ajax({
+                            url: '/error_request/',
+                            type: 'GET',
+                            data: {
+                                'api_id': api_id,
+                                'new_body': JSON.stringify(new_body),
+                                'span_text': span_text,
+                            },
+                            beforeSend: function (request) {
+                                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                console.info('=====================================')
+                                console.log(data)
+                                res = eval(data);
+                                console.log(res)
+                                error_show_response(res.span_text, res.response);
+                            }
                         })
                     }
                 }
@@ -1038,7 +1077,7 @@ padding-left: 10px;background-color: white">
     }
 
     function project_header_close() {
-        document.location.reload()
+        document.location.reload();
     }
 
     function project_header_save() {

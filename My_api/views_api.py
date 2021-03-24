@@ -11,16 +11,21 @@ import re
 import time
 
 import requests
-from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth import authenticate, login
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 # Create your views here.
 from icecream import ic
+from rest_framework_jwt.settings import api_settings
 
 from My_api.models import *
 from My_api.static.params.return_params import RE
 
 
 # 返回子页面
+from My_api.static.public_method.public_method import new_token
+
+
 def child(request, eid, oid, ooid):
     ic('child', eid, oid, ooid)
     res = child_json(eid, oid, ooid)
@@ -35,14 +40,15 @@ def child_json(eid, oid='', ooid=''):
         date = DbHomeHref.objects.all()
         home_log = DbApisLog.objects.filter(user_id=oid)[::-1]
         hosts = DbHost.objects.all()
-        user_projects = DbProject.objects.filter(user=DbUser.objects.filter(id=oid)[0].username)
+        user_projects = DbProject.objects.filter(user=DbUser.objects.filter(id=oid)[0].username, is_delete=0)
 
         # 个人数据看板
         count_project = len(user_projects)
         count_api = sum([len(DbApis.objects.filter(project_id=i.id)) for i in user_projects])
         count_case = sum([len(DbCases.objects.filter(project_id=i.id)) for i in user_projects])
 
-        ziyuan_all = len(DbProject.objects.all()) + len(DbApis.objects.all()) + len(DbCases.objects.all())
+        ziyuan_all = len(DbProject.objects.filter(is_delete=0).all()) + len(DbApis.objects.all()) + len(
+            DbCases.objects.all())
         ziyuan_user = count_project + count_api + count_case
         if ziyuan_all == 0:
             ziyuan = ziyuan_user * 100
@@ -148,30 +154,40 @@ def user_upload(request):
 def login_action(request):
     if request.method == "POST":
         data = json.loads(request.body)
-        u_name = data['username']
-        p_word = data['password']
-        ic(u_name, p_word, data)
-        if u_name == '':
-            dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
-            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-        if p_word == '':
-            dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
-            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-        # 开始联通用户库，查看用户密码是否正确
-        username = DbUser.objects.filter(username=u_name).values()
+        Authorization = request.headers['Authorization']
+        Authorization_ = 'Bearer Y2FjNDI1MTEtMzc4ZC00MmQ0LTk4ZWUtYjdmM2U0MDU1NjE2OjE1MGU5OTI1LWUxYzctNGZlZi05ZmQ4LWIwYzU5Mzg3ZmMzMQ=='
+        if Authorization == Authorization_:
+            u_name = data['username']
+            p_word = data['password']
+            ic(u_name, p_word, data)
+            if u_name == '':
+                dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            if p_word == '':
+                dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            # 开始联通用户库，查看用户密码是否正确
+            username = DbUser.objects.filter(username=u_name).values()
 
-        if username.count() == 0:
-            dic = json.dumps({"code": 30003, "data": "false", "message": "用户名不存在请检查"})
-            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            if username.count() == 0:
+                dic = json.dumps({"code": 30003, "data": "false", "message": "用户名不存在请检查"})
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            else:
+                for name in username:
+                    if u_name == name['username']:
+                        if p_word == name['password']:
+                            token = new_token(name['username'])
+                            ic(token)
+                            dic = json.dumps({"code": 200, "data": {"access_token": token}, "message": "OK"})
+                            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+                        else:
+                            dic = json.dumps({"code": 30004, "data": "false", "message": "密码错误，请重试！"})
+                            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         else:
-            for name in username:
-                if u_name == name['username']:
-                    if p_word == name['password']:
-                        dic = json.dumps({"code": 200, "data": "false", "message": "成功"})
-                        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-                    else:
-                        dic = json.dumps({"code": 30004, "data": "false", "message": "密码错误，请重试！"})
-                        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            res = HttpResponse(json.dumps({"code": 401, "data": False, "message": "凭证错误！"}))
+            res.status_code = 401
+            return res
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
@@ -234,10 +250,16 @@ def delete_project(request):
         DbApis.objects.filter(project_id=Id).update(is_delete=1)  # 删除旗下接口
 
         all_Case = DbCases.objects.filter(project_id=Id)
-        for i in all_Case:
-            DbStep.objects.filter(Case_id=i.id).update(is_delete=1)  # 删除步骤
-            i.update(is_delete=1)  # 用例删除自己
-        return HttpResponseRedirect('')
+        ic(all_Case)
+        if all_Case.count() == 0:
+            pass
+        else:
+            for i in all_Case:
+                DbStep.objects.filter(Case_id=i.id).update(is_delete=1)  # 删除步骤
+                i.update(is_delete=1)  # 用例删除自己
+        from My_api.static.public_method.mysql_id_order_by import mysql_id_order_by
+        mysql_id_order_by('db_project')
+        return HttpResponse(json.dumps({"code": 200, "data": True, "message": "ok"}))
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
@@ -745,7 +767,7 @@ def Api_send_home(request):
         # 把返回值传递给前端页面
         response.encoding = "utf-8"
         DbHost.objects.update_or_create(host=ts_host, is_delete=0)
-        return HttpResponse(response.text)
+        return HttpResponse(json.dumps({"code": 200, "data": response.text, "message": "OK"}))
     except Exception as e:
         return HttpResponse(str(e))
 
@@ -926,7 +948,7 @@ def save_project_header(request):
                 DbProjectHeader.objects.filter(id=ids[i]).delete()
             except:
                 pass
-    return HttpResponse('')
+    return HttpResponse(json.dumps({"code": 200, "data": True, "message": "OK"}))
 
 
 # 保存用例名称
@@ -1301,7 +1323,7 @@ def Home_save_api(request):
                           is_delete=0
                           )
 
-    return HttpResponse('')
+    return HttpResponse(json.dumps({"code": 200, "data": True, "message": "OK"}))
 
 
 # 首页搜索功能

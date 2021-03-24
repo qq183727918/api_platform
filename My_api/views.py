@@ -25,7 +25,7 @@ def home(request, log_id=''):
 
 
 # 进入登录页面
-def login(request):
+def login_user(request):
     return render(request, 'login.html')
 
 
@@ -66,6 +66,10 @@ def global_data(request, Id):
 # home改版
 def index(request):
     logs = DbApi.objects.all().order_by("-id")
-    ic(logs.values()[0])
     project = DbProject.objects.all()
     return render(request, 'index.html', {"logs": logs, "project": project})
+
+
+# 按钮样式
+def button(request):
+    return render(request, 'button.html')

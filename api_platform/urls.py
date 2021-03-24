@@ -24,7 +24,7 @@ urlpatterns = [
 
     url(r'^$', login),
     url(r'^admin/', admin.site.urls),
-    url(r"^login/$", login),  # 登录页面
+    url(r"^login/$", login_user),  # 登录页面
     url(r'^user/', user),  # 用户管理页面
     url(r'^home/$', home),  # 进入首页
     url(r"^child/(?P<eid>.+)/(?P<oid>.*)/(?P<ooid>.*)/$", child),  # 返回子页面
@@ -37,6 +37,7 @@ urlpatterns = [
     url(r'^global_data/(?P<Id>.*)/$', global_data),  # 进入全局变量
     url(r'^index/$', index),  # 主要自改版
     url(r'^tools_zhengjiao/$', zhengjiao),  # 进入小工具页面
+    url(r'^button/$', button),  # 进入小工具页面
 
 
 

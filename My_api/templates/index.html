@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/cs-select.css"/>
     <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/cs-skin-underline.css"/>
     <link rel="stylesheet" type="text/css" href="/static/xialakuang/css/dmaku.css"/>
+    <link rel="stylesheet" href="/static/button/css/dmaku.css">
 
     <style type="text/css">
         /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
@@ -114,16 +115,17 @@
             font-size: 10px;
             max-width: 150px;
             position: fixed;
-            left: 300px;
+            left: 330px;
             top: 86px;
         }
+
         div.cs-skin-underlines {
             background: transparent;
             font-size: 10px;
             max-width: 150px;
-            position: fixed;
-            left: 730px;
-            top: 264px;
+            position: absolute;
+            left: 400px;
+            top: 64px;
         }
 
         .test-1::-webkit-scrollbar {
@@ -196,7 +198,7 @@
     <header class="htmleaf-header">
         <h1 style="padding-left: 100px">接口请求测试平台</h1>
         <br>
-        <div style="padding-left: 100px">
+        <div style="padding-left: 150px">
             <select id="ts_method" class="cs-select cs-skin-underline">
                 <option value="none">请求方式</option>
                 <option value="POST">POST</option>
@@ -207,20 +209,19 @@
                 <option value="OPTIONS">OPTIONS</option>
                 <option value="PATCH">PATCH</option>
             </select>
-            <input id="ts_url" type="text" style="border:4px dotted red;border-radius: 5px;color:#0c81a5;width: 700px"
+            <input id="ts_url" type="text" style="border:4px dotted red;border-radius: 5px;color:#ffffff;width: 700px;
+                    background-color: rgba(171,131,234,0.5)"
                    onfocus="borderColor(this);"
                    onblur="clearTimeout(ts_url);" onkeyup="update()"
                    value="">
-            <form style="position: fixed;top: 92px;left: 1180px">
-                <div style="width: 150px;">
-                    <a onclick="ho_send()" class="onload sky_blue">测试请求</a>
-                </div>
-            </form>
-            <form id="save_button"  style="display: none;position: fixed;top: 92px;left: 1320px">
-                <div style="width: 150px;">
-                    <a onclick="open_save()" class="onload orange">保存接口</a>
-                </div>
-            </form>
+            <div style="position:fixed;width: 100px;height: 35px;top: 63px;left: 1200px;">
+                <a href="#" onclick="ho_send()" style="height: 35px;padding-top: 5px;"
+                   class="btn btn-sm animated-button victoria-one">测试请求</a>
+            </div>
+            <div id="save_button" style="display: none;position: fixed;top: 63px;left: 1320px;height: 35px;">
+                <a href="#" onclick="open_save()" style="position: fixed;top: 63px;height: 35px;padding-top: 5px"
+                   class="btn btn-sm animated-button victoria-two">保存接口</a>
+            </div>
         </div>
     </header>
 </div>
@@ -620,7 +621,7 @@
                 'content_type': content_type,
             }),
             beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "token");
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
             },
             contentType: 'application/json',
             dataType: 'json',
@@ -665,12 +666,12 @@
     }
 </script>
 {#保存接口#}
-<div id="new_send" style="display: none;position: absolute;background-color: rgb(204,186,224);width: 55%;height: 300px;top: 200px;
+<div id="new_send" style="display: none;position: fixed;background-color: rgba(199,184,217,0.5);width: 55%;height: 300px;top: 200px;
         left: 380px;padding-top: 30px;border-radius: 50px;padding-left: 80px">
     <br><br>
     <div class="input-group" style="margin-top: 5px;margin-left: 25%;width: 50%;">
         <span class="input-group-addon">项目名称：</span>
-        <select id="project_name" style="width: 200px;height: 30px;" class="cs-select cs-skin-underlines">
+        <select id="project_name" style="width: 200px;height: 30px;">
             <option value="0">请选择项目</option>
             {% for i in project %}
                 <option value="{{ i.id }}">{{ i.name }}</option>
@@ -683,18 +684,21 @@
         <input id="api_name" type="text" class="form-control" placeholder="请输入接口名称" value="">
     </div>
     <br><br>
-    <button style="left: 560px;position: absolute;background-color: #0B7500" class="btn btn-success" id="new_list"
-            onclick="save_send()">确 定
-    </button>
-    <button style="left: 220px;position: absolute;background-color: #761c19" class="btn btn-danger"
-            onclick="close_send()">取 消
-    </button>
+    <div style="position:fixed;width: 100px;height: 30px;left: 970px;">
+        <a href="#" onclick="save_send()" style="height: 30px;padding-top: 3px"
+           class="btn btn-sm animated-button victoria-one">确 定</a>
+    </div>
+    <div style="position:fixed;width: 100px;height: 30px;left: 570px;">
+        <a href="#" onclick="close_send()" style="height: 30px;padding-top: 3px"
+           class="btn btn-sm animated-button victoria-one">取 消</a>
+    </div>
 </div>
 <script>
     function save_send() {
         var project_name = document.getElementById('project_name').value;
+        console.log(project_name)
         var api_name = document.getElementById('api_name').value;
-        if (project_name === 0) {
+        if (project_name === "0") {
             Swal.fire({
                 icon: 'error',
                 title: '请选择项目',
@@ -721,6 +725,9 @@
                 "api_name": api_name,
             }),
             dataType: "json",
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             success: function (data) {
                 console.log(data)
                 Swal.fire({
@@ -756,10 +763,16 @@
                 type: 'GET',
                 data: {"Id": id},
                 dataType: 'json',
+                beforeSend: function (request) {
+                    request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                },
                 success: function (data) {
                     console.log(data)
                     var log = data.message
-                    document.getElementById('ts_method').value = log.ts_method;
+                    //document.getElementById('ts_method').value = log.ts_method;
+                    document.getElementsByClassName('cs-placeholder').value = log.ts_method;
+                    //$("#ts_method option[value='" + log.ts_method + "']").attr("selected", "selected");
+                    console.log('post', log.ts_method)
                     document.getElementById('ts_url').value = log.ts_url;
                     var heads = JSON.parse(data.head)
                     document.getElementById('result').innerText = log.result;

@@ -101,23 +101,30 @@
         if (key == '' || key == ' ') {
             return
         }
-        // 发送请求给后台
-        $.get('/search/', {
-            'key': key
-        }, function (ret) {
-            // 把结果显示
-            document.getElementById('search_close').style.display = 'block';
-            var d = document.getElementById('search_result');
-            d.style.display = 'block';
-            results = ret.results; //ret.results是返回结果为列表
-            for (var i = 0; i < results.length; i++) {
-                var a = document.createElement('a');
-                a.href = results[i].url;
-                a.target = '__blank';
-                a.innerText = '【' + results[i].type + '】：' + results[i].text;
+        $.ajax({
+            url: '/search/',
+            type: 'GET',
+            data: {'key': key},
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                // 把结果显示
+                document.getElementById('search_close').style.display = 'block';
+                var d = document.getElementById('search_result');
+                d.style.display = 'block';
+                results = data.results; //ret.results是返回结果为列表
+                for (var i = 0; i < results.length; i++) {
+                    var a = document.createElement('a');
+                    a.href = results[i].url;
+                    a.target = '__blank';
+                    a.innerText = '【' + results[i].type + '】：' + results[i].text;
 
-                d.appendChild(a);
-                d.appendChild(document.createElement('br'))
+                    d.appendChild(a);
+                    d.appendChild(document.createElement('br'))
+                }
             }
         })
     }
@@ -269,25 +276,31 @@
             body_plan_G_G = document.getElementById('body_plan_G_G').value;
             var ts_api_body = body_plan_G_Q + '*WQRF*' + body_plan_G_G
         }
-        // 发送请求给后台
-        $.get('/Home_save_api/', {
-            'project_id': id,
-            'ts_method': ts_method,
-            'ts_url': ts_url,
-            'ts_host': ts_host,
-            'ts_header': ts_header,
-            'ts_body_method': ts_body_method,
-            'ts_api_body': ts_api_body,
-        }, function (ret) {
-            Swal.fire({
-                icon: 'success',
-                title: '保存成功！！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+        $.ajax({
+            url: '/Home_save_api/',
+            type: 'GET',
+            data: {
+                'project_id': id,
+                'ts_method': ts_method,
+                'ts_url': ts_url,
+                'ts_host': ts_host,
+                'ts_header': ts_header,
+                'ts_body_method': ts_body_method,
+                'ts_api_body': ts_api_body,
+            },
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
+            dataType: 'json',
+            success: function (data) {
+                Swal.fire({
+                    icon: 'success',
+                    title: '保存成功！！',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
         })
-
-
     }
 </script>
 
@@ -490,7 +503,8 @@
         <div class="tab-pane fade" id="Json">
             <textarea name="" id="raw_Json" style="color: black;width: 98%;height: 300px"></textarea>
             <button style="position: absolute;top: 190px;left: 600px;background-color: #0B7500;z-index: 10;
-                        " onclick="prettyPrints()">JSON格式化</button>
+                        " onclick="prettyPrints()">JSON格式化
+            </button>
         </div>
         <div class="tab-pane fade" id="Html">
             <textarea name="" id="raw_Html" style="color: black;width: 98%;height: 300px"></textarea>
@@ -522,7 +536,8 @@
             <textarea class="test-1" name="" id="ts_response_body" disabled="disabled"
                       style="background-color: #e4f3f5;color: black;width: 98%;height: 300px"></textarea>
             <button style="position: absolute;top: 190px;left: 600px;background-color: #0B7500;
-                        " onclick="prettyPrint()">JSON格式化</button>
+                        " onclick="prettyPrint()">JSON格式化
+            </button>
         </div>
     </div>
     <br>
@@ -602,6 +617,7 @@
             var pretty = JSON.stringify(obj, undefined, 4);
             document.getElementById('ts_response_body').value = pretty;
         }
+
         function prettyPrints() {
             var ugly = document.getElementById('raw_Json').value;
             var obj = JSON.parse(ugly);
@@ -814,22 +830,29 @@
                 });
                 return
             }
-
-            // 发送请求给后台
-            $.get('/Api_send_home/', {
-                'ts_method': ts_method,
-                'ts_url': ts_url,
-                'ts_host': ts_host,
-                'ts_header': ts_header,
-                'ts_body_method': ts_body_method,
-                'ts_api_body': ts_api_body,
-            }, function (ret) {
-                console.info('===========================')
-                console.log(ret)
-                console.log(typeof ret)
-                log_refersh();
-                $("li a[href=#response]").click(); //点击一下返回体按钮
-                document.getElementById('ts_response_body').value = ret;//把返回值显示到返回值多行文本框中
+            $.ajax({
+                url: '/Api_send_home/',
+                type: 'GET',
+                data: {
+                    'ts_method': ts_method,
+                    'ts_url': ts_url,
+                    'ts_host': ts_host,
+                    'ts_header': ts_header,
+                    'ts_body_method': ts_body_method,
+                    'ts_api_body': ts_api_body,
+                },
+                beforeSend: function (request) {
+                    request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                },
+                dataType: 'json',
+                success: function (data) {
+                    console.info('===========================')
+                    console.log(data)
+                    console.log(typeof data)
+                    log_refersh();
+                    $("li a[href=#response]").click(); //点击一下返回体按钮
+                    document.getElementById('ts_response_body').value = data.data;//把返回值显示到返回值多行文本框中
+                }
             })
         }
 
@@ -839,28 +862,36 @@
             div = document.getElementById('home_log_plan');
             div.innerHTML = '';
             // 生成新的
-            $.get('/get_home_log/', {}, function (ret) { //ret 应该就是我们获取到的记录列表数组 的字符串形式
-                // 这里写生成展示的代码
-                console.log(ret);
-                var res = eval(ret);
-                var all_logs = res.all_log;
-                for (var i = 0; i < all_logs.length; i++) {
-                    var a = document.createElement('a');//创建a标签
-                    a.href = "/home_log/" + all_logs[i].id + "/"; // 点击函数
-                    a.style = "text-decoration: none";
-                    a.class = 'log';
-                    var s = document.createElement('span'); //声明显示请求体类型的span
-                    s.style = "font-size: large;;color: black";
-                    s.innerText = all_logs[i].api_method + ' \n '; //设定这个method;
-                    var s2 = document.createElement('span'); // 声明存放host+url的span
-                    s2.innerText = all_logs[i].api_host + all_logs[i].api_url;
-                    var v = document.createElement('div')
-                    v.style = "background-color: #eefaff;margin-bottom: 3px;border-radius: 5px;padding: 1px";
-                    div.appendChild(v);
-                    v.appendChild(a)
-                    a.appendChild(s);
-                    a.appendChild(s2);
-                    div.appendChild(v);
+            $.ajax({
+                url: '/get_home_log/',
+                type: 'GET',
+                data: {},
+                beforeSend: function (request) {
+                    request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                },
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    var res = eval(data);
+                    var all_logs = res.all_log;
+                    for (var i = 0; i < all_logs.length; i++) {
+                        var a = document.createElement('a');//创建a标签
+                        a.href = "/home_log/" + all_logs[i].id + "/"; // 点击函数
+                        a.style = "text-decoration: none";
+                        a.class = 'log';
+                        var s = document.createElement('span'); //声明显示请求体类型的span
+                        s.style = "font-size: large;;color: black";
+                        s.innerText = all_logs[i].api_method + ' \n '; //设定这个method;
+                        var s2 = document.createElement('span'); // 声明存放host+url的span
+                        s2.innerText = all_logs[i].api_host + all_logs[i].api_url;
+                        var v = document.createElement('div')
+                        v.style = "background-color: #eefaff;margin-bottom: 3px;border-radius: 5px;padding: 1px";
+                        div.appendChild(v);
+                        v.appendChild(a)
+                        a.appendChild(s);
+                        a.appendChild(s2);
+                        div.appendChild(v);
+                    }
                 }
             })
         }

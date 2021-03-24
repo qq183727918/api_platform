@@ -61,7 +61,7 @@
 
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-    $('#login').click(function() {
+    $('#login').click(function () {
         var username = document.getElementById('login-user').value;
         var password = document.getElementById('login-password').value;
         console.log(username, password)
@@ -72,18 +72,24 @@
                 "username": username,
                 "password": password
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Bearer" + " " + "Y2FjNDI1MTEtMzc4ZC00MmQ0LTk4ZWUtYjdmM2U0MDU1NjE2OjE1MGU5OTI1LWUxYzctNGZlZi05ZmQ4LWIwYzU5Mzg3ZmMzMQ==");
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {
+                //存放userTokenb
+                window.localStorage.setItem('userToken', data.data.access_token);
+                console.log(window.localStorage.getItem("userToken"))
                 console.log(data)
-                if (data.message === '成功') {
+                if (data.message === 'OK') {
                     Swal.fire({
                         icon: 'success',
                         title: '登录成功！！',
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    document.location.href = '/home/'
+                    document.location.href = '/index/'
                 } else {
                     Swal.fire({
                         icon: 'error',
@@ -97,7 +103,7 @@
         })
     })
 
-    $('#sign').click(function() {
+    $('#sign').click(function () {
         var username = document.getElementById('sign-user').value;
         var password = document.getElementById('sign-password').value;
         $.ajax({
