@@ -6,24 +6,21 @@ _*_ coding: UTF-8 _*_
 @File      : views_api.py
 @Software  : PyCharm
 """
+import datetime
 import json
 import re
 import time
 
 import requests
-from django.contrib.auth import authenticate, login
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 # Create your views here.
 from icecream import ic
-from rest_framework_jwt.settings import api_settings
 
 from My_api.models import *
 from My_api.static.params.return_params import RE
-
-
 # 返回子页面
-from My_api.static.public_method.public_method import new_token
+from My_api.static.public_method.public_method import new_token, decode_token
 
 
 def child(request, eid, oid, ooid):
@@ -53,7 +50,7 @@ def child_json(eid, oid='', ooid=''):
         if ziyuan_all == 0:
             ziyuan = ziyuan_user * 100
         else:
-            ziyuan = ziyuan_user / ziyuan_all * 100
+            ziyuan = int(ziyuan_user / ziyuan_all * 100)
 
         new_res = {
             "count_project": count_project,
@@ -1293,7 +1290,7 @@ def project_login_send_for_other(project_id):
             end_res = {"response": response.text, "get_res": get_res}
         return HttpResponse(json.dumps(end_res), content_type='application/json')
     except Exception as e:
-        return {}
+        return e
 
 
 # 首页保存请求数据
@@ -1406,7 +1403,7 @@ def delete_data(request):
     Id = request.GET['id']
     DbGlobalData.objects.filter(id=Id).delete()
 
-    return HttpResponse('删除成功！')
+    return HttpResponse(json.dumps({"code": 200, "data": True, "message": "OK"}))
 
 
 # 查询全局变量
@@ -1604,27 +1601,53 @@ def Api_new_save(request):
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
-# 查询接口
-def select_api(request):
-    if request.method == 'GET':
-        Id = request.GET['Id']
-        log = DbApi.objects.filter(id=Id).values()[0]
-        head = eval(log['head'])
-        print(type(head))
-        heads = {
-            "head1": f"{head['Server']}",
-            "head2": f"{head['Date']}",
-            "head3": f"{head['Content-Type']}",
-            "head4": f"{head['Transfer-Encoding']}",
-            "head5": f"{head['Connection']}",
-            "head6": f"{head['X-Content-Type-Options']}",
-            "head7": f"{head['X-XSS-Protection']}",
-            "head8": f"{head['Cache-Control']}",
-            "head9": f"{head['Pragma']}",
-            "head10": f"{head['Expires']}"
-        }
-        ic(log)
-        return HttpResponse(json.dumps({'message': log, "head": json.dumps(heads)}))
-    else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+class Token_JWT:
+
+    @staticmethod
+    def token(request):
+        token = request.headers['Authorization'].split(' ')[1]
+        print(token)
+
+    # 查询接口
+    @staticmethod
+    def select_api(request):
+        if request.method == 'GET':
+            token = request.headers['Authorization'].split(' ')[1]
+            # 解码
+            token_time = decode_token(token).split(';')[1]
+            dt = datetime.datetime.strptime(token_time, '%Y-%m-%d %H:%M:%S')
+            now_time = datetime.datetime.strptime(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+                                                  '%Y-%m-%d %H:%M:%S')
+            if token != "":
+                if now_time > dt:
+                    res = HttpResponse(json.dumps({"code": 401, "data": False, "message": "token失效"}))
+                    res.status_code = 401
+                    return res
+                else:
+                    ic('token未过期')
+                    ic(dt, type(dt), now_time, type(now_time))
+                    Id = request.GET['Id']
+                    log = DbApi.objects.filter(id=Id).values()[0]
+                    head = eval(log['head'])
+                    print(type(head))
+                    heads = {
+                        "head1": f"{head['Server']}",
+                        "head2": f"{head['Date']}",
+                        "head3": f"{head['Content-Type']}",
+                        "head4": f"{head['Transfer-Encoding']}",
+                        "head5": f"{head['Connection']}",
+                        "head6": f"{head['X-Content-Type-Options']}",
+                        "head7": f"{head['X-XSS-Protection']}",
+                        "head8": f"{head['Cache-Control']}",
+                        "head9": f"{head['Pragma']}",
+                        "head10": f"{head['Expires']}"
+                    }
+                    ic(log)
+                    return HttpResponse(json.dumps({'message': log, "head": json.dumps(heads)}))
+            else:
+                res = HttpResponse(json.dumps({"code": 401, "data": False, "message": "token为空"}))
+                res.status_code = 401
+                return res
+        else:
+            dic = json.dumps(RE.WRONG_REQUEST.value)
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)

@@ -8,11 +8,15 @@ _*_ coding: UTF-8 _*_
 """
 import base64
 import datetime
+import time
 
 
 def time_format():
-    curr_time = (datetime.datetime.now() + datetime.timedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')
+    curr_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     return curr_time
+
+
+print(time_format())
 
 
 def new_token(user):
@@ -33,4 +37,3 @@ def decode_token(word):
 
 
 print(new_token('admin'))
-

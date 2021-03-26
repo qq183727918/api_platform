@@ -53,6 +53,9 @@
                 'remark': remark,
                 'other_user': other_user,
             }),
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+            },
             contentType: 'application/json',
             dataType: "json",
             success: function (data) {

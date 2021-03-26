@@ -86,71 +86,60 @@
     <button onclick="close_bz()" style="width: 49.3%;height: 20%;">取消</button>
 </div>
 <script>
+    function bzzz(id) {
+        document.getElementById('bz_value').value = '';
+        $.get('/get_bz/', {
+            'api_id': id,
+        }, function (ret) {
+            {#document.getElementById('bz').style.display = 'block';#}
+            {#document.getElementById('which_api').value = id;#}
+            {#document.getElementById('bz_value').value = ret;#}
+            Swal.fire({
+                input: 'textarea',
+                inputLabel: '备注',
+                inputPlaceholder: ret,
+                inputAttributes: {
+                    'aria-label': 'Type your message here',
+                    "width": "10000px"
+                },
+                showCancelButton: true
+            })
+        })
+    }
 
     function copy_api(api_id) {
-        console.log(api_id)
-        $.ajax({
-            url: "/copy_api/",
-            type: "POST",
-            data: JSON.stringify({
-                'api_id': api_id
-            }),
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-            },
-            contentType: 'application/json',
-            dataType: "json",
-            success: function (data) {
-                document.location.reload();
-            }
+        $.get('/copy_api/', {
+            'api_id': api_id
+        }, function (ret) {
+            document.location.reload()
         })
     }
 
     function open_bz(id) {
         document.getElementById('bz_value').value = '';
-        $.ajax({
-            url: "/get_bz/",
-            type: "GET",
-            data: JSON.stringify({
-                'api_id': id,
-            }),
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-            },
-            contentType: 'application/json',
-            dataType: "json",
-            success: function (data) {
-                document.getElementById('bz').style.display = 'block';
-                document.getElementById('which_api').value = id;
-                document.getElementById('bz_value').value = data.message.bz_value;
-            }
+        $.get('/get_bz/', {
+            'api_id': id,
+        }, function (ret) {
+            document.getElementById('bz').style.display = 'block';
+            document.getElementById('which_api').value = id;
+            document.getElementById('bz_value').value = ret;
         })
     }
 
     function save_bz(id) {
         id = document.getElementById('which_api').value;
         bz_value = document.getElementById('bz_value').value;
-        $.ajax({
-            url: "/save_bz/",
-            type: "POST",
-            data: JSON.stringify({
-                'api_id': id,
-                'bz_value': bz_value,
-            }),
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-            },
-            contentType: 'application/json',
-            dataType: "json",
-            success: function (data) {
-                document.getElementById('bz').style.display = 'none';
-                Swal.fire({
-                    icon: 'success',
-                    title: '保存成功！',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            }
+        $.get('/save_bz/', {
+            'api_id': id,
+            'bz_value': bz_value,
+        }, function (ret) {
+            document.getElementById('bz').style.display = 'none';
+            Swal.fire({
+                icon: 'success',
+                title: '保存成功！',
+                showConfirmButton: false,
+                timer: 1500
+            });
         })
     }
 
@@ -328,9 +317,6 @@
         </div>
         <div class="tab-pane fade" id="Json">
             <textarea name="" id="raw_Json" style="color: black;width: 99%;height: 300px;"></textarea>
-            <button style="position: absolute;top: 235px;left: 600px;background-color: #0B7500;
-                        " onclick="prettyPrints()">JSON格式化
-            </button>
         </div>
         <div class="tab-pane fade" id="Html">
             <textarea name="" id="raw_Html" style="color: black;width: 99%;height: 300px;"></textarea>
@@ -361,29 +347,12 @@
         <div class="tab-pane fade" id="response">
             <textarea name="" id="ts_response_body" disabled="disabled"
                       style="color: black;width: 99%;height: 300px;"></textarea>
-            <button style="position: absolute;top: 235px;left: 600px;background-color: #0B7500;
-                        " onclick="prettyPrint()">JSON格式化
-            </button>
         </div>
     </div>
     <br>
 </div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-    function prettyPrint() {
-        var ugly = document.getElementById('ts_response_body').value;
-        var obj = JSON.parse(ugly);
-        var pretty = JSON.stringify(obj, undefined, 4);
-        document.getElementById('ts_response_body').value = pretty;
-    }
-
-    function prettyPrints() {
-        var ugly = document.getElementById('raw_Json').value;
-        var obj = JSON.parse(ugly);
-        var pretty = JSON.stringify(obj, undefined, 4);
-        document.getElementById('raw_Json').value = pretty;
-    }
-
     function clear_ts_api() {
         document.getElementById('ts_api_name').value = '';
 
@@ -425,98 +394,88 @@
         clear_ts_api();
         document.getElementById('ts').style.display = 'block';
         document.getElementById('ts_api_id').innerText = id;
-        $.ajax({
-            url: "/get_api_data/",
-            type: "get",
-            data: {
-                'api_id': id,
-            },
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-            },
-            dataType: 'json',
-            success: function (data) {
+        $.get('/get_api_data/', {
+            'api_id': id,
+        }, function (ret) {
+            console.log(ret)
+            document.getElementById('ts_api_name').value = ret.name;
+            document.getElementById('ts_method').value = ret.api_models;
+            document.getElementById('ts_url').value = ret.api_url;
+            document.getElementById('ts_host').value = ret.api_host;
+            document.getElementById('ts_header').value = ret.api_header;
+            if (ret.api_login != null && ret.api_login != '') {
+                document.getElementById("ts_login").value = ret.api_login;
+            }
 
-                console.log(data)
-                document.getElementById('ts_api_name').value = data.name;
-                document.getElementById('ts_method').value = data.api_models;
-                document.getElementById('ts_url').value = data.api_url;
-                document.getElementById('ts_host').value = data.api_host;
-                document.getElementById('ts_header').value = data.api_header;
-                if (data.api_login != null && data.api_login != '') {
-                    document.getElementById("ts_login").value = data.api_login;
-                }
+            //公共请求头
+            if (ret.public_header != null) {
+                var project_headers = ret.public_header.split(',')
+                for (var i = 0; i < project_headers.length; i++) {
+                    try {
+                        document.getElementById('checkbox_' + project_headers[i]).checked = 'checked';
+                    } catch (e) {
 
-                //公共请求头
-                if (data.public_header != null) {
-                    var project_headers = data.public_header.split(',')
-                    for (var i = 0; i < project_headers.length; i++) {
-                        try {
-                            document.getElementById('checkbox_' + project_headers[i]).checked = 'checked';
-                        } catch (e) {
-
-                        }
                     }
                 }
-                // 请求体编码格式
-                var body_method = '#' + data.body_method;
-                console.log(body_method)
-                $("li a[href=" + body_method + "]").click();
-                // 请求体显示
-                if (data.body_method === 'Text') {
-                    document.getElementById('raw_Text').value = data.api_body;
-                    console.log(data.api_body)
-                }
-                if (data.body_method === 'JavaScript') {
-                    document.getElementById('raw_JavaScript').value = data.api_body;
-                }
-                if (data.body_method === 'Json') {
-                    document.getElementById('raw_Json').value = data.api_body;
-                }
-                if (data.body_method === 'Html') {
-                    document.getElementById('raw_Html').value = data.api_body;
-                }
-                if (data.body_method === 'Xml') {
-                    document.getElementById('raw_Xml').value = data.api_body;
-                }
-                if (data.body_method === 'form-data') {
-                    var tbody = document.getElementById('mytbody'); // 定位表格中的tbody部分
-                    body = eval(data.api_body); //把这个像列表的字符串请求体变成真正的列表
-                    for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
-                        key = body[i][0]; //拿出每一个键值对的key
-                        value = body[i][1];//拿出每一个键值对的value
-                        var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
-                        // 每个tr下的children得到的是 td列表，只有俩个。
-                        childs_tr[i].children[0].innerText = key; //第一个td放key
-                        childs_tr[i].children[1].innerText = value;//第二个td放value
-                        //判断是否是最后一次遍历，来决定是否点击新增参数按钮
-                        if (i < body.length - 1) {
-                            document.getElementById('add').click()
-                        }
+            }
+            // 请求体编码格式
+            var body_method = '#' + ret.body_method;
+            console.log(body_method)
+            $("li a[href=" + body_method + "]").click();
+            // 请求体显示
+            if (ret.body_method === 'Text') {
+                document.getElementById('raw_Text').value = ret.api_body;
+                console.log(ret.api_body)
+            }
+            if (ret.body_method === 'JavaScript') {
+                document.getElementById('raw_JavaScript').value = ret.api_body;
+            }
+            if (ret.body_method === 'Json') {
+                document.getElementById('raw_Json').value = ret.api_body;
+            }
+            if (ret.body_method === 'Html') {
+                document.getElementById('raw_Html').value = ret.api_body;
+            }
+            if (ret.body_method === 'Xml') {
+                document.getElementById('raw_Xml').value = ret.api_body;
+            }
+            if (ret.body_method === 'form-data') {
+                var tbody = document.getElementById('mytbody'); // 定位表格中的tbody部分
+                body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
+                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                    key = body[i][0]; //拿出每一个键值对的key
+                    value = body[i][1];//拿出每一个键值对的value
+                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                    // 每个tr下的children得到的是 td列表，只有俩个。
+                    childs_tr[i].children[0].innerText = key; //第一个td放key
+                    childs_tr[i].children[1].innerText = value;//第二个td放value
+                    //判断是否是最后一次遍历，来决定是否点击新增参数按钮
+                    if (i < body.length - 1) {
+                        document.getElementById('add').click()
                     }
                 }
-                if (data.body_method === 'x-www-form-urlencoded') {
-                    var tbody = document.getElementById('mytbody2'); // 定位表格中的tbody部分
-                    body = eval(data.api_body); //把这个像列表的字符串请求体变成真正的列表
-                    for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
-                        key = body[i][0]; //拿出每一个键值对的key
-                        value = body[i][1];//拿出每一个键值对的value
-                        var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
-                        // 每个tr下的children得到的是 td列表，只有俩个。
-                        childs_tr[i].children[0].innerText = key; //第一个td放key
-                        childs_tr[i].children[1].innerText = value;//第二个td放value
-                        //判断是否是最后一次遍历，来决定是否点击新增参数按钮
-                        if (i < body.length - 1) {
-                            document.getElementById('add2').click()
-                        }
+            }
+            if (ret.body_method === 'x-www-form-urlencoded') {
+                var tbody = document.getElementById('mytbody2'); // 定位表格中的tbody部分
+                body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
+                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                    key = body[i][0]; //拿出每一个键值对的key
+                    value = body[i][1];//拿出每一个键值对的value
+                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                    // 每个tr下的children得到的是 td列表，只有俩个。
+                    childs_tr[i].children[0].innerText = key; //第一个td放key
+                    childs_tr[i].children[1].innerText = value;//第二个td放value
+                    //判断是否是最后一次遍历，来决定是否点击新增参数按钮
+                    if (i < body.length - 1) {
+                        document.getElementById('add2').click()
                     }
                 }
-                if (data.body_method === 'GraphQL') {
-                    body_plan_G_Q = data.body_method.split('*WQRF*')[0];
-                    body_plan_G_G = data.body_method.split('*WQRF*')[1];
-                    document.getElementById('body_plan_G_Q').value = body_plan_G_Q;
-                    document.getElementById('body_plan_G_G').value = body_plan_G_G;
-                }
+            }
+            if (ret.body_method === 'GraphQL') {
+                body_plan_G_Q = ret.body_method.split('*WQRF*')[0];
+                body_plan_G_G = ret.body_method.split('*WQRF*')[1];
+                document.getElementById('body_plan_G_Q').value = body_plan_G_Q;
+                document.getElementById('body_plan_G_G').value = body_plan_G_G;
             }
         })
     }
@@ -546,50 +505,25 @@
 
         // 判断顶部的数据是否填充完
         if (api_name == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入接口名字！',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            alert('请输入接口名字！');
             return
         }
         if (ts_method == 'none') {
-            Swal.fire({
-                icon: 'error',
-                title: '请选择请求方式！',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            alert('请选择请求方式！');
             return
         }
         if (ts_url == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入url！',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            alert('请输入url！');
             return
         }
         if (ts_host == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入host！',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            alert('请输入host！');
             return
         }
 
         // 判断关键数据是否符合规则
         if (ts_host.slice(0, 7) != 'http://' && ts_host.slice(0, 8) != 'https://' && ts_host.slice(0, 4) != '全局域名') {
-            Swal.fire({
-                icon: 'error',
-                title: 'host必须以http://或者https://开头！',
-                showConfirmButton: false,
-                timer: 2000
-            })
+            alert('host必须以http://或者https://开头！');
             return
         }
 
@@ -598,12 +532,7 @@
             try {
                 JSON.parse(ts_header)
             } catch (e) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'header请求头不符合JSON规范！',
-                    showConfirmButton: false,
-                    timer: 2000
-                })
+                alert('header请求头不符合JSON规范！')
                 return
             }
         }
@@ -663,39 +592,27 @@
         var api_id = document.getElementById('ts_api_id').innerText; //获取到了接口id
         console.log(project_headers)
         console.log(ts_project_headers.toString())
-        $.ajax({
-            url: "/Api_save/",
-            type: "post",
-            data: JSON.stringify({
-                'api_id': api_id,
-                'api_name': api_name,
-                'ts_method': ts_method,
-                'ts_url': ts_url,
-                'ts_host': ts_host,
-                'ts_login': ts_login,
-                'ts_header': ts_header,
-                'ts_body_method': ts_body_method,
-                'ts_api_body': ts_api_body,
-                'ts_project_headers': ts_project_headers.toString(),
-            }),
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-            },
-            contentType: 'application/json',
-            dataType: "json",
-            success: function (data) {
-                console.log(data)
-                Swal.fire({
-                    icon: 'success',
-                    title: '保存成功！！',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            }
+        $.get('/Api_save/', {
+            'api_id': api_id,
+            'api_name': api_name,
+            'ts_method': ts_method,
+            'ts_url': ts_url,
+            'ts_host': ts_host,
+            'ts_login': ts_login,
+            'ts_header': ts_header,
+            'ts_body_method': ts_body_method,
+            'ts_api_body': ts_api_body,
+            'ts_project_headers': ts_project_headers.toString(),
 
+        }, function (ret) {
+            console.log(ret)
+            Swal.fire({
+                icon: 'success',
+                title: '保存成功！',
+                showConfirmButton: false,
+                timer: 2000
+            })
         })
-
-
     }
 
     function ts_send() {
@@ -721,50 +638,25 @@
 
         // 判断顶部的数据是否填充完
         if (api_name == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入接口名字！！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+            alert('请输入接口名字！');
             return
         }
         if (ts_method == 'none') {
-            Swal.fire({
-                icon: 'error',
-                title: '请选择请求方式！！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+            alert('请选择请求方式！');
             return
         }
         if (ts_url == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入url！！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+            alert('请输入url！');
             return
         }
         if (ts_host == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入host！！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+            alert('请输入host！');
             return
         }
 
         // 判断关键数据是否符合规则
         if (ts_host.slice(0, 7) != 'http://' && ts_host.slice(0, 8) != 'https://' && ts_host.slice(0, 4) != '全局域名') {
-            Swal.fire({
-                icon: 'error',
-                title: 'host必须以http://或者https://开头！',
-                showConfirmButton: false,
-                timer: 1500
-            });
+            alert('host必须以http://或者https://开头！');
             return
         }
 
@@ -773,12 +665,7 @@
             try {
                 JSON.parse(ts_header)
             } catch (e) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'header请求头不符合JSON规范！',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                alert('header请求头不符合JSON规范！')
                 return
             }
         }
@@ -842,32 +729,20 @@
             ts_header,
             project_headers)
         var api_id = document.getElementById('ts_api_id').innerText; //获取到了接口id
-        console.log('=========================================')
-        $.ajax({
-            url: "/Api_send/",
-            type: "post",
-            data: JSON.stringify({
-                'api_id': api_id,
-                'api_name': api_name,
-                'ts_login': ts_login,
-                'ts_method': ts_method,
-                'ts_url': ts_url,
-                'ts_host': ts_host,
-                'ts_header': ts_header,
-                'ts_body_method': ts_body_method,
-                'ts_api_body': ts_api_body,
-                'ts_project_headers': ts_project_headers.toString(),
-            }),
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-            },
-            contentType: 'application/json',
-            dataType: "json",
-            success: function (data) {
-                console.log(data)
-                $("li a[href='#response']").click()
-                document.getElementById('ts_response_body').value = data.massage;
-            }
+        $.get('/Api_send/', {
+            'api_id': api_id,
+            'api_name': api_name,
+            'ts_login': ts_login,
+            'ts_method': ts_method,
+            'ts_url': ts_url,
+            'ts_host': ts_host,
+            'ts_header': ts_header,
+            'ts_body_method': ts_body_method,
+            'ts_api_body': ts_api_body,
+            'ts_project_headers': ts_project_headers.toString(),
+        }, function (ret) {
+            $("li a[href='#response']").click()
+            document.getElementById('ts_response_body').value = ret;
         })
     }
 
@@ -946,25 +821,17 @@
                         var span_text = '替换：' + new_body[i][0] + '-->' + r[j];
 
                         console.log('new_body', JSON.stringify(new_body))
-                        $.ajax({
-                            url: '/error_request/',
-                            type: 'GET',
-                            data: {
-                                'api_id': api_id,
-                                'new_body': JSON.stringify(new_body),
-                                'span_text': span_text,
-                            },
-                            beforeSend: function (request) {
-                                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-                                console.info('=====================================')
-                                console.log(data)
-                                res = eval(data);
-                                console.log(res)
-                                error_show_response(res.span_text, res.response);
-                            }
+
+                        $.get('/error_request/', {
+                            'api_id': api_id,
+                            'new_body': JSON.stringify(new_body),
+                            'span_text': span_text,
+                        }, function (ret) {
+                            console.info('=====================================')
+                            console.log(ret)
+                            res = eval(ret);
+                            console.log(res)
+                            error_show_response(res.span_text, res.response);
                         })
                     }
                 }
@@ -987,25 +854,14 @@
                         console.log(new_body)
 
                         var span_text = '替换：' + i + '-->' + r[j];
-                        $.ajax({
-                            url: '/error_request/',
-                            type: 'GET',
-                            data: {
-                                'api_id': api_id,
-                                'new_body': JSON.stringify(new_body),
-                                'span_text': span_text,
-                            },
-                            beforeSend: function (request) {
-                                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-                                console.info('=====================================')
-                                console.log(data)
-                                res = eval(data);
-                                console.log(res)
-                                error_show_response(res.span_text, res.response);
-                            }
+
+                        $.get('/error_request/', {
+                            'api_id': api_id,
+                            'new_body': JSON.stringify(new_body),
+                            'span_text': span_text,
+                        }, function (ret) {
+                            res = eval(ret);
+                            error_show_response(res.span_text, res.response);
                         })
                     }
                 }
@@ -1077,7 +933,7 @@ padding-left: 10px;background-color: white">
     }
 
     function project_header_close() {
-        document.location.reload();
+        document.location.reload()
     }
 
     function project_header_save() {
@@ -1120,7 +976,6 @@ padding-left: 10px;background-color: white">
                 timer: 1500
             });
             document.getElementById('project_header_div').style.display = 'none';
-            document.location.reload();
         })
     }
 
@@ -1416,108 +1271,85 @@ token=/data/token"></textarea>
 
 </div>
 <script>
-
-    <!--失去焦点的时候格式化 JSON 数据-->
-    $('#login_response_body').blur(function () {
-        var input;
-        try {
-            if ($('#login_response_body').val().length == 0) {
-                return;
-            }
-
-            input = eval('(' + $('#login_response_body').val() + ')');
-        } catch (error) {
-            return alert("Input data is not valid JSON, please check. Error: " + error);
-        }
-
-        $('#login_response_body').val(JSON.stringify(input, null, 4));
-    });
-
     function login_show() {
         //显示蒙层，并设置好蒙层的层级关系，让其在调试层之下，其他元素之上
         document.getElementById('mengceng').style.display = 'block';
         document.getElementById('mengceng').style.zIndex = '998';
         document.getElementById('login_set_div').style.zIndex = '999';
         document.getElementById('login_set_div').style.display = 'block';
-        $.ajax({
-            url: "/project_get_login/",//后台提供的接口
-            type: "GET",   //请求方式是GET
-            data: {
-                "project_id": "{{ project.id }}"
-            },
-            datatype: 'json',
-            success: function (data) {
-                console.log(data);
-                // 运行第三方表格插件的函数：
-                $('#login_mytable').SetEditable({
-                    $addButton: $('#login_add'),
-                });
-                $('#login_mytable2').SetEditable({
-                    $addButton: $('#login_add2'),
-                });
-                document.getElementById('login_method').value = data.api_method;
-                document.getElementById('login_url').value = data.api_url;
-                document.getElementById('login_host').value = data.api_host;
-                document.getElementById('login_header').value = data.api_header;
-                document.getElementById('login_response_set').value = data.set;
-                // 请求体编码格式
-                var body_method = '#login_' + data.body_method;
+        $.get("/project_get_login/", {
+            "project_id": "{{ project.id }}"
+        }, function (ret) {
+            console.log(ret);
+            // 运行第三方表格插件的函数：
+            $('#login_mytable').SetEditable({
+                $addButton: $('#login_add'),
+            });
+            $('#login_mytable2').SetEditable({
+                $addButton: $('#login_add2'),
+            });
+            document.getElementById('login_method').value = ret.api_method;
+            document.getElementById('login_url').value = ret.api_url;
+            document.getElementById('login_host').value = ret.api_host;
+            document.getElementById('login_header').value = ret.api_header;
+            document.getElementById('login_response_set').value = ret.set;
+            // 请求体编码格式
+            var body_method = '#login_' + ret.body_method;
 
-                $("li a[href=" + body_method + "]").click();
-                // 请求体显示
-                if (ret.body_method == 'Text') {
-                    document.getElementById('login_raw_Text').value = data.api_body;
-                }
-                if (ret.body_method == 'JavaScript') {
-                    document.getElementById('login_raw_JavaScript').value = data.api_body;
-                }
-                if (ret.body_method == 'Json') {
-                    document.getElementById('login_raw_Json').value = data.api_body;
-                }
-                if (ret.body_method == 'Html') {
-                    document.getElementById('login_raw_Html').value = data.api_body;
-                }
-                if (ret.body_method == 'Xml') {
-                    document.getElementById('login_raw_Xml').value = data.api_body;
-                }
-                if (ret.body_method == 'form-data') {
-                    var tbody = document.getElementById('login_mytbody'); // 定位表格中的tbody部分
-                    body = eval(data.api_body); //把这个像列表的字符串请求体变成真正的列表
-                    for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
-                        key = body[i][0]; //拿出每一个键值对的key
-                        value = body[i][1];//拿出每一个键值对的value
-                        var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
-                        // 每个tr下的children得到的是 td列表，只有俩个。
-                        childs_tr[i].children[0].innerText = key; //第一个td放key
-                        childs_tr[i].children[1].innerText = value;//第二个td放value
-                        //判断是否是最后一次遍历，来决定是否点击新增参数按钮
-                        if (i < body.length - 1) {
-                            document.getElementById('login_add').click()
-                        }
+            $("li a[href=" + body_method + "]").click();
+            // 请求体显示
+            if (ret.body_method == 'Text') {
+                document.getElementById('login_raw_Text').value = ret.api_body;
+            }
+            if (ret.body_method == 'JavaScript') {
+                document.getElementById('login_raw_JavaScript').value = ret.api_body;
+            }
+            if (ret.body_method == 'Json') {
+                document.getElementById('login_raw_Json').value = ret.api_body;
+            }
+            if (ret.body_method == 'Html') {
+                document.getElementById('login_raw_Html').value = ret.api_body;
+            }
+            if (ret.body_method == 'Xml') {
+                document.getElementById('login_raw_Xml').value = ret.api_body;
+            }
+            if (ret.body_method == 'form-data') {
+                var tbody = document.getElementById('login_mytbody'); // 定位表格中的tbody部分
+                body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
+                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                    key = body[i][0]; //拿出每一个键值对的key
+                    value = body[i][1];//拿出每一个键值对的value
+                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                    // 每个tr下的children得到的是 td列表，只有俩个。
+                    childs_tr[i].children[0].innerText = key; //第一个td放key
+                    childs_tr[i].children[1].innerText = value;//第二个td放value
+                    //判断是否是最后一次遍历，来决定是否点击新增参数按钮
+                    if (i < body.length - 1) {
+                        document.getElementById('login_add').click()
                     }
                 }
-                if (ret.body_method == 'x-www-form-urlencoded') {
-                    var tbody = document.getElementById('login_mytbody2'); // 定位表格中的tbody部分
-                    body = eval(data.api_body); //把这个像列表的字符串请求体变成真正的列表
-                    for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
-                        key = body[i][0]; //拿出每一个键值对的key
-                        value = body[i][1];//拿出每一个键值对的value
-                        var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
-                        // 每个tr下的children得到的是 td列表，只有俩个。
-                        childs_tr[i].children[0].innerText = key; //第一个td放key
-                        childs_tr[i].children[1].innerText = value;//第二个td放value
-                        //判断是否是最后一次遍历，来决定是否点击新增参数按钮
-                        if (i < body.length - 1) {
-                            document.getElementById('login_add2').click()
-                        }
+            }
+            if (ret.body_method == 'x-www-form-urlencoded') {
+                var tbody = document.getElementById('login_mytbody2'); // 定位表格中的tbody部分
+                body = eval(ret.api_body); //把这个像列表的字符串请求体变成真正的列表
+                for (var i = 0; i < body.length; i++) { // 遍历这个请求体列表
+                    key = body[i][0]; //拿出每一个键值对的key
+                    value = body[i][1];//拿出每一个键值对的value
+                    var childs_tr = tbody.children;//获取到这个表格下面所有的tr组成的大列表
+                    // 每个tr下的children得到的是 td列表，只有俩个。
+                    childs_tr[i].children[0].innerText = key; //第一个td放key
+                    childs_tr[i].children[1].innerText = value;//第二个td放value
+                    //判断是否是最后一次遍历，来决定是否点击新增参数按钮
+                    if (i < body.length - 1) {
+                        document.getElementById('login_add2').click()
                     }
                 }
-                if (ret.body_method == "GraphQL") {
-                    body_plan_G_Q = data.api_body.split('*WQRF*')[0];
-                    body_plan_G_G = data.api_body.split('*WQRF*')[1];
-                    document.getElementById('login_body_plan_G_Q').value = body_plan_G_Q;
-                    document.getElementById('login_body_plan_G_G').value = body_plan_G_G;
-                }
+            }
+            if (ret.body_method == "GraphQL") {
+                body_plan_G_Q = ret.api_body.split('*WQRF*')[0];
+                body_plan_G_G = ret.api_body.split('*WQRF*')[1];
+                document.getElementById('login_body_plan_G_Q').value = body_plan_G_Q;
+                document.getElementById('login_body_plan_G_G').value = body_plan_G_G;
             }
         })
     }
@@ -1538,53 +1370,28 @@ token=/data/token"></textarea>
 
         // 判断顶部的数据是否填充完
         if (ts_method == 'none') {
-            Swal.fire({
-                icon: 'error',
-                title: '请选择请求方式！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请选择请求方式！');
             return
         }
         if (ts_url == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入url！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请输入url！');
             return
         }
         if (ts_host == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入host！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请输入host！');
             return
         }
 
         //判断关键数据是否符合规则
         if (login_host.slice(0, 7) != 'http://' && login_host.slice(0, 8) != 'https://' && login_host.slice(0, 4) != '全局域名') {
-            Swal.fire({
-                icon: 'error',
-                title: 'host必须以http://或https://开头！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('host必须以http://或https://开头！');
             return
         }
         if (login_header != '') {
             try {
                 JSON.parse(login_header)
             } catch (e) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'header请求头不符合json规范！',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
+                alert('header请求头不符合json规范！');
                 return
             }
         }
@@ -1592,12 +1399,7 @@ token=/data/token"></textarea>
         var login_body_method = $('ul#login_myTab li[class="active"]')[0].innerText;
         console.log('login_body_method', login_body_method)
         if (login_body_method == '返回体') {
-            Swal.fire({
-                icon: 'error',
-                title: '请切换到请求体tab再保存！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请切换到请求体tab再保存！')
             return
         }
 
@@ -1651,33 +1453,26 @@ token=/data/token"></textarea>
             body_plan_G_G = document.getElementById('login_body_plan_G_G').value;
             var login_api_body = body_plan_G_Q + '*WQRF*' + body_plan_G_G
         }
-        $.ajax({
-            url: "/project_login_save/",//后台提供的接口
-            type: "POST",   //请求方式是GET
-            data: JSON.stringify({
-                'project_id': '{{ project.id }}',
-                'login_method': login_method,
-                'login_url': login_url,
-                'login_host': login_host,
-                'login_header': login_header,
-                'login_body_method': login_body_method,
-                'login_api_body': login_api_body,
-                'login_response_set': login_response_set,
-            }),
-            datatype: 'json',
-            contentType: 'application/json',
-            success: function (data) {
-                Swal.fire({
-                    icon: 'success',
-                    title: '保存成功！',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                document.getElementById('login_set_div').style.display = 'none';
-                document.getElementById('mengceng').style.display = 'none';
-            }
-        })
 
+        $.get('/project_login_save/', {
+            'project_id': '{{ project.id }}',
+            'login_method': login_method,
+            'login_url': login_url,
+            'login_host': login_host,
+            'login_header': login_header,
+            'login_body_method': login_body_method,
+            'login_api_body': login_api_body,
+            'login_response_set': login_response_set,
+        }, function (ret) {
+            Swal.fire({
+                icon: 'success',
+                title: '保存成功！',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            document.getElementById('login_set_div').style.display = 'none';
+            document.getElementById('mengceng').style.display = 'none';
+        })
     }
 
     function login_send() {
@@ -1690,64 +1485,34 @@ token=/data/token"></textarea>
 
         // 判断顶部的数据是否填充完
         if (login_method == 'none') {
-            Swal.fire({
-                icon: 'error',
-                title: '请选择请求方式！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请选择请求方式！');
             return
         }
         if (login_url == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入url！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请输入url！');
             return
         }
         if (login_host == '') {
-            Swal.fire({
-                icon: 'error',
-                title: '请输入host！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请输入host！');
             return
         }
 
         //判断关键数据是否符合规则
         if (login_host.slice(0, 7) != 'http://' && login_host.slice(0, 8) != 'https://' && login_host.slice(0, 4) != '全局域名') {
-            Swal.fire({
-                icon: 'error',
-                title: 'host必须以http://或https://开头！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('host必须以http://或https://开头！');
             return
         }
         if (login_header != '') {
             try {
                 JSON.parse(login_header)
             } catch (e) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'header请求头不符合json规范！',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
+                alert('header请求头不符合json规范！');
                 return
             }
         }
         var login_body_method = $('ul#login_myTab li[class="active"]')[0].innerText;
         if (login_body_method == '返回体') {
-            Swal.fire({
-                icon: 'error',
-                title: '请切换到请求体tab再保存！',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            alert('请切换到请求体tab再保存！');
             return
         }
 

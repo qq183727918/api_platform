@@ -20,9 +20,9 @@ from My_api.views import *
 from My_api.views_tools import *
 from My_api.views_api import *
 
-urlpatterns = [
 
-    url(r'^$', login),
+urlpatterns = [
+    url(r'^$', login_user),
     url(r'^admin/', admin.site.urls),
     url(r"^login/$", login_user),  # 登录页面
     url(r'^user/', user),  # 用户管理页面
@@ -41,7 +41,7 @@ urlpatterns = [
 
 
 
-    url(r'^accounts/login/$', login),  # 非登录状态自动跳回登录页面
+    url(r'^accounts/login/$', login_user),  # 非登录状态自动跳回登录页面
     url(r'^welcome/$', welcome),  # 获取菜单
     url(r'^logout/$', logout),  # 退出
     url(r"^login_action/$", login_action),  # 登录
@@ -92,10 +92,12 @@ urlpatterns = [
 
     url(r'^Api_send_index/$', Api_send_index),  # 改版发送请求
     url(r'^Api_new_save/$', Api_new_save),  # 改版保存请求
-    url(r'^select_api/$', select_api),  # 改版保存请求
+    url(r'^select_api/$', Token_JWT.select_api),  # 改版保存请求
 
     # --------------------小工具-------------------- #
     url(r'^zhengjiao_play/$', zhengjiao_play),  # 正交工具运行
     url(r'^zhengjiao_excel/$', zhengjiao_excel),  # 正交结果导出
 
 ]
+
+

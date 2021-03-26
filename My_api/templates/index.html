@@ -608,6 +608,7 @@
             var ts_api_method = 'Query参数';
         }
         console.log(ts_method, ts_url, ts_api_header, ts_body_method, ts_api_method, ts_api_body)
+        var token = window.localStorage.getItem("userToken");
         $.ajax({
             url: '/Api_send_index/',
             type: 'POST',
@@ -621,7 +622,7 @@
                 'content_type': content_type,
             }),
             beforeSend: function (request) {
-                request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                request.setRequestHeader("Authorization", "Bearer " + window.localStorage.getItem("userToken"));
             },
             contentType: 'application/json',
             dataType: 'json',
@@ -765,6 +766,12 @@
                 dataType: 'json',
                 beforeSend: function (request) {
                     request.setRequestHeader("Authorization", "Basic " + window.localStorage.getItem("userToken"));
+                },
+                complete: function (xhr) {
+                    console.log(xhr.status);
+                    if (xhr.status === 401){
+                        document.location.href = '/login/';
+                    }
                 },
                 success: function (data) {
                     console.log(data)
