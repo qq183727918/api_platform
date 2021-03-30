@@ -28,10 +28,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="解決跨域">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,77 +134,11 @@
       <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\scss" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.public_method">
+  <component name="RunManager" selected="Django 服务器.api_platform">
     <configuration name="button.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/button.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="button.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/static/button/button.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="mysql_id_order_by" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="api_platform" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My_api/static/public_method" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My_api/static/public_method/mysql_id_order_by.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="public_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="api_platform" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My_api/static/public_method" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My_api/static/public_method/public_method.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="api_platform" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My_api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My_api/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -245,7 +178,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="host" value="" />
-      <option name="additionalOptions" value="192.168.1.42:8080" />
+      <option name="additionalOptions" value="127.0.0.1:8080" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
@@ -257,15 +190,9 @@
       <item itemvalue="Django 服务器.api_platform" />
       <item itemvalue="JavaScript 调试.button.html" />
       <item itemvalue="JavaScript 调试.button.html (1)" />
-      <item itemvalue="Python.mysql_id_order_by" />
-      <item itemvalue="Python.tests" />
-      <item itemvalue="Python.public_method" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.public_method" />
-        <item itemvalue="Python.tests" />
-        <item itemvalue="Python.mysql_id_order_by" />
         <item itemvalue="JavaScript 调试.button.html" />
         <item itemvalue="JavaScript 调试.button.html (1)" />
       </list>
@@ -435,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616502920477</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="解決跨域">
+      <created>1617112929383</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617112929383</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -480,7 +414,8 @@
     <MESSAGE value="django-mysql" />
     <MESSAGE value="locust_test" />
     <MESSAGE value="new_home_change" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_home_change" />
+    <MESSAGE value="解決跨域" />
+    <option name="LAST_COMMIT_MESSAGE" value="解決跨域" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

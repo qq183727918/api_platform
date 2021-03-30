@@ -151,11 +151,12 @@ def user_upload(request):
 def login_action(request):
     if request.method == "POST":
         data = json.loads(request.body)
+        ic(data)
         Authorization = request.headers['Authorization']
-        Authorization_ = 'Bearer Y2FjNDI1MTEtMzc4ZC00MmQ0LTk4ZWUtYjdmM2U0MDU1NjE2OjE1MGU5OTI1LWUxYzctNGZlZi05ZmQ4LWIwYzU5Mzg3ZmMzMQ=='
+        Authorization_ = 'Basic YzU5Mzg3ZmMzMQ=='
         if Authorization == Authorization_:
-            u_name = data['username']
-            p_word = data['password']
+            u_name = data['params']['username']
+            p_word = data['params']['password']
             ic(u_name, p_word, data)
             if u_name == '':
                 dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})

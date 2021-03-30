@@ -127,7 +127,7 @@ STATICFILES_DIRS = [
 
 # 全部允许配置
 CORS_ORIGIN_ALLOW_ALL = True
-
+APPEND_SLASH = False
 # 允许cookie
 CORS_ALLOW_CREDENTIALS = True  # 指明在跨域访问中，后端是否支持对cookie的操作。
 # 允许的请求方式
