@@ -152,11 +152,12 @@ def login_action(request):
     if request.method == "POST":
         data = json.loads(request.body)
         ic(data)
-        Authorization = request.headers['Authorization']
-        Authorization_ = 'Basic YzU5Mzg3ZmMzMQ=='
-        if Authorization == Authorization_:
-            u_name = data['params']['username']
-            p_word = data['params']['password']
+        # Authorization = request.headers['Authorization']
+        # Authorization_ = 'Basic YzU5Mzg3ZmMzMQ=='
+        if 'Authorization' == 'Authorization':
+            ic('Authorization')
+            u_name = data['username']
+            p_word = data['password']
             ic(u_name, p_word, data)
             if u_name == '':
                 dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
@@ -176,7 +177,7 @@ def login_action(request):
                         if p_word == name['password']:
                             token = new_token(name['username'])
                             ic(token)
-                            dic = json.dumps({"code": 200, "data": {"access_token": token}, "message": "OK"})
+                            dic = json.dumps({"code": 200, "data": {"accessToken": token}, "message": "success"})
                             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
                         else:
@@ -1652,3 +1653,36 @@ class Token_JWT:
         else:
             dic = json.dumps(RE.WRONG_REQUEST.value)
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def publicKey(request):
+    if request.method == 'POST':
+        dic = {
+            "code": 200,
+            "data": {
+                "mockServer": "true",
+                "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBT2vr+dhZElF73FJ6xiP181txKWUSNLPQQlid6DUJhGAOZblluafIdLmnUyKE8mMHhT3R+Ib3ssZcJku6Hn72yHYj/qPkCGFv0eFo7G+GJfDIUeDyalBN0QsuiE/XzPHJBuJDfRArOiWvH0BXOv5kpeXSXM8yTt5Na1jAYSiQ/wIDAQAB",
+                "msg": "success"
+            }
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def userInfo(request):
+    if request.method == 'POST':
+        dic = {
+            "code": 200,
+            "data": {
+                "avatar": "https://i.gtimg.cn/club/item/face/img/8/15918_100.gif",
+                "permissions": ["admin"],
+                "username": "admin",
+            },
+            "msg": "success"
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)

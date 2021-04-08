@@ -66,7 +66,7 @@
         var password = document.getElementById('login-password').value;
         console.log(username, password)
         $.ajax({
-            url: "/login_action/",
+            url: "/login_action",
             type: "post",
             data: JSON.stringify({
                 "username": username,

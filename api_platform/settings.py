@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware', #注意顺序，必须放在这儿
+    'corsheaders.middleware.CorsMiddleware',  # 注意顺序，必须放在这儿
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware', # 取消csrf的身份认证
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -141,5 +141,5 @@ CORS_ALLOW_METHODS = (
     'VIEW',
 )
 # 允许的请求头
-#允许所有的请求头
+# 允许所有的请求头
 CORS_ALLOW_HEADERS = ('*')

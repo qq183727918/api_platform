@@ -290,11 +290,13 @@ class DbLogin(models.Model):
 
 
 class DbProject(models.Model):
-    name = models.CharField(max_length=100, blank=True, null=True)
+    listName = models.CharField(max_length=100, blank=True, null=True)
     remark = models.CharField(max_length=1000, blank=True, null=True)
     user = models.CharField(max_length=15, blank=True, null=True)
     other = models.CharField(max_length=200, blank=True, null=True)
     user_id = models.CharField(max_length=10, blank=True, null=True)
+    created_time = models.DateTimeField()
+    is_active = models.IntegerField(blank=True, null=True)
     is_delete = models.IntegerField(blank=True, null=True)
 
     class Meta:

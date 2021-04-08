@@ -32,8 +32,8 @@ def new_token(user):
 def decode_token(word):
     test_str = bytes(word, encoding='utf-8')
     decode_str = base64.decodebytes(test_str)
-    strings = str(decode_str, encoding='utf-8')
+    strings = str(decode_str, encoding='utf-8').split(';')[0]
     return strings
 
 
-print(new_token('admin'))
+print(decode_token('YWRtaW47MjAyMS0wNC0wOCAyMjoyOTowNA=='))

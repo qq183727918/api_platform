@@ -1,13 +1,21 @@
-import logging
+import requests
 
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s] - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+url = 'http://wms.test.vevor.net/api/wms-asserts-service/controller-assertsContainer/front/insert'
 
-logger.info("Start print log")
-logger.debug("Do something")
-logger.warning("Something maybe fail.")
-logger.info("Finish")
+headers = {
+    'Authorization': 'Bearer 1ee6eec5-1494-47e5-9eb9-d6d31f01ff7d'
+}
 
-i = 6
+params = {
+    'containerCode': "",
+    'createdName': "",
+    'status': "",
+    'warehouseId': 1
+}
 
-print(i % 2)
+while True:
+    response = requests.post(url=url, headers=headers, json=params)
+
+    re = response.json()
+
+    print(re)
