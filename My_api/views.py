@@ -35,7 +35,7 @@ def api_help(request):
 
 
 # 进入项目列表
-def project_list(request):
+def projectList(request):
     return render(request, 'welcome.html', {"whichHTML": "project_list.html", "oid": "", **glodict(request)})
 
 

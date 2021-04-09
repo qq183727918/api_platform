@@ -89,9 +89,53 @@ def project_del(request):
         data = json.loads(request.body)
         ic(data)
         Id = data['ids']
-        ic(Id, type(Id))
-        DbProject.objects.filter(id=Id).update(is_delete=1)
+        if type(Id) == int:
+            DbProject.objects.filter(id=Id).update(is_delete=1)
+        else:
+            ids = Id.split(',')
+            for i in ids:
+                DbProject.objects.filter(id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def project_Apis(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        ic(len(data))
+        if len(data) == 3:
+            if DbProject.objects.filter(listName=data['listName'], is_delete=0, is_active=0).values().count() == 0:
+                dic = {
+                    "code": 200,
+                    "data": [],
+                    "msg": "success",
+                    "totalCount": 0
+                }
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+            else:
+                list_id = DbProject.objects.filter(listName=data['listName'], is_delete=0, is_active=0).values()[0]['id']
+                queryset = DbApis.objects.filter(project_id=list_id, is_delete=0).all()
+        else:
+            queryset = DbApis.objects.filter(is_delete=0).all()
+        paginator = Paginator(queryset, data['pageSize'])
+        page = paginator.get_page(data['pageNo'])
+        ic(page.object_list.values())
+        lists = []
+        for project in page.object_list.values():
+            listName = DbProject.objects.filter(id=project['project_id']).values()[0]['listName']
+            ic(listName)
+            project['listName'] = listName
+            lists.append(project)
+        dic = {
+            "code": 200,
+            "data": lists,
+            "msg": "success",
+            "totalCount": queryset.count()
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+

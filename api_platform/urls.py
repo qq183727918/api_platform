@@ -30,7 +30,7 @@ urlpatterns = [
     url(r'^home/$', home),  # 进入首页
     url(r"^child/(?P<eid>.+)/(?P<oid>.*)/(?P<ooid>.*)/$", child),  # 返回子页面
     url(r"^help/$", api_help),  # 进入帮助页面
-    url(r"^project_list/$", project_list),  # 进入项目列表
+    url(r"^project_list/$", projectList),  # 进入项目列表
     url(r'^apis/(?P<id>.*)/$', open_apis),  # 进入接口库
     url(r'^cases/(?P<id>.*)/$', open_cases),  # 进入用例库
     url(r'^project_set/(?P<id>.*)/$', open_project_set),  # 进入项目设置
@@ -106,6 +106,7 @@ urlpatterns = [
     url(r'^project/getList$', project_list),
     url(r'^project/doEdit$', project_edit),
     url(r'^project/del$', project_del),
+    url(r'^project/getApis$', project_Apis),
 ]
 
 
