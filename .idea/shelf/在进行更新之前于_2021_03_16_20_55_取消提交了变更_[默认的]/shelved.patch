@@ -1,0 +1,21 @@
+Index: My_api/static/postman/jQuery之家.url
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/My_api/static/postman/jQuery之家.url b/My_api/static/postman/jQuery之家.url
+new file mode 100644
+--- /dev/null	
++++ b/My_api/static/postman/jQuery之家.url	
+@@ -0,0 +1,11 @@
++[{000214A0-0000-0000-C000-000000000046}]
++Prop3=19,2
++[InternetShortcut]
++URL=http://www.htmleaf.com/
++IDList=
++HotKey=0
++IconFile=C:\Windows\system32\SHELL32.dll
++IconIndex=220
++[InternetShortcut.A]
++[InternetShortcut.W]
++IconFile=F:+AFx/UVP2-jQuery+AFw-favicon.ico
