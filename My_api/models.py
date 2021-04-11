@@ -370,6 +370,7 @@ class DbStep(models.Model):
 class DbUser(models.Model):
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
+    created_time =  models.DateTimeField()
     is_active = models.IntegerField()
     is_delete = models.IntegerField()
 

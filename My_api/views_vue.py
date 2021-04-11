@@ -139,3 +139,83 @@ def project_Apis(request):
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
+
+def user_select(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        ic(data)
+        queryset = DbUser.objects.filter(is_delete=0).all()
+        paginator = Paginator(queryset, data['pageSize'])
+        page = paginator.get_page(data['pageNo'])
+        ic(page.object_list.values())
+        lists = []
+        for project in page.object_list.values():
+            if project['is_active'] == 0:
+                project['is_active'] = '启用'
+            else:
+                project['is_active'] = '未启用'
+            times = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.mktime(project['created_time'].timetuple())))
+            project['created_time'] = times
+            lists.append(project)
+        dic = {
+            "code": 200,
+            "data": lists,
+            "msg": "success",
+            "totalCount": queryset.count()
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def userDisable(request):
+    if request.method == 'PUT':
+        data = json.loads(request.body)
+        ic(data)
+        DbUser.objects.filter(id=data['ids']).update(is_active=1)
+        return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def NewUser(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        ic(data)
+        username = DbUser.objects.filter(username=data['username']).values().count()
+        ic(username)
+        curr_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        if username == 0:
+            DbUser.objects.create(username=data['username'], password=data['password'], created_time=curr_time, is_delete=0, is_active=0)
+            dic = json.dumps({"code": 200, "data": "false", "msg": "注册成功！"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        else:
+            dic = json.dumps({"code": 30005, "data": "false", "msg": "注册失败~用户名好像已经存在了~"})
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def APisdel(request):
+    if request.method == 'DELETE':
+        data = json.loads(request.body)
+        ic(data)
+        DbApis.objects.filter(id=data['ids']).update(is_delete=1)
+        return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+# def APislist(request):
+#     if request.method == 'PUT':
+#         data = json.loads(request.body)
+#         ic(data)
+#         DbApi.objects.filter(id=data['ids']).update(is_active=1)
+#         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+#     else:
+#         dic = json.dumps(RE.WRONG_REQUEST.value)
+#         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)

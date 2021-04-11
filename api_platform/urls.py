@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^$', login_user),
     url(r'^admin/', admin.site.urls),
     url(r"^login/$", login_user),  # 登录页面
-    url(r'^user/', user),  # 用户管理页面
+    # url(r'^user', user),  # 用户管理页面
     url(r'^home/$', home),  # 进入首页
     url(r"^child/(?P<eid>.+)/(?P<oid>.*)/(?P<ooid>.*)/$", child),  # 返回子页面
     url(r"^help/$", api_help),  # 进入帮助页面
@@ -103,10 +103,14 @@ urlpatterns = [
     url(r'^publicKey$', publicKey),
     url(r'^userInfo$', userInfo),
 
+    url(r'^user/usergetlist$', user_select),
+    url(r'^user/userDisable$', userDisable),
+    url(r'^user/NewUser$', NewUser),
     url(r'^project/getList$', project_list),
     url(r'^project/doEdit$', project_edit),
     url(r'^project/del$', project_del),
     url(r'^project/getApis$', project_Apis),
+    url(r'^project/APisdel$', APisdel),
 ]
 
 

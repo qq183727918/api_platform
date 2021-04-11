@@ -166,10 +166,10 @@ def login_action(request):
                 dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
                 return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
             # 开始联通用户库，查看用户密码是否正确
-            username = DbUser.objects.filter(username=u_name).values()
+            username = DbUser.objects.filter(username=u_name, is_active=0).values()
 
             if username.count() == 0:
-                dic = json.dumps({"code": 30003, "data": "false", "message": "用户名不存在请检查"})
+                dic = json.dumps({"code": 30003, "data": "false", "message": "用户名不存在或未请启用！"})
                 return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
             else:
                 for name in username:
