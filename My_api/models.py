@@ -190,7 +190,7 @@ class DbApis(models.Model):
     api_url = models.CharField(max_length=1000, blank=True, null=True)
     api_header = models.CharField(max_length=1000, blank=True, null=True)
     api_login = models.CharField(max_length=10, blank=True, null=True)
-    api_host = models.CharField(max_length=100, blank=True, null=True)
+    api_tag = models.CharField(max_length=100, blank=True, null=True)
     des = models.CharField(max_length=100, blank=True, null=True)
     api_body = models.CharField(max_length=1000, blank=True, null=True)
     result = models.TextField(blank=True, null=True)
@@ -232,6 +232,8 @@ class DbCases(models.Model):
     id = models.IntegerField(primary_key=True)
     project_id = models.CharField(max_length=10, blank=True, null=True)
     name = models.CharField(max_length=50, blank=True, null=True)
+    des = models.CharField(max_length=255, blank=True, null=True)
+    created_time = models.DateTimeField()
     is_delete = models.IntegerField(blank=True, null=True)
 
     class Meta:

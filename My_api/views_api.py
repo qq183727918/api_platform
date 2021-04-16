@@ -169,7 +169,7 @@ def login_action(request):
             username = DbUser.objects.filter(username=u_name, is_active=0).values()
 
             if username.count() == 0:
-                dic = json.dumps({"code": 30003, "data": "false", "message": "用户名不存在或未请启用！"})
+                dic = json.dumps({"code": 30003, "data": "false", "msg": "用户名不存在或未请启用！"})
                 return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
             else:
                 for name in username:

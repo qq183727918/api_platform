@@ -111,6 +111,16 @@ urlpatterns = [
     url(r'^project/del$', project_del),
     url(r'^project/getApis$', project_Apis),
     url(r'^project/APisdel$', APisdel),
+    url(r'^project/copyApis$', copy_apis),
+    url(r'^project/DesEdit$', DesEdit),  # 备注编辑
+    url(r'^project/SaveApis$', SaveApis),  # 备注编辑
+    url(r'^project/DebugApis$', DebugApis),
+    url(r'^project/SendRequest$', SendRequest),
+    url(r'^project/getCases$', getCases),
+    url(r'^project/CaseDel$', CaseDel),
+    url(r'^project/InNewCase$', InNewCase),
+    url(r'^project/CopyCase$', CopyCase),
+    url(r'^project/CaseEdit$', CaseEdit),
 ]
 
 

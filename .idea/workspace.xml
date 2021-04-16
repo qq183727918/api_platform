@@ -29,9 +29,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="解決跨域">
+      <change afterPath="$PROJECT_DIR$/My_api/__pycache__/views_vue.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug/ccc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2021_03_16_20_55____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2021_03_16_20_55____.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2021_04_11_10_06____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2021_04_11_10_06____.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views_api.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views_api.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/params/__pycache__/return_params.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/return_params.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/params/return_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/params/return_params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/views_vue.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_vue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +100,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JupyterTrust" id="db71e735-98d2-483b-a0a7-ab593fa3f53a" />
+  <component name="JupyterTrust" id="939af5a0-59c3-4c5f-8ab9-2e502333ef46" />
   <component name="ProjectId" id="1oso5R90bBdDsstiDNOfqhyGsnM" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="2" id="新增" />
   </component>
   <component name="ProjectViewState">
@@ -104,7 +119,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api/templates" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/vue-django" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -134,11 +149,65 @@
       <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\scss" />
     </key>
   </component>
-  <component name="RunManager" selected="Django 服务器.api_platform">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Python.DjangoServer" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.ccc">
     <configuration name="button.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/button.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="button.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/static/button/button.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="welcome.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/welcome.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ccc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="api_platform" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug/ccc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="public_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="api_platform" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My_api/static/public_method" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My_api/static/public_method/public_method.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -178,7 +247,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="host" value="" />
-      <option name="additionalOptions" value="127.0.0.1:8080" />
+      <option name="additionalOptions" value="localhost:8080" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
@@ -190,9 +259,15 @@
       <item itemvalue="Django 服务器.api_platform" />
       <item itemvalue="JavaScript 调试.button.html" />
       <item itemvalue="JavaScript 调试.button.html (1)" />
+      <item itemvalue="JavaScript 调试.welcome.html" />
+      <item itemvalue="Python.public_method" />
+      <item itemvalue="Python.ccc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ccc" />
+        <item itemvalue="Python.public_method" />
+        <item itemvalue="JavaScript 调试.welcome.html" />
         <item itemvalue="JavaScript 调试.button.html" />
         <item itemvalue="JavaScript 调试.button.html (1)" />
       </list>
@@ -235,6 +310,13 @@
       <workItem from="1615940868320" duration="38111000" />
       <workItem from="1616113877531" duration="24889000" />
       <workItem from="1616464679286" duration="49227000" />
+      <workItem from="1617323551308" duration="4166000" />
+      <workItem from="1617669100804" duration="20522000" />
+      <workItem from="1617928369210" duration="6208000" />
+      <workItem from="1618187278165" duration="26455000" />
+      <workItem from="1618329460516" duration="807000" />
+      <workItem from="1618334571115" duration="827000" />
+      <workItem from="1618407959116" duration="16483000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -369,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617112929383</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="解決跨域">
+      <created>1617964374723</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1617964374723</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -417,6 +506,72 @@
     <MESSAGE value="解決跨域" />
     <option name="LAST_COMMIT_MESSAGE" value="解決跨域" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617928469004">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617928469004" />
+    <state x="710" y="140" key="CommitChangelistDialog2" timestamp="1618187705331">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="710" y="140" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618187705331" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1617282354836">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617282354836" />
+    <state width="1676" height="250" key="GridCell.Tab.0.bottom" timestamp="1618578704561">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="1242" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
+    <state width="1676" height="250" key="GridCell.Tab.0.center" timestamp="1618578704561">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="1242" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
+    <state width="1676" height="250" key="GridCell.Tab.0.left" timestamp="1618578704561">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="1242" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
+    <state width="1676" height="250" key="GridCell.Tab.0.right" timestamp="1618578704561">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="1242" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
+    <state width="1676" height="250" key="GridCell.Tab.1.bottom" timestamp="1618578704442">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
+    <state width="1676" height="250" key="GridCell.Tab.1.center" timestamp="1618578704442">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
+    <state width="1676" height="250" key="GridCell.Tab.1.left" timestamp="1618578704442">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
+    <state width="1676" height="250" key="GridCell.Tab.1.right" timestamp="1618578704442">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1676" height="250" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
+    <state x="526" y="201" key="SettingsEditor" timestamp="1617240365686">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617240365686" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1617964377352">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617964377352" />
+    <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618187707926">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618187707926" />
+    <state x="687" y="243" key="search.everywhere.popup" timestamp="1618519804642">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="687" y="243" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618519804642" />
+  </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Python.DjangoServer">
@@ -425,18 +580,19 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/api_platform$Unittest_in_run_case_py.coverage" NAME="Unittest in run_case.py Coverage Results" MODIFIED="1614564750688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-    <SUITE FILE_PATH="coverage/platform$ddd.coverage" NAME="ddd Coverage Results" MODIFIED="1615423313070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
-    <SUITE FILE_PATH="coverage/platform$public_method.coverage" NAME="public_method Coverage Results" MODIFIED="1616578496185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
-    <SUITE FILE_PATH="coverage/api$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614261898705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
+    <SUITE FILE_PATH="coverage/platform$locust_test__1_.coverage" NAME="locust_test (1) Coverage Results" MODIFIED="1615531578340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$locust__1_.coverage" NAME="locust (1) Coverage Results" MODIFIED="1615364583006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/api$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614261898705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
     <SUITE FILE_PATH="coverage/api_platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614325510564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-    <SUITE FILE_PATH="coverage/platform$test.coverage" NAME="test Coverage Results" MODIFIED="1615366434306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$ddd.coverage" NAME="ddd Coverage Results" MODIFIED="1617672812117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/api_platform$Unittest_in_run_case_py.coverage" NAME="Unittest in run_case.py Coverage Results" MODIFIED="1614564750688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
+    <SUITE FILE_PATH="coverage/platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1616575518966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
+    <SUITE FILE_PATH="coverage/platform$locaust.coverage" NAME="locust Coverage Results" MODIFIED="1615364443599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$public_method.coverage" NAME="public_method Coverage Results" MODIFIED="1617885827358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
+    <SUITE FILE_PATH="coverage/platform$test_dingding.coverage" NAME="test_dingding Coverage Results" MODIFIED="1615288205355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$jiek.coverage" NAME="jiek Coverage Results" MODIFIED="1615536200517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$mysql_id_order_by.coverage" NAME="mysql_id_order_by Coverage Results" MODIFIED="1616569131422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
-    <SUITE FILE_PATH="coverage/platform$locaust.coverage" NAME="locust Coverage Results" MODIFIED="1615364443599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
-    <SUITE FILE_PATH="coverage/platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1616575518966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
-    <SUITE FILE_PATH="coverage/platform$test_dingding.coverage" NAME="test_dingding Coverage Results" MODIFIED="1615288205355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
-    <SUITE FILE_PATH="coverage/platform$locust_test__1_.coverage" NAME="locust_test (1) Coverage Results" MODIFIED="1615531578340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$ccc.coverage" NAME="ccc Coverage Results" MODIFIED="1618493079144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$test.coverage" NAME="test Coverage Results" MODIFIED="1615863735013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
   </component>
 </project>
