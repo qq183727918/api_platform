@@ -103,9 +103,11 @@ urlpatterns = [
     url(r'^publicKey$', publicKey),
     url(r'^userInfo$', userInfo),
 
+    url(r'^logout$', logout),
+    url(r'^user/NewUser$', NewUser),
+
     url(r'^user/usergetlist$', user_select),
     url(r'^user/userDisable$', userDisable),
-    url(r'^user/NewUser$', NewUser),
     url(r'^project/getList$', project_list),
     url(r'^project/doEdit$', project_edit),
     url(r'^project/del$', project_del),
@@ -121,6 +123,18 @@ urlpatterns = [
     url(r'^project/InNewCase$', InNewCase),
     url(r'^project/CopyCase$', CopyCase),
     url(r'^project/CaseEdit$', CaseEdit),
+    url(r'^project/SmallCase$', SmallCase),
+    url(r'^project/SmallList', SmallList),
+    url(r'^project/SmallDel', SmallDel),
+    url(r'^project/SmallGet', SmallGet),
+    url(r'^project/SmallOrder', SmallOrder),
+    url(r'^project/LookReport', LookReport),
+    url(r'^project/Report', Report),
+    url(r'^project/RunCase', RunCase),
+    url(r'^project/GetProList', GetProList),
+    url(r'^global/VariAble', Variable),
+    url(r'^global/DoEdit', DoEdit),
+    url(r'^global/GloDel', GloDel),
 ]
 
 

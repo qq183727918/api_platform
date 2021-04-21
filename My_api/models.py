@@ -243,8 +243,9 @@ class DbCases(models.Model):
 
 class DbGlobalData(models.Model):
     name = models.CharField(max_length=20, blank=True, null=True)
-    user_id = models.CharField(max_length=10, blank=True, null=True)
+    user = models.CharField(max_length=20, blank=True, null=True)
     data = models.TextField(blank=True, null=True)
+    created_time = models.DateTimeField()
     is_delete = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -348,6 +349,7 @@ class DbStep(models.Model):
     Case_id = models.CharField(max_length=10, blank=True, null=True)  # Field name made lowercase.
     name = models.CharField(max_length=50, blank=True, null=True)
     index = models.IntegerField(blank=True, null=True)
+    api_id = models.IntegerField(blank=True, null=True)
     api_method = models.CharField(max_length=10, blank=True, null=True)
     api_url = models.CharField(max_length=1000, blank=True, null=True)
     api_host = models.CharField(max_length=100, blank=True, null=True)
@@ -372,7 +374,7 @@ class DbStep(models.Model):
 class DbUser(models.Model):
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
-    created_time =  models.DateTimeField()
+    created_time = models.DateTimeField()
     is_active = models.IntegerField()
     is_delete = models.IntegerField()
 

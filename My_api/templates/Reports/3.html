@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>接口测试平台测试报告：测试</title>
+    <title>接口测试平台测试报告：产能维护-日-查询</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -114,21 +114,21 @@ function html_escape(s) {
 }
 </script>
 <div class='heading'>
-<h1 style="font-family: Microsoft YaHei">接口测试平台测试报告：测试</h1>
+<h1 style="font-family: Microsoft YaHei">接口测试平台测试报告：产能维护-日-查询</h1>
 <p class='attribute'><strong>测试人员 : </strong> 最棒QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2021-03-01 15:44:24</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:06.299457</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 1，错误 1，通过率= 50.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2021-04-21 10:24:34</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:03.051031</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 1，通过 1，通过率= 100.00%</p>
 
 <p class='description'>用例描述</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 50.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
 <a class="btn btn-success" href='javascript:showCase(2)'>通过{ 1 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 2 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 1 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,66 +148,34 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='errorClass warning'>
-    <td>My_api.run_case.Test: 测试类</td>
-    <td class="text-center">2</td>
+<tr class='passClass warning'>
+    <td>My_api.Run.Test: 测试类</td>
+    <td class="text-center">1</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
-    <td class="text-center">1</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='ft1_1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_001: 我是新步骤</div></td>
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_001: 产能维护-日-查询</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
-    <div id='div_ft1_1' class="collapse">  -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
-    <div id='div_ft1_1' class="collapse in">
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in">
     <pre>
     
-ft1_1: Traceback (most recent call last):
-  File "D:\automate\api_platform\My_api\run_case.py", line 183, in tool
-    Test.demo(self, step)  # 7
-  File "D:\automate\api_platform\My_api\run_case.py", line 42, in demo
-    rlist_url = re.findall(r"##(.*?)##", api_url)
-  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\re.py", line 239, in findall
-    return _compile(pattern, flags).findall(string)
-TypeError: expected string or bytes-like object
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_002: 我是新步骤</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in">
-    <pre>
-    
-pt1_2: 【host】： https://www.baidu.com
-【url】： qqq
-【header】： {"a":"a"}
-【method】： post
-【body_method】： none
-【body】： 
-【返回体】： &lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;
-&lt;html&gt;&lt;head&gt;
-&lt;title&gt;404 Not Found&lt;/title&gt;
-&lt;/head&gt;&lt;body&gt;
-&lt;h1&gt;Not Found&lt;/h1&gt;
-&lt;p&gt;The requested URL /qqq was not found on this server.&lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;
-
+pt1_1: 
+【host】： http://wms.test.vevor.net
+【url】： http://wms.test.vevor.net/api/wms-inbound-orders-service/controller-overseasInboundCapacity/front/queryCapacityListByDay?warehouseId=1&amp;capacityTime=2021-04-21&amp;date=3
+【header】： {'Authorization': 'Basic Y2FjNDI1MTEtMzc4ZC00MmQ0LTk4ZWUtYjdmM2U0MDU1NjE2OjE1MGU5OTI1LWUxYzctNGZlZi05ZmQ4LWIwYzU5Mzg3ZmMzMQ==', 'Set-Cookie': 'SESSION=ZWJiMzc2N2YtM2UwMS00ZTc0LWIzZDYtYTA5ZGIyOTMwNmY5; Path=/; HttpOnly; SameSite=Lax'}
+【method】： GET
+【body_method】： 
+【body】： {}
+【返回体】： {"code":401,"message":"token为空","data":null}
 
 
     </pre>
@@ -217,11 +185,11 @@ pt1_2: 【host】： https://www.baidu.com
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>2</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
-    <td>通过率：50.00%</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 

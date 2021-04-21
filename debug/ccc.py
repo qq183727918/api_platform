@@ -6,10 +6,10 @@ _*_ coding: UTF-8 _*_
 @File      : ccc.py
 @Software  : PyCharm
 """
-ssss = {
-    "code": 304214,
-    "data": "null",
-    "message": "抱歉！外网无法访问网站"
-}
+import re
 
-print(ssss['ffff'].index)
+a = '{{token}}'
+
+s = re.findall("{{(.*?)}}", a)
+if s:
+    print(s[0])

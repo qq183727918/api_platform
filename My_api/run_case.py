@@ -17,7 +17,7 @@ from HTMLTestRunner1 import HTMLTestRunner
 
 import django
 
-path = "../api_platform"
+path = "../platform"
 sys.path.append(path)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api_platform.setting")
 django.setup()
@@ -50,7 +50,7 @@ class Test(unittest.TestCase):
         if mock_res not in ['', None, 'None']:
             res = mock_res
         else:
-            ## 检查是否需要进行替换占位符的
+            # 检查是否需要进行替换占位符的
             rlist_url = re.findall(r"##(.*?)##", api_url)
             for i in rlist_url:
                 api_url = api_url.replace("##" + i + "##", str(eval(i)))
@@ -76,7 +76,7 @@ class Test(unittest.TestCase):
                 for i in rlist_body:
                     api_body = api_body.replace("##" + i + "##", str(eval(i)))
 
-            ## 实际发送请求
+            # 实际发送请求
             try:
                 header = json.loads(api_header)  # 处理header
             except:
@@ -87,7 +87,7 @@ class Test(unittest.TestCase):
                 project_header = DB_project_header.objects.filter(id=i)[0]
                 header[project_header.key] = project_header.value
 
-            ## 输出请求数据
+            # 输出请求数据
             print('\n【host】：', api_host)
             print('【url】：', api_url)
             print('【header】：', header)
@@ -274,7 +274,7 @@ def run(Case_id, Case_name, steps):  # 1
     print(steps)
     make_def(steps)  # 2
     suit = unittest.makeSuite(Test)
-    filename = 'My_Api/templates/Reports/%s.html' % Case_id
+    filename = 'My_api/templates/Reports/%s.html' % Case_id
     fp = open(filename, 'wb')
     runner = HTMLTestRunner(fp, title='接口测试平台测试报告：%s' % Case_name, description='用例描述')
     runner.run(suit)
