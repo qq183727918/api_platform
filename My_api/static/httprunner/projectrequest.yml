@@ -1,0 +1,846 @@
+-   config:
+        name: 项目列表菜单接口
+        variables: {}
+-   test:
+        name: /project/getList
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getList
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 14
+-   test:
+        name: /project/GetProList
+        request:
+            data: ''
+            headers:
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            method: POST
+            url: http://192.168.1.42:8080/project/GetProList
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 14
+-   test:
+        name: /project/getList
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                listName: 12
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getList
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 1
+-   test:
+        name: /project/doEdit
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                id: 12
+                listName: 请问
+                remark: 请问
+            method: POST
+            url: http://192.168.1.42:8080/project/doEdit
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/del
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            method: DELETE
+            url: http://192.168.1.42:8080/project/del
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/doEdit
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                listName: 测试中
+                remark: 测试中
+            method: POST
+            url: http://192.168.1.42:8080/project/doEdit
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/getApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getApis
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 9
+-   test:
+        name: /project/getApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                listName: 1
+                name: 不会改变
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getApis
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 1
+-   test:
+        name: /project/DesEdit
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                des: 测试使用
+                id: 9
+                name: 测试使用
+            method: POST
+            url: http://192.168.1.42:8080/project/DesEdit
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/getApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                listName: 1
+                name: 不会改变
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getApis
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 0
+-   test:
+        name: /project/copyApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                ids: 9
+            method: POST
+            url: http://192.168.1.42:8080/project/copyApis
+        validate:
+        -   eq:
+            - status_code
+            - 500
+        -   eq:
+            - headers.Content-Type
+            - text/html
+-   test:
+        name: /project/getApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getApis
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 9
+-   test:
+        name: /project/SendRequest
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                api_name: 测试使用
+                header: []
+                method: GET
+                project_id: 9
+                project_name: WMS接口测试
+                radio: 1
+                tag: header
+                url: http://localhost:1888/#/project/apis
+            method: POST
+            url: http://192.168.1.42:8080/project/SendRequest
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - "<!DOCTYPE html>\n<html lang=\"zh-cmn-Hans\">\n  <head>\n    <meta charset=\"\
+                utf-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\
+                \ />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\"\
+                \ />\n    <link rel=\"icon\" href=\"favicon.ico\" />\n    <title>PLATFORM</title>\n\
+                \    <meta\n      name=\"keywords\"\n    />\n    <meta\n      name=\"\
+                description\"\n    />\n    <meta name=\"author\" content=\"vue-admin-beautiful\"\
+                \ />\n    <link rel=\"stylesheet\" href=\"./static/css/loading.css\"\
+                \ />\n  </head>\n  <body>\n    <div id=\"vue-admin-beautiful\">\n\
+                \      <div class=\"first-loading-wrp\">\n        <div class=\"loading-wrp\"\
+                >\n          <span class=\"dot dot-spin\">\n            <i></i>\n\
+                \            <i></i>\n            <i></i>\n            <i></i>\n \
+                \         </span>\n        </div>\n        <h1>PLATFORM</h1>\n   \
+                \   </div>\n    </div>\n    <script>\n      ;/^http(s*):\\/\\//.test(location.href)\
+                \ ||\n        alert(\n          '基于vue-admin-beautiful-pro开源版开发的项目需要部署到服务器下访问'\n\
+                \        )\n    </script>\n    <script>\n      if (window.location.hostname\
+                \ !== 'localhost') {\n        var _hmt = _hmt || []\n        ;(function\
+                \ () {\n          var hm = document.createElement('script')\n    \
+                \      hm.src = 'https://hm.baidu.com/hm.js?7174bade1219f9cc272e7978f9523fc8'\n\
+                \          var s = document.getElementsByTagName('script')[0]\n  \
+                \        s.parentNode.insertBefore(hm, s)\n        })()\n      }\n\
+                \    </script>\n  <script type=\"text/javascript\" src=\"static/js/chunk-vendors.js\"\
+                ></script><script type=\"text/javascript\" src=\"static/js/app.js\"\
+                ></script></body>\n</html>\n"
+        -   eq:
+            - content.message
+            - ok
+-   test:
+        name: /project/DebugApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                api_name: 测试使用
+                header: []
+                method: GET
+                project_id: 9
+                project_name: WMS接口测试
+                radio: 1
+                result: "<!DOCTYPE html>\n<html lang=\"zh-cmn-Hans\">\n  <head>\n\
+                    \    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"X-UA-Compatible\"\
+                    \ content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"\
+                    width=device-width,initial-scale=1.0\" />\n    <link rel=\"icon\"\
+                    \ href=\"favicon.ico\" />\n    <title>PLATFORM</title>\n    <meta\n\
+                    \      name=\"keywords\"\n    />\n    <meta\n      name=\"description\"\
+                    \n    />\n    <meta name=\"author\" content=\"vue-admin-beautiful\"\
+                    \ />\n    <link rel=\"stylesheet\" href=\"./static/css/loading.css\"\
+                    \ />\n  </head>\n  <body>\n    <div id=\"vue-admin-beautiful\"\
+                    >\n      <div class=\"first-loading-wrp\">\n        <div class=\"\
+                    loading-wrp\">\n          <span class=\"dot dot-spin\">\n    \
+                    \        <i></i>\n            <i></i>\n            <i></i>\n \
+                    \           <i></i>\n          </span>\n        </div>\n     \
+                    \   <h1>PLATFORM</h1>\n      </div>\n    </div>\n    <script>\n\
+                    \      ;/^http(s*):\\/\\//.test(location.href) ||\n        alert(\n\
+                    \          '基于vue-admin-beautiful-pro开源版开发的项目需要部署到服务器下访问'\n  \
+                    \      )\n    </script>\n    <script>\n      if (window.location.hostname\
+                    \ !== 'localhost') {\n        var _hmt = _hmt || []\n        ;(function\
+                    \ () {\n          var hm = document.createElement('script')\n\
+                    \          hm.src = 'https://hm.baidu.com/hm.js?7174bade1219f9cc272e7978f9523fc8'\n\
+                    \          var s = document.getElementsByTagName('script')[0]\n\
+                    \          s.parentNode.insertBefore(hm, s)\n        })()\n  \
+                    \    }\n    </script>\n  <script type=\"text/javascript\" src=\"\
+                    static/js/chunk-vendors.js\"></script><script type=\"text/javascript\"\
+                    \ src=\"static/js/app.js\"></script></body>\n</html>\n"
+                tag: header
+                url: http://localhost:1888/#/project/apis
+            method: POST
+            url: http://192.168.1.42:8080/project/DebugApis
+        validate:
+        -   eq:
+            - status_code
+            - 500
+        -   eq:
+            - headers.Content-Type
+            - text/html
+-   test:
+        name: /project/APisdel
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            method: DELETE
+            url: http://192.168.1.42:8080/project/APisdel
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/SaveApis
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                api_body: 响应数据
+                api_name: 测试使用
+                header:
+                -   key: a
+                    value: a
+                method: GET
+                project_id: 16
+                radio: 1
+                result: 接口响应结果
+                tag: header
+                url: http://localhost:1888/#/project/apis
+            method: POST
+            url: http://192.168.1.42:8080/project/SaveApis
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/getCases
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getCases
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 9
+-   test:
+        name: /project/InNewCase
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                des: 测试使用
+                name: 测试使用
+                project_id: 16
+            method: POST
+            url: http://192.168.1.42:8080/project/InNewCase
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/SmallGet
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                project_id: '16'
+            method: POST
+            url: http://192.168.1.42:8080/project/SmallGet
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+-   test:
+        name: /project/SmallCase
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                case_id: 10
+                index: 1
+                name: 测试新增小用例
+            method: POST
+            url: http://192.168.1.42:8080/project/SmallCase
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/SmallList
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                id: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/SmallList
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+-   test:
+        name: /project/SmallOrder
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                case:
+                -   apiid: 10
+                    id: 9
+                    index: 1
+                case_id: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/SmallOrder
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/getCases
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                pageNo: 1
+                pageSize: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/getCases
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.msg
+            - success
+        -   eq:
+            - content.totalCount
+            - 11
+-   test:
+        name: /project/CopyCase
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                ids: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/CopyCase
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/RunCase
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                case_id: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/RunCase
+        validate:
+        -   eq:
+            - status_code
+            - 500
+        -   eq:
+            - headers.Content-Type
+            - text/html
+-   test:
+        name: /project/LookReport
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                id: 10
+            method: POST
+            url: http://192.168.1.42:8080/project/LookReport
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 30215
+        -   eq:
+            - content.data
+            - 'false'
+        -   eq:
+            - content.msg
+            - 测试报告还未生成，请检查！
+-   test:
+        name: /project/CaseDel
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            method: DELETE
+            url: http://192.168.1.42:8080/project/CaseDel
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK
+-   test:
+        name: /project/CaseEdit
+        request:
+            headers:
+                Content-Type: application/json;charset=UTF-8
+                User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+                    (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+                accessToken: YWRtaW47MjAyMS0wNC0yMiAxMTozODoxNA==
+            json:
+                des: 测试使用编辑
+                id: 10
+                name: 测试使用编辑
+                project_id: 测试中
+            method: PUT
+            url: http://192.168.1.42:8080/project/CaseEdit
+        validate:
+        -   eq:
+            - status_code
+            - 200
+        -   eq:
+            - headers.Content-Type
+            - application/json;charset=utf-8
+        -   eq:
+            - content.code
+            - 200
+        -   eq:
+            - content.data
+            - 'true'
+        -   eq:
+            - content.message
+            - OK

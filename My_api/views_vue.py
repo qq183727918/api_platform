@@ -7,20 +7,59 @@ _*_ coding: UTF-8 _*_
 @Software  : PyCharm
 """
 import json
+import os
 import re
 import time
 
 import requests
 from django.core.paginator import Paginator
-from django.http import HttpResponse
+from django.forms import forms
+from django.http import HttpResponse, JsonResponse
 # Create your views here.
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from icecream import ic
 
 from My_api.models import *
 from My_api.static.params.return_params import RE
 # Create your views here.
 from My_api.static.public_method.public_method import decode_token
+
+
+def publicKey(request):
+    if request.method == 'POST':
+        dic = {
+            "code": 200,
+            "data": {
+                "mockServer": "true",
+                "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBT2vr+dhZElF73FJ6xiP181txKWUSNLPQQlid6DUJhGAOZblluafIdLmnUyKE8mMHhT3R+Ib3ssZcJku6Hn72yHYj/qPkCGFv0eFo7G+GJfDIUeDyalBN0QsuiE/XzPHJBuJDfRArOiWvH0BXOv5kpeXSXM8yTt5Na1jAYSiQ/wIDAQAB",
+                "msg": "success"
+            }
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+def userInfo(request):
+    if request.method == 'POST':
+        Authorization = request.headers['Accesstoken']
+        user = decode_token(Authorization)
+        ic(user)
+        dic = {
+            "code": 200,
+            "data": {
+                "avatar": "https://i.gtimg.cn/club/item/face/img/8/15918_100.gif",
+                "permissions": [f"{user}"],
+                "username": f"{user}",
+            },
+            "msg": "success"
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 项目列表查询
@@ -687,7 +726,8 @@ def CaseEdit(request):
     if request.method == 'PUT':
         data = json.loads(request.body)
         ic(data)
-        DbCases.objects.filter(id=data['id']).update(des=data['des'], name=data['name'], project_id=data['project_id'])
+        project_id = DbProject.objects.filter(listName=data['project_id']).values()[0]['id']
+        DbCases.objects.filter(id=data['id']).update(des=data['des'], name=data['name'], project_id=project_id)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
@@ -865,13 +905,15 @@ def Report(request):
 def RunCase(request):
     if request.method == 'POST':
         data = json.loads(request.body)
+        ic(data)
         Case_id = data['case_id']
-        Case = DbStep.objects.filter(id=Case_id)[0]
+        Case_name = DbCases.objects.filter(id=Case_id).values()[0]['name']
+        Case = DbStep.objects.filter(Case_id=Case_id)[0]
         steps = DbStep.objects.filter(Case_id=Case_id)
         ic(data, Case, Case.id, Case.name, steps)
         # from My_api.run_case import run
         from My_api.Run import run
-        run(Case.id, Case.name, steps)
+        run(Case.Case_id, Case_name, steps)
 
         dic = json.dumps(RE.SUCCESS.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
@@ -958,6 +1000,29 @@ def GloDel(request):
             for i in ids:
                 DbGlobalData.objects.filter(id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+
+class UserForm(forms.Form):
+    filename = forms.FileField()
+
+
+@csrf_exempt
+def Runner(request):
+    if request.method == "POST":
+        myFile = request.FILES.get("file", None)  # 获取上传的文件，如果没有文件，则默认为None
+        ic(myFile)
+        if not myFile:
+            dic = {"code": 70010, "data": "true", "msg": "no files for upload!"}
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        destination = open(os.path.join("D:\\platform\\My_api\\static\\httprunner\\", myFile.name), 'wb+')  # 打开特定的文件进行二进制的写操作
+        for chunk in myFile.chunks():  # 分块写入文件
+            destination.write(chunk)
+        destination.close()
+        dic = {"code": 200, "data": "true", "msg": "上传成功！"}
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
         dic = json.dumps(RE.WRONG_REQUEST.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)

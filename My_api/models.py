@@ -583,3 +583,12 @@ class DbSession(models.Model):
     class Meta:
         managed = False
         db_table = 'db_session'
+
+
+class Runner(models.Model):
+    name = models.CharField(max_length=255)
+    path = models.CharField(max_length=255)
+
+    class Meta:
+        managed = False
+        db_table = 'runner'

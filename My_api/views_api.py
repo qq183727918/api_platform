@@ -1653,36 +1653,3 @@ class Token_JWT:
         else:
             dic = json.dumps(RE.WRONG_REQUEST.value)
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-
-
-def publicKey(request):
-    if request.method == 'POST':
-        dic = {
-            "code": 200,
-            "data": {
-                "mockServer": "true",
-                "publicKey": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBT2vr+dhZElF73FJ6xiP181txKWUSNLPQQlid6DUJhGAOZblluafIdLmnUyKE8mMHhT3R+Ib3ssZcJku6Hn72yHYj/qPkCGFv0eFo7G+GJfDIUeDyalBN0QsuiE/XzPHJBuJDfRArOiWvH0BXOv5kpeXSXM8yTt5Na1jAYSiQ/wIDAQAB",
-                "msg": "success"
-            }
-        }
-        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
-    else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-
-
-def userInfo(request):
-    if request.method == 'POST':
-        dic = {
-            "code": 200,
-            "data": {
-                "avatar": "https://i.gtimg.cn/club/item/face/img/8/15918_100.gif",
-                "permissions": ["admin"],
-                "username": "admin",
-            },
-            "msg": "success"
-        }
-        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
-    else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
