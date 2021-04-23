@@ -215,8 +215,6 @@ class Test(unittest.TestCase):
                             py_path += '["%s"]' % j
                         else:
                             py_path += j
-                value = eval("%s%s" % (json.loads(res), py_path))
-                exec('global %s\n%s = value ' % (key, key))
 
         # # 正则法提取：
         if get_zz != '':  # 说明有设置

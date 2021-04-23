@@ -203,6 +203,9 @@ class DbApis(models.Model):
     body_method = models.CharField(max_length=50, blank=True, null=True)
     is_delete = models.IntegerField()
 
+    def __str__(self):
+        return self.id
+
     class Meta:
         managed = False
         db_table = 'db_apis'
@@ -589,8 +592,8 @@ class Returned(models.Model):
     apis_id = models.IntegerField(blank=True, max_length=11)
     extract_path = models.TextField(blank=True)  # 提取返回值-路径法
     extract_re = models.TextField(blank=True)  # 提取返回值-正则
+    expected = models.TextField(blank=True)  # 断言返回值-全文检索存在
     assert_re = models.TextField(blank=True)  # 断言返回值-正则
-    assert_all = models.TextField(blank=True)  # 断言返回值-全文检索存在
     assert_path = models.TextField(blank=True)  # 断言返回值-路径法
     mock_res = models.TextField(blank=True)  # mock返回值
     is_delete = models.IntegerField()

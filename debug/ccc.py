@@ -6,7 +6,9 @@ _*_ coding: UTF-8 _*_
 @File      : ccc.py
 @Software  : PyCharm
 """
+import re
 
-with open('../My_api/static/httprunner/projectrequest.yml', 'r', encoding='utf-8') as f:
-    a = f.readlines()
-print(a)
+dic = "{'code': 401, 'data': 'true', 'message': 'token为空'}"
+
+pa = re.findall('code(.*?),', dic)
+print(pa)

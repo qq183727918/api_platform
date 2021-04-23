@@ -117,7 +117,7 @@ def GetProList(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 项目编辑/新增
@@ -147,7 +147,7 @@ def project_edit(request):
 
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 项目删除
@@ -163,7 +163,7 @@ def project_del(request):
             else:
                 listName = DbProject.objects.filter(id=Id).values()[0]['listName']
                 dic = json.dumps({"code": 20010, "data": "false", "msg": f"项目{listName}下存在接口不能删除！"})
-                community(request, method)
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         else:
             ids = Id.split(',')
             for i in ids:
@@ -172,10 +172,10 @@ def project_del(request):
                 else:
                     listName = DbProject.objects.filter(id=i).values()[0]['listName']
                     dic = json.dumps({"code": 20010, "data": "false", "msg": f"项目{listName}下存在接口不能删除！"})
-                    community(request, method)
+                    return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 接口查询
@@ -222,7 +222,7 @@ def project_Apis(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 用户查询
@@ -262,7 +262,7 @@ def user_select(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 用户禁用
@@ -274,7 +274,7 @@ def userDisable(request):
         DbUser.objects.filter(id=data['ids']).update(is_active=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 新增用户
@@ -294,7 +294,7 @@ def NewUser(request):
             dic = json.dumps({"code": 30005, "data": "false", "msg": "注册失败~用户名好像已经存在了~"})
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 退出登录
@@ -303,7 +303,7 @@ def logout(request):
     if community(request, method) == RE.TRUE.value:
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 接口删除
@@ -315,13 +315,15 @@ def APisdel(request):
         Id = data['ids']
         if type(Id) == int:
             DbApis.objects.filter(id=Id).update(is_delete=1)
+            Returned.objects.filter(apis_id=Id).update(is_delete=1)
         else:
             ids = Id.split(',')
             for i in ids:
                 DbApis.objects.filter(id=i).update(is_delete=1)
+                Returned.objects.filter(apis_id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 接口复制接口
@@ -356,7 +358,7 @@ def copy_apis(request):
         dic = json.dumps({'code': 200, 'data': True, 'message': 'ok'})
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 接口备注、名称修改
@@ -369,7 +371,7 @@ def DesEdit(request):
         DbApis.objects.filter(id=Id).update(des=data['des'], name=data['name'])
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 新增接口
@@ -416,21 +418,65 @@ def SaveApis(request):
         else:
             pass
         result = data['result']
-        DbApis.objects.create(
-            project_id=project_id,
-            name=api_name,
-            api_models=method,
-            api_url=url,
-            api_header=json.dumps(dic_head),
-            api_body=json.dumps(dic_body),
-            api_tag=tag,
-            result=result,
-            body_method=body_method,
-            is_delete=0,
-        )
+        if "AssertRe" in data:
+            AssertRe = data['AssertRe']
+        else:
+            AssertRe = ""
+        if "AssertPath" in data:
+            AssertPath = data['AssertPath']
+        else:
+            AssertPath = ""
+        if "ExpectedResult" in data:
+            ExpectedResult = data['ExpectedResult']
+        else:
+            ExpectedResult = ""
+        if "ExtractPath" in data:
+            ExtractPath = data['ExtractPath']
+        else:
+            ExtractPath = ""
+        if "ExtractRe" in data:
+            ExtractRe = data['ExtractRe']
+        else:
+            ExtractRe = ""
+        if "mock" in data:
+            mock = data['mock']
+        else:
+            mock = ""
+
+        if DbApis.objects.filter(name=api_name).values().count() == 0:
+            DbApis.objects.create(
+                project_id=project_id,
+                name=api_name,
+                api_models=method,
+                api_url=url,
+                api_header=json.dumps(dic_head),
+                api_body=json.dumps(dic_body),
+                api_tag=tag,
+                result=result,
+                body_method=body_method,
+                is_delete=0,
+            )
+            api_id = DbApis.objects.filter(name=api_name).values()[0]['id']
+            Returned.objects.create(
+                apis_id=api_id,
+                extract_path=ExtractPath,
+                extract_re=ExtractRe,
+                expected=ExpectedResult,  # 预期结果
+                assert_re=AssertRe,    # 断言全文检索
+                assert_path=AssertPath,  # 断言路径
+                mock_res=mock,
+                is_delete=0
+            )
+        else:
+            dic = {
+                "code": 230010,
+                "data": False,
+                "msg": "接口名称已存在请重新输入"
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 调试保存
@@ -444,10 +490,12 @@ def DebugApis(request):
         body_method = ''
         method = data['method']
         url = data['url']
-        api_body = data['api_body']
         radio = data['radio']
         tag = data['tag']
-        ic(type(data['result']))
+        if "api_body" in data:
+            api_body = data['api_body']
+        else:
+            api_body = {}
         if tag == 'header' or tag == 'body':
             if radio == 1:
                 body_method = "None"
@@ -481,8 +529,6 @@ def DebugApis(request):
             dic_head = {}
         if dic_body == {'': ''}:
             dic_body = {}
-        else:
-            pass
         result = data['result']
         if type(result) == dict:
             results = json.dumps(result)
@@ -497,9 +543,42 @@ def DebugApis(request):
             result=results,
             body_method=body_method,
         )
+        if "AssertRe" in data:
+            AssertRe = data['AssertRe']
+        else:
+            AssertRe = ""
+        if "AssertPath" in data:
+            AssertPath = data['AssertPath']
+        else:
+            AssertPath = ""
+        if "ExpectedResult" in data:
+            ExpectedResult = data['ExpectedResult']
+        else:
+            ExpectedResult = ""
+        if "ExtractPath" in data:
+            ExtractPath = data['ExtractPath']
+        else:
+            ExtractPath = ""
+        if "ExtractRe" in data:
+            ExtractRe = data['ExtractRe']
+        else:
+            ExtractRe = ""
+        if "mock" in data:
+            mock = data['mock']
+        else:
+            mock = ""
+        Returned.objects.filter(apis_id=data['project_id']).update(
+            extract_path=ExtractPath,
+            extract_re=ExtractRe,
+            expected=ExpectedResult,  # 预期结果
+            assert_re=AssertRe,  # 断言全文检索
+            assert_path=AssertPath,  # 断言路径
+            mock_res=mock,
+            is_delete=0
+        )
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 发送请求
@@ -507,7 +586,7 @@ def SendRequest(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        # ic(data)
         dic_head = {}
         dic_body = {}
         response = ''
@@ -581,15 +660,138 @@ def SendRequest(request):
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
 
         response.encoding = "utf-8"
-        ic(type(response.text))
+        res = response.json()
+        ic(res)
+        tractpath = ""
+        tractre = ""
+        ReAssert = ""
+        PathAssert = ""
+        ResultExpected = ""
+        if "mock" in data:
+            res = data['mock']
+            ic(res)
+        if "ExtractPath" in data:
+            ExtractPath = data['ExtractPath']
+            try:
+                datas = ExtractPath.split('\n')
+                for i in datas:
+                    if i == '':
+                        continue
+                    extract = i.split('=')
+                    path = extract[1].split('/')
+                    values = ""
+                    for a in path:
+                        if a == '':
+                            continue
+                        py_path = res[a]
+                        values = py_path
+                    tractpath += f"{i} ==> {values}\n"
+            except Exception as e:
+                ic(e)
+                dic = {
+                    "code": 35010,
+                    "data": "false",
+                    "msg": "提取路径输入有误请仔细检查！"
+                }
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+        if "ExtractRe" in data:
+            ExtractRe = data['ExtractRe']
+            try:
+                datas = ExtractRe.split('\n')
+                for i in datas:
+                    if i == '':
+                        continue
+                    extract = i.split('=')
+                    path = extract[1]
+                    pa = re.findall(path, str(res))
+                    tractre += f"{i} ==> {pa[0]}\n"
+            except Exception as e:
+                ic(e)
+                dic = {
+                    "code": 35010,
+                    "data": "false",
+                    "msg": "提取正则输入有误请仔细检查！"
+                }
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+        if "AssertRe" in data:
+            AssertRe = data['AssertRe']
+            datas = AssertRe.split('\n')
+            for i in datas:
+                if i in str(res):
+                    ReAssert += f"{i} ==> True\n"
+                else:
+                    ReAssert += f"{i} ==> False\n"
+        if "AssertPath" in data:
+            AssertPath = data['AssertPath']
+            try:
+                datas = AssertPath.split('\n')
+                for i in datas:
+                    if i == '':
+                        continue
+                    extract = i.split('=')
+                    path = extract[0].split('/')
+                    extract_value = extract[1]
+                    values = ""
+                    for a in path:
+                        if a == '':
+                            continue
+                        py_path = res[a]
+                        values = py_path
+                    if str(values) == eval(extract_value):
+                        PathAssert += f"{i} ==> True\n"
+                    else:
+                        PathAssert += f"{i} ==> False\n"
+            except Exception as e:
+                ic(e)
+                dic = {
+                    "code": 35010,
+                    "data": "false",
+                    "msg": "输入有误请仔细检查！"
+                }
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+        if "ExpectedResult" in data:
+            ExpectedResult = data['ExpectedResult']
+            try:
+                datas = ExpectedResult.split('\n')
+                ic(datas)
+                for i in datas:
+                    if i == '':
+                        continue
+                    extract = i.split('=')
+                    path = extract[0]
+                    path_value = extract[1]
+                    ic(path)
+                    if len(re.findall(path, str(res))) == 0:
+                        ResultExpected += f"{i} ==> 该正则未匹配到数据！\n"
+                    else:
+                        pa = re.findall(path, str(res))[0]
+                        ic(pa, eval(path_value))
+                        if pa == eval(path_value):
+                            ResultExpected += f"{i} ==> True\n"
+                        else:
+                            ResultExpected += f"{i} ==> False\n"
+            except Exception as e:
+                ic(e)
+                dic = {
+                    "code": 35010,
+                    "data": "false",
+                    "msg": "输入有误请仔细检查！"
+                }
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+
         dic = {
             "code": 200,
-            "data": response.text,
+            "data": response.json(),
+            "ExtractPath": f'{tractpath}',
+            "ExtractRe": f'{tractre}',
+            "AssertRe": f"{ReAssert}",
+            "AssertPath": f"{PathAssert}",
+            "ResultExpected": f"{ResultExpected}",
             "message": "ok"
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 用例查询
@@ -646,7 +848,7 @@ def getCases(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 用例删除
@@ -666,7 +868,7 @@ def CaseDel(request):
                 DbStep.objects.filter(Case_id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 新增用例
@@ -697,7 +899,7 @@ def InNewCase(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 复制用例
@@ -728,7 +930,7 @@ def CopyCase(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 用例编辑
@@ -741,7 +943,7 @@ def CaseEdit(request):
         DbCases.objects.filter(id=data['id']).update(des=data['des'], name=data['name'], project_id=project_id)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 新增小用例
@@ -766,7 +968,7 @@ def SmallCase(request):
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 查询小用例
@@ -786,7 +988,7 @@ def SmallList(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 删除小用例
@@ -804,7 +1006,7 @@ def SmallDel(request):
             DbStep.objects.filter(id=case['id']).update(index=i)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 小用例下拉框查询接口
@@ -824,7 +1026,7 @@ def SmallGet(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 保存接口
@@ -873,7 +1075,7 @@ def SmallOrder(request):
             DbStep.objects.filter(id=case['id']).update(index=i)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 查看报告
@@ -899,7 +1101,7 @@ def LookReport(request):
             })
         community(request, method)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 报告路径
@@ -929,7 +1131,7 @@ def RunCase(request):
         dic = json.dumps(RE.SUCCESS.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 全局变量查询
@@ -967,7 +1169,7 @@ def Variable(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 全局变量编辑/新增
@@ -994,7 +1196,7 @@ def DoEdit(request):
             )
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 全局变量删除
@@ -1012,7 +1214,7 @@ def GloDel(request):
                 DbGlobalData.objects.filter(id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 class UserForm(forms.Form):
@@ -1035,7 +1237,7 @@ def Runner(request):
         dic = {"code": 200, "data": "true", "msg": "上传成功！"}
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        community(request, method)
+        return community(request, method)
 
 
 # 公共方法
@@ -1054,8 +1256,7 @@ def community(request, method):
             res.status_code = 401
             return res
     else:
-
-        community(request, method)
+        return community(request, method)
 
 
 # 测试接口
@@ -1063,5 +1264,26 @@ def testmetod(request):
     method = "GET"
     if community(request, method) == RE.TRUE.value:
         pass
+    else:
+        return community(request, method)
+
+
+# 查询
+def GetReturned(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        ic(data)
+        Id = data['id']
+        if Returned.objects.filter(apis_id=Id).values().count() == 0:
+            dic = {"code": 32001, "data": False, "msg": "查询结果为空"}
+        else:
+            relist = Returned.objects.filter(apis_id=Id).values()[0]
+            dic = {
+                "code": 200,
+                "data": relist,
+                "msg": "OK"
+            }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)

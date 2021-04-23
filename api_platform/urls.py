@@ -136,7 +136,9 @@ urlpatterns = [
     url(r'^global/DoEdit', DoEdit),
     url(r'^global/GloDel', GloDel),
     url(r'^httprunner/update', Runner),
-    url(r'^testmetod', testmetod),
+    url(r'^project/Returned', GetReturned),
+
+    url(r'^testmetod', testmetod),  # 测试使用接口
 
 ]
 
