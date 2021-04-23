@@ -22,32 +22,26 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:platform" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="解決跨域">
-      <change afterPath="$PROJECT_DIR$/My_api/__pycache__/views_vue.cpython-38.pyc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug/ccc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/api_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_platform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2021_03_16_20_55____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2021_03_16_20_55____.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2021_04_11_10_06____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2021_04_11_10_06____.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/My_api/__pycache__/Run.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2021_04_11_10_06____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2021_04_11_10_06_取消提交了变更_[默认的]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views_api.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views_api.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views_vue.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views_vue.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/static/params/__pycache__/return_params.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/params/__pycache__/return_params.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/static/params/return_params.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/params/return_params.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/views_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/views_vue.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_vue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +94,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JupyterTrust" id="939af5a0-59c3-4c5f-8ab9-2e502333ef46" />
+  <component name="JupyterTrust" id="89e71df6-f5f0-4187-a50e-b71c691efc5b" />
   <component name="ProjectId" id="1oso5R90bBdDsstiDNOfqhyGsnM" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="新增" />
@@ -119,7 +113,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/vue-django" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -134,19 +128,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\platform\My_api" />
+      <recent name="D:\platform\My_api\templates" />
+      <recent name="D:\platform\My_api\static" />
+      <recent name="D:\platform\My_api\static\xialakuang\css" />
+      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\platform\My_api\static\xialakuang" />
       <recent name="D:\platform\My_api\templates" />
       <recent name="D:\automate\api_platform\My_api\static" />
       <recent name="D:\automate\api_platform\My_api\static\img" />
       <recent name="D:\automate\api_platform\My_api\static\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\platform\My_api\templates" />
-      <recent name="D:\platform\My_api\static" />
-      <recent name="D:\platform\My_api\static\xialakuang\css" />
-      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515" />
-      <recent name="D:\platform\My_api\static\xuanxiangla\201610091515\scss" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -156,14 +150,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ccc">
-    <configuration name="button.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/button.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Python.public_method">
+    <configuration name="1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/Reports/1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="button.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/static/button/button.html" useBuiltInWebServerPort="true">
+    <configuration name="2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/Reports/2.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="welcome.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/welcome.html" useBuiltInWebServerPort="true">
+    <configuration name="5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/Reports/5.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="ccc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -247,7 +241,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="host" value="" />
-      <option name="additionalOptions" value="localhost:8080" />
+      <option name="additionalOptions" value="192.168.1.42:8080" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
@@ -257,19 +251,19 @@
     </configuration>
     <list>
       <item itemvalue="Django 服务器.api_platform" />
-      <item itemvalue="JavaScript 调试.button.html" />
-      <item itemvalue="JavaScript 调试.button.html (1)" />
-      <item itemvalue="JavaScript 调试.welcome.html" />
+      <item itemvalue="JavaScript 调试.5.html" />
+      <item itemvalue="JavaScript 调试.2.html" />
+      <item itemvalue="JavaScript 调试.1.html" />
       <item itemvalue="Python.public_method" />
       <item itemvalue="Python.ccc" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ccc" />
         <item itemvalue="Python.public_method" />
-        <item itemvalue="JavaScript 调试.welcome.html" />
-        <item itemvalue="JavaScript 调试.button.html" />
-        <item itemvalue="JavaScript 调试.button.html (1)" />
+        <item itemvalue="Python.ccc" />
+        <item itemvalue="JavaScript 调试.5.html" />
+        <item itemvalue="JavaScript 调试.1.html" />
+        <item itemvalue="JavaScript 调试.2.html" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +310,9 @@
       <workItem from="1618187278165" duration="26455000" />
       <workItem from="1618329460516" duration="807000" />
       <workItem from="1618334571115" duration="827000" />
-      <workItem from="1618407959116" duration="16483000" />
+      <workItem from="1618407959116" duration="17439000" />
+      <workItem from="1618792287409" duration="76858000" />
+      <workItem from="1619081329670" duration="7634000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -458,7 +454,35 @@
       <option name="project" value="LOCAL" />
       <updated>1617964374723</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="解決跨域">
+      <created>1618593071805</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1618593071805</updated>
+    </task>
+    <task id="LOCAL-00022" summary="修改bug">
+      <created>1619007555757</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1619007555757</updated>
+    </task>
+    <task id="LOCAL-00023" summary="文件上传">
+      <created>1619074063877</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619074063877</updated>
+    </task>
+    <task id="LOCAL-00024" summary="解決跨域">
+      <created>1619138632335</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1619138632335</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -484,7 +508,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="platform" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -498,71 +522,78 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="django" />
     <MESSAGE value="django-mysql" />
     <MESSAGE value="locust_test" />
     <MESSAGE value="new_home_change" />
+    <MESSAGE value="修改bug" />
+    <MESSAGE value="文件上传" />
     <MESSAGE value="解決跨域" />
     <option name="LAST_COMMIT_MESSAGE" value="解決跨域" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617928469004">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618996151501">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617928469004" />
-    <state x="710" y="140" key="CommitChangelistDialog2" timestamp="1618187705331">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618996151501" />
+    <state x="710" y="140" key="CommitChangelistDialog2" timestamp="1619138630983">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="710" y="140" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618187705331" />
+    <state x="710" y="140" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619138630983" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1617282354836">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617282354836" />
-    <state width="1676" height="250" key="GridCell.Tab.0.bottom" timestamp="1618578704561">
+    <state width="2005" height="329" key="GridCell.Tab.0.bottom" timestamp="1619091363110">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="2005" height="329" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619091363110" />
     <state width="1242" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.0.center" timestamp="1618578704561">
+    <state width="2005" height="329" key="GridCell.Tab.0.center" timestamp="1619091363110">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="2005" height="329" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619091363110" />
     <state width="1242" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.0.left" timestamp="1618578704561">
+    <state width="2005" height="329" key="GridCell.Tab.0.left" timestamp="1619091363110">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="2005" height="329" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619091363110" />
     <state width="1242" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.0.right" timestamp="1618578704561">
+    <state width="2005" height="329" key="GridCell.Tab.0.right" timestamp="1619091363110">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704561" />
+    <state width="2005" height="329" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619091363110" />
     <state width="1242" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.1.bottom" timestamp="1618578704442">
+    <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1619081302791">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
-    <state width="1676" height="250" key="GridCell.Tab.1.center" timestamp="1618578704442">
+    <state width="2005" height="376" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619081302791" />
+    <state width="2005" height="376" key="GridCell.Tab.1.center" timestamp="1619081302791">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
-    <state width="1676" height="250" key="GridCell.Tab.1.left" timestamp="1618578704442">
+    <state width="2005" height="376" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619081302791" />
+    <state width="2005" height="376" key="GridCell.Tab.1.left" timestamp="1619081302791">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
-    <state width="1676" height="250" key="GridCell.Tab.1.right" timestamp="1618578704442">
+    <state width="2005" height="376" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619081302791" />
+    <state width="2005" height="376" key="GridCell.Tab.1.right" timestamp="1619081302791">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618578704442" />
+    <state width="2005" height="376" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619081302791" />
+    <state x="736" y="258" key="RollbackChangesDialog" timestamp="1618792339860">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="736" y="258" key="RollbackChangesDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618792339860" />
     <state x="526" y="201" key="SettingsEditor" timestamp="1617240365686">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617240365686" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1617964377352">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1619138645297">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617964377352" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619138645297" />
     <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618187707926">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -588,11 +619,11 @@
     <SUITE FILE_PATH="coverage/api_platform$Unittest_in_run_case_py.coverage" NAME="Unittest in run_case.py Coverage Results" MODIFIED="1614564750688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
     <SUITE FILE_PATH="coverage/platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1616575518966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
     <SUITE FILE_PATH="coverage/platform$locaust.coverage" NAME="locust Coverage Results" MODIFIED="1615364443599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
-    <SUITE FILE_PATH="coverage/platform$public_method.coverage" NAME="public_method Coverage Results" MODIFIED="1617885827358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
+    <SUITE FILE_PATH="coverage/platform$public_method.coverage" NAME="public_method Coverage Results" MODIFIED="1619091330723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
     <SUITE FILE_PATH="coverage/platform$test_dingding.coverage" NAME="test_dingding Coverage Results" MODIFIED="1615288205355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$jiek.coverage" NAME="jiek Coverage Results" MODIFIED="1615536200517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$mysql_id_order_by.coverage" NAME="mysql_id_order_by Coverage Results" MODIFIED="1616569131422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
-    <SUITE FILE_PATH="coverage/platform$ccc.coverage" NAME="ccc Coverage Results" MODIFIED="1618493079144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$ccc.coverage" NAME="ccc Coverage Results" MODIFIED="1619080417313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$test.coverage" NAME="test Coverage Results" MODIFIED="1615863735013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
   </component>
 </project>

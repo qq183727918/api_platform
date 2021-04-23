@@ -585,10 +585,16 @@ class DbSession(models.Model):
         db_table = 'db_session'
 
 
-class Runner(models.Model):
-    name = models.CharField(max_length=255)
-    path = models.CharField(max_length=255)
+class Returned(models.Model):
+    apis_id = models.IntegerField(blank=True, max_length=11)
+    extract_path = models.TextField(blank=True)  # 提取返回值-路径法
+    extract_re = models.TextField(blank=True)  # 提取返回值-正则
+    assert_re = models.TextField(blank=True)  # 断言返回值-正则
+    assert_all = models.TextField(blank=True)  # 断言返回值-全文检索存在
+    assert_path = models.TextField(blank=True)  # 断言返回值-路径法
+    mock_res = models.TextField(blank=True)  # mock返回值
+    is_delete = models.IntegerField()
 
     class Meta:
         managed = False
-        db_table = 'runner'
+        db_table = 'returned'
