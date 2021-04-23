@@ -20,7 +20,7 @@ from icecream import ic
 from My_api.models import *
 from My_api.static.params.return_params import RE
 # 返回子页面
-from My_api.static.public_method.public_method import new_token, decode_token
+from My_api.static.public_method.public_method import new_token, decode_user
 
 
 def child(request, eid, oid, ooid):
@@ -1616,7 +1616,7 @@ class Token_JWT:
         if request.method == 'GET':
             token = request.headers['Authorization'].split(' ')[1]
             # 解码
-            token_time = decode_token(token).split(';')[1]
+            token_time = decode_user(token).split(';')[1]
             dt = datetime.datetime.strptime(token_time, '%Y-%m-%d %H:%M:%S')
             now_time = datetime.datetime.strptime(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
                                                   '%Y-%m-%d %H:%M:%S')

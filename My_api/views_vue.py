@@ -23,11 +23,11 @@ from icecream import ic
 from My_api.models import *
 from My_api.static.params.return_params import RE
 # Create your views here.
-from My_api.static.public_method.public_method import decode_token
+from My_api.static.public_method.public_method import decode_user, decode_time
 
 
 def publicKey(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         dic = {
             "code": 200,
             "data": {
@@ -43,9 +43,10 @@ def publicKey(request):
 
 
 def userInfo(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         Authorization = request.headers['Accesstoken']
-        user = decode_token(Authorization)
+        user = decode_user(Authorization)
         ic(user)
         dic = {
             "code": 200,
@@ -58,13 +59,13 @@ def userInfo(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        return community(request, method)
 
 
 # 项目列表查询
 def project_list(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         if "listName" in data:
@@ -91,13 +92,13 @@ def project_list(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        return community(request, method)
 
 
 # 项目列表查询
 def GetProList(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         queryset = DbProject.objects.filter(is_delete=0).order_by('-id').all()
         lists = []
         for project in queryset.values():
@@ -116,15 +117,15 @@ def GetProList(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 项目编辑/新增
 def project_edit(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         Authorization = request.headers['Accesstoken']
-        user = decode_token(Authorization)
+        user = decode_user(Authorization)
         ic(user)
         data = json.loads(request.body)
         ic(data)
@@ -146,31 +147,41 @@ def project_edit(request):
 
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 项目删除
 def project_del(request):
-    if request.method == 'DELETE':
+    method = "DELETE"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         Id = data['ids']
         if type(Id) == int:
-            DbProject.objects.filter(id=Id).update(is_delete=1)
+            if DbApis.objects.filter(project_id=Id).values().count() == 0:
+                DbProject.objects.filter(id=Id).update(is_delete=1)
+            else:
+                listName = DbProject.objects.filter(id=Id).values()[0]['listName']
+                dic = json.dumps({"code": 20010, "data": "false", "msg": f"项目{listName}下存在接口不能删除！"})
+                community(request, method)
         else:
             ids = Id.split(',')
             for i in ids:
-                DbProject.objects.filter(id=i).update(is_delete=1)
+                if DbApis.objects.filter(project_id=i).values().count() == 0:
+                    DbProject.objects.filter(id=i).update(is_delete=1)
+                else:
+                    listName = DbProject.objects.filter(id=i).values()[0]['listName']
+                    dic = json.dumps({"code": 20010, "data": "false", "msg": f"项目{listName}下存在接口不能删除！"})
+                    community(request, method)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 接口查询
 def project_Apis(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         if "listName" in data:
@@ -211,13 +222,13 @@ def project_Apis(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 用户查询
 def user_select(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
             ic(data)
@@ -251,25 +262,25 @@ def user_select(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 用户禁用
 def userDisable(request):
-    if request.method == 'PUT':
+    method = "PUT"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         DbUser.objects.filter(id=data['ids']).update(is_active=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 新增用户
 def NewUser(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         username = DbUser.objects.filter(username=data['username']).values().count()
@@ -283,22 +294,22 @@ def NewUser(request):
             dic = json.dumps({"code": 30005, "data": "false", "msg": "注册失败~用户名好像已经存在了~"})
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 退出登录
 def logout(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 接口删除
 def APisdel(request):
-    if request.method == 'DELETE':
+    method = "DELETE"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data, type(data['ids']))
         Id = data['ids']
@@ -310,13 +321,13 @@ def APisdel(request):
                 DbApis.objects.filter(id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 接口复制接口
 def copy_apis(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         api_id = data['ids']
@@ -345,26 +356,26 @@ def copy_apis(request):
         dic = json.dumps({'code': 200, 'data': True, 'message': 'ok'})
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 接口备注、名称修改
 def DesEdit(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         Id = data['id']
         DbApis.objects.filter(id=Id).update(des=data['des'], name=data['name'])
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 新增接口
 def SaveApis(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         dic_head = {}
@@ -419,13 +430,13 @@ def SaveApis(request):
         )
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 调试保存
 def DebugApis(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         dic_head = {}
@@ -488,13 +499,13 @@ def DebugApis(request):
         )
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 发送请求
 def SendRequest(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         dic_head = {}
@@ -578,13 +589,13 @@ def SendRequest(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 用例查询
 def getCases(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
             ic(data)
@@ -635,13 +646,13 @@ def getCases(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 用例删除
 def CaseDel(request):
-    if request.method == 'DELETE':
+    method = "DELETE"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data, type(data['ids']))
         Id = data['ids']
@@ -655,13 +666,13 @@ def CaseDel(request):
                 DbStep.objects.filter(Case_id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 新增用例
 def InNewCase(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
             ic(data)
@@ -686,13 +697,13 @@ def InNewCase(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 复制用例
 def CopyCase(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
             ic(data)
@@ -717,26 +728,26 @@ def CopyCase(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 用例编辑
 def CaseEdit(request):
-    if request.method == 'PUT':
+    method = "PUT"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         project_id = DbProject.objects.filter(listName=data['project_id']).values()[0]['id']
         DbCases.objects.filter(id=data['id']).update(des=data['des'], name=data['name'], project_id=project_id)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 新增小用例
 def SmallCase(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         if DbStep.objects.filter(Case_id=data['case_id'], name=data['name'], is_delete=0).values().count() == 0:
@@ -755,13 +766,13 @@ def SmallCase(request):
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 查询小用例
 def SmallList(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         smalls = DbStep.objects.filter(Case_id=data['id'], is_delete=0).order_by('index').values()
@@ -775,13 +786,13 @@ def SmallList(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 删除小用例
 def SmallDel(request):
-    if request.method == 'DELETE':
+    method = "DELETE"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         DbStep.objects.filter(Case_id=data['case_id'], index=data['ids']).update(is_delete=1)
@@ -793,13 +804,13 @@ def SmallDel(request):
             DbStep.objects.filter(id=case['id']).update(index=i)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 小用例下拉框查询接口
 def SmallGet(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         lists = DbApis.objects.filter(project_id=data['project_id'], is_delete=0).values()
@@ -813,13 +824,13 @@ def SmallGet(request):
         }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 保存接口
 def SmallOrder(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         small_list = data['case']
@@ -862,13 +873,13 @@ def SmallOrder(request):
             DbStep.objects.filter(id=case['id']).update(index=i)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 查看报告
 def LookReport(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         global case_ids
@@ -886,10 +897,9 @@ def LookReport(request):
                 "data": "true",
                 "message": "http://192.168.1.42:8080/project/Report"
             })
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 报告路径
@@ -903,7 +913,8 @@ def Report(request):
 
 # 运行用例
 def RunCase(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         Case_id = data['case_id']
@@ -918,13 +929,13 @@ def RunCase(request):
         dic = json.dumps(RE.SUCCESS.value)
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 全局变量查询
 def Variable(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
             ic(data)
@@ -956,13 +967,13 @@ def Variable(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 全局变量编辑/新增
 def DoEdit(request):
-    if request.method == 'POST':
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
         if "id" in data:
@@ -972,7 +983,7 @@ def DoEdit(request):
             )
         else:
             Authorization = request.headers['Accesstoken']
-            user = decode_token(Authorization)
+            user = decode_user(Authorization)
             ic(user)
             DbGlobalData.objects.create(
                 name=data['name'],
@@ -983,13 +994,13 @@ def DoEdit(request):
             )
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 # 全局变量删除
 def GloDel(request):
-    if request.method == 'DELETE':
+    method = "DELETE"
+    if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data, type(data['ids']))
         Id = data['ids']
@@ -1001,8 +1012,7 @@ def GloDel(request):
                 DbGlobalData.objects.filter(id=i).update(is_delete=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
 
 
 class UserForm(forms.Form):
@@ -1011,7 +1021,8 @@ class UserForm(forms.Form):
 
 @csrf_exempt
 def Runner(request):
-    if request.method == "POST":
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
         myFile = request.FILES.get("file", None)  # 获取上传的文件，如果没有文件，则默认为None
         ic(myFile)
         if not myFile:
@@ -1024,5 +1035,33 @@ def Runner(request):
         dic = {"code": 200, "data": "true", "msg": "上传成功！"}
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        dic = json.dumps(RE.WRONG_REQUEST.value)
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        community(request, method)
+
+
+# 公共方法
+def community(request, method):
+    if request.method == method:
+        if "Accesstoken" in request.headers:
+            Authorization = request.headers['Accesstoken']
+            if decode_time(Authorization):
+                return RE.TRUE.value
+            else:
+                res = HttpResponse(json.dumps({"code": 402, "data": False, "msg": "token失效"}))
+                res.status_code = 402
+                return res
+        else:
+            res = HttpResponse(json.dumps({"code": 401, "data": False, "msg": "token为空"}))
+            res.status_code = 401
+            return res
+    else:
+
+        community(request, method)
+
+
+# 测试接口
+def testmetod(request):
+    method = "GET"
+    if community(request, method) == RE.TRUE.value:
+        pass
+    else:
+        return community(request, method)

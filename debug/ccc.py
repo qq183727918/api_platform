@@ -6,10 +6,7 @@ _*_ coding: UTF-8 _*_
 @File      : ccc.py
 @Software  : PyCharm
 """
-import re
 
-a = '{{token}}'
-
-s = re.findall("{{(.*?)}}", a)
-if s:
-    print(s[0])
+with open('../My_api/static/httprunner/projectrequest.yml', 'r', encoding='utf-8') as f:
+    a = f.readlines()
+print(a)

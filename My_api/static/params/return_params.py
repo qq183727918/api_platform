@@ -22,3 +22,5 @@ class RE(Enum):
     WRONG_REQUEST = {"code": 30013, "data": "false", "msg": "请求方式错误"}
     # 编码格式
     CONTENT_TYPE = 'application/json;charset=utf-8'
+    # 返回值为真
+    TRUE = "用户有使用权限"

@@ -136,6 +136,8 @@ urlpatterns = [
     url(r'^global/DoEdit', DoEdit),
     url(r'^global/GloDel', GloDel),
     url(r'^httprunner/update', Runner),
+    url(r'^testmetod', testmetod),
+
 ]
 
 
