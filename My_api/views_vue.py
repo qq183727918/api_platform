@@ -679,11 +679,11 @@ def SendRequest(request):
                         continue
                     extract = i.split('=')
                     path = extract[1].split('/')
-                    values = ""
+                    values = res
                     for a in path:
                         if a == '':
                             continue
-                        py_path = res[a]
+                        py_path = values[a]
                         values = py_path
                     tractpath += f"{i} ==> {values}\n"
             except Exception as e:
@@ -731,11 +731,11 @@ def SendRequest(request):
                     extract = i.split('=')
                     path = extract[0].split('/')
                     extract_value = extract[1]
-                    values = ""
+                    values = res
                     for a in path:
                         if a == '':
                             continue
-                        py_path = res[a]
+                        py_path = values[a]
                         values = py_path
                     if str(values) == eval(extract_value):
                         PathAssert += f"{i} ==> True\n"
