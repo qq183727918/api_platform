@@ -502,13 +502,13 @@ def DebugApis(request):
             if radio == 2:
                 body_method = "Form-data"
                 for head in api_body:
-                    dic_body[head['key']] = head['value']
-                dic_body = json.loads(dic_body)
+                    dic_body[head["key"]] = head["value"]
+                dic_body = json.dumps(dic_body)
             if radio == 3:
                 body_method = "X-www-form-urlencoded"
                 for head in api_body:
                     dic_body[head['key']] = head['value']
-                dic_body = json.loads(dic_body)
+                dic_body = json.dumps(dic_body)
             if radio == 4:
                 body_method = "Raw"
                 ic(type(data['api_body']))
@@ -683,6 +683,11 @@ def SendRequest(request):
                     for a in path:
                         if a == '':
                             continue
+                        try:
+                            a = int(a)
+                        except Exception as e:
+                            ic(e)
+                            a = a
                         py_path = values[a]
                         values = py_path
                     tractpath += f"{i} ==> {values}\n"
@@ -735,6 +740,11 @@ def SendRequest(request):
                     for a in path:
                         if a == '':
                             continue
+                        try:
+                            a = int(a)
+                        except Exception as e:
+                            ic(e)
+                            a = a
                         py_path = values[a]
                         values = py_path
                     if str(values) == eval(extract_value):
