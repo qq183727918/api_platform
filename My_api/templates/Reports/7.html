@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>接口测试平台测试报告：的</title>
+    <title>接口测试平台测试报告：恶趣味</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
@@ -114,10 +114,10 @@ function html_escape(s) {
 }
 </script>
 <div class='heading'>
-<h1 style="font-family: Microsoft YaHei">接口测试平台测试报告：的</h1>
+<h1 style="font-family: Microsoft YaHei">接口测试平台测试报告：恶趣味</h1>
 <p class='attribute'><strong>测试人员 : </strong> 最棒QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2021-04-22 11:13:55</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:03.433241</p>
+<p class='attribute'><strong>开始时间 : </strong> 2021-04-25 16:31:59</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:03.065579</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 1，通过 1，通过率= 100.00%</p>
 
 <p class='description'>用例描述</p>
@@ -158,7 +158,7 @@ function html_escape(s) {
 </tr>
 
 <tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_001: 的</div></td>
+    <td class='passCase'><div class='testcase'>test_001: 委屈</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
@@ -170,12 +170,12 @@ function html_escape(s) {
     
 pt1_1: 
 【host】： http://wms.test.vevor.net
-【url】： http://wms.test.vevor.net/api/wms-authorization-service/controller-authLoginController/login?tenantId=vevor&amp;username=vevor&amp;password=150448c665e0f0826fe834292d7f6f71&amp;grant_type=password&amp;type=account
+【url】： http://wms.test.vevor.net/api/wms-inbound-orders-service/controller-overseasInboundOrderItems/front/queryInboundOrderList?createdStartTime=&amp;createdEndTime=&amp;orderSn=RK2021041500000005&amp;targetWarehouse=1&amp;temporaryOrder=0&amp;currentPage=1&amp;pageSize=10
 【header】： {'Authorization': 'Basic Y2FjNDI1MTEtMzc4ZC00MmQ0LTk4ZWUtYjdmM2U0MDU1NjE2OjE1MGU5OTI1LWUxYzctNGZlZi05ZmQ4LWIwYzU5Mzg3ZmMzMQ==', 'Set-Cookie': 'SESSION=ZWJiMzc2N2YtM2UwMS00ZTc0LWIzZDYtYTA5ZGIyOTMwNmY5; Path=/; HttpOnly; SameSite=Lax'}
-【method】： POST
-【body_method】： Form-data
-【body】： {"tenantId": "vevor", "username": "vevor", "password": "150448c665e0f0826fe834292d7f6f71", "grant_type": "password", "type": "account"}
-【返回体】： {"code":200,"message":"OK","data":{"access_token":"2d3004f8-c61f-484a-b1b8-5f273b8b78a4","token_type":"bearer","refresh_token":"e3635455-1e13-431a-8e14-7605f338e5b4","expires_in":3521837,"scope":"all","user":{"id":37,"type":1,"tenantId":888891,"tenantCode":"vevor","supperTenant":false,"userNo":"vevor","username":"vevor","nikeName":"vevor","password":"","pwdLastUpdate":"2021-01-28 09:03:56","expireDatetime":"2022-01-28 09:03:56","delete":0,"active":1,"activeRemark":"正常","lock":0,"authorizeSet":["ROLE_USER"],"avatarUrl":null}}}
+【method】： GET
+【body_method】： 
+【body】： {}
+【返回体】： {"code":401,"message":"token为空","data":null}
 
 
     </pre>

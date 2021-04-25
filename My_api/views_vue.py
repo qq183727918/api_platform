@@ -341,7 +341,7 @@ def copy_apis(request):
                               api_url=old_api.api_url,
                               api_header=old_api.api_header,
                               api_login=old_api.api_login,
-                              api_host=old_api.api_host,
+                              # api_host=old_api.api_host,
                               des=old_api.des,
                               body_method=old_api.body_method,
                               api_body=old_api.api_body,
@@ -354,8 +354,22 @@ def copy_apis(request):
                               last_api_body=old_api.last_api_body,
                               is_delete=0
                               )
+        api_name = old_api.name + '_副本'
+        apisIds = DbApis.objects.filter(name=api_name).values()[0]['id']
+        apisId = Returned.objects.filter(apis_id=api_id).values()[0]
+        Returned.objects.create(
+            apis_id=apisIds,
+            extract_path=apisId['extract_path'],
+            extract_re=apisId['extract_re'],
+            expected=apisId['expected'],
+            assert_re=apisId['assert_re'],
+            assert_path=apisId['assert_path'],
+            mock_res=apisId['mock_res'],
+            is_delete=0,
+        )
+        ic(apisId)
         # 返回
-        dic = json.dumps({'code': 200, 'data': True, 'message': 'ok'})
+        dic = json.dumps({'code': 200, 'data': True, 'msg': 'ok'})
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -418,6 +432,10 @@ def SaveApis(request):
         else:
             pass
         result = data['result']
+        if type(result) == dict:
+            results = json.dumps(result)
+        else:
+            results = result
         if "AssertRe" in data:
             AssertRe = data['AssertRe']
         else:
@@ -452,7 +470,7 @@ def SaveApis(request):
                 api_header=json.dumps(dic_head),
                 api_body=json.dumps(dic_body),
                 api_tag=tag,
-                result=result,
+                result=results,
                 body_method=body_method,
                 is_delete=0,
             )
@@ -719,13 +737,22 @@ def SendRequest(request):
                 }
                 return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         if "AssertRe" in data:
-            AssertRe = data['AssertRe']
-            datas = AssertRe.split('\n')
-            for i in datas:
-                if i in str(res):
-                    ReAssert += f"{i} ==> True\n"
-                else:
-                    ReAssert += f"{i} ==> False\n"
+            try:
+                AssertRe = data['AssertRe']
+                datas = AssertRe.split('\n')
+                for i in datas:
+                    if i in str(res):
+                        ReAssert += f"{i} ==> True\n"
+                    else:
+                        ReAssert += f"{i} ==> False\n"
+            except Exception as e:
+                ic(e)
+                dic = {
+                    "code": 35010,
+                    "data": "false",
+                    "msg": "断言正则输入有误请仔细检查！"
+                }
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         if "AssertPath" in data:
             AssertPath = data['AssertPath']
             try:
@@ -756,7 +783,7 @@ def SendRequest(request):
                 dic = {
                     "code": 35010,
                     "data": "false",
-                    "msg": "输入有误请仔细检查！"
+                    "msg": "断言路径输入有误请仔细检查！"
                 }
                 return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         if "ExpectedResult" in data:
@@ -785,7 +812,7 @@ def SendRequest(request):
                 dic = {
                     "code": 35010,
                     "data": "false",
-                    "msg": "输入有误请仔细检查！"
+                    "msg": "全文检索输入有误请仔细检查！"
                 }
                 return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
 
@@ -988,9 +1015,13 @@ def SmallList(request):
         data = json.loads(request.body)
         ic(data)
         smalls = DbStep.objects.filter(Case_id=data['id'], is_delete=0).order_by('index').values()
+        a = smalls.count()
+        ic(a)
         small = []
         for s in smalls:
             small.append(s)
+        ic(len(small))
+        ic(small)
         dic = {
             "code": 200,
             "data": small,
@@ -1109,7 +1140,7 @@ def LookReport(request):
                 "data": "true",
                 "message": "http://192.168.1.42:8080/project/Report"
             })
-        community(request, method)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
 

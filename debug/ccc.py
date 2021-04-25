@@ -6,9 +6,8 @@ _*_ coding: UTF-8 _*_
 @File      : ccc.py
 @Software  : PyCharm
 """
-import re
+import json
 
-dic = "{'code': 401, 'data': 'true', 'message': 'token为空'}"
+a = {'code': 304214, 'message': '抱歉！外网无法访问网站', 'data': None}
 
-pa = re.findall('code(.*?),', dic)
-print(pa)
+print(json.dumps(a))
