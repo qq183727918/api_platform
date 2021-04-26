@@ -211,7 +211,7 @@ def project_Apis(request):
             listName = DbProject.objects.filter(id=project['project_id']).values()[0]['listName']
             project['listName'] = listName
             project['api_header'] = json.loads(project['api_header'])
-            project['api_body'] = json.loads(project['api_body'])
+            project['api_body'] = project['api_body']
             lists.append(project)
 
         dic = {
@@ -279,8 +279,7 @@ def userDisable(request):
 
 # 新增用户
 def NewUser(request):
-    method = "POST"
-    if community(request, method) == RE.TRUE.value:
+    if request.method == "POST":
         data = json.loads(request.body)
         ic(data)
         username = DbUser.objects.filter(username=data['username']).values().count()
@@ -294,7 +293,7 @@ def NewUser(request):
             dic = json.dumps({"code": 30005, "data": "false", "msg": "注册失败~用户名好像已经存在了~"})
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
-        return community(request, method)
+        return HttpResponse(json.dumps(RE.WRONG_REQUEST.value), content_type=RE.CONTENT_TYPE.value)
 
 
 # 退出登录
@@ -335,12 +334,18 @@ def copy_apis(request):
         api_id = data['ids']
         # 开始复制接口
         old_api = DbApis.objects.filter(id=api_id)[0]
+        names = old_api.name
+        apis_num = DbApis.objects.filter(name__contains=names).values().count()
+
+        for i in range(apis_num):
+            names += '_副本'
         DbApis.objects.create(project_id=old_api.project_id,
-                              name=old_api.name + '_副本',
+                              name=names,
                               api_models=old_api.api_models,
                               api_url=old_api.api_url,
                               api_header=old_api.api_header,
                               api_login=old_api.api_login,
+                              api_tag=old_api.api_tag,
                               # api_host=old_api.api_host,
                               des=old_api.des,
                               body_method=old_api.body_method,
@@ -354,7 +359,7 @@ def copy_apis(request):
                               last_api_body=old_api.last_api_body,
                               is_delete=0
                               )
-        api_name = old_api.name + '_副本'
+        api_name = names
         apisIds = DbApis.objects.filter(name=api_name).values()[0]['id']
         apisId = Returned.objects.filter(apis_id=api_id).values()[0]
         Returned.objects.create(
@@ -369,7 +374,7 @@ def copy_apis(request):
         )
         ic(apisId)
         # 返回
-        dic = json.dumps({'code': 200, 'data': True, 'msg': 'ok'})
+        dic = json.dumps({"code": 200, "data": True, "msg": "ok"})
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -545,7 +550,8 @@ def DebugApis(request):
             dic_head[head['key']] = head['value']
         if dic_head == {'': ''}:
             dic_head = {}
-        if dic_body == {'': ''}:
+
+        if dic_body == {"": ""}:
             dic_body = {}
         result = data['result']
         if type(result) == dict:
@@ -623,12 +629,23 @@ def SendRequest(request):
                 api_body = {}
             if radio == 2:
                 api_body = data['api_body']
+                ic(api_body)
                 for head in api_body:
-                    dic_body[head['key']] = head['value']
+                    glos = re.findall("{{(.*?)}}", head['value'])
+                    if glos:
+                        aw = DbGlobalData.objects.filter(name=glos[0]).values()[0]
+                        dic_body[head['key']] = aw['data']
+                    else:
+                        dic_body[head['key']] = head['value']
             if radio == 3:
                 api_body = data['api_body']
                 for head in api_body:
-                    dic_body[head['key']] = head['value']
+                    glos = re.findall("{{(.*?)}}", head['value'])
+                    if glos:
+                        aw = DbGlobalData.objects.filter(name=glos[0]).values()[0]
+                        dic_body[head['key']] = aw['data']
+                    else:
+                        dic_body[head['key']] = head['value']
             if radio == 4:
                 if type(data['api_body']) == str:
                     dic_body = data['api_body']
@@ -637,14 +654,18 @@ def SendRequest(request):
         else:
             api_body = data['api_body']
             for head in api_body:
-                dic_body[head['key']] = head['value']
+                glos = re.findall("{{(.*?)}}", head['value'])
+                if glos:
+                    aw = DbGlobalData.objects.filter(name=glos[0]).values()[0]
+                    dic_body[head['key']] = aw['data']
+                else:
+                    dic_body[head['key']] = head['value']
 
         for head in data['header']:
             ic(head['value'])
             glo = re.findall("{{(.*?)}}", head['value'])
             if glo:
                 a = DbGlobalData.objects.filter(name=glo[0]).values()[0]
-                ic(a)
                 dic_head[head['key']] = a['data']
             else:
                 dic_head[head['key']] = head['value']
@@ -654,20 +675,20 @@ def SendRequest(request):
             pass
         try:
             if data['radio'] == 1:
-                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data={})
+                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data={}, verify=False)
             elif data['radio'] == 2:
                 files = []
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head, data=dic_body,
-                                            files=files)
+                                            files=files, verify=False)
             elif data['radio'] == 3:
                 dic_head['Content-Type'] = 'application/x-www-form-urlencoded'
-                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data=dic_body)
+                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data=dic_body, verify=False)
             elif data['radio'] == 4:
                 ic(dic_body)
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head,
-                                            data=json.dumps(dic_body).encode('utf-8'))
+                                            data=json.dumps(dic_body).encode('utf-8'), verify=False)
             else:
-                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data={})
+                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data={}, verify=False)
         except Exception as e:
             ic(e)
             dic = {
@@ -676,7 +697,7 @@ def SendRequest(request):
                 "msg": "非法API请求地址：请检查是否正确填写URL以及URL是否允许访问"
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
-
+        ic(dic_body)
         response.encoding = "utf-8"
         res = response.json()
         ic(res)
@@ -1079,6 +1100,7 @@ def SmallOrder(request):
         small_list = data['case']
         for small in small_list:
             api = DbApis.objects.filter(id=small['apiid']).values()[0]
+            returned = Returned.objects.filter(apis_id=small['apiid']).values()[0]
             ic(api)
             apis = api['api_url']
             if apis[0:7] == 'http://':
@@ -1107,7 +1129,13 @@ def SmallOrder(request):
                 api_url=path,
                 api_header=api['api_header'],
                 api_body=api['api_body'],
-                api_body_method=api['body_method']
+                api_body_method=api['body_method'],
+                get_path=returned['extract_path'],
+                get_zz=returned['extract_re'],
+                assert_path=returned['assert_path'],
+                assert_zz=returned['assert_re'],
+                assert_qz=returned['expected'],
+                mock_res=returned['mock_res'],
             )
         cases = DbStep.objects.filter(Case_id=data['case_id'], is_delete=0).order_by('index').values()
         i = 0
@@ -1161,6 +1189,13 @@ def RunCase(request):
         data = json.loads(request.body)
         ic(data)
         Case_id = data['case_id']
+        if DbStep.objects.filter(Case_id=Case_id).count() == 0:
+            dic = json.dumps({
+                "code": 32100,
+                "daya": False,
+                "msg": "该用例下没有接口存在"
+            })
+            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         Case_name = DbCases.objects.filter(id=Case_id).values()[0]['name']
         Case = DbStep.objects.filter(Case_id=Case_id)[0]
         steps = DbStep.objects.filter(Case_id=Case_id)
@@ -1326,5 +1361,30 @@ def GetReturned(request):
                 "msg": "OK"
             }
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# 异常值测试
+def ErrorPlay(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        apis = DbApis.objects.filter(id=data['id']).values()[0]
+        url = apis['api_url']
+        dic_body = data['abody']
+        dic_head = eval(apis['api_header'])
+        try:
+            response = requests.request(apis['api_models'].upper(), url=url, headers=dic_head, data=dic_body, verify=False)
+        except Exception as e:
+            ic(e)
+            dic = {
+                "code": 503001,
+                "data": "false",
+                "msg": "非法API请求地址：请检查是否正确填写URL以及URL是否允许访问"
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+        res = response.text
+        return HttpResponse(json.dumps({"code": 200, "data": res, "msg": "OK"}), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
