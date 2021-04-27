@@ -183,7 +183,9 @@ requests==2.24.0
 requests-toolbelt==0.9.1
 robotframework==3.2.2
 robotframework-pythonlibcore==2.1.0
+robotframework-requests==0.9.1
 robotframework-ride==1.7.4.2
+robotframework-selenium2library==3.0.0
 robotframework-seleniumlibrary==4.5.0
 scikit-image==0.18.1
 scipy==1.5.2

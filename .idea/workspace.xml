@@ -29,16 +29,30 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="">
+    <list default="true" id="7c8f87c7-80d7-4d0c-a22f-29780057091e" name="默认的" comment="path提取优化">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Test__RobotFramework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RobotFramework/first.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/__pycache__/looger.cpython-38.pyc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/looger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/all-2021-04-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/platform.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/models.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/run_case.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/__pycache__/views_vue.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/__pycache__/views_vue.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/My_api/run_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/run_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/static/public_method/public_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/static/public_method/public_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/EOLINKER.html" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/EOLINKER.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/My_api/templates/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/templates/logins.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/My_api/views_vue.py" beforeDir="false" afterPath="$PROJECT_DIR$/My_api/views_vue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__pycache__/manage.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/__pycache__/manage.cpython-38.pyc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/settings.cpython-38.pyc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/__pycache__/urls.cpython-38.pyc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug/ccc.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug/ccc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_platform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +68,8 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Robot Test Suite" />
+        <option value="Robot Keywords" />
         <option value="Python Script" />
       </list>
     </option>
@@ -91,7 +107,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JupyterTrust" id="89e71df6-f5f0-4187-a50e-b71c691efc5b" />
+  <component name="JupyterTrust" id="0c19c2c6-9839-4d06-929a-fc6c8b34fb5b" />
   <component name="ProjectId" id="1oso5R90bBdDsstiDNOfqhyGsnM" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="新增" />
@@ -110,7 +126,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/My_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -121,7 +137,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="service.view.auto.scroll.from.source" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -133,11 +149,11 @@
       <recent name="D:\platform\My_api\static\xuanxiangla\201610091515" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\platform\RobotFramework" />
       <recent name="D:\platform\My_api\static\xialakuang" />
       <recent name="D:\platform\My_api\templates" />
       <recent name="D:\automate\api_platform\My_api\static" />
       <recent name="D:\automate\api_platform\My_api\static\img" />
-      <recent name="D:\automate\api_platform\My_api\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -147,17 +163,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ccc">
-    <configuration name="1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/Reports/1.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Django 测试.Test: RobotFramework">
+    <configuration name="button.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/button.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/Reports/2.html" useBuiltInWebServerPort="true">
+    <configuration name="logins.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/logins.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/Reports/5.html" useBuiltInWebServerPort="true">
+    <configuration name="welcome1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/welcome1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="ccc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="welcome.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/platform/My_api/templates/welcome.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ride" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="api_platform" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -165,34 +184,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Programs/Python/Python38/Scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/debug/ccc.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="public_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="api_platform" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/My_api/static/public_method" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/My_api/static/public_method/public_method.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Programs/Python/Python38/Scripts/ride.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -248,19 +245,20 @@
     </configuration>
     <list>
       <item itemvalue="Django 服务器.api_platform" />
-      <item itemvalue="JavaScript 调试.5.html" />
-      <item itemvalue="JavaScript 调试.2.html" />
-      <item itemvalue="JavaScript 调试.1.html" />
-      <item itemvalue="Python.public_method" />
-      <item itemvalue="Python.ccc" />
+      <item itemvalue="JavaScript 调试.welcome.html" />
+      <item itemvalue="JavaScript 调试.welcome1.html" />
+      <item itemvalue="JavaScript 调试.logins.html" />
+      <item itemvalue="JavaScript 调试.button.html" />
+      <item itemvalue="Python.ride" />
+      <item itemvalue="Django 测试.Test: RobotFramework" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ccc" />
-        <item itemvalue="Python.public_method" />
-        <item itemvalue="JavaScript 调试.5.html" />
-        <item itemvalue="JavaScript 调试.1.html" />
-        <item itemvalue="JavaScript 调试.2.html" />
+        <item itemvalue="Python.ride" />
+        <item itemvalue="JavaScript 调试.button.html" />
+        <item itemvalue="JavaScript 调试.logins.html" />
+        <item itemvalue="JavaScript 调试.welcome1.html" />
+        <item itemvalue="JavaScript 调试.welcome.html" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +307,11 @@
       <workItem from="1618334571115" duration="827000" />
       <workItem from="1618407959116" duration="17439000" />
       <workItem from="1618792287409" duration="76858000" />
-      <workItem from="1619081329670" duration="28833000" />
+      <workItem from="1619081329670" duration="28867000" />
+      <workItem from="1619310743077" duration="26283000" />
+      <workItem from="1619485992711" duration="7984000" />
+      <workItem from="1619521958356" duration="1257000" />
+      <workItem from="1619523230835" duration="3892000" />
     </task>
     <task id="LOCAL-00001" summary="django">
       <created>1614085021164</created>
@@ -486,7 +488,35 @@
       <option name="project" value="LOCAL" />
       <updated>1619140258529</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="返回值提取断言">
+      <created>1619171252679</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1619171252679</updated>
+    </task>
+    <task id="LOCAL-00027" summary="path提取优化">
+      <created>1619316373130</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1619316373130</updated>
+    </task>
+    <task id="LOCAL-00028" summary="path提取优化">
+      <created>1619354927221</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1619354927221</updated>
+    </task>
+    <task id="LOCAL-00029" summary="异常值测试页面接口完成">
+      <created>1619438421975</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1619438421975</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -535,86 +565,101 @@
     <MESSAGE value="修改bug" />
     <MESSAGE value="文件上传" />
     <MESSAGE value="解決跨域" />
-    <option name="LAST_COMMIT_MESSAGE" value="解決跨域" />
+    <MESSAGE value="返回值提取断言" />
+    <MESSAGE value="path提取优化" />
+    <MESSAGE value="异常值测试页面接口完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="异常值测试页面接口完成" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618996151501">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619349195610">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618996151501" />
-    <state x="710" y="140" key="CommitChangelistDialog2" timestamp="1619140257480">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619349195610" />
+    <state x="710" y="140" key="CommitChangelistDialog2" timestamp="1619438421178">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="710" y="140" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619140257480" />
+    <state x="710" y="140" key="CommitChangelistDialog2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619438421178" />
     <state width="874" height="466" key="DebuggerActiveHint" timestamp="1619170833989">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="874" height="466" key="DebuggerActiveHint/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619170833989" />
-    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1619162618350">
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1619522675762">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619162618350" />
-    <state width="1676" height="250" key="GridCell.Tab.0.bottom" timestamp="1619171073060">
+    <state x="805" y="311" key="FileChooserDialogImpl/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619522675762" />
+    <state width="1676" height="247" key="GridCell.Tab.0.bottom" timestamp="1619527047041">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
+    <state width="1676" height="247" key="GridCell.Tab.0.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619527047041" />
     <state width="1242" height="246" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.0.center" timestamp="1619171073060">
+    <state width="1676" height="247" key="GridCell.Tab.0.center" timestamp="1619527047040">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
+    <state width="1676" height="247" key="GridCell.Tab.0.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619527047040" />
     <state width="1242" height="246" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.0.left" timestamp="1619171073059">
+    <state width="1676" height="247" key="GridCell.Tab.0.left" timestamp="1619527047040">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073059" />
+    <state width="1676" height="247" key="GridCell.Tab.0.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619527047040" />
     <state width="1242" height="246" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.0.right" timestamp="1619171073060">
+    <state width="1676" height="247" key="GridCell.Tab.0.right" timestamp="1619527047040">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
+    <state width="1676" height="247" key="GridCell.Tab.0.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619527047040" />
     <state width="1242" height="246" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617261902700" />
-    <state width="1676" height="250" key="GridCell.Tab.1.bottom" timestamp="1619171073060">
+    <state width="1676" height="422" key="GridCell.Tab.1.bottom" timestamp="1619418941717">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
-    <state width="1676" height="250" key="GridCell.Tab.1.center" timestamp="1619171073060">
+    <state width="1676" height="422" key="GridCell.Tab.1.bottom/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619418941717" />
+    <state width="1676" height="422" key="GridCell.Tab.1.center" timestamp="1619418941717">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
-    <state width="1676" height="250" key="GridCell.Tab.1.left" timestamp="1619171073060">
+    <state width="1676" height="422" key="GridCell.Tab.1.center/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619418941717" />
+    <state width="1676" height="422" key="GridCell.Tab.1.left" timestamp="1619418941717">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
-    <state width="1676" height="250" key="GridCell.Tab.1.right" timestamp="1619171073060">
+    <state width="1676" height="422" key="GridCell.Tab.1.left/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619418941717" />
+    <state width="1676" height="422" key="GridCell.Tab.1.right" timestamp="1619418941717">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1676" height="250" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619171073060" />
+    <state width="1676" height="422" key="GridCell.Tab.1.right/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619418941717" />
     <state x="736" y="258" key="RollbackChangesDialog" timestamp="1618792339860">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="736" y="258" key="RollbackChangesDialog/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618792339860" />
-    <state x="526" y="201" key="SettingsEditor" timestamp="1617240365686">
+    <state x="526" y="201" key="SettingsEditor" timestamp="1619523211830">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1617240365686" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1619140260582">
+    <state x="526" y="201" key="SettingsEditor/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619523211830" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1619438428608">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619140260582" />
-    <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618187707926">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619438428608" />
+    <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619310800440">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618187707926" />
-    <state x="687" y="243" key="search.everywhere.popup" timestamp="1618519804642">
+    <state x="838" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619310800440" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1619524183540">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1618519804642" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/-1920.528.1536.824/0.0.2048.1112@0.0.2048.1112" timestamp="1619524183540" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/platform$locust_test__1_.coverage" NAME="locust_test (1) Coverage Results" MODIFIED="1615531578340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$locust__1_.coverage" NAME="locust (1) Coverage Results" MODIFIED="1615364583006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/api$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614261898705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
+    <SUITE FILE_PATH="coverage/platform$ride.coverage" NAME="ride Coverage Results" MODIFIED="1619523159629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/Programs/Python/Python38/Scripts" />
     <SUITE FILE_PATH="coverage/api_platform$tests.coverage" NAME="tests Coverage Results" MODIFIED="1614325510564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
     <SUITE FILE_PATH="coverage/platform$ddd.coverage" NAME="ddd Coverage Results" MODIFIED="1617672812117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/api_platform$Unittest_in_run_case_py.coverage" NAME="Unittest in run_case.py Coverage Results" MODIFIED="1614564750688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api" />
@@ -624,7 +669,7 @@
     <SUITE FILE_PATH="coverage/platform$test_dingding.coverage" NAME="test_dingding Coverage Results" MODIFIED="1615288205355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$jiek.coverage" NAME="jiek Coverage Results" MODIFIED="1615536200517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$mysql_id_order_by.coverage" NAME="mysql_id_order_by Coverage Results" MODIFIED="1616569131422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/My_api/static/public_method" />
-    <SUITE FILE_PATH="coverage/platform$ccc.coverage" NAME="ccc Coverage Results" MODIFIED="1619165503783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
+    <SUITE FILE_PATH="coverage/platform$ccc.coverage" NAME="ccc Coverage Results" MODIFIED="1619429538864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
     <SUITE FILE_PATH="coverage/platform$test.coverage" NAME="test Coverage Results" MODIFIED="1615863735013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug" />
   </component>
 </project>

@@ -36,7 +36,6 @@ def decode_time(word):
     test_str = bytes(word, encoding='utf-8')
     decode_str = base64.decodebytes(test_str)
     strings = str(decode_str, encoding='utf-8').split(';')[1]
-    print(strings)
     return compare_time(strings)
 
 
@@ -45,11 +44,9 @@ def compare_time(time2):
     s_time = time.mktime(time.strptime(curr_time, "%Y-%m-%d %H:%M:%S"))
     e_time = time.mktime(time.strptime(time2, "%Y-%m-%d %H:%M:%S"))
     difference = int(e_time) - int(s_time)
-    print(curr_time, difference)
     if difference > 0:
         return True
     else:
         return False
 
 
-print(decode_time('YWRtaW47MjAyMS0wNC0yMiAxOToxNToyNg=='))

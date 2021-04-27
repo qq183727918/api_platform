@@ -14,7 +14,7 @@ import time
 import requests
 from django.core.paginator import Paginator
 from django.forms import forms
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
 # Create your views here.
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -24,6 +24,9 @@ from My_api.models import *
 from My_api.static.params.return_params import RE
 # Create your views here.
 from My_api.static.public_method.public_method import decode_user, decode_time
+import logging
+
+logger = logging.getLogger('log')
 
 
 def publicKey(request):
@@ -47,7 +50,7 @@ def userInfo(request):
     if community(request, method) == RE.TRUE.value:
         Authorization = request.headers['Accesstoken']
         user = decode_user(Authorization)
-        ic(user)
+        logger.info('登录用户：{}'.format(user))
         dic = {
             "code": 200,
             "data": {
@@ -67,7 +70,7 @@ def project_list(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         if "listName" in data:
             project_name = DbProject.objects.filter(id=data['listName']).order_by('-id').values()[0]['listName']
             queryset = DbProject.objects.filter(listName=project_name, is_delete=0).order_by('-id').all()
@@ -90,6 +93,7 @@ def project_list(request):
             "msg": "success",
             "totalCount": queryset.count()
         }
+        logger.info('请求成功：{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -115,6 +119,7 @@ def GetProList(request):
             "msg": "success",
             "totalCount": queryset.count()
         }
+        logger.info('请求成功：{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -126,11 +131,10 @@ def project_edit(request):
     if community(request, method) == RE.TRUE.value:
         Authorization = request.headers['Accesstoken']
         user = decode_user(Authorization)
-        ic(user)
         data = json.loads(request.body)
-        ic(data)
         listName = data['listName']
         remark = data['remark']
+        logger.info('请求参数：{}'.format(data))
         if len(data) == 3:
             Id = data['id']
             DbProject.objects.filter(id=Id).update(listName=listName, remark=remark)
@@ -211,7 +215,7 @@ def project_Apis(request):
             listName = DbProject.objects.filter(id=project['project_id']).values()[0]['listName']
             project['listName'] = listName
             project['api_header'] = json.loads(project['api_header'])
-            project['api_body'] = project['api_body']
+            project['api_body'] = json.loads(project['api_body'])
             lists.append(project)
 
         dic = {
@@ -647,10 +651,8 @@ def SendRequest(request):
                     else:
                         dic_body[head['key']] = head['value']
             if radio == 4:
-                if type(data['api_body']) == str:
-                    dic_body = data['api_body']
-                else:
-                    dic_body = json.loads(data['api_body'])
+                dic_head['Content-Type'] = 'application/json'
+                dic_body = data['api_body']
         else:
             api_body = data['api_body']
             for head in api_body:
@@ -686,7 +688,7 @@ def SendRequest(request):
             elif data['radio'] == 4:
                 ic(dic_body)
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head,
-                                            data=json.dumps(dic_body).encode('utf-8'), verify=False)
+                                            data=dic_body, verify=False)
             else:
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head, data={}, verify=False)
         except Exception as e:
@@ -697,7 +699,6 @@ def SendRequest(request):
                 "msg": "非法API请求地址：请检查是否正确填写URL以及URL是否允许访问"
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
-        ic(dic_body)
         response.encoding = "utf-8"
         res = response.json()
         ic(res)
@@ -1326,12 +1327,15 @@ def community(request, method):
             else:
                 res = HttpResponse(json.dumps({"code": 402, "data": False, "msg": "token失效"}))
                 res.status_code = 402
+                logger.error('请求出错：{}'.format(res))
                 return res
         else:
             res = HttpResponse(json.dumps({"code": 401, "data": False, "msg": "token为空"}))
             res.status_code = 401
+            logger.error('请求出错：{}'.format(res))
             return res
     else:
+        logger.error('请求出错：{}'.format(community(request, method)))
         return community(request, method)
 
 
@@ -1349,7 +1353,7 @@ def GetReturned(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数！'.format(data))
         Id = data['id']
         if Returned.objects.filter(apis_id=Id).values().count() == 0:
             dic = {"code": 32001, "data": False, "msg": "查询结果为空"}
@@ -1360,6 +1364,7 @@ def GetReturned(request):
                 "data": relist,
                 "msg": "OK"
             }
+            logger.info('请求成功！'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)

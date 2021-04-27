@@ -589,7 +589,7 @@ class DbSession(models.Model):
 
 
 class Returned(models.Model):
-    apis_id = models.IntegerField(blank=True, max_length=11)
+    apis_id = models.IntegerField(blank=True)
     extract_path = models.TextField(blank=True)  # 提取返回值-路径法
     extract_re = models.TextField(blank=True)  # 提取返回值-正则
     expected = models.TextField(blank=True)  # 断言返回值-全文检索存在
