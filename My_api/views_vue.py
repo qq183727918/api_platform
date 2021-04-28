@@ -73,10 +73,9 @@ def login_action(request):
         # Authorization = request.headers['Authorization']
         # Authorization_ = 'Basic YzU5Mzg3ZmMzMQ=='
         if 'Authorization' == 'Authorization':
-            ic('Authorization')
             u_name = data['username']
             p_word = data['password']
-            ic(u_name, p_word, data)
+            logger.info('请求参数：{}'.format(data))
             if u_name == '':
                 dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
                 return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
@@ -94,7 +93,6 @@ def login_action(request):
                     if u_name == name['username']:
                         if p_word == name['password']:
                             token = new_token(name['username'])
-                            ic(token)
                             dic = json.dumps({"code": 200, "data": {"Authorization": token}, "message": "success"})
                             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
@@ -741,9 +739,24 @@ def SendRequest(request):
                 "msg": "非法API请求地址：请检查是否正确填写URL以及URL是否允许访问"
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
-        response.encoding = "utf-8"
-        res = response.json()
+        response.encoding = "gbk"
+        res = response.text
+        head = response.headers
+        if re.findall("{(.*?)}", res):
+            res = response.json()
+        else:
+            res = response.text
+        # 将头信息转为可以进行json序列化的
+        logger.info('API返回头部：{}'.format(head))
         logger.info('请求参数：{}'.format(res))
+        if 'Content-Disposition' in head:
+            head_file = head['Content-Disposition'].split(";")[1].strip().split("=")[1]
+            ic(head_file)
+            file_path = ''
+            with open(f"D:\\platform\\My_api\\static\\api_file\\{head_file}", "wb") as code:
+                code.write(response.content)
+        else:
+            file_path = False
         tractpath = ""
         tractre = ""
         ReAssert = ""
@@ -880,15 +893,16 @@ def SendRequest(request):
 
         dic = {
             "code": 200,
-            "data": response.json(),
+            "data": res,
             "ExtractPath": f'{tractpath}',
             "ExtractRe": f'{tractre}',
             "AssertRe": f"{ReAssert}",
             "AssertPath": f"{PathAssert}",
             "ResultExpected": f"{ResultExpected}",
+            "file_path": f"{file_path}",
             "message": "ok"
         }
-        logger.info('请求参数：{}'.format(dic))
+        logger.info('返回结果：{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
