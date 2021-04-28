@@ -23,7 +23,7 @@ from icecream import ic
 from My_api.models import *
 from My_api.static.params.return_params import RE
 # Create your views here.
-from My_api.static.public_method.public_method import decode_user, decode_time
+from My_api.static.public_method.public_method import decode_user, decode_time, new_token
 import logging
 
 logger = logging.getLogger('log')
@@ -48,7 +48,7 @@ def publicKey(request):
 def userInfo(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
-        Authorization = request.headers['Accesstoken']
+        Authorization = request.headers['Authorization']
         user = decode_user(Authorization)
         logger.info('登录用户：{}'.format(user))
         dic = {
@@ -63,6 +63,51 @@ def userInfo(request):
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
+
+
+# 登录
+def login_action(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        logger.info('请求参数：{}'.format(data))
+        # Authorization = request.headers['Authorization']
+        # Authorization_ = 'Basic YzU5Mzg3ZmMzMQ=='
+        if 'Authorization' == 'Authorization':
+            ic('Authorization')
+            u_name = data['username']
+            p_word = data['password']
+            ic(u_name, p_word, data)
+            if u_name == '':
+                dic = json.dumps({"code": 30001, "data": "false", "message": "请输入账号"})
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            if p_word == '':
+                dic = json.dumps({"code": 30002, "data": "false", "message": "请输入密码"})
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            # 开始联通用户库，查看用户密码是否正确
+            username = DbUser.objects.filter(username=u_name, is_active=0).values()
+
+            if username.count() == 0:
+                dic = json.dumps({"code": 30003, "data": "false", "msg": "用户名不存在或未请启用！"})
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            else:
+                for name in username:
+                    if u_name == name['username']:
+                        if p_word == name['password']:
+                            token = new_token(name['username'])
+                            ic(token)
+                            dic = json.dumps({"code": 200, "data": {"Authorization": token}, "message": "success"})
+                            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+
+                        else:
+                            dic = json.dumps({"code": 30004, "data": "false", "message": "密码错误，请重试！"})
+                            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+        else:
+            res = HttpResponse(json.dumps({"code": 401, "data": False, "message": "凭证错误！"}))
+            res.status_code = 401
+            return res
+    else:
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 项目列表查询
@@ -1312,8 +1357,8 @@ def Runner(request):
 def community(request, method):
     if request.method == method:
         try:
-            if "Accesstoken" in request.headers:
-                Authorization = request.headers['Accesstoken']
+            if "Authorization" in request.headers:
+                Authorization = request.headers['Authorization']
                 if decode_time(Authorization):
                     return RE.TRUE.value
                 else:

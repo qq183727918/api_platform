@@ -148,7 +148,7 @@ def user_upload(request):
 
 
 # 登录
-def login_action(request):
+def login(request):
     if request.method == "POST":
         data = json.loads(request.body)
         ic(data)
