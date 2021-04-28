@@ -138,6 +138,7 @@ urlpatterns = [
     url(r'^httprunner/update', Runner),
     url(r'^project/Returned', GetReturned),
     url(r'^apis/ErrorPlay', ErrorPlay),
+    url(r'^apis/Orthogonal', Orthogonal),
 
     url(r'^testmetod', testmetod),  # 测试使用接口
 

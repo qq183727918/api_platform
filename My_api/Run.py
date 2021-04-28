@@ -34,7 +34,7 @@ class Test(unittest.TestCase):
         api_method = step.api_method
         api_url = step.api_url
         api_host = step.api_host
-        api_header = {"Authorization": "Basic Y2FjNDI1MTEtMzc4ZC00MmQ0LTk4ZWUtYjdmM2U0MDU1NjE2OjE1MGU5OTI1LWUxYzctNGZlZi05ZmQ4LWIwYzU5Mzg3ZmMzMQ==", "Set-Cookie": "SESSION=ZWJiMzc2N2YtM2UwMS00ZTc0LWIzZDYtYTA5ZGIyOTMwNmY5; Path=/; HttpOnly; SameSite=Lax"}
+        api_header = step.api_header
         api_body_method = step.api_body_method
         api_body = step.api_body
         url = api_host + api_url

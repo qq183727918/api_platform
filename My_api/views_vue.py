@@ -12,6 +12,7 @@ import re
 import time
 
 import requests
+from allpairspy import AllPairs
 from django.core.paginator import Paginator
 from django.forms import forms
 from django.http import HttpResponse
@@ -1311,9 +1312,8 @@ def DoEdit(request):
                 data=data['data'],
             )
         else:
-            Authorization = request.headers['Accesstoken']
+            Authorization = request.headers['Authorization']
             user = decode_user(Authorization)
-            ic(user)
             DbGlobalData.objects.create(
                 name=data['name'],
                 data=data['data'],
@@ -1453,5 +1453,38 @@ def ErrorPlay(request):
         res = response.text
         logger.info('请求参数！'.format(res))
         return HttpResponse(json.dumps({"code": 200, "data": res, "msg": "OK"}), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# 正交运行
+def Orthogonal(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        ic(data)
+        logger.info('请求参数！'.format(data))
+        end_values = data['end_values']
+
+        new_values = [i['value'].split('/') for i in end_values]
+        ic(new_values)
+        res = []
+        if new_values == [['']]:
+            dic = {"code": 200, "res": [], "msg": "OK"}
+        else:
+            for s in AllPairs(new_values):
+                res.append(s)
+            response = []
+            for i in res:
+                ic(i)
+                hj = []
+                for j in range(len(i)):
+                    a = f"{end_values[j]['key']}: {i[j]}"
+                    hj.append(a)
+                response.append(hj)
+                hj = []
+            ic(response)
+            dic = {"code": 200, "res": response, "msg": "OK"}
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)

@@ -20,12 +20,11 @@ if not os.path.exists(log_path): os.mkdir(log_path)
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'formatters': {
         # 日志格式
         'standard': {
-            'format': '[%(asctime)s] [%(filename)s:%(lineno)d] [%(module)s:%(funcName)s] '
-                      '[%(levelname)s]- %(message)s'},
+            'format': '[%(asctime)s]-[%(process)d]-[%(filename)s:%(lineno)d]-[%(module)s:%(funcName)s]-[%(levelname)s]- %(message)s'},
         'simple': {  # 简单格式
             'format': '%(levelname)s %(message)s'
         },
