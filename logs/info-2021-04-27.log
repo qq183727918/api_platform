@@ -1,0 +1,69 @@
+[2021-04-27 20:16:55,834] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:16:55,834] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:16:55,835] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:16:55,837] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:17:52,354] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:17:52,506] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:17:52,519] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:19:33,819] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:19:33,836] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:19:48,666] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:19:48,907] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:19:48,917] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:19:48,917] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:27:19,183] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:27:19,375] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:27:19,383] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:27:19,386] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:28:18,607] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:28:18,758] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:28:18,780] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:28:18,782] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:39:40,964] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:39:41,276] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:39:41,286] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:39:41,290] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:40:55,017] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:40:55,210] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:40:55,217] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:40:55,221] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:41:01,401] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:41:01,704] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:41:01,980] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:41:02,284] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:41:02,440] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:41:02,448] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:41:02,451] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:41:05,145] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:41:05,352] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:41:05,361] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:41:05,364] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:41:07,781] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-27 20:41:07,907] [views_vue.py:73] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-27 20:41:07,914] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-27 20:41:07,921] [views_vue.py:96] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 09:28:12,445] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:12,446] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:12,447] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:12,447] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:23,038] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 09:28:23,605] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 09:28:25,022] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 09:28:25,029] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 09:31:55,449] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 09:31:55,769] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 09:31:57,614] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 09:31:57,619] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 09:32:02,083] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 09:32:02,089] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:04:01,567] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:05:03,346] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:08:27,463] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:08:27,469] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:08:49,503] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:08:49,508] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:08:55,367] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:10:41,261] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:15:04,323] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:15:04,342] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:16:13,320] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}

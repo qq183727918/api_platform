@@ -1,0 +1,26 @@
+[2021-04-27 20:16:55,834] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:16:55,834] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:16:55,835] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-27 20:16:55,837] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+INFO 2021-04-27 20:38:40,082 autoreload 617 Watching for file changes with StatReloader
+INFO 2021-04-27 20:38:46,352 basehttp 157 "POST /userInfo HTTP/1.1" 200 163
+INFO 2021-04-27 20:38:46,517 basehttp 157 "POST /project/getList HTTP/1.1" 200 269
+INFO 2021-04-27 20:38:46,519 basehttp 157 "POST /project/GetProList HTTP/1.1" 200 269
+INFO 2021-04-27 20:38:52,525 basehttp 157 "POST /project/getList HTTP/1.1" 200 269
+INFO 2021-04-27 20:38:53,776 basehttp 157 "POST /project/getList HTTP/1.1" 200 269
+INFO 2021-04-27 20:38:57,869 basehttp 157 "OPTIONS /project/doEdit HTTP/1.1" 200 0
+INFO 2021-04-27 20:38:57,879 basehttp 157 "POST /project/doEdit HTTP/1.1" 200 46
+INFO 2021-04-27 20:38:57,904 basehttp 157 "POST /project/getList HTTP/1.1" 200 269
+INFO 2021-04-27 20:39:06,725 basehttp 157 "OPTIONS /project/getApis HTTP/1.1" 200 0
+INFO 2021-04-27 20:39:06,845 basehttp 157 "POST /project/GetProList HTTP/1.1" 200 269
+INFO 2021-04-27 20:39:07,341 basehttp 157 "POST /project/getApis HTTP/1.1" 200 68888
+INFO 2021-04-27 20:39:08,078 basehttp 157 "OPTIONS /project/getCases HTTP/1.1" 200 0
+INFO 2021-04-27 20:39:08,119 basehttp 157 "POST /project/GetProList HTTP/1.1" 200 269
+INFO 2021-04-27 20:39:08,132 basehttp 157 "POST /project/getCases HTTP/1.1" 200 60
+INFO 2021-04-27 20:39:09,500 basehttp 157 "POST /project/getList HTTP/1.1" 200 269
+INFO 2021-04-27 20:39:09,501 basehttp 157 "POST /project/GetProList HTTP/1.1" 200 269
+INFO 2021-04-27 20:39:34,332 autoreload 240 D:\platform\api_platform\settings.py changed, reloading.
+[2021-04-28 09:28:12,445] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:12,446] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:12,447] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 09:28:12,447] [views_vue.py:1330] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">

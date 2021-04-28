@@ -1,0 +1,12 @@
+[2021-04-28 11:22:53,724] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:22:53,739] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:22:58,165] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:22:58,174] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:23:04,404] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:23:34,388] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:23:34,403] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:23:37,452] [views_vue.py:1356] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 11:23:37,464] [views_vue.py:1367] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 11:23:47,835] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:23:58,878] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:23:59,383] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}

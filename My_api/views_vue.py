@@ -159,7 +159,7 @@ def project_del(request):
     method = "DELETE"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         Id = data['ids']
         if type(Id) == int:
             if DbApis.objects.filter(project_id=Id).values().count() == 0:
@@ -187,7 +187,7 @@ def project_Apis(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         if "listName" in data:
             if DbProject.objects.filter(id=data['listName'], is_delete=0, is_active=0).values().count() == 0:
                 dic = {
@@ -217,7 +217,6 @@ def project_Apis(request):
             project['api_header'] = json.loads(project['api_header'])
             project['api_body'] = json.loads(project['api_body'])
             lists.append(project)
-
         dic = {
             "code": 200,
             "data": lists,
@@ -235,7 +234,7 @@ def user_select(request):
     if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
-            ic(data)
+            logger.info('请求参数：{}'.format(data))
             queryset = DbUser.objects.filter(is_delete=0).order_by('-id').all()
             paginator = Paginator(queryset, data['pageSize'])
             page = paginator.get_page(data['pageNo'])
@@ -274,7 +273,7 @@ def userDisable(request):
     method = "PUT"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         DbUser.objects.filter(id=data['ids']).update(is_active=1)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
     else:
@@ -285,7 +284,7 @@ def userDisable(request):
 def NewUser(request):
     if request.method == "POST":
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         username = DbUser.objects.filter(username=data['username']).values().count()
         curr_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         if username == 0:
@@ -314,7 +313,7 @@ def APisdel(request):
     method = "DELETE"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data, type(data['ids']))
+        logger.info('请求参数：{}'.format(data))
         Id = data['ids']
         if type(Id) == int:
             DbApis.objects.filter(id=Id).update(is_delete=1)
@@ -334,7 +333,7 @@ def copy_apis(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         api_id = data['ids']
         # 开始复制接口
         old_api = DbApis.objects.filter(id=api_id)[0]
@@ -376,7 +375,7 @@ def copy_apis(request):
             mock_res=apisId['mock_res'],
             is_delete=0,
         )
-        ic(apisId)
+        logger.info('请求参数：{}'.format(apisId))
         # 返回
         dic = json.dumps({"code": 200, "data": True, "msg": "ok"})
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
@@ -389,7 +388,7 @@ def DesEdit(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         Id = data['id']
         DbApis.objects.filter(id=Id).update(des=data['des'], name=data['name'])
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
@@ -402,7 +401,7 @@ def SaveApis(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         dic_head = {}
         dic_body = {}
         body_method = ''
@@ -511,7 +510,7 @@ def DebugApis(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         dic_head = {}
         dic_body = {}
         body_method = ''
@@ -538,7 +537,6 @@ def DebugApis(request):
                 dic_body = json.dumps(dic_body)
             if radio == 4:
                 body_method = "Raw"
-                ic(type(data['api_body']))
                 if type(data['api_body']) == str:
                     dic_body = data['api_body']
                 else:
@@ -614,7 +612,7 @@ def SendRequest(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        # ic(data)
+        logger.info('请求参数：{}'.format(data))
         dic_head = {}
         dic_body = {}
         response = ''
@@ -627,13 +625,13 @@ def SendRequest(request):
                 "data": "false",
                 "msg": "非法请求地址！"
             }
+            logger.info('请求参数：{}'.format(dic))
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         if tag == 'header' or tag == 'body':
             if radio == 1:
                 api_body = {}
             if radio == 2:
                 api_body = data['api_body']
-                ic(api_body)
                 for head in api_body:
                     glos = re.findall("{{(.*?)}}", head['value'])
                     if glos:
@@ -664,13 +662,13 @@ def SendRequest(request):
                     dic_body[head['key']] = head['value']
 
         for head in data['header']:
-            ic(head['value'])
             glo = re.findall("{{(.*?)}}", head['value'])
             if glo:
                 a = DbGlobalData.objects.filter(name=glo[0]).values()[0]
                 dic_head[head['key']] = a['data']
             else:
-                dic_head[head['key']] = head['value']
+                if head['key'] != "":
+                    dic_head[head['key']] = head['value']
         if dic_head == {'': ''}:
             dic_head = {}
         else:
@@ -686,13 +684,12 @@ def SendRequest(request):
                 dic_head['Content-Type'] = 'application/x-www-form-urlencoded'
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head, data=dic_body, verify=False)
             elif data['radio'] == 4:
-                ic(dic_body)
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head,
                                             data=dic_body, verify=False)
             else:
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head, data={}, verify=False)
         except Exception as e:
-            ic(e)
+            logger.error('错误信息：{}'.format(e))
             dic = {
                 "code": 503001,
                 "data": "false",
@@ -701,7 +698,7 @@ def SendRequest(request):
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         response.encoding = "utf-8"
         res = response.json()
-        ic(res)
+        logger.info('请求参数：{}'.format(res))
         tractpath = ""
         tractre = ""
         ReAssert = ""
@@ -709,7 +706,7 @@ def SendRequest(request):
         ResultExpected = ""
         if "mock" in data:
             res = data['mock']
-            ic(res)
+            logger.info('请求参数：{}'.format(res))
         if "ExtractPath" in data:
             ExtractPath = data['ExtractPath']
             try:
@@ -726,13 +723,13 @@ def SendRequest(request):
                         try:
                             a = int(a)
                         except Exception as e:
-                            ic(e)
+                            logger.error('错误信息：{}'.format(e))
                             a = a
                         py_path = values[a]
                         values = py_path
                     tractpath += f"{i} ==> {values}\n"
             except Exception as e:
-                ic(e)
+                logger.error('错误信息：{}'.format(e))
                 dic = {
                     "code": 35010,
                     "data": "false",
@@ -751,7 +748,7 @@ def SendRequest(request):
                     pa = re.findall(path, str(res))
                     tractre += f"{i} ==> {pa[0]}\n"
             except Exception as e:
-                ic(e)
+                logger.error('错误信息：{}'.format(e))
                 dic = {
                     "code": 35010,
                     "data": "false",
@@ -768,12 +765,13 @@ def SendRequest(request):
                     else:
                         ReAssert += f"{i} ==> False\n"
             except Exception as e:
-                ic(e)
+                logger.error('错误信息：{}'.format(e))
                 dic = {
                     "code": 35010,
                     "data": "false",
                     "msg": "断言正则输入有误请仔细检查！"
                 }
+                logger.info('请求参数：{}'.format(dic))
                 return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         if "AssertPath" in data:
             AssertPath = data['AssertPath']
@@ -792,7 +790,7 @@ def SendRequest(request):
                         try:
                             a = int(a)
                         except Exception as e:
-                            ic(e)
+                            logger.error('错误信息：{}'.format(e))
                             a = a
                         py_path = values[a]
                         values = py_path
@@ -801,7 +799,7 @@ def SendRequest(request):
                     else:
                         PathAssert += f"{i} ==> False\n"
             except Exception as e:
-                ic(e)
+                logger.error('错误信息：{}'.format(e))
                 dic = {
                     "code": 35010,
                     "data": "false",
@@ -812,25 +810,22 @@ def SendRequest(request):
             ExpectedResult = data['ExpectedResult']
             try:
                 datas = ExpectedResult.split('\n')
-                ic(datas)
                 for i in datas:
                     if i == '':
                         continue
                     extract = i.split('=')
                     path = extract[0]
                     path_value = extract[1]
-                    ic(path)
                     if len(re.findall(path, str(res))) == 0:
                         ResultExpected += f"{i} ==> 该正则未匹配到数据！\n"
                     else:
                         pa = re.findall(path, str(res))[0]
-                        ic(pa, eval(path_value))
                         if pa == eval(path_value):
                             ResultExpected += f"{i} ==> True\n"
                         else:
                             ResultExpected += f"{i} ==> False\n"
             except Exception as e:
-                ic(e)
+                logger.error('错误信息：{}'.format(e))
                 dic = {
                     "code": 35010,
                     "data": "false",
@@ -848,6 +843,7 @@ def SendRequest(request):
             "ResultExpected": f"{ResultExpected}",
             "message": "ok"
         }
+        logger.info('请求参数：{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -859,7 +855,7 @@ def getCases(request):
     if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
-            ic(data)
+            logger.info('请求参数：{}'.format(data))
             if "listName" in data:
                 if DbProject.objects.filter(id=data['listName'], is_delete=0, is_active=0).values().count() == 0:
                     dic = {
@@ -898,7 +894,7 @@ def getCases(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         except Exception as e:
-            print(e)
+            logger.error('错误信息：{}'.format(e))
             dic = {
                 "code": 30010,
                 "data": [],
@@ -915,7 +911,7 @@ def CaseDel(request):
     method = "DELETE"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data, type(data['ids']))
+        logger.info('请求参数：{}'.format(data))
         Id = data['ids']
         if type(Id) == int:
             DbCases.objects.filter(id=Id).update(is_delete=1)
@@ -936,7 +932,7 @@ def InNewCase(request):
     if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
-            ic(data)
+            logger.info('请求参数：{}'.format(data))
             curr_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print(curr_time)
             DbCases.objects.create(
@@ -949,7 +945,7 @@ def InNewCase(request):
             dic = json.dumps(RE.SUCCESS.value)
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         except Exception as e:
-            print(e)
+            logger.error('错误信息：{}'.format(e))
             dic = {
                 "code": 30010,
                 "data": [],
@@ -967,9 +963,8 @@ def CopyCase(request):
     if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
-            ic(data)
+            logger.info('请求参数：{}'.format(data))
             old_case = DbCases.objects.filter(id=data['ids'])[0]
-            ic(old_case)
             curr_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             DbCases.objects.create(
                 project_id=old_case.project_id,
@@ -980,7 +975,7 @@ def CopyCase(request):
             dic = json.dumps(RE.SUCCESS.value)
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
         except Exception as e:
-            print(e)
+            logger.error('错误信息：{}'.format(e))
             dic = {
                 "code": 30010,
                 "data": [],
@@ -997,7 +992,7 @@ def CaseEdit(request):
     method = "PUT"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         project_id = DbProject.objects.filter(listName=data['project_id']).values()[0]['id']
         DbCases.objects.filter(id=data['id']).update(des=data['des'], name=data['name'], project_id=project_id)
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
@@ -1010,7 +1005,7 @@ def SmallCase(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         if DbStep.objects.filter(Case_id=data['case_id'], name=data['name'], is_delete=0).values().count() == 0:
             DbStep.objects.create(
                 Case_id=data['case_id'],
@@ -1035,20 +1030,18 @@ def SmallList(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         smalls = DbStep.objects.filter(Case_id=data['id'], is_delete=0).order_by('index').values()
         a = smalls.count()
-        ic(a)
         small = []
         for s in smalls:
             small.append(s)
-        ic(len(small))
-        ic(small)
         dic = {
             "code": 200,
             "data": small,
             "msg": "success",
         }
+        logger.info('请求参数：{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -1059,9 +1052,8 @@ def SmallDel(request):
     method = "DELETE"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         DbStep.objects.filter(Case_id=data['case_id'], index=data['ids']).update(is_delete=1)
-        length = DbStep.objects.filter(Case_id=data['case_id'], is_delete=0).values().count()
         cases = DbStep.objects.filter(Case_id=data['case_id'], is_delete=0).values()
         i = 0
         for case in cases:
@@ -1077,7 +1069,7 @@ def SmallGet(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         lists = DbApis.objects.filter(project_id=data['project_id'], is_delete=0).values()
         small = []
         for s in lists:
@@ -1087,6 +1079,7 @@ def SmallGet(request):
             "data": small,
             "msg": "success",
         }
+        logger.info('请求参数：{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -1097,12 +1090,11 @@ def SmallOrder(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         small_list = data['case']
         for small in small_list:
             api = DbApis.objects.filter(id=small['apiid']).values()[0]
             returned = Returned.objects.filter(apis_id=small['apiid']).values()[0]
-            ic(api)
             apis = api['api_url']
             if apis[0:7] == 'http://':
                 paths = apis[7:]
@@ -1120,7 +1112,6 @@ def SmallOrder(request):
                     "data": "false",
                     "msg": f"url不正确:{apis}"
                 })
-                ic(f'url不正确{apis}')
                 return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
             DbStep.objects.filter(id=small['id']).update(
                 api_id=small['apiid'],
@@ -1153,7 +1144,7 @@ def LookReport(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         global case_ids
         case_ids = data['id']
         asz = Report(request)
@@ -1179,7 +1170,7 @@ def Report(request):
     try:
         return render(request, f'Reports/{case_ids}.html')
     except Exception as e:
-        ic(e)
+        logger.error('错误信息：{}'.format(e))
         return "TemplateDoesNotExist"
 
 
@@ -1188,7 +1179,7 @@ def RunCase(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         Case_id = data['case_id']
         if DbStep.objects.filter(Case_id=Case_id).count() == 0:
             dic = json.dumps({
@@ -1200,7 +1191,7 @@ def RunCase(request):
         Case_name = DbCases.objects.filter(id=Case_id).values()[0]['name']
         Case = DbStep.objects.filter(Case_id=Case_id)[0]
         steps = DbStep.objects.filter(Case_id=Case_id)
-        ic(data, Case, Case.id, Case.name, steps)
+        logger.info('请求参数data, Case, Case.id, Case.name, steps：{}'.format(data, Case, Case.id, Case.name, steps))
         # from My_api.run_case import run
         from My_api.Run import run
         run(Case.Case_id, Case_name, steps)
@@ -1217,7 +1208,7 @@ def Variable(request):
     if community(request, method) == RE.TRUE.value:
         try:
             data = json.loads(request.body)
-            ic(data)
+            logger.info('请求参数：{}'.format(data))
             if "name" in data:
                 queryset = DbGlobalData.objects.filter(name=data['name'], is_delete=0).order_by('-id').all()
             else:
@@ -1237,7 +1228,7 @@ def Variable(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         except Exception as e:
-            print(e)
+            logger.error('错误信息：{}'.format(e))
             dic = {
                 "code": 30010,
                 "data": [],
@@ -1254,7 +1245,7 @@ def DoEdit(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
+        logger.info('请求参数：{}'.format(data))
         if "id" in data:
             DbGlobalData.objects.filter(id=data['id']).update(
                 name=data['name'],
@@ -1281,7 +1272,7 @@ def GloDel(request):
     method = "DELETE"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data, type(data['ids']))
+        logger.info('请求参数：{}'.format(data))
         Id = data['ids']
         if type(Id) == int:
             DbGlobalData.objects.filter(id=Id).update(is_delete=1)
@@ -1303,7 +1294,7 @@ def Runner(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         myFile = request.FILES.get("file", None)  # 获取上传的文件，如果没有文件，则默认为None
-        ic(myFile)
+        logger.info('请求参数：{}'.format(myFile))
         if not myFile:
             dic = {"code": 70010, "data": "true", "msg": "no files for upload!"}
             return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
@@ -1320,20 +1311,30 @@ def Runner(request):
 # 公共方法
 def community(request, method):
     if request.method == method:
-        if "Accesstoken" in request.headers:
-            Authorization = request.headers['Accesstoken']
-            if decode_time(Authorization):
-                return RE.TRUE.value
+        try:
+            if "Accesstoken" in request.headers:
+                Authorization = request.headers['Accesstoken']
+                if decode_time(Authorization):
+                    return RE.TRUE.value
+                else:
+                    res = HttpResponse(json.dumps({"code": 402, "data": False, "msg": "token失效"}))
+                    res.status_code = 402
+                    logger.error('请求出错：{}'.format(res))
+                    return res
             else:
-                res = HttpResponse(json.dumps({"code": 402, "data": False, "msg": "token失效"}))
-                res.status_code = 402
+                res = HttpResponse(json.dumps({"code": 401, "data": False, "msg": "token为空"}))
+                res.status_code = 401
                 logger.error('请求出错：{}'.format(res))
                 return res
-        else:
-            res = HttpResponse(json.dumps({"code": 401, "data": False, "msg": "token为空"}))
-            res.status_code = 401
-            logger.error('请求出错：{}'.format(res))
-            return res
+        except Exception as e:
+            logger.error('错误信息：{}'.format(e))
+            dic = {
+                "code": 30010,
+                "data": [],
+                "msg": "服务不可用，请联系管理员！",
+                "totalCount": 0
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         logger.error('请求出错：{}'.format(community(request, method)))
         return community(request, method)
@@ -1375,6 +1376,7 @@ def ErrorPlay(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
+        logger.info('请求参数！'.format(data))
         apis = DbApis.objects.filter(id=data['id']).values()[0]
         url = apis['api_url']
         dic_body = data['abody']
@@ -1382,7 +1384,7 @@ def ErrorPlay(request):
         try:
             response = requests.request(apis['api_models'].upper(), url=url, headers=dic_head, data=dic_body, verify=False)
         except Exception as e:
-            ic(e)
+            logger.error('请求出错：{}'.format(e))
             dic = {
                 "code": 503001,
                 "data": "false",
@@ -1390,6 +1392,7 @@ def ErrorPlay(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         res = response.text
+        logger.info('请求参数！'.format(res))
         return HttpResponse(json.dumps({"code": 200, "data": res, "msg": "OK"}), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
