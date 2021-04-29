@@ -6,6 +6,8 @@ _*_ coding: UTF-8 _*_
 @File      : views_vue.py
 @Software  : PyCharm
 """
+import codecs
+import csv
 import json
 import os
 import re
@@ -1373,8 +1375,13 @@ def community(request, method):
         try:
             if "Authorization" in request.headers:
                 Authorization = request.headers['Authorization']
-                if decode_time(Authorization):
-                    return RE.TRUE.value
+                try:
+                    if decode_time(Authorization):
+                        return RE.TRUE.value
+                except Exception as e:
+                    logger.error('请求出错：{}'.format(e))
+                    res = HttpResponse(json.dumps({"code": 403, "data": False, "msg": "token错误"}))
+                    return res
                 else:
                     res = HttpResponse(json.dumps({"code": 402, "data": False, "msg": "token失效"}))
                     res.status_code = 402
@@ -1395,8 +1402,9 @@ def community(request, method):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
-        logger.error('请求出错：{}'.format(community(request, method)))
-        return community(request, method)
+        dic = json.dumps(RE.WRONG_REQUEST.value)
+        logger.error('请求出错：{}'.format(dic))
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
 # 测试接口
@@ -1462,29 +1470,78 @@ def Orthogonal(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        ic(data)
         logger.info('请求参数！'.format(data))
         end_values = data['end_values']
-
         new_values = [i['value'].split('/') for i in end_values]
-        ic(new_values)
         res = []
         if new_values == [['']]:
             dic = {"code": 200, "res": [], "msg": "OK"}
+        elif len(new_values) == 1:
+            for k in new_values[0]:
+                a = f"{end_values[0]['key']}:{k}"
+                res.append(a)
+            dic = {"code": 200, "res": res, "msg": "OK"}
         else:
             for s in AllPairs(new_values):
                 res.append(s)
             response = []
             for i in res:
-                ic(i)
-                hj = []
+                hj = {}
+                for j in range(len(i)):
+                    a = f"key{j}: {i[j]}"
+                    hj[f"key{j}"] = i[j]
+                response.append(hj)
+                hj = {}
+            dic = {"code": 200, "res": response, "msg": "OK"}
+            logger.info('请求结果！'.format(dic))
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# 正交导出
+def OrthogonalDrive(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        ic(data)
+        logger.info('请求参数！'.format(data))
+        end_values = data['end_values']
+        new_values = [i['value'].split('/') for i in end_values]
+        ic(new_values)
+        res = []
+        if new_values == [['']]:
+            dic = {"code": 200, "res": [], "msg": "OK"}
+        elif len(new_values) == 1:
+            for k in new_values[0]:
+                a = f"{end_values[0]['key']}:{k}"
+                res.append(a)
+            dic = {"code": 200, "res": res, "msg": "OK"}
+        else:
+            for s in AllPairs(new_values):
+                res.append(s)
+            response = []
+            x = 1
+            for i in res:
+                hj = [f"用例编号{x}"]
                 for j in range(len(i)):
                     a = f"{end_values[j]['key']}: {i[j]}"
                     hj.append(a)
                 response.append(hj)
                 hj = []
+                x += 1
             ic(response)
-            dic = {"code": 200, "res": response, "msg": "OK"}
-        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+            f = codecs.open('D:\\platform\\My_api\\static\\driverfile\\driverFile.csv', 'w', 'gbk')
+            writer = csv.writer(f)
+            for i in response:
+                writer.writerow(i)
+            f.close()
+            file_path = 'D:\\platform\\My_api\\static\\driverfile\\driverFile.csv'
+            with open(file_path, "rb") as f:
+                res = HttpResponse(f)
+                res["Content-Type"] = "application/octet-stream;charset=UTF-8"  # 注意格式
+                res["Content-Disposition"] = 'attachment; filename="OrthogonalDrive.csv"'
+                return res
+
     else:
         return community(request, method)
