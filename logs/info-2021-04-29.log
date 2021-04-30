@@ -1,0 +1,150 @@
+[2021-04-29 10:53:39,615]-[6336]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 10:57:23,250]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 11:03:32,631]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:06:07,740]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:08:17,131]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:16:13,294]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:20:08,677]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 11:20:45,147]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:20:48,150]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 11:22:37,473]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:23:40,637]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:23:45,211]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 11:24:11,288]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:31:10,503]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:33:03,861]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 11:33:37,042]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:34:16,776]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:43:46,480]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:45:44,703]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:48:25,699]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:50:06,984]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:51:06,379]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:51:42,437]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:51:46,988]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:53:05,082]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 11:53:35,117]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:18:26,347]-[37448]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 13:18:26,347]-[37448]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 13:18:32,753]-[37448]-[views_vue.py:73]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-29 13:18:32,754]-[37448]-[views_vue.py:79]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-29 13:18:32,794]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:19:56,644]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:23:43,571]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:24:25,846]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:25:53,020]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:26:11,204]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:26:44,795]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:30:00,495]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:30:11,750]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:34:01,197]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:34:19,341]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:35:54,984]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:36:11,429]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:37:33,163]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:38:44,195]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:40:17,428]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:42:40,531]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:42:53,082]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:43:09,957]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:43:24,731]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:43:57,578]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:44:15,564]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:44:42,146]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:45:31,050]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:45:38,340]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:48:08,144]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:48:35,019]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:48:38,614]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:57:22,397]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:57:28,170]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:58:13,479]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:58:24,708]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 13:58:29,077]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:58:55,744]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 13:59:34,908]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:00:18,705]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:01:42,879]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:02:53,799]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:03:56,969]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:04:34,180]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:05:54,062]-[37448]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 14:05:56,552]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:07:33,967]-[37448]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:08:15,883]-[13236]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:11:41,288]-[10588]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:13:12,813]-[6096]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:13:49,502]-[6096]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 14:14:08,511]-[6096]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:14:49,396]-[6096]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:15:35,069]-[6096]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 14:21:07,438]-[6096]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:00:02,245]-[26868]-[views_vue.py:1399]-[views_vue:community]-[ERROR]- 请求出错：{"code": 30013, "data": "false", "msg": "\u8bf7\u6c42\u65b9\u5f0f\u9519\u8bef"}
+[2021-04-29 15:00:02,246]-[26868]-[views_vue.py:1399]-[views_vue:community]-[ERROR]- 请求出错：{"code": 30013, "data": "false", "msg": "\u8bf7\u6c42\u65b9\u5f0f\u9519\u8bef"}
+[2021-04-29 15:00:10,941]-[26868]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 错误信息：Incorrect padding
+[2021-04-29 15:00:10,942]-[26868]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 错误信息：Incorrect padding
+[2021-04-29 15:00:57,215]-[5060]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 错误信息：Incorrect padding
+[2021-04-29 15:00:57,216]-[5060]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 错误信息：Incorrect padding
+[2021-04-29 15:02:04,109]-[13508]-[views_vue.py:1390]-[views_vue:community]-[ERROR]- 错误信息：Incorrect padding
+[2021-04-29 15:02:04,114]-[13508]-[views_vue.py:1390]-[views_vue:community]-[ERROR]- 错误信息：Incorrect padding
+[2021-04-29 15:04:18,987]-[35040]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：Incorrect padding
+[2021-04-29 15:04:18,993]-[35040]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：Incorrect padding
+[2021-04-29 15:04:48,975]-[35040]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:06:12,723]-[32500]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:07:24,109]-[35128]-[views_vue.py:1472]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:07:57,869]-[24148]-[views_vue.py:1472]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:08:24,376]-[24148]-[views_vue.py:1472]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:08:37,487]-[24148]-[views_vue.py:1472]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:09:12,116]-[15048]-[views_vue.py:1472]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:10:13,754]-[30340]-[views_vue.py:1472]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:10:43,022]-[29492]-[views_vue.py:1471]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 15:12:12,863]-[36600]-[views_vue.py:1506]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:15:10,808]-[2324]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:38:54,572]-[26016]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 15:38:54,573]-[26016]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 15:39:01,926]-[26016]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 15:39:01,927]-[26016]-[views_vue.py:1389]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 15:39:09,230]-[26016]-[views_vue.py:76]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-29 15:39:09,230]-[26016]-[views_vue.py:82]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-29 15:39:09,253]-[26016]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 15:39:37,741]-[26016]-[views_vue.py:1509]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:39:58,583]-[22832]-[views_vue.py:1509]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:44:58,912]-[23164]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:45:14,173]-[26088]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:46:57,125]-[30176]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:48:00,265]-[32820]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:49:04,442]-[7928]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:49:24,651]-[37728]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:51:26,822]-[13736]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:52:37,996]-[14244]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:55:02,666]-[26588]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 15:55:51,398]-[28264]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 16:59:07,113]-[28264]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 16:59:08,833]-[28264]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 17:03:45,358]-[28264]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 17:03:50,765]-[28264]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 17:04:21,614]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:04:37,989]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:04:37,992]-[28264]-[views_vue.py:1496]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-29 17:04:44,384]-[28264]-[views_vue.py:1508]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-29 17:10:44,233]-[28264]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 17:10:46,822]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:47,768]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:48,345]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:48,584]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:48,756]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:48,956]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:49,144]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:49,328]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:49,512]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:49,634]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:49,815]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:53,621]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:10:59,322]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:11:12,260]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:11:12,261]-[28264]-[views_vue.py:1496]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-29 17:11:20,099]-[28264]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 17:11:20,099]-[28264]-[views_vue.py:1496]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-29 17:11:32,359]-[28264]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-29 17:11:32,382]-[28264]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-29 17:11:32,387]-[28264]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}

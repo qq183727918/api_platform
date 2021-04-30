@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/My_api/static/api_file/filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/My_api/static/api_file/listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv" charset="GBK" />
     <file url="file://$PROJECT_DIR$/My_api/static/public_method/__pycache__/public_method.cpython-38.pyc" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

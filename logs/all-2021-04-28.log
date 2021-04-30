@@ -46,3 +46,1036 @@
 [2021-04-28 11:36:20,684] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
 [2021-04-28 11:36:23,553] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
 [2021-04-28 11:36:28,328] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 11:37:21,677] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-28 11:37:21,688] [views_vue.py:1322] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 11:37:21,689] [views_vue.py:1322] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 11:37:21,689] [log.py:224] [log:log_response] [WARNING]- Payment Required: /userInfo
+[2021-04-28 11:37:21,690] [basehttp.py:157] [basehttp:log_message] [WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-28 11:37:35,120] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:37:35,127] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-28 11:37:35,767] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 104
+[2021-04-28 11:37:35,784] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:37:35,785] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:37:36,012] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/getApis HTTP/1.1" 200 0
+[2021-04-28 11:37:36,015] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/GetProList HTTP/1.1" 200 0
+[2021-04-28 11:37:36,015] [views_vue.py:190] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 11:37:36,028] [views_vue.py:122] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:37:36,032] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 11:37:36,047] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 11:39:11,540] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_api.py changed, reloading.
+[2021-04-28 11:39:13,488] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 11:39:51,009] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 11:39:52,157] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 11:40:00,546] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:40:00,550] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:40:00,759] [views_vue.py:235] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 11:40:00,769] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:40:00,773] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 11:40:00,787] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 11:40:09,035] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /logout HTTP/1.1" 200 0
+[2021-04-28 11:40:09,039] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /logout HTTP/1.1" 200 46
+[2021-04-28 11:40:18,992] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:40:18,997] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:40:19,098] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /login_action
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 73, in login_action
+    Authorization = request.headers['Authorization']
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\http\request.py", line 412, in __getitem__
+    return super().__getitem__(key.replace('_', '-'))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'authorization'
+[2021-04-28 11:40:19,100] [basehttp.py:157] [basehttp:log_message] [ERROR]- "POST /login_action HTTP/1.1" 500 76051
+[2021-04-28 11:40:30,415] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:40:30,422] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:40:30,462] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /login_action
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 73, in login_action
+    Authorization = request.headers['Authorization']
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\http\request.py", line 412, in __getitem__
+    return super().__getitem__(key.replace('_', '-'))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'authorization'
+[2021-04-28 11:40:30,464] [basehttp.py:157] [basehttp:log_message] [ERROR]- "POST /login_action HTTP/1.1" 500 76051
+[2021-04-28 11:45:13,352] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 11:45:15,113] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 11:45:18,745] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:45:18,752] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:45:19,436] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 104
+[2021-04-28 11:45:19,472] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:45:19,473] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:45:19,650] [views_vue.py:235] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 11:45:19,661] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:45:19,665] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 11:45:19,685] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 11:46:10,934] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:46:10,936] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:46:11,513] [views_vue.py:235] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 11:46:11,525] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:46:11,529] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 11:46:11,545] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 11:46:47,132] [views_vue.py:1372] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-28 11:46:47,133] [views_vue.py:1372] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-28 11:46:47,135] [log.py:224] [log:log_response] [WARNING]- Unauthorized: /userInfo
+[2021-04-28 11:46:47,135] [basehttp.py:157] [basehttp:log_message] [WARNING]- "POST /userInfo HTTP/1.1" 401 56
+[2021-04-28 11:46:58,805] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:46:58,811] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:46:58,822] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 104
+[2021-04-28 11:47:30,175] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 11:47:31,808] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 11:47:37,208] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:47:37,217] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:47:37,813] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 11:47:37,831] [views_vue.py:1372] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-28 11:47:37,833] [views_vue.py:1372] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-28 11:47:37,833] [log.py:224] [log:log_response] [WARNING]- Unauthorized: /userInfo
+[2021-04-28 11:47:37,835] [basehttp.py:157] [basehttp:log_message] [WARNING]- "POST /userInfo HTTP/1.1" 401 56
+[2021-04-28 11:47:37,845] [views_vue.py:1372] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-28 11:47:37,846] [views_vue.py:1372] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-28 11:47:37,847] [log.py:224] [log:log_response] [WARNING]- Unauthorized: /userInfo
+[2021-04-28 11:47:37,848] [basehttp.py:157] [basehttp:log_message] [WARNING]- "POST /userInfo HTTP/1.1" 401 56
+[2021-04-28 11:48:34,568] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 11:48:35,688] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 11:48:47,111] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:48:47,116] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:48:47,696] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 11:48:47,712] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:48:47,713] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:48:53,681] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/getList HTTP/1.1" 200 0
+[2021-04-28 11:48:53,685] [views_vue.py:118] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 11:48:53,691] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:48:53,694] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 11:48:53,696] [views_vue.py:141] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:48:53,697] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-28 11:52:30,926] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /logout HTTP/1.1" 200 46
+[2021-04-28 11:52:43,690] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:52:43,697] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': '1234565', 'password': '1234565'}
+[2021-04-28 11:52:43,703] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 115
+[2021-04-28 11:52:52,628] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 11:52:52,632] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 11:52:52,639] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 11:52:52,654] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:52:52,655] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:52:52,849] [views_vue.py:118] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 11:52:52,860] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:52:52,863] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 11:52:52,862] [views_vue.py:141] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 11:52:52,864] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-28 11:53:54,206] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:53:54,207] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:54:56,113] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:54:56,114] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:55:24,646] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:55:24,646] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 11:56:31,218] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 11:56:31,219] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 13:32:10,611] [views_vue.py:235] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 13:32:10,621] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 13:32:10,623] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 13:32:10,638] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 13:38:48,895] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/GetProList HTTP/1.1" 200 0
+[2021-04-28 13:38:48,902] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 13:38:48,902] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 13:39:03,664] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/SendRequest HTTP/1.1" 200 0
+[2021-04-28 13:39:03,668] [views_vue.py:660] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}], 'value': 1}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 13:39:04,098] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /project/SendRequest
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 745, in SendRequest
+    res = response.json()
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\requests\models.py", line 898, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 6 (char 5)
+[2021-04-28 13:39:04,100] [basehttp.py:157] [basehttp:log_message] [ERROR]- "POST /project/SendRequest HTTP/1.1" 500 85524
+[2021-04-28 13:39:29,028] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:39:30,824] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:39:39,148] [views_vue.py:660] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}], 'value': 1}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 13:39:39,489] [views_vue.py:746] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34
+
+[2021-04-28 13:39:39,590] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /project/SendRequest
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 883, in SendRequest
+    "data": response.json(),
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\requests\models.py", line 898, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\json\decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 6 (char 5)
+[2021-04-28 13:39:39,592] [basehttp.py:157] [basehttp:log_message] [ERROR]- "POST /project/SendRequest HTTP/1.1" 500 87819
+[2021-04-28 13:39:47,878] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:39:49,342] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:39:52,431] [views_vue.py:660] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}], 'value': 1}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 13:39:52,757] [views_vue.py:746] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34
+
+[2021-04-28 13:39:52,757] [views_vue.py:891] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'message': 'ok'}
+[2021-04-28 13:39:52,758] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1761
+[2021-04-28 13:40:19,762] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:40:21,379] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:41:44,984] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:41:46,439] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:41:50,695] [views_vue.py:660] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}], 'value': 1}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 13:41:51,693] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34
+
+[2021-04-28 13:41:51,694] [views_vue.py:892] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'message': 'ok'}
+[2021-04-28 13:41:51,694] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1761
+[2021-04-28 13:48:27,433] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:48:28,642] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:48:30,177] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:48:32,275] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:48:40,239] [views_vue.py:660] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}], 'value': 1}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 13:48:40,676] [views_vue.py:748] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 05:48:41 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 13:48:40,676] [views_vue.py:750] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34
+
+[2021-04-28 13:48:40,677] [views_vue.py:895] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9934,�����̻�����Veneer Heat Press Machines��,DBTHJ15X15LSK0001V3,�����̻���15x15��ɫ��Ĳ�,Heat Press Sublimation Machine 38X38cm Heat Press Machine for T-Shirts  orange,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/DBTHJ15X15LSK0001/1614183328252/heat-press-m100-1.2.jpg,Arts1,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/heat-press-sublimation-machine-38x38cm-heat-press-machine-for-t-shirts-about,250.990000,0,0.130000,���ϼ�,Arts & Crafts & Sewing,Printmaking,Heat Press Machine,2021-04-28 13:29:41,,,,"""""",wubin,2021-04-28 13:25:34\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'message': 'ok'}
+[2021-04-28 13:48:40,678] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1761
+[2021-04-28 13:51:22,979] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:51:24,243] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:51:45,799] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:51:47,577] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:56:03,543] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:56:04,660] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:57:52,748] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:57:54,855] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:57:58,393] [views_vue.py:1379] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 13:57:58,394] [views_vue.py:1379] [views_vue:community] [ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 13:57:58,395] [log.py:224] [log:log_response] [WARNING]- Payment Required: /project/SendRequest
+[2021-04-28 13:57:58,396] [basehttp.py:157] [basehttp:log_message] [WARNING]- "POST /project/SendRequest HTTP/1.1" 402 56
+[2021-04-28 13:58:08,494] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 13:58:08,518] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-28 13:58:08,520] [views_vue.py:72] [views_vue:login_action] [INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 13:58:09,109] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 13:58:09,122] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-28 13:58:09,124] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 13:58:09,125] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 13:58:09,320] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/getApis HTTP/1.1" 200 0
+[2021-04-28 13:58:09,324] [views_vue.py:235] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 13:58:09,332] [views_vue.py:167] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 13:58:09,336] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 13:58:09,356] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 13:58:46,595] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:58:48,336] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 13:59:01,310] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 13:59:03,036] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:00:15,228] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:00:15,229] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:00:42,411] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=SLYGDSLLFYBS00001V0&site=AU', 'tag': 'header', 'header': [{'key': '', 'value': ''}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:00:42,646] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:00:43 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:00:42,647] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数：{"code":200,"message":"OK","data":0}
+[2021-04-28 14:00:42,647] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":200,"message":"OK","data":0}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:00:42,648] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 200
+[2021-04-28 14:01:05,317] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': '', 'value': ''}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:01:05,515] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:01:06 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '48', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:01:05,515] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数：{"code":401,"message":"token为空","data":null}
+[2021-04-28 14:01:05,515] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":401,"message":"token为空","data":null}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:01:05,516] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 218
+[2021-04-28 14:01:17,624] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:01:17,965] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:01:19 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:01:17,966] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18
+
+[2021-04-28 14:01:17,966] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:01:17,967] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1638
+[2021-04-28 14:02:07,983] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:02:09,660] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:02:11,915] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:02:12,259] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:02:13 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:02:12,259] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18
+
+[2021-04-28 14:02:12,260] [views_vue.py:903] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:02:12,261] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1638
+[2021-04-28 14:03:05,015] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:03:06,351] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:03:08,563] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:03:08,896] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:03:10 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:03:08,896] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18
+
+[2021-04-28 14:03:09,538] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:03:09,539] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1633
+[2021-04-28 14:04:06,264] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:04:07,587] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:04:36,724] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:04:38,239] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:05:10,128] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:05:14,223] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:05:14,565] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:05:15 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:05:14,566] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18
+
+[2021-04-28 14:05:15,236] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9935,Chain Slings,3M2600KGSTGL00001V0,3M2600KG˫ͷ����,Lifting Chain Sling 2 Legs 3M WLL 2600kg 2 Hook Sling Pull Tractor,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3M2600KGSTGL00001/1614234399137/chain-slings-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/lifting-chain-sling-2-legs-3m-wll-2600kg-2-hook-sling-pull-tractor,84.990000,27,0.150000,���ϼ�,Arts & Crafts & Sewing,Ceramics & Pottery Crafts,Pottery Wheel,2021-04-28 13:57:52,,,,"""""",yanyiming,2021-04-28 13:56:18\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:05:15,237] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1633
+[2021-04-28 14:06:34,148] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:06:34,235] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:06:35,386] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:06:35,903] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:06:36,244] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:06:37 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:06:36,245] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9940,Chain Hoists,3T3MSBHL000000001V0,3T3���ְ��«,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,���ϼ�,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19
+
+[2021-04-28 14:06:36,996] [log.py:224] [log:log_response] [ERROR]- Internal Server Error: /project/SendRequest
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 752, in SendRequest
+    with open(f"../My_api/static/api_file/{head_file}", "wb") as code:
+FileNotFoundError: [Errno 2] No such file or directory: '../My_api/static/api_file/filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv'
+[2021-04-28 14:06:36,998] [basehttp.py:157] [basehttp:log_message] [ERROR]- "POST /project/SendRequest HTTP/1.1" 500 72725
+[2021-04-28 14:07:49,965] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:07:51,542] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:07:54,652] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:07:54,990] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:07:56 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:07:54,990] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9940,Chain Hoists,3T3MSBHL000000001V0,3T3���ְ��«,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,���ϼ�,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19
+
+[2021-04-28 14:07:55,647] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9940,Chain Hoists,3T3MSBHL000000001V0,3T3���ְ��«,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,���ϼ�,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:07:55,648] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1657
+[2021-04-28 14:09:09,127] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:09:10,944] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:09:16,616] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:09:16,957] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:09:18 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:09:16,957] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��
+S9940,Chain Hoists,3T3MSBHL000000001V0,3T3���ְ��«,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,���ϼ�,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19
+
+[2021-04-28 14:09:17,538] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"���",spu,ϵͳsku,��Ʒ��������,����,����,ͼƬ,����,ƽ̨,վ��,�����˺�,ƽ̨ID,�۸�,���,��������,״̬,һ����Ŀ,������Ŀ,������Ŀ,�״��ϼ�ʱ��,����ϼ�ʱ��,����¼�ʱ��,���ͣ��ʱ��,ʧ��ԭ��,������,����ʱ��\r\nS9940,Chain Hoists,3T3MSBHL000000001V0,3T3���ְ��«,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,��Ʒ,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,���ϼ�,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:09:17,539] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1657
+[2021-04-28 14:10:17,144] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:10:18,590] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:10:21,797] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:10:22,133] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:10:23 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:10:22,133] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数："序号",spu,系统sku,产品中文名称,标题,类型,图片,分组,平台,站点,店铺账号,平台ID,价格,库存,净利润率,状态,一级类目,二级类目,三级类目,首次上架时间,最近上架时间,最近下架时间,最近停售时间,失败原因,创建人,创建时间
+S9940,Chain Hoists,3T3MSBHL000000001V0,3T3米手板葫芦,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,单品,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,已上架,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19
+
+[2021-04-28 14:10:22,787] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"序号",spu,系统sku,产品中文名称,标题,类型,图片,分组,平台,站点,店铺账号,平台ID,价格,库存,净利润率,状态,一级类目,二级类目,三级类目,首次上架时间,最近上架时间,最近下架时间,最近停售时间,失败原因,创建人,创建时间\r\nS9940,Chain Hoists,3T3MSBHL000000001V0,3T3米手板葫芦,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,单品,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,已上架,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:10:22,788] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1327
+[2021-04-28 14:11:41,591] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/Returned HTTP/1.1" 200 0
+[2021-04-28 14:11:41,592] [views_vue.py:1412] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 14:11:41,598] [views_vue.py:1423] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 14:11:41,599] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/Returned HTTP/1.1" 200 181
+[2021-04-28 14:11:42,516] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 1}
+[2021-04-28 14:11:42,717] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:11:43 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:11:42,717] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数：{"code":200,"message":"OK","data":17}
+[2021-04-28 14:11:42,717] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":200,"message":"OK","data":17}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:11:42,718] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 201
+[2021-04-28 14:11:53,847] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:11:55,753] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:11:59,347] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 1}
+[2021-04-28 14:11:59,538] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:12:00 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:11:59,538] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数：{"code":200,"message":"OK","data":17}
+[2021-04-28 14:11:59,539] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":200,"message":"OK","data":17}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:11:59,542] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 201
+[2021-04-28 14:12:11,348] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:12:13,046] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:12:28,656] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 1}
+[2021-04-28 14:12:28,852] [views_vue.py:746] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:12:30 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:12:28,853] [views_vue.py:747] [views_vue:SendRequest] [INFO]- 请求参数：{"code":200,"message":"OK","data":17}
+[2021-04-28 14:12:28,853] [views_vue.py:901] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":200,"message":"OK","data":17}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:12:28,855] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 201
+[2021-04-28 14:13:32,416] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:13:34,801] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:13:41,745] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 1}
+[2021-04-28 14:13:41,933] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:13:43 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:13:41,933] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{"code":200,"message":"OK","data":17}
+[2021-04-28 14:13:41,934] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":200,"message":"OK","data":17}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:13:41,935] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 201
+[2021-04-28 14:13:49,581] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:13:49,582] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:13:54,750] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:13:55,097] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:13:56 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:13:55,097] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数："序号",spu,系统sku,产品中文名称,标题,类型,图片,分组,平台,站点,店铺账号,平台ID,价格,库存,净利润率,状态,一级类目,二级类目,三级类目,首次上架时间,最近上架时间,最近下架时间,最近停售时间,失败原因,创建人,创建时间
+S9940,Chain Hoists,3T3MSBHL000000001V0,3T3米手板葫芦,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,单品,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,已上架,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19
+
+[2021-04-28 14:13:55,711] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"序号",spu,系统sku,产品中文名称,标题,类型,图片,分组,平台,站点,店铺账号,平台ID,价格,库存,净利润率,状态,一级类目,二级类目,三级类目,首次上架时间,最近上架时间,最近下架时间,最近停售时间,失败原因,创建人,创建时间\r\nS9940,Chain Hoists,3T3MSBHL000000001V0,3T3米手板葫芦,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,单品,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,已上架,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:13:55,712] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1327
+[2021-04-28 14:14:30,755] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:14:32,505] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:14:37,566] [views_vue.py:1416] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 14:14:37,574] [views_vue.py:1427] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 14:14:37,575] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/Returned HTTP/1.1" 200 181
+[2021-04-28 14:14:38,660] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 1}
+[2021-04-28 14:14:38,866] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:14:40 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:14:38,866] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:14:38,867] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '{"code":200,"message":"OK","data":17}', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:14:38,867] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 201
+[2021-04-28 14:14:52,226] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:14:53,891] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:14:57,614] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 1}
+[2021-04-28 14:14:57,818] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:14:58 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:14:57,819] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:14:57,819] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:14:57,819] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:15:02,139] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:15:02,139] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:15:03,337] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_name': {'options': [{'value': 'PRM-B1.3.8', 'label': 1}]}, 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/bmp-prm-service/controller-modelShopifyService/front/exportModel?startCount=1&endCount=2&currentPage=1&pageSize=20&status=&platform=&site=&storeName=&groupId=&sku=&spu=&listingId=&listingType=&isWarn=&updateFail=', 'tag': 'header', 'header': [{'key': 'Authorization', 'value': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}], 'api_body': {}, 'radio': 1}
+[2021-04-28 14:15:03,666] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:15:04 GMT', 'Content-Type': 'application/octet-stream;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Content-Disposition': 'attachment; filename=listing%E8%8C%83%E6%9C%AC%E4%BF%A1%E6%81%AF2021-04-28.csv', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:15:03,667] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数："序号",spu,系统sku,产品中文名称,标题,类型,图片,分组,平台,站点,店铺账号,平台ID,价格,库存,净利润率,状态,一级类目,二级类目,三级类目,首次上架时间,最近上架时间,最近下架时间,最近停售时间,失败原因,创建人,创建时间
+S9940,Chain Hoists,3T3MSBHL000000001V0,3T3米手板葫芦,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,单品,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,已上架,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19
+
+[2021-04-28 14:15:04,253] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': '"序号",spu,系统sku,产品中文名称,标题,类型,图片,分组,平台,站点,店铺账号,平台ID,价格,库存,净利润率,状态,一级类目,二级类目,三级类目,首次上架时间,最近上架时间,最近下架时间,最近停售时间,失败原因,创建人,创建时间\r\nS9940,Chain Hoists,3T3MSBHL000000001V0,3T3米手板葫芦,3 Ton 6600lbs Lever Chain Hoist Comealong Ratchet Lever Block 3m 10ft Lifting,单品,https://vevor-bmp-prm.s3.ap-east-1.amazonaws.com/product/3T3MSBHL000000001/1614235653578/chain-hoist-m100-1.2.jpg,Tool-Transport 2,shopify,AU,vevorshopau@hotmail.com,https://sishuntest.myshopify.com/products/3-ton-6600lbs-lever-chain-hoist-comealong-ratchet-lever-block-3m-10ft-lifting,147.990000,0,-0.070000,已上架,Material Handling,Hoists & Winches & Rigging,Manual Chain Hoist,2021-04-28 14:06:19,,,,"""""",yanyiming,2021-04-28 14:05:19\r\n', 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': '', 'message': 'ok'}
+[2021-04-28 14:15:04,255] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 1327
+[2021-04-28 14:22:46,940] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:23:00,389] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:23:00,392] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:23:01,623] [views_vue.py:233] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:23:01,671] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:23:01,709] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:23:01,712] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:24:04,920] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:24:04,921] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:24:05,246] [views_vue.py:233] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:24:05,255] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:24:05,257] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:24:05,272] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:27:43,290] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/getList HTTP/1.1" 200 0
+[2021-04-28 14:27:43,292] [views_vue.py:116] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:27:43,296] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:27:43,300] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:27:43,302] [views_vue.py:139] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:27:43,303] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-28 14:27:47,524] [views_vue.py:116] [views_vue:project_list] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:27:47,534] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:27:47,537] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:27:47,537] [views_vue.py:139] [views_vue:project_list] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:27:47,539] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-28 14:27:48,323] [views_vue.py:233] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:27:48,330] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:27:48,331] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:27:48,351] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:27:49,006] [basehttp.py:157] [basehttp:log_message] [INFO]- "OPTIONS /project/getCases HTTP/1.1" 200 0
+[2021-04-28 14:27:49,008] [views_vue.py:917] [views_vue:getCases] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:27:49,013] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:27:49,017] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:27:49,021] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getCases HTTP/1.1" 200 60
+[2021-04-28 14:35:45,221] [views_vue.py:233] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:35:45,236] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:35:45,238] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:35:45,249] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:35:49,481] [views_vue.py:1416] [views_vue:GetReturned] [INFO]- 请求参数！
+[2021-04-28 14:35:49,490] [views_vue.py:1427] [views_vue:GetReturned] [INFO]- 请求成功！
+[2021-04-28 14:35:49,490] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/Returned HTTP/1.1" 200 181
+[2021-04-28 14:35:53,471] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'body', 'header': [], 'radio': 5}
+[2021-04-28 14:35:53,665] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:35:53 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:35:53,666] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:35:53,666] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:35:53,667] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:36:02,355] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'header', 'header': [], 'radio': 1}
+[2021-04-28 14:36:02,553] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:36:02 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:36:02,553] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:36:02,554] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:36:02,554] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:36:04,821] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'header', 'header': [], 'radio': 1}
+[2021-04-28 14:36:05,002] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:36:04 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:36:05,003] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:36:05,003] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:36:05,004] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:36:06,418] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'header', 'header': [], 'radio': 1}
+[2021-04-28 14:36:06,591] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:36:06 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:36:06,591] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:36:06,591] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:36:06,592] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:36:07,594] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'header', 'header': [], 'radio': 1}
+[2021-04-28 14:36:07,786] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:36:07 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:36:07,786] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:36:07,786] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:36:07,787] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:36:11,259] [views_vue.py:658] [views_vue:SendRequest] [INFO]- 请求参数：{'project_id': 7, 'project_name': 'PRM-B1.3.8', 'api_name': 'shopify-获取库存', 'method': 'GET', 'url': 'https://gateway-test-a.vevor.net/scp-inventory-service/api-prmnStockService//outer/getCountBySkuAndSite?sku=5WMJSQGLX00000001V0&site=AU', 'tag': 'query', 'header': [], 'api_body': [{'key': '', 'value': ''}], 'radio': 'None'}
+[2021-04-28 14:36:11,449] [views_vue.py:750] [views_vue:SendRequest] [INFO]- API返回头部：{'Server': 'nginx', 'Date': 'Wed, 28 Apr 2021 06:36:11 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1; mode=block', 'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Frame-Options': 'DENY'}
+[2021-04-28 14:36:11,449] [views_vue.py:751] [views_vue:SendRequest] [INFO]- 请求参数：{'code': 200, 'message': 'OK', 'data': 17}
+[2021-04-28 14:36:11,449] [views_vue.py:905] [views_vue:SendRequest] [INFO]- 返回结果：{'code': 200, 'data': {'code': 200, 'message': 'OK', 'data': 17}, 'ExtractPath': '', 'ExtractRe': '', 'AssertRe': '', 'AssertPath': '', 'ResultExpected': '', 'file_path': 'False', 'message': 'ok'}
+[2021-04-28 14:36:11,450] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/SendRequest HTTP/1.1" 200 196
+[2021-04-28 14:37:27,697] [views_vue.py:53] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:37:27,699] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:37:27,912] [views_vue.py:233] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:37:27,924] [views_vue.py:165] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:37:27,926] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:37:27,945] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:39:42,537] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:39:45,294] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:39:49,185] [views_vue.py:54] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:39:49,186] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:39:49,370] [views_vue.py:234] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:39:49,379] [views_vue.py:166] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:39:49,383] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:39:49,402] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:39:57,890] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:40:00,756] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:40:13,255] [views_vue.py:50] [views_vue:userInfo] [ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:40:13,258] [views_vue.py:54] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:40:13,259] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:40:13,549] [views_vue.py:234] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:40:13,557] [views_vue.py:166] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:40:13,560] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:40:13,575] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:42:55,305] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\api_platform\settings.py changed, reloading.
+[2021-04-28 14:42:56,353] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:43:01,052] [views_vue.py:50] [views_vue:userInfo] [ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:43:01,055] [views_vue.py:54] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:43:01,056] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:43:01,274] [views_vue.py:234] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:43:01,285] [views_vue.py:166] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:43:01,291] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:43:01,301] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:49:40,652] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:52:21,153] [views_vue.py:50] [views_vue:userInfo] [ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:52:21,156] [views_vue.py:54] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:52:21,157] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:52:21,339] [views_vue.py:234] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:52:21,349] [views_vue.py:166] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:52:21,352] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:52:21,367] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:52:57,629] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 14:53:02,425] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:53:02,990] [views_vue.py:50] [views_vue:userInfo] [ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:53:02,991] [views_vue.py:51] [views_vue:userInfo] [INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:53:02,991] [views_vue.py:52] [views_vue:userInfo] [WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:53:02,995] [views_vue.py:57] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:53:02,998] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:53:03,447] [views_vue.py:237] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:53:03,456] [views_vue.py:169] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:53:03,462] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:53:03,484] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:53:25,213] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 14:53:29,962] [views_vue.py:50] [views_vue:userInfo] [ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:53:29,964] [views_vue.py:51] [views_vue:userInfo] [INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:53:29,965] [views_vue.py:52] [views_vue:userInfo] [WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 14:53:29,973] [views_vue.py:57] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 14:53:29,975] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 14:53:30,196] [views_vue.py:237] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 14:53:30,236] [views_vue.py:169] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 14:53:30,252] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 14:53:30,277] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 14:53:42,310] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:01:39,282] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\api_platform\settings.py changed, reloading.
+[2021-04-28 15:01:40,503] [autoreload.py:617] [autoreload:run_with_reloader] [INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:01:46,280] [views_vue.py:50] [views_vue:userInfo] [ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:01:46,280] [views_vue.py:51] [views_vue:userInfo] [INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:01:46,281] [views_vue.py:52] [views_vue:userInfo] [WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:01:46,284] [views_vue.py:56] [views_vue:userInfo] [INFO]- 登录用户：lxqiang95
+[2021-04-28 15:01:46,285] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 15:01:46,467] [views_vue.py:236] [views_vue:project_Apis] [INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 15:01:46,477] [views_vue.py:168] [views_vue:GetProList] [INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:01:46,481] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:01:46,494] [basehttp.py:157] [basehttp:log_message] [INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 15:02:08,255] [autoreload.py:240] [autoreload:trigger_reload] [INFO]- D:\platform\api_platform\settings.py changed, reloading.
+[2021-04-28 15:02:09,346]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:02:13,330]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:02:13,331]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:02:13,331]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:02:13,333]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 15:02:13,334]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 15:02:13,653]-[views_vue.py:236]-[views_vue:project_Apis]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 15:02:13,662]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:02:13,666]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:02:13,679]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 15:03:19,368]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 15:03:21,211]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:03:24,502]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:03:24,502]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:03:24,656]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /userInfo
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 52, in userInfo
+    logger.console('登录用户：{}'.format('ddddddddddddddddddddddddddd'))
+AttributeError: 'Logger' object has no attribute 'console'
+[2021-04-28 15:03:24,660]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /userInfo HTTP/1.1" 500 67128
+[2021-04-28 15:03:30,515]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 15:03:32,535]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:03:47,654]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 15:03:47,660]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 15:03:47,660]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 15:03:47,667]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 15:03:47,684]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:03:47,685]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:03:47,685]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:03:47,688]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 15:03:47,690]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 15:03:47,940]-[views_vue.py:920]-[views_vue:getCases]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 15:03:47,949]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:03:47,951]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:03:47,952]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getCases HTTP/1.1" 200 60
+[2021-04-28 15:06:23,744]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\api_platform\settings.py changed, reloading.
+[2021-04-28 15:06:54,880]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:08:33,580]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\api_platform\settings.py changed, reloading.
+[2021-04-28 15:08:34,617]-[18240]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 15:08:39,487]-[18240]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:08:39,487]-[18240]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:08:39,487]-[18240]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 15:08:39,493]-[18240]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 15:08:39,494]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 15:08:39,702]-[18240]-[views_vue.py:920]-[views_vue:getCases]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 15:08:39,712]-[18240]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:08:39,714]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getCases HTTP/1.1" 200 60
+[2021-04-28 15:08:39,715]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:57:23,166]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/GetProList HTTP/1.1" 200 0
+[2021-04-28 15:57:23,173]-[18240]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:57:23,175]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:58:44,572]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/getApis HTTP/1.1" 200 0
+[2021-04-28 15:58:44,577]-[18240]-[views_vue.py:236]-[views_vue:project_Apis]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 15:58:44,582]-[18240]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:58:44,585]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:58:44,603]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 15:58:46,733]-[18240]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:58:46,734]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:59:56,825]-[18240]-[views_vue.py:236]-[views_vue:project_Apis]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 15:59:56,833]-[18240]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 15:59:56,835]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 15:59:56,851]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-28 16:00:00,052]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /global/VariAble HTTP/1.1" 200 0
+[2021-04-28 16:00:00,056]-[18240]-[views_vue.py:1273]-[views_vue:Variable]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 16:00:00,064]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /global/VariAble HTTP/1.1" 200 60
+[2021-04-28 16:00:10,506]-[18240]-[views_vue.py:1273]-[views_vue:Variable]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 16:00:10,514]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /global/VariAble HTTP/1.1" 200 60
+[2021-04-28 16:02:37,642]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /global/DoEdit HTTP/1.1" 200 0
+[2021-04-28 16:02:37,644]-[18240]-[views_vue.py:1310]-[views_vue:DoEdit]-[INFO]- 请求参数：{'name': 'PRMTOKEN', 'data': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}
+[2021-04-28 16:02:37,748]-[18240]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /global/DoEdit
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1317, in DoEdit
+    Authorization = request.headers['Accesstoken']
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\http\request.py", line 412, in __getitem__
+    return super().__getitem__(key.replace('_', '-'))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'accesstoken'
+[2021-04-28 16:02:37,750]-[18240]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /global/DoEdit HTTP/1.1" 500 76522
+[2021-04-28 16:03:03,787]-[18240]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:03:06,150]-[12360]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:03:08,614]-[12360]-[views_vue.py:1310]-[views_vue:DoEdit]-[INFO]- 请求参数：{'name': 'PRMTOKEN', 'data': 'Bearer d0ea7fa3-0c28-4c01-9aa1-0c2a1bd58d24'}
+[2021-04-28 16:03:08,700]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /global/DoEdit HTTP/1.1" 200 46
+[2021-04-28 16:03:08,714]-[12360]-[views_vue.py:1273]-[views_vue:Variable]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 16:03:08,724]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /global/VariAble HTTP/1.1" 200 220
+[2021-04-28 16:08:16,437]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-28 16:08:16,439]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:08:16,439]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:08:16,440]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:08:16,440]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:08:16,441]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:10:31,099]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:10:31,100]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:10:31,100]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:10:31,101]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:10:31,102]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:10:49,974]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:10:49,974]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:10:49,975]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:10:49,975]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:10:49,976]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:17:01,880]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:17:01,881]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:17:01,881]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:17:01,882]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:17:01,883]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:24:24,466]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:24:24,467]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:24:24,467]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:24:24,467]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:24:24,468]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:25:47,327]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:25:47,327]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:25:47,327]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:25:47,328]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:25:47,330]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:28:11,969]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:28:11,970]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:28:11,970]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:28:11,971]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:28:11,971]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:28:16,786]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/getList HTTP/1.1" 200 0
+[2021-04-28 16:28:16,788]-[12360]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-28 16:28:16,800]-[12360]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 16:28:16,801]-[12360]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-28 16:28:16,802]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-28 16:28:16,803]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-28 16:35:02,334]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:35:02,334]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:35:02,335]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:35:02,335]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:35:02,336]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:35:18,777]-[12360]-[views_vue.py:50]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:35:18,777]-[12360]-[views_vue.py:51]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:35:18,777]-[12360]-[views_vue.py:52]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:35:18,778]-[12360]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:35:18,778]-[12360]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:42:23,191]-[12360]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:42:25,521]-[19120]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:44:03,333]-[19120]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:44:04,704]-[27164]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:44:13,926]-[27164]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:44:15,799]-[30608]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:44:38,433]-[30608]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\api_platform\urls.py changed, reloading.
+[2021-04-28 16:44:39,478]-[29820]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:47:45,931]-[29820]-[views_vue.py:51]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:47:45,932]-[29820]-[views_vue.py:52]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:47:45,932]-[29820]-[views_vue.py:53]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:47:45,934]-[29820]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:47:45,935]-[29820]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:50:19,576]-[29820]-[views_vue.py:51]-[views_vue:userInfo]-[ERROR]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:50:19,577]-[29820]-[views_vue.py:52]-[views_vue:userInfo]-[INFO]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:50:19,577]-[29820]-[views_vue.py:53]-[views_vue:userInfo]-[WARNING]- 登录用户：ddddddddddddddddddddddddddd
+[2021-04-28 16:50:19,578]-[29820]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:50:19,579]-[29820]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:52:47,608]-[29820]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:52:49,302]-[24932]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:52:58,128]-[24932]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /apis/Orthogonal HTTP/1.1" 200 0
+[2021-04-28 16:52:58,140]-[24932]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:52:58,316]-[24932]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1466, in Orthogonal
+    end_values = data['end_values'].split(',')
+AttributeError: 'list' object has no attribute 'split'
+[2021-04-28 16:52:58,318]-[24932]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 67278
+[2021-04-28 16:54:02,328]-[24932]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 16:54:02,328]-[24932]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 16:54:32,240]-[24932]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:54:32,264]-[24932]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1466, in Orthogonal
+    end_values = data['end_values'].split(',')
+AttributeError: 'list' object has no attribute 'split'
+[2021-04-28 16:54:32,265]-[24932]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 67270
+[2021-04-28 16:54:57,842]-[24932]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:54:59,222]-[13352]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:55:20,147]-[13352]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:55:22,439]-[25956]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:55:29,149]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:55:29,149]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:55:39,333]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:55:39,334]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:56:20,179]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:56:20,180]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:56:31,408]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:56:31,409]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:57:20,596]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:57:20,597]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:57:33,879]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:57:33,880]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:58:09,625]-[25956]-[views_vue.py:1465]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:58:09,626]-[25956]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:58:24,878]-[25956]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:58:26,604]-[18716]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:58:31,793]-[18716]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:58:31,794]-[18716]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:59:16,534]-[18716]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:59:16,535]-[18716]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 16:59:44,017]-[18716]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 16:59:45,439]-[21200]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 16:59:51,158]-[21200]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 16:59:51,312]-[21200]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1469, in Orthogonal
+    new_values = [i.split('/') for i in end_values]
+  File "D:\platform\My_api\views_vue.py", line 1469, in <listcomp>
+    new_values = [i.split('/') for i in end_values]
+AttributeError: 'dict' object has no attribute 'split'
+[2021-04-28 16:59:51,313]-[21200]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 71399
+[2021-04-28 17:00:23,056]-[21200]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 17:00:24,172]-[34076]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 17:00:42,496]-[34076]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 17:00:42,628]-[34076]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1467, in Orthogonal
+    end_values = data['end_values']['value']
+TypeError: list indices must be integers or slices, not str
+[2021-04-28 17:00:42,630]-[34076]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 67233
+[2021-04-28 17:00:58,661]-[34076]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 17:00:59,812]-[4452]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 17:01:02,979]-[4452]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 17:01:02,993]-[4452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 17:03:09,046]-[4452]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 17:03:09,048]-[4452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 46
+[2021-04-28 17:07:57,331]-[4452]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 17:07:59,259]-[20504]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 17:08:05,689]-[20504]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 17:08:05,689]-[20504]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 17:08:05,690]-[20504]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /apis/Orthogonal
+[2021-04-28 17:08:05,690]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /apis/Orthogonal HTTP/1.1" 402 56
+[2021-04-28 17:08:18,657]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 17:08:18,662]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-28 17:08:18,663]-[20504]-[views_vue.py:73]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 17:08:18,663]-[20504]-[views_vue.py:79]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 17:08:18,671]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 17:08:18,707]-[20504]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 17:08:18,708]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 17:08:38,053]-[20504]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 17:08:38,167]-[20504]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1475, in Orthogonal
+    for i in AllPairs(new_values):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 61, in __init__
+    self.__validate_parameter(parameters)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 170, in __validate_parameter
+    raise ValueError("must provide more than one option")
+ValueError: must provide more than one option
+[2021-04-28 17:08:38,168]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 76648
+[2021-04-28 17:11:13,385]-[20504]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 17:11:13,490]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 1235
+[2021-04-28 17:12:45,404]-[20504]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 17:12:45,470]-[20504]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 1235
+[2021-04-28 19:11:55,976]-[20504]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:11:57,071]-[9612]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:12:01,752]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /apis/Orthogonal HTTP/1.1" 200 0
+[2021-04-28 19:12:01,770]-[9612]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 19:12:01,772]-[9612]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-28 19:12:01,773]-[9612]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /apis/Orthogonal
+[2021-04-28 19:12:01,774]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /apis/Orthogonal HTTP/1.1" 402 56
+[2021-04-28 19:12:14,239]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-28 19:12:14,246]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-28 19:12:14,247]-[9612]-[views_vue.py:73]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 19:12:14,247]-[9612]-[views_vue.py:79]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-28 19:12:14,252]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-28 19:12:14,269]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-28 19:12:14,271]-[9612]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 19:12:14,272]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-28 19:12:39,766]-[9612]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:12:39,768]-[9612]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 227
+[2021-04-28 19:26:31,155]-[9612]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:26:32,760]-[16040]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:26:37,363]-[16040]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:26:37,379]-[16040]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 227
+[2021-04-28 19:30:54,947]-[16040]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:30:54,956]-[16040]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:36:18,313]-[16040]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:36:19,422]-[14916]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:36:23,050]-[14916]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:36:23,220]-[14916]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1477, in Orthogonal
+    a = {
+TypeError: unhashable type: 'dict'
+[2021-04-28 19:36:23,221]-[14916]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 68454
+[2021-04-28 19:37:18,354]-[14916]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:37:19,464]-[29976]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:37:36,652]-[29976]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:37:38,200]-[21768]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:37:49,223]-[21768]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:37:50,284]-[2316]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:37:54,762]-[2316]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:37:54,882]-[2316]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1478, in Orthogonal
+    a = {end_values[q]: s}
+TypeError: unhashable type: 'dict'
+[2021-04-28 19:37:54,883]-[2316]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 68504
+[2021-04-28 19:38:04,006]-[2316]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:38:06,195]-[6256]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:38:19,232]-[6256]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:38:19,346]-[6256]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1479, in Orthogonal
+    ic(a)
+TypeError: unhashable type: 'dict'
+[2021-04-28 19:38:19,347]-[6256]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 68675
+[2021-04-28 19:39:20,750]-[6256]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:39:22,009]-[26860]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:39:24,819]-[26860]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:39:24,997]-[26860]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1478, in Orthogonal
+    a[f'{end_values[q]}'] = s
+IndexError: list index out of range
+[2021-04-28 19:39:24,998]-[26860]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 69199
+[2021-04-28 19:39:37,984]-[26860]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:39:39,141]-[11280]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:40:28,789]-[11280]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:40:30,006]-[27520]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:40:33,490]-[27520]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:40:33,625]-[27520]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1478, in Orthogonal
+    a[f'{end_values[q]["key"]}'] = s
+IndexError: list index out of range
+[2021-04-28 19:40:33,626]-[27520]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 69018
+[2021-04-28 19:41:06,622]-[27520]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:41:08,336]-[26036]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:41:20,302]-[26036]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:41:21,627]-[32960]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:41:25,631]-[32960]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:41:25,669]-[32960]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:45:25,299]-[32960]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:45:26,555]-[33192]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:46:52,216]-[33192]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:46:53,275]-[31080]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:48:19,728]-[31080]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:48:21,043]-[30428]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:51:07,839]-[30428]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:51:09,551]-[13708]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:51:40,628]-[13708]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:51:41,679]-[29496]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:51:46,922]-[29496]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:51:46,956]-[29496]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:52:14,676]-[29496]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:52:16,041]-[4612]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:52:22,936]-[4612]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:52:24,227]-[26300]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:52:31,623]-[26300]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:52:31,658]-[26300]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:52:57,710]-[26300]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:52:59,374]-[16248]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:53:02,246]-[16248]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:53:02,307]-[16248]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:53:34,999]-[16248]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:53:36,221]-[27668]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:53:38,968]-[27668]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:53:39,028]-[27668]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:54:28,786]-[27668]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:54:30,033]-[3220]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:54:37,646]-[3220]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:54:37,702]-[3220]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:54:48,658]-[3220]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:54:50,151]-[30148]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:55:07,294]-[30148]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:55:07,358]-[30148]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:56:19,252]-[30148]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:56:20,431]-[15264]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:57:16,946]-[15264]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:57:17,014]-[15264]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:59:04,551]-[15264]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 19:59:05,731]-[17912]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 19:59:14,727]-[17912]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:59:14,789]-[17912]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 307
+[2021-04-28 19:59:54,722]-[17912]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-28 19:59:54,803]-[17912]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 868
+[2021-04-28 20:00:58,375]-[17912]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-28 20:00:59,476]-[15860]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-28 20:11:35,114]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-28 20:11:35,115]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:45:11,447]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /apis/Orthogonal HTTP/1.1" 200 0
+[2021-04-29 10:45:11,453]-[15860]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 10:45:11,454]-[15860]-[views_vue.py:1381]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-29 10:45:11,455]-[15860]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /apis/Orthogonal
+[2021-04-29 10:45:11,455]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /apis/Orthogonal HTTP/1.1" 402 56
+[2021-04-29 10:45:19,101]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-29 10:45:19,109]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-29 10:45:19,112]-[15860]-[views_vue.py:73]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-29 10:45:19,112]-[15860]-[views_vue.py:79]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-29 10:45:19,137]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-29 10:45:19,153]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-29 10:45:19,155]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:45:19,156]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:45:22,346]-[15860]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 10:45:22,365]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 37
+[2021-04-29 10:45:44,150]-[15860]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 10:45:44,202]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 485
+[2021-04-29 10:46:52,683]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:46:52,684]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:47:42,030]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:47:42,030]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:47:52,524]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:47:52,524]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:48:15,142]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:48:15,142]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:48:28,987]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:48:28,988]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:49:17,419]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:49:17,420]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:50:04,202]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:50:04,203]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:50:20,958]-[15860]-[views_vue.py:54]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-29 10:50:20,959]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-29 10:50:35,828]-[15860]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 10:50:35,932]-[15860]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1475, in Orthogonal
+    for s in AllPairs(new_values):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 61, in __init__
+    self.__validate_parameter(parameters)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 170, in __validate_parameter
+    raise ValueError("must provide more than one option")
+ValueError: must provide more than one option
+[2021-04-29 10:50:35,933]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 76254
+[2021-04-29 10:51:58,944]-[15860]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 10:51:58,997]-[15860]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /apis/Orthogonal
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1475, in Orthogonal
+    for s in AllPairs(new_values):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 61, in __init__
+    self.__validate_parameter(parameters)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 170, in __validate_parameter
+    raise ValueError("must provide more than one option")
+ValueError: must provide more than one option
+[2021-04-29 10:51:58,998]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /apis/Orthogonal HTTP/1.1" 500 76254
+[2021-04-29 10:52:24,587]-[15860]-[views_vue.py:1466]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-29 10:52:24,589]-[15860]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 37
+[2021-04-29 10:53:32,832]-[15860]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.

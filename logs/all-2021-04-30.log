@@ -1,0 +1,1387 @@
+[2021-04-30 09:04:55,495]-[24816]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:06:04,804]-[24816]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-30 09:06:04,809]-[24816]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-30 09:06:04,811]-[24816]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 09:06:04,812]-[24816]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 09:06:04,820]-[24816]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-30 09:06:04,837]-[24816]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-30 09:06:04,841]-[24816]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:06:04,842]-[24816]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:07:33,682]-[24816]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:07:35,022]-[8696]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:07:45,184]-[8696]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /apis/Orthogonal HTTP/1.1" 200 0
+[2021-04-30 09:07:45,192]-[8696]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:07:45,193]-[8696]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 83
+[2021-04-30 09:10:57,469]-[8696]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:10:58,784]-[32672]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:11:01,126]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:01,127]-[32672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:11:04,442]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:04,443]-[32672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:11:05,015]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:05,016]-[32672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:11:05,658]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:05,658]-[32672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:11:07,555]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:07,555]-[32672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:11:22,053]-[32672]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:11:23,504]-[35672]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:11:26,315]-[35672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'q/Q/S/D'}]}
+[2021-04-30 09:11:26,316]-[35672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:11:48,755]-[35672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'q/Q/S/D'}]}
+[2021-04-30 09:11:48,756]-[35672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 95
+[2021-04-30 09:12:52,857]-[35672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '侧事故1', 'value': 'q/Q/S/D'}, {'key': '侧事故2', 'value': 'ZX/C/VFDS/VB'}]}
+[2021-04-30 09:12:52,858]-[35672]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-30 09:12:52,859]-[35672]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 503
+[2021-04-30 09:13:22,930]-[35672]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:13:24,729]-[31068]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:13:29,322]-[31068]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '侧事故2', 'value': 'ZX/C/VFDS/VB'}]}
+[2021-04-30 09:13:29,323]-[31068]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 100
+[2021-04-30 09:13:40,639]-[31068]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:13:40,639]-[31068]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:13:44,529]-[31068]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '', 'value': ''}]}
+[2021-04-30 09:13:44,530]-[31068]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 37
+[2021-04-30 09:19:23,168]-[31068]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:19:23,169]-[31068]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:20:21,254]-[31068]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /Orthogonal/OrthogonalDrive HTTP/1.1" 200 0
+[2021-04-30 09:20:21,845]-[31068]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:20:22,073]-[31068]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view My_api.views_vue.OrthogonalDrive didn't return an HttpResponse object. It returned None instead.
+[2021-04-30 09:20:22,074]-[31068]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 68828
+[2021-04-30 09:21:50,396]-[31068]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:21:52,280]-[25476]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:21:55,216]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:21:55,412]-[25476]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'list' object has no attribute 'get'
+[2021-04-30 09:21:55,413]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 67676
+[2021-04-30 09:22:45,546]-[25476]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'qaa/AAAA/ssssssssssd/DSF'}, {'key': '33', 'value': 'wwww'}]}
+[2021-04-30 09:22:45,546]-[25476]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-30 09:22:45,547]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 176
+[2021-04-30 09:22:46,906]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:22:46,908]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 117
+[2021-04-30 09:22:55,883]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:22:55,885]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 117
+[2021-04-30 09:23:15,464]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:23:15,467]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 117
+[2021-04-30 09:24:12,300]-[25476]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 09:24:12,301]-[25476]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 09:24:12,301]-[25476]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /Orthogonal/OrthogonalDrive
+[2021-04-30 09:24:12,302]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 402 56
+[2021-04-30 09:24:30,695]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:24:30,705]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 260
+[2021-04-30 09:25:02,754]-[25476]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'qaa/AAAA/ssssssssssd/DSF'}]}
+[2021-04-30 09:25:02,755]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 112
+[2021-04-30 09:25:04,453]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:25:04,476]-[25476]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'list' object has no attribute 'get'
+[2021-04-30 09:25:04,477]-[25476]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 67676
+[2021-04-30 09:32:12,329]-[25476]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:32:14,842]-[17460]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:32:20,496]-[17460]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:32:22,471]-[18608]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:32:27,161]-[18608]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': []}
+[2021-04-30 09:32:27,271]-[18608]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1527, in OrthogonalDrive
+    for s in AllPairs(new_values):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 61, in __init__
+    self.__validate_parameter(parameters)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 170, in __validate_parameter
+    raise ValueError("must provide more than one option")
+ValueError: must provide more than one option
+[2021-04-30 09:32:27,273]-[18608]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 77007
+[2021-04-30 09:32:50,076]-[18608]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:32:51,606]-[9736]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:32:54,347]-[9736]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': []}
+[2021-04-30 09:32:54,552]-[9736]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1527, in OrthogonalDrive
+    for s in AllPairs(new_values):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 61, in __init__
+    self.__validate_parameter(parameters)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\allpairspy\allpairs.py", line 170, in __validate_parameter
+    raise ValueError("must provide more than one option")
+ValueError: must provide more than one option
+[2021-04-30 09:32:54,554]-[9736]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 77007
+[2021-04-30 09:33:07,782]-[9736]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:33:09,306]-[8552]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:33:14,281]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': []}
+[2021-04-30 09:33:14,292]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 91
+[2021-04-30 09:33:21,251]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '', 'value': ''}]}
+[2021-04-30 09:33:21,252]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 91
+[2021-04-30 09:33:24,139]-[8552]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:33:24,140]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:33:25,735]-[8552]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:33:25,735]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:33:29,852]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': ''}]}
+[2021-04-30 09:33:29,853]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 91
+[2021-04-30 09:33:33,936]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': '3'}]}
+[2021-04-30 09:33:33,938]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 6
+[2021-04-30 09:33:47,892]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': '3'}]}
+[2021-04-30 09:33:47,894]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 6
+[2021-04-30 09:34:49,116]-[8552]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': '3'}]}
+[2021-04-30 09:34:49,116]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 50
+[2021-04-30 09:37:17,746]-[8552]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:37:17,747]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:37:49,213]-[8552]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:37:49,214]-[8552]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！{'code': 200, 'res': [{'key0': '23', 'key1': 'fsd'}, {'key0': '45', 'key1': 'fsd'}, {'key0': 're', 'key1': 'fsd'}, {'key0': 're', 'key1': 'gfdhgfd'}, {'key0': '45', 'key1': 'gfdhgfd'}, {'key0': '23', 'key1': 'gfdhgfd'}, {'key0': '23', 'key1': 'vbxcvd'}, {'key0': '45', 'key1': 'vbxcvd'}, {'key0': 're', 'key1': 'vbxcvd'}, {'key0': 're', 'key1': 'fdsfsd'}, {'key0': '45', 'key1': 'fdsfsd'}, {'key0': '23', 'key1': 'fdsfsd'}], 'msg': 'OK'}
+[2021-04-30 09:37:49,215]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 437
+[2021-04-30 09:37:51,696]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:37:51,834]-[8552]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1533, in OrthogonalDrive
+    a = f"{end_values[j]['key']}: {i[j]}"
+IndexError: list index out of range
+[2021-04-30 09:37:51,835]-[8552]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 71325
+[2021-04-30 09:39:18,607]-[8552]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:39:20,009]-[29216]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:39:22,944]-[29216]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:39:23,145]-[29216]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1533, in OrthogonalDrive
+    a = f"{end_values[j]['key']}: {i[j]}"
+IndexError: list index out of range
+[2021-04-30 09:39:23,146]-[29216]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 71328
+[2021-04-30 09:43:08,744]-[29216]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:43:08,777]-[29216]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1533, in OrthogonalDrive
+    for j in range(len(i)):
+IndexError: list index out of range
+[2021-04-30 09:43:08,778]-[29216]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 71280
+[2021-04-30 09:43:09,163]-[29216]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:43:10,574]-[31072]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:43:18,794]-[31072]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}]}
+[2021-04-30 09:43:18,982]-[31072]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /Orthogonal/OrthogonalDrive
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\deprecation.py", line 116, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'list' object has no attribute 'get'
+[2021-04-30 09:43:18,984]-[31072]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 500 67578
+[2021-04-30 09:43:31,504]-[31072]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}, {'key': '2', 'value': '32'}]}
+[2021-04-30 09:43:31,507]-[31072]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 87
+[2021-04-30 09:45:01,421]-[31072]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:45:02,780]-[8820]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:45:25,742]-[8820]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:45:27,111]-[31532]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:45:34,238]-[31532]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:45:35,600]-[11400]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:45:49,574]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '站点', 'value': 'AU'}, {'key': '账号', 'value': 'eaby/Amazon'}, {'key': '分组', 'value': 'SKU/SPU/平台ID '}]}
+[2021-04-30 09:45:49,593]-[11400]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 260
+[2021-04-30 09:46:03,826]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}, {'key': '2', 'value': '32'}]}
+[2021-04-30 09:46:03,829]-[11400]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 87
+[2021-04-30 09:46:14,086]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}]}
+[2021-04-30 09:46:14,088]-[11400]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 69
+[2021-04-30 09:46:35,032]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}]}
+[2021-04-30 09:46:35,034]-[11400]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 69
+[2021-04-30 09:47:19,962]-[11400]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:47:21,446]-[1596]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:48:15,913]-[1596]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:48:17,570]-[24604]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:49:28,396]-[24604]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:49:28,396]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:49:46,851]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '2/3/4'}, {'key': '2', 'value': 'g/h/j/m'}]}
+[2021-04-30 09:49:46,874]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 255
+[2021-04-30 09:50:55,157]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': 'qe/rew/te'}, {'key': 'ew', 'value': 'fdsf/g/h'}], 'responseType': 'blob'}
+[2021-04-30 09:50:55,160]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 228
+[2021-04-30 09:50:59,304]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': 'qe/rew/te'}, {'key': 'ew', 'value': 'fdsf/g/h'}], 'responseType': 'blob'}
+[2021-04-30 09:50:59,311]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 228
+[2021-04-30 09:53:30,815]-[24604]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:53:30,815]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 09:53:56,779]-[24604]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': '二维、e/dsa/dsa'}, {'key': 'sa', 'value': 'vxcv/gfdg/hd'}]}
+[2021-04-30 09:53:56,781]-[24604]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！{'code': 200, 'res': [{'key0': '二维、e', 'key1': 'vxcv'}, {'key0': 'dsa', 'key1': 'vxcv'}, {'key0': 'dsa', 'key1': 'vxcv'}, {'key0': 'dsa', 'key1': 'gfdg'}, {'key0': 'dsa', 'key1': 'gfdg'}, {'key0': '二维、e', 'key1': 'gfdg'}, {'key0': '二维、e', 'key1': 'hd'}, {'key0': 'dsa', 'key1': 'hd'}, {'key0': 'dsa', 'key1': 'hd'}], 'msg': 'OK'}
+[2021-04-30 09:53:56,781]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /apis/Orthogonal HTTP/1.1" 200 374
+[2021-04-30 09:53:58,915]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': '二维、e/dsa/dsa'}, {'key': 'sa', 'value': 'vxcv/gfdg/hd'}]}
+[2021-04-30 09:53:58,918]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 258
+[2021-04-30 09:54:49,763]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:54:49,766]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 347
+[2021-04-30 09:54:54,921]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:54:54,925]-[24604]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 347
+[2021-04-30 09:59:20,629]-[24604]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:59:22,023]-[30240]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 09:59:27,040]-[30240]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:59:27,061]-[30240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 347
+[2021-04-30 09:59:32,539]-[30240]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:59:32,543]-[30240]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 347
+[2021-04-30 09:59:54,977]-[30240]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 09:59:57,044]-[20864]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 10:00:03,974]-[20864]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 10:00:04,012]-[20864]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 347
+[2021-04-30 10:03:21,383]-[20864]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:03:21,384]-[20864]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 10:07:06,931]-[20864]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 10:07:08,376]-[36828]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 10:09:33,013]-[36828]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 10:09:34,402]-[22776]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 10:09:40,969]-[22776]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '站点', 'value': 'AU'}, {'key': '账号', 'value': 'eaby/Amazon'}, {'key': '分组', 'value': 'SKU/SPU/平台ID '}]}
+[2021-04-30 10:09:40,988]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /Orthogonal/OrthogonalDrive HTTP/1.1" 200 260
+[2021-04-30 10:11:35,756]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/getList HTTP/1.1" 200 0
+[2021-04-30 10:11:35,757]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/GetProList HTTP/1.1" 200 0
+[2021-04-30 10:11:35,759]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:11:35,768]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:11:35,769]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:11:35,770]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 10:11:35,771]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 10:12:12,149]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:12:12,168]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:12:12,169]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 10:12:12,175]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:12:12,176]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 10:16:10,286]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:16:10,287]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 10:16:10,555]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:16:10,565]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:16:10,570]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 10:16:10,568]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:16:10,572]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 10:17:11,722]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:17:11,722]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 10:17:11,973]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:17:11,982]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:17:11,984]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:17:11,986]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 10:17:11,988]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 10:18:23,669]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:18:23,670]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 10:18:24,134]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:18:24,143]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:18:24,150]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 10:18:24,149]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:18:24,152]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 10:59:48,937]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:59:48,937]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 10:59:49,118]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:59:49,127]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:59:49,132]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 10:59:49,130]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:59:49,135]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:01:16,119]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /httprunner/update HTTP/1.1" 200 0
+[2021-04-30 11:01:16,122]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:01:16,123]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:01:16,123]-[22776]-[log.py:224]-[log:log_response]-[WARNING]- Unauthorized: /httprunner/update
+[2021-04-30 11:01:16,124]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 401 56
+[2021-04-30 11:05:27,328]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:05:27,329]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:05:27,330]-[22776]-[log.py:224]-[log:log_response]-[WARNING]- Unauthorized: /httprunner/update
+[2021-04-30 11:05:27,330]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 401 56
+[2021-04-30 11:06:43,956]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-30 11:06:43,958]-[22776]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 11:06:43,959]-[22776]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 11:06:43,961]-[22776]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 11:06:43,962]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 11:08:18,878]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-30 11:08:18,897]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-30 11:08:18,899]-[22776]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 11:08:18,899]-[22776]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 11:08:18,908]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-30 11:08:18,943]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:08:18,947]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:08:19,186]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:08:19,197]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:08:19,197]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:08:19,198]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:08:19,199]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:08:24,478]-[22776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:08:24,478]-[22776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:08:24,479]-[22776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 56
+[2021-04-30 11:09:56,913]-[22776]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 11:09:58,802]-[32776]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 11:10:48,983]-[32776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:10:48,984]-[32776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:10:48,985]-[32776]-[log.py:224]-[log:log_response]-[WARNING]- Forbidden: /httprunner/update
+[2021-04-30 11:10:48,985]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 403 56
+[2021-04-30 11:13:40,889]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:13:40,910]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:13:40,911]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:13:40,917]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:13:40,919]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:14:05,329]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:14:05,338]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:05,340]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:14:05,346]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:05,347]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:14:42,699]-[32776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:14:42,700]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:14:43,127]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:14:43,134]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:43,135]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:43,136]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:14:43,137]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:15:18,088]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:15:18,097]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:15:18,098]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:15:18,113]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:15:18,114]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:17:38,782]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:17:38,796]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:17:38,798]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:17:38,799]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:17:38,799]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:18:26,211]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:18:26,221]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:18:26,225]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:18:26,225]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:18:26,226]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:21:28,910]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:21:28,923]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:28,927]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:28,929]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:21:28,930]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:21:51,884]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:21:51,894]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:51,896]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:51,897]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:21:51,899]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:22:25,453]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:22:25,463]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:22:25,467]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:22:25,468]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:22:25,470]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:23:52,817]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:23:52,829]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:23:52,832]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:23:52,833]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:23:52,834]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:24:51,998]-[32776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:24:51,999]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:24:52,208]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:24:52,217]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:24:52,220]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:24:52,221]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:24:52,223]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:25:19,078]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:25:19,088]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:19,091]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:25:19,094]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:19,095]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:25:25,077]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:25:25,083]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:25,085]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:25:25,085]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:25,088]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:25:38,166]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:25:38,176]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:38,177]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:25:38,189]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:38,191]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:26:10,401]-[32776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:26:10,402]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:26:10,849]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:26:10,860]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:26:10,862]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:26:10,863]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:26:10,865]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:26:24,319]-[32776]-[views_vue.py:1362]-[views_vue:Runner]-[INFO]- 请求参数：login (1).vue
+[2021-04-30 11:26:24,321]-[32776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 11
+[2021-04-30 11:26:59,653]-[32776]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 11:27:01,847]-[14628]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 11:28:12,507]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:28:12,508]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:28:12,717]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:28:12,731]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:12,733]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:28:12,737]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:12,741]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:28:38,099]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:28:38,099]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:28:38,298]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:28:38,307]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:38,311]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:28:38,312]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:38,314]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:29:08,781]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:29:08,782]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:29:09,046]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:29:09,057]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:09,060]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:29:09,060]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:09,062]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:29:20,134]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:29:20,136]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:29:49,223]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:29:49,224]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:29:49,526]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:29:49,534]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:49,536]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:49,540]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:29:49,540]-[14628]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:32:08,102]-[14628]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 11:32:09,511]-[11788]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 11:36:58,393]-[11788]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:36:58,394]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:36:58,581]-[11788]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:36:58,595]-[11788]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:36:58,596]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:36:58,608]-[11788]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:36:58,608]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:37:33,474]-[11788]-[views_vue.py:1362]-[views_vue:Runner]-[INFO]- 请求参数：zxc.har
+[2021-04-30 11:37:33,479]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 70
+[2021-04-30 11:45:14,502]-[11788]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:45:14,503]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 11:45:14,694]-[11788]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:45:14,707]-[11788]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:45:14,708]-[11788]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:45:14,708]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 11:45:14,709]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 11:45:32,458]-[11788]-[views_vue.py:1362]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 11:45:32,462]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 70
+[2021-04-30 13:38:13,032]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,033]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,033]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 13:38:13,034]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 13:38:13,039]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,039]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,039]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 13:38:13,040]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 13:38:13,045]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,045]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,045]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 13:38:13,046]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 13:38:13,052]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,052]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,053]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 13:38:13,053]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 13:40:39,176]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,177]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,177]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 13:40:39,177]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 13:40:39,182]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,182]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,183]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 13:40:39,183]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 13:40:39,187]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,188]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,188]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 13:40:39,188]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 13:40:39,194]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,194]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,195]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 13:40:39,195]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 13:46:32,153]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,154]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,154]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 13:46:32,154]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 13:46:32,159]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,159]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,160]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 13:46:32,160]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 13:46:32,164]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,165]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,165]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 13:46:32,165]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 13:46:32,175]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,175]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,176]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 13:46:32,176]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 13:48:50,961]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,961]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,961]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 13:48:50,962]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 13:48:50,967]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,967]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,967]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 13:48:50,968]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 13:48:50,972]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,972]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,973]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 13:48:50,973]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 13:48:50,983]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,983]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,984]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 13:48:50,984]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 13:50:12,044]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,044]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,044]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 13:50:12,045]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 13:50:12,049]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,050]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,050]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 13:50:12,051]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 13:50:12,055]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,056]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,056]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 13:50:12,057]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 13:50:12,065]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,065]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,066]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 13:50:12,066]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 13:57:32,579]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,580]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,580]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 13:57:32,580]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 13:57:32,585]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,585]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,586]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 13:57:32,586]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 13:57:32,589]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,590]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,590]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 13:57:32,590]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 13:57:32,599]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,600]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,600]-[11788]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 13:57:32,600]-[11788]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:36:27,120]-[6236]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 14:36:45,254]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:36:45,264]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:36:45,264]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 14:36:45,264]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 14:36:45,274]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,274]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,274]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 14:36:45,274]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 14:36:45,284]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,284]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,284]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:36:45,284]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:37:17,501]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-30 14:37:17,503]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:37:17,504]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:37:17,504]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:37:17,504]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:37:23,017]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-30 14:37:23,023]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-30 14:37:23,025]-[6236]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 14:37:23,026]-[6236]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 14:37:23,034]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-30 14:37:23,049]-[6236]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 14:37:23,050]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 14:37:23,190]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/getList HTTP/1.1" 200 0
+[2021-04-30 14:37:23,194]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/GetProList HTTP/1.1" 200 0
+[2021-04-30 14:37:23,194]-[6236]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 14:37:23,205]-[6236]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 14:37:23,207]-[6236]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 14:37:23,209]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 14:37:23,211]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:40:03,569]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 14:40:03,569]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/update
+[2021-04-30 14:40:03,569]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/update HTTP/1.1" 402 56
+[2021-04-30 14:40:03,579]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,579]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,579]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:40:03,579]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:41:01,434]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,434]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,435]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:41:01,435]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:41:01,438]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,438]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,438]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:41:01,439]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:41:47,234]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,234]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,235]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:41:47,235]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:41:47,239]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,240]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,240]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 14:41:47,240]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 14:41:47,244]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,244]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,245]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:41:47,245]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:42:22,122]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 14:42:22,122]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,132]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:42:22,132]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:43:32,398]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 14:43:32,398]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 14:43:32,408]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,408]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,408]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:43:32,408]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/getList
+[2021-04-30 14:44:15,121]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/getList HTTP/1.1" 402 56
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /project/GetProList
+[2021-04-30 14:44:15,121]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /project/GetProList HTTP/1.1" 402 56
+[2021-04-30 14:44:15,131]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,131]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,131]-[6236]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /userInfo
+[2021-04-30 14:44:15,131]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /userInfo HTTP/1.1" 402 56
+[2021-04-30 15:02:19,944]-[6236]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:02:19,945]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:02:20,123]-[6236]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:02:20,138]-[6236]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:02:20,141]-[6236]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:02:20,146]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:02:20,146]-[6236]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 15:11:33,024]-[6236]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:11:35,058]-[16716]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:12:05,552]-[16716]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 15:12:06,946]-[10772]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:16:46,006]-[10772]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:16:47,882]-[10608]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:17:26,683]-[10608]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:17:28,063]-[8780]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:17:44,905]-[8780]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /httprunner/update HTTP/1.1" 200 0
+[2021-04-30 15:17:44,927]-[8780]-[views_vue.py:1363]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:17:45,063]-[8780]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /httprunner/update
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\platform\My_api\views_vue.py", line 1364, in Runner
+    filename = Runner.objects.filter(file_name=myFile.name).values().count()
+AttributeError: 'function' object has no attribute 'objects'
+[2021-04-30 15:17:45,065]-[8780]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /httprunner/update HTTP/1.1" 500 72006
+[2021-04-30 15:19:46,451]-[8780]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:19:47,854]-[11776]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:19:53,839]-[11776]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：SHHH.har
+[2021-04-30 15:19:53,840]-[11776]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:19:53,841]-[11776]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 15:20:42,272]-[11776]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:20:44,248]-[18884]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:20:53,723]-[18884]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:20:53,724]-[18884]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'object'
+[2021-04-30 15:20:53,724]-[18884]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 15:22:46,885]-[18884]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:22:48,737]-[19348]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:22:53,986]-[19348]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:22:53,987]-[19348]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:22:53,988]-[19348]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 15:23:26,820]-[19348]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:23:26,832]-[19348]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:23:26,834]-[19348]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:23:26,839]-[19348]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:23:26,840]-[19348]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 15:24:57,318]-[19348]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 15:24:58,599]-[19036]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:25:17,363]-[19036]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:25:18,741]-[8812]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:25:24,316]-[8812]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:25:24,330]-[8812]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:25:24,331]-[8812]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:25:24,334]-[8812]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:25:24,335]-[8812]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 15:25:27,957]-[8812]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:25:27,965]-[8812]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:25:27,966]-[8812]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 15:26:04,369]-[8812]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 15:26:06,051]-[6876]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:26:17,197]-[6876]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:26:17,206]-[6876]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:26:17,207]-[6876]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 15:26:24,922]-[6876]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/doEdit HTTP/1.1" 200 0
+[2021-04-30 15:26:25,038]-[6876]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /project/doEdit
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 178, in project_edit
+    Authorization = request.headers['Accesstoken']
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\http\request.py", line 412, in __getitem__
+    return super().__getitem__(key.replace('_', '-'))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'accesstoken'
+[2021-04-30 15:26:25,040]-[6876]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /project/doEdit HTTP/1.1" 500 76599
+[2021-04-30 15:26:27,974]-[6876]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /project/doEdit
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 178, in project_edit
+    Authorization = request.headers['Accesstoken']
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\http\request.py", line 412, in __getitem__
+    return super().__getitem__(key.replace('_', '-'))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'accesstoken'
+[2021-04-30 15:26:27,975]-[6876]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /project/doEdit HTTP/1.1" 500 76599
+[2021-04-30 15:26:43,989]-[6876]-[log.py:224]-[log:log_response]-[ERROR]- Internal Server Error: /project/doEdit
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\platform\My_api\views_vue.py", line 178, in project_edit
+    Authorization = request.headers['Accesstoken']
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\http\request.py", line 412, in __getitem__
+    return super().__getitem__(key.replace('_', '-'))
+  File "C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'accesstoken'
+[2021-04-30 15:26:43,990]-[6876]-[basehttp.py:157]-[basehttp:log_message]-[ERROR]- "POST /project/doEdit HTTP/1.1" 500 76599
+[2021-04-30 15:26:53,677]-[6876]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:26:55,670]-[7644]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:27:16,816]-[7644]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:27:18,753]-[18936]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:27:31,790]-[18936]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:27:31,791]-[18936]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:27:32,060]-[18936]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:27:32,080]-[18936]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:27:32,082]-[18936]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:27:32,086]-[18936]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:27:32,087]-[18936]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 15:27:35,672]-[18936]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:27:35,772]-[18936]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 70
+[2021-04-30 15:28:15,669]-[18936]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 15:28:17,524]-[19400]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:31:27,476]-[19400]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:31:28,998]-[8420]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:32:18,868]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /httprunner/RunnerSee HTTP/1.1" 200 0
+[2021-04-30 15:32:18,883]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:32:18,888]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:32:18,890]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:32:18,892]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:32:30,415]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:32:30,416]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:32:30,892]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:32:30,902]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:32:30,905]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:32:30,907]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:34:14,510]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:34:14,520]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:34:14,524]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:34:14,526]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:34:41,681]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:34:41,681]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:34:41,879]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:34:41,891]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:34:41,896]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:34:41,898]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:35:36,763]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:35:36,772]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:35:36,773]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:35:36,774]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:36:06,357]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:36:06,358]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:36:06,572]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:36:06,586]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:36:06,592]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:36:06,595]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:36:46,463]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:36:46,464]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:36:46,642]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:36:46,650]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:36:46,653]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:36:46,655]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:36:49,219]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:36:49,225]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:36:50,465]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:36:50,471]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:36:55,106]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:36:55,115]-[8420]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:37:15,583]-[8420]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:37:17,172]-[2108]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:37:24,487]-[9676]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:37:28,246]-[9676]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:37:28,252]-[9676]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 60
+[2021-04-30 15:37:31,309]-[9676]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:37:31,315]-[9676]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:39:28,245]-[9676]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:39:28,247]-[9676]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:39:28,441]-[9676]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:39:28,452]-[9676]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:39:28,457]-[9676]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 192
+[2021-04-30 15:39:28,458]-[9676]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:40:25,143]-[9676]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:40:27,214]-[15168]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:40:29,968]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:40:29,969]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:40:30,208]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:40:30,218]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:40:30,219]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:40:30,220]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:41:57,793]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:41:57,794]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:41:57,970]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:41:57,986]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:41:57,987]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:41:57,998]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:42:04,702]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:42:04,711]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 15:42:33,235]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:42:33,245]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 15:45:22,317]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:45:22,318]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:45:22,777]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:45:22,784]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:45:22,787]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:45:22,789]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:45:27,163]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:45:27,170]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 15:45:52,607]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:45:52,614]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 15:47:05,900]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:47:05,906]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 15:48:38,092]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:48:38,093]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:48:38,285]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:48:38,293]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:48:38,295]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:48:38,297]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:49:48,357]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:49:48,360]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:49:48,601]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:49:48,607]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:49:48,614]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:49:48,616]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:50:09,281]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:50:09,282]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:50:09,503]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:50:09,512]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:50:09,513]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:50:09,524]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:50:11,367]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:50:11,377]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:51:20,406]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:51:20,418]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:52:14,312]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:52:14,332]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:54:05,991]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:06,002]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:54:53,312]-[15168]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:53,319]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:54:53,321]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:54:53,321]-[15168]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:54:53,326]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getList HTTP/1.1" 200 269
+[2021-04-30 15:54:57,277]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:57,283]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:54:58,718]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /project/getApis HTTP/1.1" 200 0
+[2021-04-30 15:54:58,720]-[15168]-[views_vue.py:236]-[views_vue:project_Apis]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:58,726]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:54:58,727]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/GetProList HTTP/1.1" 200 269
+[2021-04-30 15:54:58,747]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /project/getApis HTTP/1.1" 200 70261
+[2021-04-30 15:55:03,415]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:55:03,421]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:55:59,970]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:55:59,971]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 15:56:00,153]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:56:00,161]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:57:19,676]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:57:19,686]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:57:29,916]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:57:29,928]-[15168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 15:58:15,305]-[15168]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:58:18,358]-[18488]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 15:58:56,498]-[18488]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 15:58:59,059]-[12776]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:00:00,533]-[12776]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:00:03,173]-[12824]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:00:30,758]-[12824]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\api_platform\urls.py changed, reloading.
+[2021-04-30 16:00:32,447]-[5280]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:01:13,709]-[5280]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:01:13,730]-[5280]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:01:47,671]-[5280]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:01:47,684]-[5280]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:02:12,962]-[5280]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:02:15,787]-[18452]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:02:19,275]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /httprunner/Uncompress HTTP/1.1" 200 0
+[2021-04-30 16:02:19,285]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:02:19,896]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 16:03:53,126]-[18452]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:03:53,127]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:03:53,616]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:03:53,627]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:04:09,130]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:09,136]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:04:14,642]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:14,644]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 16:04:16,688]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:16,689]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 16:04:25,180]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:25,191]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:04:26,818]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:26,819]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 16:04:26,832]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:26,839]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:04:36,378]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:36,385]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:04:37,542]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:37,544]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 16:04:37,557]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:37,563]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:05:08,305]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:05:08,316]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:05:09,260]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:05:09,262]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 16:05:09,276]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:05:09,281]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:05:14,081]-[18452]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:05:14,082]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:05:14,347]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:05:14,356]-[18452]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 211
+[2021-04-30 16:07:07,570]-[18452]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:07:08,938]-[18824]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:07:24,397]-[18824]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:07:26,314]-[12016]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:07:29,049]-[12016]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 16:07:30,334]-[17760]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:07:49,015]-[17760]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:07:51,469]-[18908]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:11:30,309]-[18908]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:30,326]-[18908]-[views_vue.py:1611]-[views_vue:RunnerSee]-[ERROR]- 错误信息：'is_gunzip'
+[2021-04-30 16:11:30,327]-[18908]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 133
+[2021-04-30 16:11:41,734]-[18908]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:41,743]-[18908]-[views_vue.py:1611]-[views_vue:RunnerSee]-[ERROR]- 错误信息：'is_gunzip'
+[2021-04-30 16:11:41,744]-[18908]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 133
+[2021-04-30 16:11:45,615]-[18908]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:45,624]-[18908]-[views_vue.py:1611]-[views_vue:RunnerSee]-[ERROR]- 错误信息：'is_gunzip'
+[2021-04-30 16:11:45,625]-[18908]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 133
+[2021-04-30 16:13:00,566]-[18908]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:13:02,904]-[11188]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:13:03,676]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:13:03,676]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:13:03,863]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:13:03,875]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 208
+[2021-04-30 16:13:34,295]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:13:34,306]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 208
+[2021-04-30 16:16:41,351]-[11188]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：zxc.har
+[2021-04-30 16:16:41,492]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 70
+[2021-04-30 16:16:42,584]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:16:42,603]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:17:49,692]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:17:49,693]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:17:49,835]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:17:49,841]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:18:13,561]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:18:13,562]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:18:13,772]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:18:13,780]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:19:26,591]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:26,603]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:19:28,935]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:19:28,937]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:19:29,159]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:29,171]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:19:30,294]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:30,302]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:19:33,987]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': 'zxc.har'}
+[2021-04-30 16:19:33,993]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 206
+[2021-04-30 16:19:36,774]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:36,780]-[11188]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:21:47,964]-[11188]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:21:49,944]-[18268]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:22:04,681]-[18268]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:22:05,310]-[18268]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 16:22:27,750]-[18268]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:22:29,200]-[9148]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:22:31,229]-[9148]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:22:31,245]-[9148]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 356
+[2021-04-30 16:22:36,807]-[9148]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:22:37,474]-[9148]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 16:22:47,377]-[9148]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:22:48,760]-[1928]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:22:53,771]-[1928]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:22:54,386]-[1928]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 16:23:05,786]-[1928]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:23:07,416]-[400]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:23:14,285]-[400]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:23:14,988]-[400]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 16:25:17,240]-[400]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:25:19,451]-[6440]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:25:22,938]-[6440]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:25:22,938]-[6440]-[views_vue.py:1394]-[views_vue:Runner]-[ERROR]- 错误信息：'str' object has no attribute 'replce'
+[2021-04-30 16:25:22,939]-[6440]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 16:26:18,927]-[6440]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:26:20,969]-[9556]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:26:26,167]-[9556]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:26:26,168]-[9556]-[views_vue.py:1394]-[views_vue:Runner]-[ERROR]- 错误信息：replace expected at least 2 arguments, got 1
+[2021-04-30 16:26:26,170]-[9556]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 133
+[2021-04-30 16:27:57,311]-[9556]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:27:58,952]-[14168]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:28:03,659]-[14168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:28:04,441]-[14168]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 16:29:16,113]-[14168]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 16:29:17,584]-[18704]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:31:29,545]-[18704]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:31:29,554]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/update HTTP/1.1" 200 116
+[2021-04-30 16:33:25,695]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:33:25,703]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:34:04,501]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:34:04,520]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:35:07,046]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:35:07,048]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:35:07,616]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:35:07,627]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:36:06,495]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:36:06,496]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:36:06,682]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:36:06,687]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:37:58,945]-[18704]-[views_vue.py:1421]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 16:37:58,946]-[18704]-[views_vue.py:1421]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 16:37:58,947]-[18704]-[log.py:224]-[log:log_response]-[WARNING]- Payment Required: /httprunner/RunnerSee
+[2021-04-30 16:37:58,947]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[WARNING]- "POST /httprunner/RunnerSee HTTP/1.1" 402 56
+[2021-04-30 16:38:04,660]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /publicKey HTTP/1.1" 200 296
+[2021-04-30 16:38:04,669]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /login_action HTTP/1.1" 200 0
+[2021-04-30 16:38:04,670]-[18704]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 16:38:04,670]-[18704]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 16:38:04,676]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /login_action HTTP/1.1" 200 106
+[2021-04-30 16:38:04,691]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /userInfo HTTP/1.1" 200 0
+[2021-04-30 16:38:04,693]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:38:04,694]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:38:04,825]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:38:04,833]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:39:47,707]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:39:47,708]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:39:47,813]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:39:47,822]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:39:55,927]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:39:55,945]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:39:57,131]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:39:57,137]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:40:05,107]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:40:05,108]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:40:05,228]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:40:05,245]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:40:16,212]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:40:16,213]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:40:16,373]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:40:16,384]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:40:50,749]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:40:50,755]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:42:26,073]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:42:26,074]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:42:26,231]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:42:26,237]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:42:34,623]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:42:34,630]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:42:59,107]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:42:59,108]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:42:59,226]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:42:59,235]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:43:05,627]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:05,629]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:43:05,722]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:05,731]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:43:13,799]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:13,800]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:43:13,909]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:13,933]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:43:20,109]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:20,110]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:43:20,240]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:20,249]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:43:44,316]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:44,317]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:43:44,467]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:44,473]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:43:46,551]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:46,552]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:43:46,788]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:46,796]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:43:58,837]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:58,837]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:43:59,208]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:59,217]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:44:21,164]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:44:21,165]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:44:21,365]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:44:21,385]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:45:33,281]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:45:33,282]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:45:33,430]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:45:33,451]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:47:14,042]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:14,042]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:47:14,439]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:14,447]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:47:20,275]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:20,276]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:47:20,751]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:20,757]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:47:43,104]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:43,105]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:47:43,523]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:43,533]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:47:49,256]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:49,256]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:47:49,450]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:49,456]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:54:39,552]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:54:39,562]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:54:45,536]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:54:45,543]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:55:36,066]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:55:36,074]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:57:13,516]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:57:13,517]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:57:13,985]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:57:13,995]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:57:22,023]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:57:22,024]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:57:22,597]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:57:22,604]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:57:52,852]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:57:52,862]-[18704]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 348
+[2021-04-30 16:59:10,727]-[18704]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 16:59:12,159]-[11484]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 16:59:51,657]-[11484]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:59:51,659]-[11484]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:59:52,113]-[11484]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:59:52,122]-[11484]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 16:59:56,788]-[11484]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:59:56,789]-[11484]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 16:59:57,065]-[11484]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:59:57,077]-[11484]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:00:51,317]-[11484]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:00:52,661]-[4688]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:01:13,748]-[4688]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:01:13,763]-[4688]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:01:22,682]-[4688]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:01:22,690]-[4688]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:02:40,421]-[4688]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:02:40,438]-[4688]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:03:01,525]-[4688]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:03:02,813]-[12980]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:03:20,789]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:20,797]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:03:22,148]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "OPTIONS /httprunner/IsJSon HTTP/1.1" 200 0
+[2021-04-30 17:03:22,149]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2, 'is_json': 1}
+[2021-04-30 17:03:22,812]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 46
+[2021-04-30 17:03:22,824]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:22,831]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:03:26,614]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:26,623]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:03:57,484]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:57,493]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:03:58,894]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:03:58,895]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:03:58,896]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:04:03,594]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2, 'is_json': 1}
+[2021-04-30 17:04:03,599]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 46
+[2021-04-30 17:04:16,615]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:04:16,622]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:04:17,744]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:04:17,745]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:04:17,746]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:04:18,899]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1, 'is_json': 1}
+[2021-04-30 17:04:18,905]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 46
+[2021-04-30 17:04:20,026]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:04:20,027]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:04:20,028]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:04:22,472]-[12980]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:04:22,474]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:04:22,667]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:04:22,677]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:04:35,905]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:04:35,907]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:04:35,908]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:05:03,634]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:05:03,642]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:05:07,594]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:05:07,596]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:05:07,597]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:05:36,398]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:05:36,403]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:05:38,473]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2, 'is_json': '[object Undefined]'}
+[2021-04-30 17:05:38,475]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：Field 'is_json' expected a number but got '[object Undefined]'.
+[2021-04-30 17:05:38,477]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:06:12,528]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:06:12,535]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:06:16,631]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:06:16,632]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:06:16,633]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:06:41,101]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:06:41,111]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:06:42,492]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:06:42,494]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:06:42,495]-[12980]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 133
+[2021-04-30 17:07:45,030]-[12980]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:07:46,356]-[316]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:07:49,362]-[316]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:07:49,978]-[316]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 46
+[2021-04-30 17:07:56,065]-[316]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1, 'is_json': 1}
+[2021-04-30 17:07:56,083]-[316]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 46
+[2021-04-30 17:09:15,376]-[316]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:09:16,887]-[7324]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:09:22,027]-[7324]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:09:23,574]-[8336]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:09:26,170]-[8336]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:09:26,905]-[8336]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:09:26,918]-[8336]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:09:26,933]-[8336]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:09:45,721]-[8336]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:09:47,844]-[19464]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:09:49,834]-[19464]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:09:50,423]-[19464]-[views_vue.py:1640]-[views_vue:Uncompress]-[ERROR]- 错误信息：'QuerySet' object has no attribute 'is_json'
+[2021-04-30 17:09:50,424]-[19464]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 133
+[2021-04-30 17:10:04,268]-[19464]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:10:06,113]-[20184]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:10:07,836]-[20184]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:08,435]-[20184]-[views_vue.py:1640]-[views_vue:Uncompress]-[ERROR]- 错误信息：'dict' object has no attribute 'is_json'
+[2021-04-30 17:10:08,436]-[20184]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 133
+[2021-04-30 17:10:17,088]-[20184]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:10:19,099]-[13896]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:10:22,324]-[13896]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:22,945]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:10:22,959]-[13896]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:10:22,966]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:10:26,888]-[13896]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:10:26,893]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:10:26,903]-[13896]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:10:26,917]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:10:30,114]-[13896]-[views_vue.py:1658]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:30,148]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/IsJSon HTTP/1.1" 200 46
+[2021-04-30 17:10:35,951]-[13896]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:35,957]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:10:35,972]-[13896]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:10:35,983]-[13896]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:12:43,227]-[13896]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:12:45,194]-[3264]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:12:53,601]-[3264]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:12:55,256]-[20260]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:13:37,911]-[20260]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\config\httprunner_file.py changed, reloading.
+[2021-04-30 17:13:39,341]-[18540]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:13:41,493]-[18540]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:13:42,094]-[18540]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:13:42,107]-[18540]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:13:42,115]-[18540]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:13:52,658]-[18540]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:13:54,907]-[18640]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:13:57,038]-[18640]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:13:57,646]-[18640]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:13:57,657]-[18640]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:13:57,665]-[18640]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 376
+[2021-04-30 17:15:07,415]-[18640]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:15:09,128]-[5200]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:16:24,679]-[5200]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\models.py changed, reloading.
+[2021-04-30 17:16:26,037]-[14844]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:17:30,901]-[14844]-[autoreload.py:240]-[autoreload:trigger_reload]-[INFO]- D:\platform\My_api\views_vue.py changed, reloading.
+[2021-04-30 17:17:32,263]-[19516]-[autoreload.py:617]-[autoreload:run_with_reloader]-[INFO]- Watching for file changes with StatReloader
+[2021-04-30 17:18:42,001]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:18:42,015]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 418
+[2021-04-30 17:19:04,949]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:04,964]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 418
+[2021-04-30 17:19:12,126]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:19:12,127]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:19:12,549]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:12,559]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 418
+[2021-04-30 17:19:14,457]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:19:14,458]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:19:14,646]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:14,658]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 418
+[2021-04-30 17:19:15,371]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:19:15,372]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:19:15,604]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:15,612]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 418
+[2021-04-30 17:19:17,536]-[19516]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:19:20,557]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:19:20,574]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:20,590]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:19:36,824]-[19516]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:19:38,819]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "PUT /httprunner/Uncompress HTTP/1.1" 200 46
+[2021-04-30 17:19:38,831]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:38,839]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:19:55,096]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:55,104]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:20:03,477]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:03,482]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:20:19,444]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:19,451]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:20:28,319]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:28,328]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:20:51,437]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:51,447]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:20:54,268]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:20:54,269]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:20:54,464]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:54,473]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:21:03,359]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:21:03,366]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:21:08,871]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:21:08,880]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:27:57,068]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:27:57,069]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:27:57,181]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:27:57,189]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:28:05,496]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:28:05,503]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:28:10,695]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:28:10,696]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:28:10,815]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:28:10,832]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:28:36,612]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:28:36,613]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:28:36,792]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:28:36,798]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:29:41,108]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:29:41,109]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /userInfo HTTP/1.1" 200 163
+[2021-04-30 17:29:41,293]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:29:41,298]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:30:07,131]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:30:07,145]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110
+[2021-04-30 17:30:08,297]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:30:08,304]-[19516]-[basehttp.py:157]-[basehttp:log_message]-[INFO]- "POST /httprunner/RunnerSee HTTP/1.1" 200 1110

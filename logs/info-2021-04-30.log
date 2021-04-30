@@ -1,0 +1,567 @@
+[2021-04-30 09:06:04,811]-[24816]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 09:06:04,812]-[24816]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 09:06:04,841]-[24816]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:07:45,192]-[8696]-[views_vue.py:1473]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:01,126]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:04,442]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:05,015]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:05,658]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:07,555]-[32672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！
+[2021-04-30 09:11:26,315]-[35672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'q/Q/S/D'}]}
+[2021-04-30 09:11:48,755]-[35672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'q/Q/S/D'}]}
+[2021-04-30 09:12:52,857]-[35672]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '侧事故1', 'value': 'q/Q/S/D'}, {'key': '侧事故2', 'value': 'ZX/C/VFDS/VB'}]}
+[2021-04-30 09:12:52,858]-[35672]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-30 09:13:29,322]-[31068]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '侧事故2', 'value': 'ZX/C/VFDS/VB'}]}
+[2021-04-30 09:13:40,639]-[31068]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:13:44,529]-[31068]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '', 'value': ''}]}
+[2021-04-30 09:19:23,168]-[31068]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:20:21,845]-[31068]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:21:55,216]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:22:45,546]-[25476]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'qaa/AAAA/ssssssssssd/DSF'}, {'key': '33', 'value': 'wwww'}]}
+[2021-04-30 09:22:45,546]-[25476]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！
+[2021-04-30 09:22:46,906]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:22:55,883]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:23:15,464]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:24:12,300]-[25476]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 09:24:12,301]-[25476]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 09:24:30,695]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:25:02,754]-[25476]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': 'qaa/AAAA/ssssssssssd/DSF'}]}
+[2021-04-30 09:25:04,453]-[25476]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！
+[2021-04-30 09:32:27,161]-[18608]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': []}
+[2021-04-30 09:32:54,347]-[9736]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': []}
+[2021-04-30 09:33:14,281]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': []}
+[2021-04-30 09:33:21,251]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '', 'value': ''}]}
+[2021-04-30 09:33:24,139]-[8552]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:33:25,735]-[8552]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:33:29,852]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': ''}]}
+[2021-04-30 09:33:33,936]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': '3'}]}
+[2021-04-30 09:33:47,892]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': '3'}]}
+[2021-04-30 09:34:49,116]-[8552]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '2', 'value': '3'}]}
+[2021-04-30 09:37:17,746]-[8552]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:37:49,213]-[8552]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:37:49,214]-[8552]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！{'code': 200, 'res': [{'key0': '23', 'key1': 'fsd'}, {'key0': '45', 'key1': 'fsd'}, {'key0': 're', 'key1': 'fsd'}, {'key0': 're', 'key1': 'gfdhgfd'}, {'key0': '45', 'key1': 'gfdhgfd'}, {'key0': '23', 'key1': 'gfdhgfd'}, {'key0': '23', 'key1': 'vbxcvd'}, {'key0': '45', 'key1': 'vbxcvd'}, {'key0': 're', 'key1': 'vbxcvd'}, {'key0': 're', 'key1': 'fdsfsd'}, {'key0': '45', 'key1': 'fdsfsd'}, {'key0': '23', 'key1': 'fdsfsd'}], 'msg': 'OK'}
+[2021-04-30 09:37:51,696]-[8552]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:39:22,944]-[29216]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:43:08,744]-[29216]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '2', 'value': 'fsd/gfdhgfd/vbxcvd/fdsfsd'}]}
+[2021-04-30 09:43:18,794]-[31072]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}]}
+[2021-04-30 09:43:31,504]-[31072]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}, {'key': '2', 'value': '32'}]}
+[2021-04-30 09:45:49,574]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '站点', 'value': 'AU'}, {'key': '账号', 'value': 'eaby/Amazon'}, {'key': '分组', 'value': 'SKU/SPU/平台ID '}]}
+[2021-04-30 09:46:03,826]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}, {'key': '2', 'value': '32'}]}
+[2021-04-30 09:46:14,086]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}]}
+[2021-04-30 09:46:35,032]-[11400]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '23/45/re'}, {'key': '3', 'value': '34'}]}
+[2021-04-30 09:49:28,396]-[24604]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:49:46,851]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '1', 'value': '2/3/4'}, {'key': '2', 'value': 'g/h/j/m'}]}
+[2021-04-30 09:50:55,157]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': 'qe/rew/te'}, {'key': 'ew', 'value': 'fdsf/g/h'}], 'responseType': 'blob'}
+[2021-04-30 09:50:59,304]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': 'qe/rew/te'}, {'key': 'ew', 'value': 'fdsf/g/h'}], 'responseType': 'blob'}
+[2021-04-30 09:53:30,815]-[24604]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 09:53:56,779]-[24604]-[views_vue.py:1479]-[views_vue:Orthogonal]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': '二维、e/dsa/dsa'}, {'key': 'sa', 'value': 'vxcv/gfdg/hd'}]}
+[2021-04-30 09:53:56,781]-[24604]-[views_vue.py:1502]-[views_vue:Orthogonal]-[INFO]- 请求结果！{'code': 200, 'res': [{'key0': '二维、e', 'key1': 'vxcv'}, {'key0': 'dsa', 'key1': 'vxcv'}, {'key0': 'dsa', 'key1': 'vxcv'}, {'key0': 'dsa', 'key1': 'gfdg'}, {'key0': 'dsa', 'key1': 'gfdg'}, {'key0': '二维、e', 'key1': 'gfdg'}, {'key0': '二维、e', 'key1': 'hd'}, {'key0': 'dsa', 'key1': 'hd'}, {'key0': 'dsa', 'key1': 'hd'}], 'msg': 'OK'}
+[2021-04-30 09:53:58,915]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '12', 'value': '二维、e/dsa/dsa'}, {'key': 'sa', 'value': 'vxcv/gfdg/hd'}]}
+[2021-04-30 09:54:49,763]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:54:54,921]-[24604]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:59:27,040]-[30240]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 09:59:32,539]-[30240]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 10:00:03,974]-[20864]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': 'wqe', 'value': 'dsa/ds/dsa'}, {'key': 'das', 'value': 'dsad/sada/fd/gf'}]}
+[2021-04-30 10:03:21,383]-[20864]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:09:40,969]-[22776]-[views_vue.py:1514]-[views_vue:OrthogonalDrive]-[INFO]- 请求参数！{'end_values': [{'key': '站点', 'value': 'AU'}, {'key': '账号', 'value': 'eaby/Amazon'}, {'key': '分组', 'value': 'SKU/SPU/平台ID '}]}
+[2021-04-30 10:11:35,759]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:11:35,768]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:11:35,769]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:12:12,149]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:12:12,168]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:12:12,175]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:16:10,286]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:16:10,555]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:16:10,565]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:16:10,568]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:17:11,722]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:17:11,973]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:17:11,982]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:17:11,984]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:18:23,669]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:18:24,134]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:18:24,143]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:18:24,149]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:59:48,937]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 10:59:49,118]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 10:59:49,127]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 10:59:49,130]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:01:16,122]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:01:16,123]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:05:27,328]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:05:27,329]-[22776]-[views_vue.py:1398]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=401, "text/html; charset=utf-8">
+[2021-04-30 11:06:43,958]-[22776]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 11:06:43,959]-[22776]-[views_vue.py:1393]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 11:08:18,899]-[22776]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 11:08:18,899]-[22776]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 11:08:18,943]-[22776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:08:19,186]-[22776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:08:19,197]-[22776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:08:19,197]-[22776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:08:24,478]-[22776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:08:24,478]-[22776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:10:48,983]-[32776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:10:48,984]-[32776]-[views_vue.py:1387]-[views_vue:community]-[ERROR]- 请求出错：Invalid base64-encoded string: number of data characters (9) cannot be 1 more than a multiple of 4
+[2021-04-30 11:13:40,889]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:13:40,910]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:13:40,911]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:05,329]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:14:05,338]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:05,346]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:42,699]-[32776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:14:43,127]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:14:43,134]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:14:43,135]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:15:18,088]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:15:18,097]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:15:18,113]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:17:38,782]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:17:38,796]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:17:38,798]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:18:26,211]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:18:26,221]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:18:26,225]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:28,910]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:21:28,923]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:28,927]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:51,884]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:21:51,894]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:21:51,896]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:22:25,453]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:22:25,463]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:22:25,468]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:23:52,817]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:23:52,829]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:23:52,832]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:24:51,998]-[32776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:24:52,208]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:24:52,217]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:24:52,220]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:19,078]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:25:19,088]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:19,094]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:25,077]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:25:25,083]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:25,085]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:38,166]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:25:38,176]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:25:38,189]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:26:10,401]-[32776]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:26:10,849]-[32776]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:26:10,860]-[32776]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:26:10,863]-[32776]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:26:24,319]-[32776]-[views_vue.py:1362]-[views_vue:Runner]-[INFO]- 请求参数：login (1).vue
+[2021-04-30 11:28:12,507]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:28:12,717]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:28:12,731]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:12,737]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:38,099]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:28:38,298]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:28:38,307]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:28:38,312]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:08,781]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:29:09,046]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:29:09,057]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:09,060]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:20,134]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:29:49,223]-[14628]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:29:49,526]-[14628]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:29:49,534]-[14628]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:29:49,536]-[14628]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:36:58,393]-[11788]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:36:58,581]-[11788]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:36:58,595]-[11788]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:36:58,608]-[11788]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:37:33,474]-[11788]-[views_vue.py:1362]-[views_vue:Runner]-[INFO]- 请求参数：zxc.har
+[2021-04-30 11:45:14,502]-[11788]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 11:45:14,694]-[11788]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 11:45:14,707]-[11788]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:45:14,708]-[11788]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 11:45:32,458]-[11788]-[views_vue.py:1362]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 13:38:13,032]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,033]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,039]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,039]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,045]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,045]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,052]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:38:13,052]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,176]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,177]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,182]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,182]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,187]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,188]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,194]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:40:39,194]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,153]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,154]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,159]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,159]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,164]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,165]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,175]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:46:32,175]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,961]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,961]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,967]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,967]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,972]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,972]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,983]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:48:50,983]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,044]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,044]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,049]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,050]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,055]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,056]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,065]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:50:12,065]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,579]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,580]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,585]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,585]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,589]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,590]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,599]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 13:57:32,600]-[11788]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,254]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,264]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,274]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,274]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,284]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:36:45,284]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:37:17,503]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:37:17,504]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:37:23,025]-[6236]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 14:37:23,026]-[6236]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 14:37:23,049]-[6236]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 14:37:23,194]-[6236]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 14:37:23,205]-[6236]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 14:37:23,207]-[6236]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,569]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,579]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:40:03,579]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,434]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,434]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,438]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:01,438]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,234]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,234]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,239]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,240]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,244]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:41:47,244]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:42:22,122]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,398]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,408]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:43:32,408]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,121]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,131]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 14:44:15,131]-[6236]-[views_vue.py:1394]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 15:02:19,944]-[6236]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:02:20,123]-[6236]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:02:20,138]-[6236]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:02:20,141]-[6236]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:17:44,927]-[8780]-[views_vue.py:1363]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:19:53,839]-[11776]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：SHHH.har
+[2021-04-30 15:19:53,840]-[11776]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:20:53,723]-[18884]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:20:53,724]-[18884]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'object'
+[2021-04-30 15:22:53,986]-[19348]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:22:53,987]-[19348]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:23:26,820]-[19348]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:23:26,832]-[19348]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:23:26,839]-[19348]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:25:24,316]-[8812]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:25:24,330]-[8812]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:25:24,331]-[8812]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:25:27,957]-[8812]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:25:27,965]-[8812]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:26:17,197]-[6876]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:26:17,206]-[6876]-[views_vue.py:1391]-[views_vue:Runner]-[ERROR]- 错误信息：'function' object has no attribute 'objects'
+[2021-04-30 15:27:31,790]-[18936]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:27:32,060]-[18936]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:27:32,080]-[18936]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:27:32,082]-[18936]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:27:35,672]-[18936]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:32:18,883]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:32:18,888]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:32:30,415]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:32:30,892]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:32:30,902]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:34:14,510]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:34:14,520]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:34:41,681]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:34:41,879]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:34:41,891]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:35:36,763]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:35:36,772]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:36:06,357]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:36:06,572]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:36:06,586]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:36:46,463]-[8420]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:36:46,642]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:36:46,650]-[8420]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:36:49,219]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:36:50,465]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:36:55,106]-[8420]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:37:28,246]-[9676]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': '0000'}
+[2021-04-30 15:37:31,309]-[9676]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:39:28,245]-[9676]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:39:28,441]-[9676]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:39:28,452]-[9676]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:40:29,968]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:40:30,208]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:40:30,218]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:41:57,793]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:41:57,970]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:41:57,986]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:42:04,702]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:42:33,235]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:45:22,317]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:45:22,777]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:45:22,784]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:45:27,163]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:45:52,607]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:47:05,900]-[15168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 15:48:38,092]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:48:38,285]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:48:38,293]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:49:48,357]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:49:48,601]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:49:48,607]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:50:09,281]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:50:09,503]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:50:09,512]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:50:11,367]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:51:20,406]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:52:14,312]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:05,991]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:53,312]-[15168]-[views_vue.py:119]-[views_vue:project_list]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:53,319]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:54:53,321]-[15168]-[views_vue.py:142]-[views_vue:project_list]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:54:57,277]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:58,720]-[15168]-[views_vue.py:236]-[views_vue:project_Apis]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:54:58,726]-[15168]-[views_vue.py:168]-[views_vue:GetProList]-[INFO]- 请求成功：{'code': 200, 'data': [{'id': 1, 'listName': 'PRM-B1.3.8', 'remark': '接口项目', 'user': 'lxqiang95', 'other': None, 'user_id': '1', 'created_time': '2021-04-27 01:19:06', 'is_active': '启用', 'is_delete': 0}], 'msg': 'success', 'totalCount': 1}
+[2021-04-30 15:55:03,415]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:55:59,970]-[15168]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 15:56:00,153]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:57:19,676]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 15:57:29,916]-[15168]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:01:13,709]-[5280]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:01:47,671]-[5280]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:02:19,285]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:03:53,126]-[18452]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:03:53,616]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:09,130]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:14,642]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:16,688]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:25,180]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:26,818]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:26,832]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:36,378]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:04:37,542]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:04:37,557]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:05:08,305]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:05:09,260]-[18452]-[views_vue.py:1629]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 16:05:09,276]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:05:14,081]-[18452]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:05:14,347]-[18452]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:30,309]-[18908]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:30,326]-[18908]-[views_vue.py:1611]-[views_vue:RunnerSee]-[ERROR]- 错误信息：'is_gunzip'
+[2021-04-30 16:11:41,734]-[18908]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:41,743]-[18908]-[views_vue.py:1611]-[views_vue:RunnerSee]-[ERROR]- 错误信息：'is_gunzip'
+[2021-04-30 16:11:45,615]-[18908]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:11:45,624]-[18908]-[views_vue.py:1611]-[views_vue:RunnerSee]-[ERROR]- 错误信息：'is_gunzip'
+[2021-04-30 16:13:03,676]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:13:03,863]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:13:34,295]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:16:41,351]-[11188]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：zxc.har
+[2021-04-30 16:16:42,584]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:17:49,692]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:17:49,835]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:18:13,561]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:18:13,772]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:26,591]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:28,935]-[11188]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:19:29,159]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:30,294]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:19:33,987]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10, 'file_name': 'zxc.har'}
+[2021-04-30 16:19:36,774]-[11188]-[views_vue.py:1586]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:22:04,681]-[18268]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:22:31,229]-[9148]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:22:36,807]-[9148]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:22:53,771]-[1928]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:23:14,285]-[400]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:25:22,938]-[6440]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:25:22,938]-[6440]-[views_vue.py:1394]-[views_vue:Runner]-[ERROR]- 错误信息：'str' object has no attribute 'replce'
+[2021-04-30 16:26:26,167]-[9556]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:26:26,168]-[9556]-[views_vue.py:1394]-[views_vue:Runner]-[ERROR]- 错误信息：replace expected at least 2 arguments, got 1
+[2021-04-30 16:28:03,659]-[14168]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:31:29,545]-[18704]-[views_vue.py:1364]-[views_vue:Runner]-[INFO]- 请求参数：debug.har
+[2021-04-30 16:33:25,695]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:34:04,501]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:35:07,046]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:35:07,616]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:36:06,495]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:36:06,682]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:37:58,945]-[18704]-[views_vue.py:1421]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 16:37:58,946]-[18704]-[views_vue.py:1421]-[views_vue:community]-[ERROR]- 请求出错：<HttpResponse status_code=402, "text/html; charset=utf-8">
+[2021-04-30 16:38:04,670]-[18704]-[views_vue.py:75]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 16:38:04,670]-[18704]-[views_vue.py:81]-[views_vue:login_action]-[INFO]- 请求参数：{'username': 'lxqiang95', 'password': 'lxqiang95'}
+[2021-04-30 16:38:04,693]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:38:04,825]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:39:47,707]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:39:47,813]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:39:55,927]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:39:57,131]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:40:05,107]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:40:05,228]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:40:16,212]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:40:16,373]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:40:50,749]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:42:26,073]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:42:26,231]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:42:34,623]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:42:59,107]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:42:59,226]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:05,627]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:05,722]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:13,799]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:13,909]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:20,109]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:20,240]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:44,316]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:44,467]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:46,551]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:46,788]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:43:58,837]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:43:59,208]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:44:21,164]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:44:21,365]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:45:33,281]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:45:33,430]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:14,042]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:14,439]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:20,275]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:20,751]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:43,104]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:43,523]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:47:49,256]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:47:49,450]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:54:39,552]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:54:45,536]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:55:36,066]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:57:13,516]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:57:13,985]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:57:22,023]-[18704]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:57:22,597]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:57:52,852]-[18704]-[views_vue.py:1589]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:59:51,657]-[11484]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:59:52,113]-[11484]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 16:59:56,788]-[11484]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 16:59:57,065]-[11484]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:01:13,748]-[4688]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:01:22,682]-[4688]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:02:40,421]-[4688]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:20,789]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:22,149]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2, 'is_json': 1}
+[2021-04-30 17:03:22,824]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:26,614]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:57,484]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:03:58,894]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:03:58,895]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:04:03,594]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2, 'is_json': 1}
+[2021-04-30 17:04:16,615]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:04:17,744]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:04:17,745]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:04:18,899]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1, 'is_json': 1}
+[2021-04-30 17:04:20,026]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:04:20,027]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:04:22,472]-[12980]-[views_vue.py:56]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:04:22,667]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:04:35,905]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:04:35,907]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:05:03,634]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:05:07,594]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:05:07,596]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:05:36,398]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:05:38,473]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2, 'is_json': '[object Undefined]'}
+[2021-04-30 17:05:38,475]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：Field 'is_json' expected a number but got '[object Undefined]'.
+[2021-04-30 17:06:12,528]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:06:16,631]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:06:16,632]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:06:41,101]-[12980]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:06:42,492]-[12980]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:06:42,494]-[12980]-[views_vue.py:1661]-[views_vue:IsJSon]-[ERROR]- 错误信息：'is_json'
+[2021-04-30 17:07:49,362]-[316]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:07:56,065]-[316]-[views_vue.py:1656]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 1, 'is_json': 1}
+[2021-04-30 17:09:26,170]-[8336]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:09:26,918]-[8336]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:09:49,834]-[19464]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:09:50,423]-[19464]-[views_vue.py:1640]-[views_vue:Uncompress]-[ERROR]- 错误信息：'QuerySet' object has no attribute 'is_json'
+[2021-04-30 17:10:07,836]-[20184]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:08,435]-[20184]-[views_vue.py:1640]-[views_vue:Uncompress]-[ERROR]- 错误信息：'dict' object has no attribute 'is_json'
+[2021-04-30 17:10:22,324]-[13896]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:22,959]-[13896]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:10:26,888]-[13896]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 1}
+[2021-04-30 17:10:26,903]-[13896]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:10:30,114]-[13896]-[views_vue.py:1658]-[views_vue:IsJSon]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:35,951]-[13896]-[views_vue.py:1633]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:10:35,972]-[13896]-[views_vue.py:1590]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:13:41,493]-[18540]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:13:42,107]-[18540]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:13:57,038]-[18640]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:13:57,657]-[18640]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:18:42,001]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:04,949]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:12,126]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:19:12,549]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:14,457]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:19:14,646]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:15,371]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:19:15,604]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:17,536]-[19516]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:19:20,574]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:36,824]-[19516]-[views_vue.py:1634]-[views_vue:Uncompress]-[INFO]- 请求参数：{'id': 2}
+[2021-04-30 17:19:38,831]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:19:55,096]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:03,477]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:19,444]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:28,319]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:51,437]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:20:54,268]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:20:54,464]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:21:03,359]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:21:08,871]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:27:57,068]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:27:57,181]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:28:05,496]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:28:10,695]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:28:10,815]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:28:36,612]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:28:36,792]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:29:41,108]-[19516]-[views_vue.py:57]-[views_vue:userInfo]-[INFO]- 登录用户：lxqiang95
+[2021-04-30 17:29:41,293]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:30:07,131]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
+[2021-04-30 17:30:08,297]-[19516]-[views_vue.py:1591]-[views_vue:RunnerSee]-[INFO]- 请求参数：{'pageNo': 1, 'pageSize': 10}
