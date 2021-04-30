@@ -9,6 +9,7 @@ _*_ coding: UTF-8 _*_
 import codecs
 import csv
 import json
+import logging
 import os
 import re
 import time
@@ -27,7 +28,7 @@ from My_api.models import *
 from My_api.static.params.return_params import RE
 # Create your views here.
 from My_api.static.public_method.public_method import decode_user, decode_time, new_token
-import logging
+from config.httprunner_file import *
 
 logger = logging.getLogger('log')
 
@@ -175,7 +176,7 @@ def GetProList(request):
 def project_edit(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
-        Authorization = request.headers['Accesstoken']
+        Authorization = request.headers['Authorization']
         user = decode_user(Authorization)
         data = json.loads(request.body)
         listName = data['listName']
@@ -245,7 +246,8 @@ def project_Apis(request):
                 return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
             else:
                 if "name" in data:
-                    queryset = DbApis.objects.filter(name=data['name'], project_id=data['listName'], is_delete=0).order_by('-id').all()
+                    queryset = DbApis.objects.filter(name=data['name'], project_id=data['listName'],
+                                                     is_delete=0).order_by('-id').all()
                 else:
                     queryset = DbApis.objects.filter(project_id=data['listName'], is_delete=0).order_by('-id').all()
         else:
@@ -302,7 +304,7 @@ def user_select(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         except Exception as e:
-            print(e)
+            logger.error('错误信息：{}'.format(e))
             dic = {
                 "code": 30010,
                 "data": [],
@@ -534,7 +536,7 @@ def SaveApis(request):
                 extract_path=ExtractPath,
                 extract_re=ExtractRe,
                 expected=ExpectedResult,  # 预期结果
-                assert_re=AssertRe,    # 断言全文检索
+                assert_re=AssertRe,  # 断言全文检索
                 assert_path=AssertPath,  # 断言路径
                 mock_res=mock,
                 is_delete=0
@@ -728,7 +730,8 @@ def SendRequest(request):
                                             files=files, verify=False)
             elif data['radio'] == 3:
                 dic_head['Content-Type'] = 'application/x-www-form-urlencoded'
-                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data=dic_body, verify=False)
+                response = requests.request(data['method'].upper(), url=url, headers=dic_head, data=dic_body,
+                                            verify=False)
             elif data['radio'] == 4:
                 response = requests.request(data['method'].upper(), url=url, headers=dic_head,
                                             data=dic_body, verify=False)
@@ -932,7 +935,8 @@ def getCases(request):
                         queryset = DbCases.objects.filter(name=data['name'], project_id=data['listName'],
                                                           is_delete=0).order_by('-id').all()
                     else:
-                        queryset = DbCases.objects.filter(project_id=data['listName'], is_delete=0).order_by('-id').all()
+                        queryset = DbCases.objects.filter(project_id=data['listName'], is_delete=0).order_by(
+                            '-id').all()
             else:
                 if "name" in data:
                     queryset = DbCases.objects.filter(name=data['name'], is_delete=0).order_by('-id').all()
@@ -1279,7 +1283,8 @@ def Variable(request):
             page = paginator.get_page(data['pageNo'])
             lists = []
             for project in page.object_list.values():
-                times = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.mktime(project['created_time'].timetuple())))
+                times = time.strftime("%Y-%m-%d %H:%M:%S",
+                                      time.localtime(time.mktime(project['created_time'].timetuple())))
                 project['created_time'] = times
                 lists.append(project)
             dic = {
@@ -1350,23 +1355,52 @@ class UserForm(forms.Form):
     filename = forms.FileField()
 
 
+# 文件上传
 @csrf_exempt
 def Runner(request):
     method = "POST"
-    if community(request, method) == RE.TRUE.value:
-        myFile = request.FILES.get("file", None)  # 获取上传的文件，如果没有文件，则默认为None
-        logger.info('请求参数：{}'.format(myFile))
-        if not myFile:
-            dic = {"code": 70010, "data": "true", "msg": "no files for upload!"}
-            return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-        destination = open(os.path.join("D:\\platform\\My_api\\static\\httprunner\\", myFile.name), 'wb+')  # 打开特定的文件进行二进制的写操作
-        for chunk in myFile.chunks():  # 分块写入文件
-            destination.write(chunk)
-        destination.close()
-        dic = {"code": 200, "data": "true", "msg": "上传成功！"}
-        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
-    else:
-        return community(request, method)
+    try:
+        if community(request, method) == RE.TRUE.value:
+            myFile = request.FILES.get("file", None)  # 获取上传的文件，如果没有文件，则默认为None
+            logger.info('请求参数：{}'.format(myFile))
+            names = myFile.name
+            a = "." + names.split('.')[-1]
+            fname = names.replace(a, '')
+            filename = HttpRunner.objects.filter(file_name=fname).values().count()
+            if filename != 0:
+                dic = {"code": 20110, "data": "false", "msg": "文件名称已存在请重新导入!"}
+                return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+            if not myFile:
+                dic = {"code": 70010, "data": "false", "msg": "no files for upload!"}
+                return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+            destination = open(os.path.join("D:\\platform\\My_api\\static\\httprunner\\testcases\\", myFile.name),
+                               'wb+')  # 打开特定的文件进行二进制的写操作
+            for chunk in myFile.chunks():  # 分块写入文件
+                destination.write(chunk)
+            destination.close()
+            Authorization = request.headers['Authorization']
+            user = decode_user(Authorization)
+            HttpRunner.objects.create(
+                file_name=fname,
+                is_zip=0,
+                user_name=user,
+                is_json=0,
+                created_time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+                is_delete=0
+            )
+            dic = {"code": 200, "data": "true", "msg": "上传成功！"}
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+        else:
+            return community(request, method)
+    except Exception as e:
+        logger.error('错误信息：{}'.format(e))
+        dic = {
+            "code": 30010,
+            "data": [],
+            "msg": "服务不可用，请联系管理员！",
+            "totalCount": 0
+        }
+        return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
 
 
 # 公共方法
@@ -1381,6 +1415,7 @@ def community(request, method):
                 except Exception as e:
                     logger.error('请求出错：{}'.format(e))
                     res = HttpResponse(json.dumps({"code": 403, "data": False, "msg": "token错误"}))
+                    res.status_code = 403
                     return res
                 else:
                     res = HttpResponse(json.dumps({"code": 402, "data": False, "msg": "token失效"}))
@@ -1421,7 +1456,7 @@ def GetReturned(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        logger.info('请求参数！'.format(data))
+        logger.info('请求参数！{}'.format(data))
         Id = data['id']
         if Returned.objects.filter(apis_id=Id).values().count() == 0:
             dic = {"code": 32001, "data": False, "msg": "查询结果为空"}
@@ -1432,7 +1467,7 @@ def GetReturned(request):
                 "data": relist,
                 "msg": "OK"
             }
-            logger.info('请求成功！'.format(dic))
+            logger.info('请求成功！{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -1443,13 +1478,14 @@ def ErrorPlay(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        logger.info('请求参数！'.format(data))
+        logger.info('请求参数！{}'.format(data))
         apis = DbApis.objects.filter(id=data['id']).values()[0]
         url = apis['api_url']
         dic_body = data['abody']
         dic_head = eval(apis['api_header'])
         try:
-            response = requests.request(apis['api_models'].upper(), url=url, headers=dic_head, data=dic_body, verify=False)
+            response = requests.request(apis['api_models'].upper(), url=url, headers=dic_head, data=dic_body,
+                                        verify=False)
         except Exception as e:
             logger.error('请求出错：{}'.format(e))
             dic = {
@@ -1459,7 +1495,7 @@ def ErrorPlay(request):
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         res = response.text
-        logger.info('请求参数！'.format(res))
+        logger.info('请求参数！{}'.format(res))
         return HttpResponse(json.dumps({"code": 200, "data": res, "msg": "OK"}), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -1470,15 +1506,15 @@ def Orthogonal(request):
     method = "POST"
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
-        logger.info('请求参数！'.format(data))
+        logger.info('请求参数！{}'.format(data))
         end_values = data['end_values']
         new_values = [i['value'].split('/') for i in end_values]
         res = []
         if new_values == [['']]:
             dic = {"code": 200, "res": [], "msg": "OK"}
         elif len(new_values) == 1:
-            for k in new_values[0]:
-                a = f"{end_values[0]['key']}:{k}"
+            for k in range(len(new_values[0])):
+                a = {f"key0": new_values[0][k]}
                 res.append(a)
             dic = {"code": 200, "res": res, "msg": "OK"}
         else:
@@ -1493,7 +1529,7 @@ def Orthogonal(request):
                 response.append(hj)
                 hj = {}
             dic = {"code": 200, "res": response, "msg": "OK"}
-            logger.info('请求结果！'.format(dic))
+            logger.info('请求结果！{}'.format(dic))
         return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)
@@ -1505,18 +1541,18 @@ def OrthogonalDrive(request):
     if community(request, method) == RE.TRUE.value:
         data = json.loads(request.body)
         ic(data)
-        logger.info('请求参数！'.format(data))
+        logger.info('请求参数！{}'.format(data))
         end_values = data['end_values']
         new_values = [i['value'].split('/') for i in end_values]
         ic(new_values)
         res = []
-        if new_values == [['']]:
-            dic = {"code": 200, "res": [], "msg": "OK"}
+        if new_values == [['']] or new_values == []:
+            res = {"code": 13201, "data": "false", "msg": "没有可导出的数据"}
+            return HttpResponse(json.dumps(res), content_type=RE.CONTENT_TYPE.value)
         elif len(new_values) == 1:
-            for k in new_values[0]:
-                a = f"{end_values[0]['key']}:{k}"
+            for k in range(len(new_values[0])):
+                a = {f"key0": new_values[0][k]}
                 res.append(a)
-            dic = {"code": 200, "res": res, "msg": "OK"}
         else:
             for s in AllPairs(new_values):
                 res.append(s)
@@ -1530,7 +1566,6 @@ def OrthogonalDrive(request):
                 response.append(hj)
                 hj = []
                 x += 1
-            ic(response)
             f = codecs.open('D:\\platform\\My_api\\static\\driverfile\\driverFile.csv', 'w', 'gbk')
             writer = csv.writer(f)
             for i in response:
@@ -1541,7 +1576,105 @@ def OrthogonalDrive(request):
                 res = HttpResponse(f)
                 res["Content-Type"] = "application/octet-stream;charset=UTF-8"  # 注意格式
                 res["Content-Disposition"] = 'attachment; filename="OrthogonalDrive.csv"'
-                return res
+        return res
 
+    else:
+        return community(request, method)
+
+
+# HttpRunner列表查询
+def RunnerSee(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        try:
+            data = json.loads(request.body)
+            logger.info('请求参数：{}'.format(data))
+            if "file_name" in data:
+                queryset = HttpRunner.objects.filter(file_name=data['file_name'], is_delete=0).order_by('-id').all()
+            else:
+                queryset = HttpRunner.objects.filter(is_delete=0).order_by('-id').all()
+            paginator = Paginator(queryset, data['pageSize'])
+            page = paginator.get_page(data['pageNo'])
+            lists = []
+            for project in page.object_list.values():
+                if project['is_zip'] == 0:
+                    project['is_zip'] = "未解压"
+                else:
+                    project['is_zip'] = "已解压"
+                times = time.strftime("%Y-%m-%d %H:%M:%S",
+                                      time.localtime(time.mktime(project['created_time'].timetuple())))
+                project['created_time'] = times
+                lists.append(project)
+            dic = {
+                "code": 200,
+                "data": lists,
+                "msg": "success",
+                "totalCount": queryset.count()
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+        except Exception as e:
+            logger.error('错误信息：{}'.format(e))
+            dic = {
+                "code": 30010,
+                "data": [],
+                "msg": "服务不可用，请联系管理员！",
+                "totalCount": 0
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# HttpRunner文件解压
+def Uncompress(request):
+    method = "PUT"
+    if community(request, method) == RE.TRUE.value:
+        try:
+            data = json.loads(request.body)
+            logger.info('请求参数：{}'.format(data))
+            is_json = HttpRunner.objects.filter(id=data['id']).values()[0]
+            ic(is_json)
+            if is_json['is_json'] == 0:
+                # json解压
+                runner_text = RunnerFileJson(is_json['file_name'])
+            else:
+                # yml解压
+                runner_text = RunnerFileYml(is_json['file_name'])
+            HttpRunner.objects.filter(id=data['id']).update(is_zip=1, runner_text=runner_text)
+            return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+        except Exception as e:
+            logger.error('错误信息：{}'.format(e))
+            dic = {
+                "code": 30010,
+                "data": [],
+                "msg": "服务不可用，请联系管理员！",
+                "totalCount": 0
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# HttpRunner文件解压方式
+def IsJSon(request):
+    method = "PUT"
+    if community(request, method) == RE.TRUE.value:
+        try:
+            data = json.loads(request.body)
+            logger.info('请求参数：{}'.format(data))
+            ic(data)
+            if 'is_json' not in data:
+                data['is_json'] = 0
+            HttpRunner.objects.filter(id=data['id']).update(is_json=data['is_json'])
+            return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+        except Exception as e:
+            logger.error('错误信息：{}'.format(e))
+            dic = {
+                "code": 30010,
+                "data": [],
+                "msg": "服务不可用，请联系管理员！",
+                "totalCount": 0
+            }
+            return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
     else:
         return community(request, method)

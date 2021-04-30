@@ -601,3 +601,17 @@ class Returned(models.Model):
     class Meta:
         managed = False
         db_table = 'returned'
+
+
+class HttpRunner(models.Model):
+    file_name = models.CharField(max_length=255)
+    is_zip = models.IntegerField()
+    user_name = models.CharField(max_length=255)
+    created_time = models.DateTimeField()
+    is_delete = models.IntegerField()
+    is_json = models.IntegerField()
+    runner_text = models.TextField(null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'httprunner'

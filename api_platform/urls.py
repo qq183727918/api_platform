@@ -140,6 +140,9 @@ urlpatterns = [
     url(r'^apis/ErrorPlay', ErrorPlay),
     url(r'^apis/Orthogonal', Orthogonal),
     url(r'^Orthogonal/OrthogonalDrive', OrthogonalDrive),
+    url(r'^httprunner/RunnerSee', RunnerSee),
+    url(r'^httprunner/Uncompress', Uncompress),
+    url(r'^httprunner/IsJSon', IsJSon),
 
     url(r'^testmetod', testmetod),  # 测试使用接口
 
