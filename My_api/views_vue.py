@@ -8,11 +8,8 @@ _*_ coding: UTF-8 _*_
 """
 import codecs
 import csv
-import json
 import logging
-import os
 import re
-import time
 
 import requests
 from allpairspy import AllPairs
@@ -673,7 +670,6 @@ def SendRequest(request):
                 "data": "false",
                 "msg": "非法请求地址！"
             }
-            logger.info('请求参数：{}'.format(dic))
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
         if tag == 'header' or tag == 'body':
             if radio == 1:
@@ -1234,7 +1230,7 @@ def LookReport(request):
 # 报告路径
 def Report(request):
     try:
-        return render(request, f'Reports/{case_ids}.html')
+        return render(request, f'Reports/HtmlTest/{case_ids}.html')
     except Exception as e:
         logger.error('错误信息：{}'.format(e))
         return "TemplateDoesNotExist"
@@ -1442,15 +1438,6 @@ def community(request, method):
         return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
 
 
-# 测试接口
-def testmetod(request):
-    method = "GET"
-    if community(request, method) == RE.TRUE.value:
-        pass
-    else:
-        return community(request, method)
-
-
 # 查询
 def GetReturned(request):
     method = "POST"
@@ -1633,7 +1620,6 @@ def Uncompress(request):
             data = json.loads(request.body)
             logger.info('请求参数：{}'.format(data))
             is_json = HttpRunner.objects.filter(id=data['id']).values()[0]
-            ic(is_json)
             if is_json['is_json'] == 0:
                 # json解压
                 runner_text = RunnerFileJson(is_json['file_name'])
@@ -1662,7 +1648,6 @@ def IsJSon(request):
         try:
             data = json.loads(request.body)
             logger.info('请求参数：{}'.format(data))
-            ic(data)
             if 'is_json' not in data:
                 data['is_json'] = 0
             HttpRunner.objects.filter(id=data['id']).update(is_json=data['is_json'])
@@ -1676,5 +1661,83 @@ def IsJSon(request):
                 "totalCount": 0
             }
             return HttpResponse(json.dumps(dic), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# HttpRunner删除
+def RunnerDel(request):
+    method = "DELETE"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        logger.info('请求参数：{}'.format(data))
+        Id = data['ids']
+        if type(Id) == int:
+            HttpRunner.objects.filter(id=Id).update(is_delete=1)
+        else:
+            ids = Id.split(',')
+            for i in ids:
+                HttpRunner.objects.filter(id=i).update(is_delete=1)
+        return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# httpRunner查看报告
+def RunnerLook(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        logger.info('请求参数：{}'.format(data))
+        global file_name
+        file_name = data['file_name']
+        asz = HttpReport(request)
+        if asz == "TemplateDoesNotExist":
+            dic = json.dumps({
+                "code": 30215,
+                "data": "false",
+                "msg": "测试报告还未生成，请检查！"
+            })
+        else:
+            dic = json.dumps({
+                "code": 200,
+                "data": "true",
+                "message": "http://192.168.1.42:8080/httprunner/HttpReport"
+            })
+        return HttpResponse(dic, content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# HttpRunner报告路径
+def HttpReport(request):
+    try:
+        return render(request, f'Reports/runner/{file_name}.html')
+    except Exception as e:
+        logger.error('错误信息：{}'.format(e))
+        return "TemplateDoesNotExist"
+
+
+# 运行
+def HttpRunnerReport(request):
+    method = "POST"
+    if community(request, method) == RE.TRUE.value:
+        data = json.loads(request.body)
+        logger.info('请求参数：{}'.format(data))
+        RunnerValue = HttpRunner.objects.filter(id=data['id']).values()[0]
+        if RunnerValue['is_json'] == 0:
+            RunApiFileJson(RunnerValue['file_name'])
+        else:
+            RunApiFileYml(RunnerValue['file_name'])
+        return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
+    else:
+        return community(request, method)
+
+
+# 测试接口
+def testmetod(request):
+    method = "GET"
+    if community(request, method) == RE.TRUE.value:
+        pass
     else:
         return community(request, method)

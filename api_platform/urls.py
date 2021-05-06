@@ -143,6 +143,10 @@ urlpatterns = [
     url(r'^httprunner/RunnerSee', RunnerSee),
     url(r'^httprunner/Uncompress', Uncompress),
     url(r'^httprunner/IsJSon', IsJSon),
+    url(r'^httprunner/del', RunnerDel),
+    url(r'^httprunner/HttpReport', HttpReport),
+    url(r'^httprunner/RunnerLook', RunnerLook),
+    url(r'^httprunner/HttpRunnerReport', HttpRunnerReport),
 
     url(r'^testmetod', testmetod),  # 测试使用接口
 
