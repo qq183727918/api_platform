@@ -20,6 +20,7 @@ from My_api.views import *
 from My_api.views_tools import *
 from My_api.views_api import *
 from My_api.views_vue import *
+from My_api.views_selenium import *
 
 
 urlpatterns = [
@@ -148,7 +149,9 @@ urlpatterns = [
     url(r'^httprunner/RunnerLook', RunnerLook),
     url(r'^httprunner/HttpRunnerReport', HttpRunnerReport),
 
-    url(r'^testmetod', testmetod),  # 测试使用接口
+    # =============selenium============================= #
+
+    url(r'^testmetod', TestMethod),  # 测试使用接口
 
 ]
 

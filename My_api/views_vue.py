@@ -755,7 +755,7 @@ def SendRequest(request):
             head_file = head['Content-Disposition'].split(";")[1].strip().split("=")[1]
             ic(head_file)
             file_path = ''
-            with open(f"D:\\platform\\My_api\\static\\api_file\\{head_file}", "wb") as code:
+            with open(f"/My_api/static/selenium_file\\{head_file}", "wb") as code:
                 code.write(response.content)
         else:
             file_path = False
@@ -1730,14 +1730,5 @@ def HttpRunnerReport(request):
         else:
             RunApiFileYml(RunnerValue['file_name'])
         return HttpResponse(json.dumps(RE.SUCCESS.value), content_type=RE.CONTENT_TYPE.value)
-    else:
-        return community(request, method)
-
-
-# 测试接口
-def testmetod(request):
-    method = "GET"
-    if community(request, method) == RE.TRUE.value:
-        pass
     else:
         return community(request, method)
