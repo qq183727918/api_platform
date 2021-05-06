@@ -8,33 +8,31 @@ _*_ coding: UTF-8 _*_
 """
 import json
 import os
-import re
 import sys
 import time
 import unittest
 from HTMLTestRunner1 import HTMLTestRunner
 
 import django
-from requests import request
 
 path = "../platform"
 sys.path.append(path)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "api_platform.setting")
 django.setup()
-from My_api.models import *
 # from My_api.A_WQRFhtmlRunner import HTMLTestRunner
 import requests
 
 
 class Test(unittest.TestCase):
     """测试类"""
+
     def demo(self, step):  # 8
         time.sleep(3)
         # 提取所有请求数据
         api_method = step.api_method
         api_url = step.api_url
         api_host = step.api_host
-        api_header = step.api_header
+        api_header = json.loads(step.api_header)
         api_body_method = step.api_body_method
         api_body = step.api_body
         url = api_host + api_url
@@ -45,9 +43,27 @@ class Test(unittest.TestCase):
         print('【method】：', api_method)
         print('【body_method】：', api_body_method)
         print('【body】：', api_body)
-        response = request(api_method.upper(), url=url, headers=api_header, data=api_body)
+        print('【header】：', type(api_header))
+        # response = request(api_method.upper(), url=url, headers=api_header, data=api_body)
+        if api_body_method == "None":
+            response = requests.request(api_method.upper(), url=url, headers=api_header, data={}, verify=False)
+        elif api_body_method == "Form-data":
+            files = []
+            response = requests.request(api_method.upper(), url=url, headers=api_header, data=api_body,
+                                        files=files, verify=False)
+        elif api_body_method == "X-www-form-urlencoded":
+            api_header['Content-Type'] = 'application/x-www-form-urlencoded'
+            response = requests.request(api_method.upper(), url=url, headers=api_header, data=api_body,
+                                        verify=False)
+        elif api_body_method == "Raw":
+            api_header['Content-Type'] = 'application/json'
+            response = requests.request(api_method.upper(), url=url, headers=api_header,
+                                        data=api_body, verify=False)
+        else:
+            response = requests.request(api_method.upper(), url=url, headers=api_header, data={}, verify=False)
 
         response.encoding = "utf-8"
+
         res = response.text
 
         print('【返回体】：', res)
@@ -70,7 +86,7 @@ def run(Case_id, Case_name, steps):  # 1
     print(steps)
     make_def(steps)  # 2
     suit = unittest.makeSuite(Test)
-    filename = 'My_api/templates/Reports/%s.html' % Case_id
+    filename = 'My_api/templates/Reports/HtmlTest/%s.html' % Case_id
     fp = open(filename, 'wb')
     runner = HTMLTestRunner(fp, title='接口测试平台测试报告：%s' % Case_name, description='用例描述')
     runner.run(suit)
